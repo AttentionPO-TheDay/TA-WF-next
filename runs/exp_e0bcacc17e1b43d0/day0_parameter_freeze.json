@@ -1,0 +1,11 @@
+{
+  "parameters": "artifacts/frozen_day0_parameters.json",
+  "parameters_sha256": "fc2513c7be4dd51ce541e7cd2c89c564bbf02e6b6d4eb0d254ae87b589720d18",
+  "valid_logits": "artifacts/df_valid_logits.npz",
+  "valid_logits_sha256": "db518139683df33e2138692349136acc181c658572192006394ecb57dea2c908",
+  "frozen_before_successful_future_scoring": true,
+  "formal_inference_batch_size": 128,
+  "primary_alpha": 0.0,
+  "unsupported_classes": [4, 8, 23, 43],
+  "implementation_correction": "Attempt 1 used batch 256 and stopped at Day14 cache argmax alignment before diagnostics; batch 128 matches the formal evaluation implementation. Day0 alpha choices were unchanged."
+}

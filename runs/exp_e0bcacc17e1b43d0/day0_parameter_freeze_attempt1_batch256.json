@@ -1,0 +1,10 @@
+{
+  "parameters": "artifacts/frozen_day0_parameters.json",
+  "parameters_sha256": "8538382b3d5702238ea7f4cbf1a7fc36110cc80cd9f5fb459c95ff68b40896bf",
+  "valid_logits": "artifacts/df_valid_logits.npz",
+  "valid_logits_sha256": "eb69e3d36d840d076235d67434d8996536448cc9301bb5533dee1a46282cbd96",
+  "frozen_before_future_scoring": true,
+  "future_logits_present_at_freeze": false,
+  "primary_alpha": 0.0,
+  "unsupported_classes": [4, 8, 23, 43]
+}

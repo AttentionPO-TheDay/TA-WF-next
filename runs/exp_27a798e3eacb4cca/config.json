@@ -1,0 +1,14 @@
+{
+  "id": "exp_27a798e3eacb4cca",
+  "status": "completed",
+  "audit_version": 1,
+  "dataset_root": "/mnt/data2/ren/datasets/TemporalDrift",
+  "historical_files": ["train.npz", "valid.npz"],
+  "future_labels_used": false,
+  "future_physical_access": "uncertain_due_to_timed_out_schema_inspection_command_with_no_output",
+  "new_backbone_training_runs": 0,
+  "gpu_jobs": 0,
+  "minimum_support_shots_per_site": 3,
+  "minimum_query_samples_per_site": 1,
+  "verdicts": ["PASS", "CONDITIONAL", "FAIL"]
+}

@@ -1,0 +1,116 @@
+{
+  "artifacts": {
+    "DIAGNOSTIC_PLAN_v1.md": {
+      "bytes": 7445,
+      "sha256": "a7f136010ef339ac5f279640eb6521d8be76951bc981c8ad5fbaa2e43a023dc0"
+    },
+    "PLAN.md": {
+      "bytes": 537,
+      "sha256": "12b7c3788e4b91eb7e1150cdd27974a2345d126e7d97d9eb47e21c4af38f2b3c"
+    },
+    "RESULTS.md": {
+      "bytes": 3482,
+      "sha256": "f3449ac40a9cfb4982b51923d4364fda1064c5e4cbb942742bb732398e941bd1"
+    },
+    "artifacts/equal500_joint.csv": {
+      "bytes": 9639,
+      "sha256": "498f52e05f85cc89237715646908094ddef9c7019c296f8763fc4974bc08977c"
+    },
+    "artifacts/exclude_terminal_joint.csv": {
+      "bytes": 9022,
+      "sha256": "3ae90d4a50839541aca0a67c0e9b17ce58960ef452e0e7dc7b5acf6e512317b9"
+    },
+    "artifacts/position_equal500_sensitivity.csv": {
+      "bytes": 130833,
+      "sha256": "bdd50d7992e0541484f0c6252bad3a8ed5f9033ede73b3e45d74b2f7dc1af949"
+    },
+    "artifacts/position_stability_discriminability_joint.csv": {
+      "bytes": 63919,
+      "sha256": "3dc4c50b42fab1dce6028a3c358b1304239557bf89d7c95ce49f43281457c5e4"
+    },
+    "artifacts/trace_direction_features.csv": {
+      "bytes": 30397005,
+      "sha256": "20c37fda2587286746d0c99834e5cafc8f5c5a8366f95e6bf6c29b3bc45d2e07"
+    },
+    "boundary_length_sensitivity.md": {
+      "bytes": 2515,
+      "sha256": "6378af63b58aa0f8d310aabc790e334c8921dfb83b77265be045c4ec466dc23a"
+    },
+    "burst_rle_roundtrip_audit.md": {
+      "bytes": 817,
+      "sha256": "57dbbbfa73add3da1cc9b75ebc5f9914dcf4cbabf97c4ba3eff7d6c37b39ce06"
+    },
+    "data_observation_boundary_audit.md": {
+      "bytes": 2029,
+      "sha256": "eccb0e2e12c8665220df1b260be37c7cdda1442578e59461156bc74b3300c399"
+    },
+    "day0_internal_vs_temporal_shift.csv": {
+      "bytes": 927037,
+      "sha256": "d24120bd08dace86d242d3f55d80ef7b3074d6629907bd859b55d2c2029e2f8c"
+    },
+    "execution_record.md": {
+      "bytes": 2327,
+      "sha256": "39cab5328315071da226c9b5547d52212970a0a8632346665998e13164814bb5"
+    },
+    "position_direction_diagnostic.csv": {
+      "bytes": 7301541,
+      "sha256": "909eaaabd10fa68a4b6649320609a71c9da42b12239747900235129ef78b3310"
+    },
+    "stability_discriminability_joint.csv": {
+      "bytes": 9042,
+      "sha256": "ac8a32c114652d7cbec98dddf20b84b7b80da3a0abcbd71b391bde22a416c526"
+    },
+    "timing_appendix.md": {
+      "bytes": 1449,
+      "sha256": "c08810081923788e13b5881e9be1ccb5be4fbdf28f3788d12d947bb2b62f3e71"
+    }
+  },
+  "canonical_traces": 136621,
+  "experiment": "exp_bdca1fca83844035",
+  "followup_evidence": {
+    "common_sites": 96,
+    "coordinate": "raw_packet_index",
+    "excluded_terminal": {
+      "separability_by_date": {
+        "day14": 6.196078431372554,
+        "day150": 3.2682926829268313,
+        "day270": 2.433628318584068,
+        "day30": 6.416666666666661,
+        "day90": 4.7272727272727275
+      },
+      "stable_fraction": 0.8770833333333334
+    },
+    "metric": "cover_run_length_mass_weighted",
+    "packet_indices": "50..99 (zero based)",
+    "retained_terminal": {
+      "separability_by_date": {
+        "day14": 6.196078431372554,
+        "day150": 3.2682926829268313,
+        "day270": 2.433628318584068,
+        "day30": 6.416666666666661,
+        "day90": 4.7272727272727275
+      },
+      "stable_fraction": 0.8770833333333334
+    }
+  },
+  "limitations": [
+    "candidate ranking uses future true labels descriptively",
+    "equal-500 positional comparison covers 96/102 websites",
+    "full-L sensitivity lacks all-site coverage",
+    "timestamp monotonicity has small violations",
+    "no deployable weighting rule was learned"
+  ],
+  "observation_length": 5000,
+  "permissions": {
+    "adaptation_runs": 0,
+    "future_labels": "descriptive same-site/different-site comparisons only",
+    "gpu_used": false,
+    "training_runs": 0
+  },
+  "primary_whole_trace_candidate_attributes": [],
+  "rle_roundtrip_failures": 0,
+  "schema_version": 1,
+  "scope": "training-free descriptive TemporalDrift development diagnostic; not a method contribution or external confirmation",
+  "status": "completed",
+  "verdict": "SUPPORTS_FOLLOWUP"
+}

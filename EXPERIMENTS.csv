@@ -1,0 +1,19 @@
+id,name,status,question,summary
+exp_6238dacf9aa142cc,temporal_local_global_screening,stopped,DF 与 Var-CNN 冻结编码器局部与全局零当前标签筛查,v3 split 保持；评价 v4 已补逐样本 RF mask、浅层区域 D 与同层全局 E；source 覆盖及 CPU smoke 通过，9 tests passed/1 skipped；等待 GPU，未训练或读取未来数据。
+exp_9121b664a1854097,temporal_abcd_screening_execution,completed,独立执行冻结 TemporalDrift DF 与 VarCNNDirection A/B/C/D/E 首轮筛查,冻结 v3/v4 首轮完成：DF 与 VarCNNDirection 各 1 seed；两 backbone 全日期 D-C 大幅为负，发现跨 backbone 重复低区分性局部错误模式。
+exp_4b72ed0c9a354d54,bounded_representation_diagnostic,completed,冻结 checkpoint 的浅层与唯一中间层表示及有限读出诊断,零 backbone 重训练完成；source 恢复但两 backbone 未共同取得相对强 C 的重复 future 正收益，未满足扩展证据条件。
+exp_b471517a3e6f41e7,frozen_global_recoverability,completed,冻结最终全局 embedding 的跨时间少标签监督可恢复性诊断,零 backbone 训练完成；10-shot 在两 backbone 的 Day90/270 稳定恢复，3-shot 不足，simple prototype 达预注册接近门槛。
+exp_a2ffb5623ad346c7,historical_retention_baselines,completed,冻结 global representation 上的 source-current 历史保留基线,零 backbone 更新完成；固定 interpolation/shrinkage 均未同时保护 Day14 并保留 Day90/270 recovery，网站得失跨模型重复但简单可见量不能区分修复与损害。
+exp_376fca9354214097,support_internal_selection,completed,已付费 current support 内常规分层 CV 能否解决历史保留的早期保护与后期恢复权衡,零 backbone 更新完成；10-shot 后期恢复保留但 DF Day14 距严格门槛 0.049 pp，oracle envelope 通过，归因为 support selection failure；3-shot selection noise 高。
+exp_3ae08f5b65a44cbf,backbone_seed_replication,completed,冻结 support-internal maintenance 是否跨 backbone training seeds 重复成立,严格 replication 未通过：18 个主单元 15 个通过；12/12 Day90/270 通过，VarCNNDirection 3/3 Day14 通过，但 DF 3/3 Day14 均低于 2 pp 门槛；integrity passed。
+exp_04faf4088b604155,estimation_noise_vs_historical_coverage,completed,3-shot 相对 10-shot 的损失来自估计噪声还是历史支持区域覆盖不足,诊断完成且 integrity passed；预注册裁决 B_historical_coverage_dominant，0 次 backbone 训练，等待 Host 决定是否进入机制设计。
+exp_62c23528b1774202,equal_budget_region_relevance,completed,相同 3-shot 与历史存储预算下区域级历史保留和冲突抑制是否超过强常规对照,阴性：D 后期低于 A 2.883 pp、低于 B 0.343 pp；B/C 与 D 均实质相当，Day14 明显受损，去区域消融未达归因门槛；integrity passed。
+exp_27a798e3eacb4cca,historical_variation_episode_feasibility,completed,历史 source 是否含真实变化结构以构造无泄漏 3-shot episode,FAIL：Day0 是唯一可验证历史条件；0/102 网站有两个真实条件；未训练且未使用 future 内容；一次无输出 schema 命令使物理访问状态不确定。
+exp_bdca1fca83844035,burst_temporal_drift_characterization,completed,TemporalDrift 无训练 burst 结构漂移诊断,SUPPORTS_FOLLOWUP：全局属性未过联合门槛；固定 500 包的早期 run-length 位置规律在 96/102 网站跨五日期具稳定性和判别性并通过末段删除检查；仅为描述证据，零训练零适应。
+exp_e0bcacc17e1b43d0,local_burst_error_correction_diagnostic,completed,冻结局部 run-length evidence 是否对正式 TemporalDrift 全局模型有额外纠错价值,STOP_LOCAL_CORRECTION_ROUTE：Day0-only 主融合选择 alpha=0，五日期 Net Repair=0；eligible global errors 上 local rank 4556 改善、35811 恶化；零训练零适应。
+exp_dce0488c23844cb7,shared_update_interference_diagnostic,completed,固定 TemporalDrift checkpoint 与 TTA 后诊断 oracle 网站组共享更新干扰,STOP_NO_USABLE_INTERFERENCE：self 有效但 cross 损伤与 mixed 抵消未过预注册门槛；第二关未执行。
+20260921T184917Z_proteus_condition_audit_f033070f,proteus_condition_audit,completed,核实 Proteus 多条件结构及 provenance，评估共享 burst tokenizer；只读结构审计，不训练评分,首轮只读结构审计：44 NPZ元数据与旧证据一致；Tor版本纳入，聚合版本标签及隔离门槛待核；共享生成器建议，未训练评分
+20260921T185436Z_proteus_identity_isolation_e596ccf3,proteus_identity_isolation,completed,Version整行身份恢复及Network/Behavior内容URL隔离、旧使用记录审计；无训练评分,Version恢复90145唯一版本锚点，10017未知；Network/Behavior仅已知共享，URL重复2661；时间回退待核，无训练评分
+20260921T190311Z_timestamp_semantics_ad0e8097,timestamp_semantics,completed,查明Proteus时间回退的数值特征、方向关系和处理语义；不改数据不训练,时间诊断完成：回退全跨方向，方向内单调；混合IAT受限，同run可保留。原始采集根因缺转换链，未训练改数据
+20260921T191053Z_burst_tokenizer_prototype_ef77e595,burst_tokenizer_prototype,completed,实现共享stored-order方向run生成器，验证可逆性边界粗化及三场景接口；不训练评分,共享方向run原型完成；12新测试通过，全项目21通过1跳过；384真实样本0错误，无训练评分
+20260922T005618Z_multiview_feature_generator_0b5365cf,multiview_feature_generator,completed,扩展方向run生成器为多视角可信流量表示接口，验证字段边界和三场景兼容性；不训练评分,多视角v0：方向/run/窗口/可选受限时间与size；31测试通过1跳过，384真实行接口通过，无训练评分

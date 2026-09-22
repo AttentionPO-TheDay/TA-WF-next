@@ -1,0 +1,9 @@
+{
+  "id": "20260921T191053Z_burst_tokenizer_prototype_ef77e595",
+  "status": "frozen_prototype_only",
+  "budget": 5000,
+  "rows_per_file": 128,
+  "time_features": false,
+  "read_labels": false,
+  "training": false
+}

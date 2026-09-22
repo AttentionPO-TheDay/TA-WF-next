@@ -1,0 +1,43 @@
+{
+  "id": "exp_6238dacf9aa142cc",
+  "status": "frozen",
+  "dataset": {
+    "root": "/mnt/data2/ren/datasets/TemporalDrift",
+    "source_train": "train.npz",
+    "source_validation": "valid.npz",
+    "future": ["day14.npz", "day30.npz", "day90.npz", "day150.npz", "day270.npz"],
+    "x_key": "X",
+    "y_key": "y",
+    "length": 5000,
+    "transform": "sign",
+    "split_seed": 6238,
+    "deduplication": "before splitting, exclude train content hashes occurring in official valid; then group by SHA-256 of int8 sign(X[:5000]) and retain minimum row index per group",
+    "reference_per_class": 2,
+    "holdout_per_class": 20
+  },
+  "models": ["df", "varcnn_direction"],
+  "training": {
+    "seed": 6238,
+    "epochs": 30,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "selection": "maximum source_validation macro_f1; earliest epoch on exact tie",
+    "maximum_new_training_runs": 2
+  },
+  "evaluation": {
+    "revision": 4,
+    "methods": ["A", "B", "C", "D", "E"],
+    "local_layer_spec": "artifacts/local_layer_spec_v4.json",
+    "local_layers": {"df": "feature_extraction.0", "varcnn_direction": "dir_encoder.convs.0"},
+    "valid_positions": "inclusive RF entirely inside nonzero finite input positions per sample; treat zero as unknown",
+    "insufficient_positions": "fewer than 4: D/E fallback to C; exclude ineligible references; if any class lacks eligible reference all D/E fallback to C",
+    "same_layer_control_E": "cosine 1-NN on normalized raw-position mean over exactly D-valid positions",
+    "source_audit": "artifacts/source_length_audit_v4.json",
+    "distance": "cosine_on_l2_normalized_features",
+    "global_neighbor_k": 1,
+    "local_regions": 4,
+    "query_labels_available_to_inference": false,
+    "future_labels_use": "scoring_and_post_hoc_diagnostics_only"
+  }
+}

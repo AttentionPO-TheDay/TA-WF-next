@@ -1,0 +1,10 @@
+{
+  "id": "20260922T005618Z_multiview_feature_generator_0b5365cf",
+  "status": "frozen_prototype_only",
+  "budget": 5000,
+  "read_labels": false,
+  "read_urls": false,
+  "time_features": "same-direction intervals and within-run spans; cross-sign intervals omitted",
+  "training": false,
+  "scoring": false
+}

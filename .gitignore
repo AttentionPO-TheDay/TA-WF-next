@@ -1,0 +1,36 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+.experiment.lock
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Shared/raw data and generated model payloads stay local.
+data/
+datasets/
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.pcap
+*.pcapng
+
+# Keep plans, configs, source scripts, reports and compact JSON summaries.
+# Generated tables and per-sample evidence remain on disk, outside Git.
+runs/*/checkpoints/
+runs/*/logs/
+runs/*/artifacts/
+runs/**/*.csv

@@ -1,0 +1,27 @@
+{
+  "id": "exp_a2ffb5623ad346c7",
+  "status": "completed",
+  "dataset_root": "/mnt/data2/ren/datasets/TemporalDrift",
+  "donor_experiment": "/home/rbf/TA-WF-next/runs/exp_b471517a3e6f41e7",
+  "checkpoint_experiment": "/home/rbf/TA-WF-next/runs/exp_9121b664a1854097",
+  "split_path": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json",
+  "models": ["df", "varcnn_direction"],
+  "dates": ["day14", "day90", "day270"],
+  "shots": [3, 10],
+  "seeds": [1729, 6238, 20260916],
+  "alpha_candidates": [0.25, 0.5, 0.75],
+  "lambda_candidates": [0.01, 0.1, 1.0],
+  "selection": "shared across backbones/shots/seeds by mean official source-validation macro-F1 using nested source-holdout pseudo-support only",
+  "maximum_new_backbone_training_runs": 0,
+  "maximum_backbone_finetuning_runs": 0,
+  "query_labels_use": "scoring and preregistered posthoc analysis only after all predictions for a backbone-date are fixed",
+  "execution": {
+    "selected_alpha": 0.25,
+    "selected_lambda": 0.1,
+    "new_backbone_training_runs": 0,
+    "backbone_finetuning_runs": 0,
+    "checkpoint_outputs": 0,
+    "formal_evaluations": 36,
+    "integrity_check": "passed"
+  }
+}

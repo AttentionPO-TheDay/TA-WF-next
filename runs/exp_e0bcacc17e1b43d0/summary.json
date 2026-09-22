@@ -1,0 +1,75 @@
+{
+  "accuracy_delta": 0.0,
+  "artifacts": {
+    "CORRECTION_PLAN_v1.md": "7c5a053664898308bd847d756d1922010934439fc609e6585766cd6fd9636731",
+    "CORRECTION_PLAN_v2.md": "15a5db0df04c266e17d254f8ec681b0bbf2bb54cf7e1ef02f319ac82b34e1320",
+    "RESULTS.md": "6e9716048e2599cb79f0a1f660919142c48f0cd1f37e1109bf970558ba0bc7e9",
+    "error_complementarity.csv": "7d3b40689cea809cb812197cdf1a1c8fe50fd5d759d3fff33f26112cce0d2889",
+    "execution_record.md": "51d78da92dfaa5c33e63a90552dbc1b02b893fabed7bf29f188ee215e914a6e6",
+    "fusion_repair_table.csv": "0a017258b7ecbbe0e1ceed55d60f037a12d835ec6aa092a04222bcd3c494c41f",
+    "global_prediction_audit.md": "eb9bd3a003d3b627a161c0f9c6993a6f71461946ae1014573021ac540c1f3b4c",
+    "local_rank_diagnostic.csv": "259bdf4c158362d98bc840160b09b105d8b989647fec75638c001118f01ed8d4",
+    "local_scoring_definition.md": "304f2414489241e0eefa1e73d4911be6decce1b21ea7a09e661b7ab7bfbcf906",
+    "per_site_date_breakdown.csv": "7ada52b1486da212e8cf60e0923efcc22d7aec6b571920b94869c6952386d94d",
+    "specificity_controls.csv": "907af22e8ee92d9d52a245615d8b7f718409e82505bbc2f311e41a6b81cab34a"
+  },
+  "best_control": "run_mw_0_49",
+  "best_control_net_repair": 0,
+  "bypass_global_unsupported_sensitivity": {
+    "accuracy_delta": 0.0,
+    "net_repair": 0
+  },
+  "chosen_alpha": 0.0,
+  "correct_to_wrong": 0,
+  "experiment": "exp_e0bcacc17e1b43d0",
+  "fused_accuracy": 0.5801910763288952,
+  "gates": {
+    "rank_gate": false,
+    "specificity_gate": false
+  },
+  "global_accuracy": 0.5801910763288952,
+  "net_repair": 0,
+  "local_rank_on_eligible_global_errors": {
+    "n": 40920,
+    "global_mean": 10.489516129032259,
+    "global_median": 4.0,
+    "local_mean": 42.66903714565005,
+    "local_median": 38.0,
+    "improved": 4556,
+    "unchanged": 553,
+    "worsened": 35811,
+    "local_top5_hit": 0.06287878787878788,
+    "local_top10_hit": 0.13663245356793743
+  },
+  "local_coverage": {
+    "eligible": 96037,
+    "total": 118068,
+    "fraction": 0.813404139987126
+  },
+  "permissions": {
+    "adaptation_runs": 0,
+    "future_labels": "post-prediction development scoring only",
+    "training_runs": 0
+  },
+  "implementation_correction": "batch 256 attempt stopped on two Day14 near-tie cache mismatches; formal batch 128 restored exact A argmax alignment and left all Day0 alpha choices unchanged",
+  "positive_net_repair_dates": 0,
+  "positive_net_repair_sites": 0,
+  "primary_feature": "run_mw_50_99",
+  "rank_improved": 4556,
+  "rank_worsened": 35811,
+  "required_specificity_gap": 10,
+  "schema_version": 1,
+  "scope": "TemporalDrift development evidence; no training or adaptation",
+  "specificity_gap": 0,
+  "status": "completed",
+  "unsupported_true_class": {
+    "correct_to_wrong": 0,
+    "global_correct": 3592,
+    "n": 4656,
+    "net_repair": 0,
+    "wrong_to_correct": 0
+  },
+  "verdict": "STOP_LOCAL_CORRECTION_ROUTE",
+  "wrong_to_correct": 0,
+  "wrong_to_different_wrong": 0
+}

@@ -1,0 +1,41 @@
+{
+  "id": "exp_3ae08f5b65a44cbf",
+  "status": "completed",
+  "dataset": "TemporalDrift",
+  "dataset_root": "/mnt/data2/ren/datasets/TemporalDrift",
+  "closed_external_evaluations": ["WTT-Time", "AWF"],
+  "split_path": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json",
+  "split_sha256": "0f322e9a418f0e96eff3e3d7ceca7237219f2ea6cb910c061fdd7f8025f3f142",
+  "architectures": ["df", "varcnn_direction"],
+  "training_seeds": [6238, 1013, 2024],
+  "original_training_seed": 6238,
+  "new_training_seeds": [1013, 2024],
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 64,
+    "epochs": 30,
+    "selection": "maximum official source-validation macro_f1; earliest epoch on exact tie",
+    "maximum_new_runs": 4
+  },
+  "dates": ["day14", "day90", "day270"],
+  "shots": [3, 10],
+  "support_seeds": [1729, 6238, 20260916],
+  "support_manifest_sha256": "cbf37c99af375c576e882e049ffb4a37946ea631099d6b15f1ba9458782725ca",
+  "selection_plan_sha256": "89c3059fefc78fe47151e8a25e8107f64171542597d87af335539e401e3791dc",
+  "common_query_manifest_sha256": "161ebc6e71885258808a865c97c346abdc77fba3b823e595ba510e8159e531ed",
+  "primary_endpoint": "10-shot support_selected_baseline macro_f1",
+  "three_shot_role": "diagnostic only",
+  "query_labels_use": "scoring and preregistered diagnostics only after all predictions for an architecture-training_seed-date are fixed",
+  "execution": {
+    "new_backbone_training_runs": 4,
+    "new_checkpoints": 4,
+    "new_formal_evaluations": 72,
+    "reused_original_evaluations": 36,
+    "integrity_check": "passed",
+    "strict_replication_success": false,
+    "primary_cells_passed": 15,
+    "primary_cells_total": 18
+  }
+}

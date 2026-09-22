@@ -1,0 +1,28 @@
+{
+  "id": "exp_b471517a3e6f41e7",
+  "status": "completed",
+  "dataset_root": "/mnt/data2/ren/datasets/TemporalDrift",
+  "donor_experiment": "/home/rbf/TA-WF-next/runs/exp_9121b664a1854097",
+  "split": {
+    "path": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json",
+    "sha256": "0f322e9a418f0e96eff3e3d7ceca7237219f2ea6cb910c061fdd7f8025f3f142",
+    "schema_version": 3
+  },
+  "models": ["df", "varcnn_direction"],
+  "maximum_new_backbone_training_runs": 0,
+  "embedding": {"location": "model.forward_features output / model.mlp input", "dimension": 512, "normalization": "row_l2_for_G_and_prototype; raw_frozen_embedding_to_original_mlp_for_A"},
+  "dates": ["day14", "day90", "day270"],
+  "shots": [3, 10],
+  "support_seeds": [1729, 6238, 20260916],
+  "linear": {"penalty": "l2", "solver": "lbfgs", "C_candidates": [0.1, 1.0, 10.0], "max_iter": 300, "tol": 0.0001, "fit_intercept": true, "class_weight": null},
+  "simple_maintenance": "nearest normalized current class prototype; no source prototype and no interpolation coefficient",
+  "current_query_labels_use": "scoring and per-website analysis only after predictions are fixed",
+  "execution": {
+    "new_backbone_training_runs": 0,
+    "source_linear_models": 2,
+    "fixed_split_configurations": 18,
+    "backbone_date_shot_seed_evaluations": 36,
+    "method_metric_rows": 144,
+    "integrity_check": "passed"
+  }
+}

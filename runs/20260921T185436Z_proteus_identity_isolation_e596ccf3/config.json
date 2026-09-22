@@ -1,0 +1,8 @@
+{
+  "id": "20260921T185436Z_proteus_identity_isolation_e596ccf3",
+  "status": "frozen_audit_only",
+  "label_use": "identity_and_isolation_audit_only",
+  "training": false,
+  "scoring": false,
+  "prefix_direction_budget": 5000
+}

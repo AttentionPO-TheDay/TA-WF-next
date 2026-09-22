@@ -1,0 +1,24 @@
+{
+  "id": "exp_04faf4088b604155",
+  "status": "frozen",
+  "plan_version": 1,
+  "donor_experiment": "exp_b471517a3e6f41e7",
+  "models": ["df", "varcnn_direction"],
+  "dates": ["day14", "day90", "day270"],
+  "support_seeds": [1729, 6238, 20260916],
+  "formal_shots": [3, 10],
+  "diagnostic_subsets": "all_120_lexicographic_combinations_of_3_positions_from_10",
+  "embedding": {
+    "location": "forward_features output / model.mlp input",
+    "dimension": 512,
+    "normalization": "row_l2"
+  },
+  "source_role_for_geometry": "supervised_train",
+  "distance": "cosine_distance",
+  "source_threshold": "per-backbone-class q95 leave-one-out nearest same-class source distance; numpy linear quantile",
+  "new_backbone_training_runs": 0,
+  "query_label_firewall": ["preflight", "extract", "freeze", "seal", "score"],
+  "new_probe": "three deterministic source farthest-first exemplars per class plus current 3-shot prototype; max cosine",
+  "external_data": false
+}
+

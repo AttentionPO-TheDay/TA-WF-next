@@ -1,0 +1,9 @@
+{
+  "id": "20260921T184917Z_proteus_condition_audit_f033070f",
+  "status": "frozen_audit_only",
+  "read_array_values": false,
+  "read_label_arrays": false,
+  "training": false,
+  "scoring": false,
+  "external_datasets": false
+}

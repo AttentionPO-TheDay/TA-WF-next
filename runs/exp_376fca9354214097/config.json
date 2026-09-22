@@ -1,0 +1,27 @@
+{
+  "id": "exp_376fca9354214097",
+  "status": "completed",
+  "donor_experiment": "/home/rbf/TA-WF-next/runs/exp_b471517a3e6f41e7",
+  "history_experiment": "/home/rbf/TA-WF-next/runs/exp_a2ffb5623ad346c7",
+  "checkpoint_experiment": "/home/rbf/TA-WF-next/runs/exp_9121b664a1854097",
+  "models": ["df", "varcnn_direction"],
+  "dates": ["day14", "day90", "day270"],
+  "shots": [3, 10],
+  "seeds": [1729, 6238, 20260916],
+  "cv_folds": {"3": 3, "10": 5},
+  "prototype_candidates": ["G_source", "alpha_0.25", "alpha_0.50", "alpha_0.75", "current_prototype"],
+  "linear_candidates": ["G_source", "lambda_1.00", "lambda_0.10", "lambda_0.01", "G_current"],
+  "common_query": "canonical eligible pool minus the full seed-specific 10-shot support for both shot budgets",
+  "maximum_new_backbone_training_runs": 0,
+  "maximum_backbone_finetuning_runs": 0,
+  "query_labels_use": "scoring and preregistered posthoc oracle diagnostics only after all predictions are fixed",
+  "execution": {
+    "formal_evaluations": 36,
+    "new_backbone_training_runs": 0,
+    "backbone_finetuning_runs": 0,
+    "checkpoint_outputs": 0,
+    "integrity_check": "passed",
+    "pre_registered_tradeoff_passed": false,
+    "failure_attribution": "A_selection_failure"
+  }
+}

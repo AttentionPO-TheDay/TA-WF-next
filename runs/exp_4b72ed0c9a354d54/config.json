@@ -1,0 +1,37 @@
+{
+  "id": "exp_4b72ed0c9a354d54",
+  "status": "completed",
+  "donor_experiment": "/home/rbf/TA-WF-next/runs/exp_9121b664a1854097",
+  "dataset_root": "/mnt/data2/ren/datasets/TemporalDrift",
+  "split": {
+    "path": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json",
+    "sha256": "0f322e9a418f0e96eff3e3d7ceca7237219f2ea6cb910c061fdd7f8025f3f142",
+    "schema_version": 3
+  },
+  "models": ["df", "varcnn_direction"],
+  "maximum_new_backbone_training_runs": 0,
+  "linear_readout": {
+    "penalty": "l2",
+    "solver": "lbfgs",
+    "C_candidates": [0.1, 1.0, 10.0],
+    "max_iter": 300,
+    "tol": 0.0001,
+    "fit_intercept": true,
+    "class_weight": null,
+    "selection": "maximum source-validation macro-F1; smaller C on exact tie"
+  },
+  "future_gate": {
+    "minimum_source_validation_macro_f1": 0.4,
+    "maximum_configs_per_backbone": 1,
+    "selection": "maximum source-validation macro-F1 after per-representation C selection; deterministic simplicity tie-break"
+  },
+  "future_dates": ["day14", "day30", "day90", "day150", "day270"],
+  "future_labels_use": "scoring and post-hoc per-website analysis only after predictions are fixed",
+  "execution": {
+    "new_backbone_training_runs": 0,
+    "source_matrix_rows_per_backbone": 10,
+    "frozen_configs_per_backbone": 1,
+    "frozen_selection_sha256": "4280429d4f5397af8cc2fa422ab20b3345fe6eee384a4c7ab487761fd79e720f",
+    "future_dates_scored": 5
+  }
+}

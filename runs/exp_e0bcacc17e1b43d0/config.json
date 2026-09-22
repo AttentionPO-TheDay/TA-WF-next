@@ -1,0 +1,27 @@
+{
+  "id": "exp_e0bcacc17e1b43d0",
+  "status": "completed",
+  "plan_version": 2,
+  "dataset_root": "/mnt/data2/ren/datasets/TemporalDrift",
+  "source_split": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json",
+  "global_model": {
+    "name": "df",
+    "method": "A_source_only_head",
+    "seed": 6238,
+    "checkpoint": "/home/rbf/TA-WF-next/runs/exp_9121b664a1854097/checkpoints/df_best.pt",
+    "sha256": "1bf851278365d0cb716d0ab2d59d6ef43f5b715d50b2a282418151836c9133ae"
+  },
+  "observation_length": 5000,
+  "local_common_budget": 500,
+  "primary_feature": "run_mw_50_99",
+  "alpha_grid": [0.0, 0.05, 0.1, 0.2, 0.3, 0.5, 0.75, 1.0],
+  "template_role": "v3 supervised_train only",
+  "fusion_selection_role": "official valid.npz only",
+  "future_dates": ["day14", "day30", "day90", "day150", "day270"],
+  "future_labels_use": "post-prediction development scoring and attribution only",
+  "training_runs": 0,
+  "adaptation_runs": 0,
+  "batch_calibration": false
+  ,"unsupported_classes": [4, 8, 23, 43]
+  ,"unsupported_policy": "exactly zero additive local contribution"
+}

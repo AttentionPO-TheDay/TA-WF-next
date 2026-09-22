@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "data_root": "/mnt/data2/ren/datasets",
+  "datasets": {
+    "proteus_temporal": {
+      "path": "TemporalDrift",
+      "input": "signed_packet_timestamp",
+      "exposure": "used_in_prior_method_development",
+      "warning": "Do not automatically use precomputed tam_day90.npz; prior conversion mismatch."
+    },
+    "awf": {
+      "path": "awf_concept_drift_200w",
+      "input": "packet_direction",
+      "exposure": "audit_prior_usage_before_assigning_confirmation_role"
+    },
+    "shusterman": {
+      "path": "shusterman_concept_drift_v2",
+      "input": "signed_packet_size",
+      "exposure": "historical_and_development_used; recheck_future_access_before_confirmation"
+    },
+    "wtt_time_processed": {
+      "path": "processed/wtt_time/exp_26dd67e087824c2f",
+      "input": "frozen_indices_and_manifests",
+      "exposure": "inherits_wtt_time_protocol"
+    }
+  }
+}

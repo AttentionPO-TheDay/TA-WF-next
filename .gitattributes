@@ -1,0 +1,6 @@
+# Preserve archived bytes and their recorded hashes; do not normalize line endings.
+* -text
+# csv.DictWriter emits standard CRLF; this is not stray trailing whitespace.
+EXPERIMENTS.csv whitespace=cr-at-eol
+# Some frozen reports/scripts contain a final blank line. Preserve evidence bytes.
+runs/** whitespace=-blank-at-eof

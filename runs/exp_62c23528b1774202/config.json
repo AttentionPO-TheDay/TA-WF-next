@@ -1,0 +1,27 @@
+{
+  "id": "exp_62c23528b1774202",
+  "status": "frozen",
+  "method_plan_version": 1,
+  "models": ["df", "varcnn_direction"],
+  "dates": ["day14", "day90", "day270"],
+  "support_seeds": [1729, 6238, 20260916],
+  "formal_shot": 3,
+  "classes": 102,
+  "embedding_dimension": 512,
+  "history_exemplars_per_class": 3,
+  "history_exemplar_selection": "source-only deterministic farthest-first frozen by exp_04faf4088b604155",
+  "history_threshold": "per-backbone/class source-only q95 leave-one-out nearest-same-class cosine distance frozen by exp_04faf4088b604155",
+  "common_query": "exp_376fca9354214097 common query: canonical eligible pool minus full pre-existing 10-shot manifest; extra seven are neither algorithm inputs nor returned as query",
+  "methods": [
+    "A_support_cv_3shot",
+    "B_plain_multiprototype",
+    "C_site_global_weight",
+    "D_region_conflict_suppression",
+    "D_ablation_uniform_site_retention"
+  ],
+  "query_label_firewall": ["preflight", "freeze", "seal", "score", "verify"],
+  "maximum_new_backbone_training_runs": 0,
+  "maximum_backbone_finetuning_runs": 0,
+  "external_data": false,
+  "ten_shot_algorithm_access": false
+}

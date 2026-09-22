@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "experiment_id": "exp_27a798e3eacb4cca",
+  "audit_version": "v1",
+  "completed_date": "2026-09-17",
+  "question": "Does existing historical source data contain reliable real variation structure for leakage-free same-site 3-shot support-to-query episodes?",
+  "verdict": "FAIL",
+  "host_research_decision_made": false,
+  "reason": "Historical source has only one verified collection condition (Day0) and no row-level date/session/capture/run/environment/source-family metadata. Train/valid membership is a split role, not a verified change axis.",
+  "historical_schema": {
+    "train": {"rows": 19439, "sites": 102, "per_site_min": 163, "per_site_max": 198, "keys": ["X", "y"]},
+    "valid": {"rows": 2160, "sites": 102, "per_site_min": 18, "per_site_max": 22, "keys": ["X", "y"]},
+    "verified_historical_conditions_per_site": 1,
+    "sites_with_two_verified_conditions": 0,
+    "two_condition_site_coverage": 0.0,
+    "temporal_direction_available_within_source": false
+  },
+  "candidate_axes": {
+    "verified_collection_date": "one Day0 condition only",
+    "train_valid_file": "rejected: split role without acquisition semantics",
+    "session_capture_run": "absent",
+    "network_collector_environment": "corpus-level only; absent per row",
+    "original_batch_repeat_id": "absent",
+    "row_order": "rejected: serialization only",
+    "within_trace_packet_time": "rejected: input feature, not cross-trace condition",
+    "random_split_or_augmentation": "forbidden as evidence"
+  },
+  "source_dedup_evidence": {
+    "train_rows_excluded_for_valid_admitted_input_overlap": 168,
+    "train_duplicate_rows_excluded": 718,
+    "canonical_train_rows": 18553,
+    "canonical_cross_role_exact_duplicate_groups": 0,
+    "remaining_canonical_role_to_valid_admitted_input_intersections": 0,
+    "valid_rows": 2160,
+    "valid_unique_content_groups": 2151,
+    "limit": "Exact hashes do not establish session or derivation-family independence."
+  },
+  "episode_minimum": {"support_shots_per_site": 3, "query_samples_per_site": 1, "different_verified_conditions": 2},
+  "admissible_episode_constructors": 0,
+  "future_temporal_labels_used": false,
+  "future_physical_access": {
+    "status": "uncertain",
+    "event": "A read-only whole-directory NPZ schema command invoked array loading, timed out after 30 seconds, and returned no output.",
+    "impact": "No future array value, label, statistic, or command output was consumed by the audit; verdict depends only on source-side schema and pre-existing formal provenance/isolation artifacts."
+  },
+  "new_backbone_training_runs": 0,
+  "gpu_jobs": 0,
+  "next_action": "Stop the current historical-episode representation-learning hypothesis unless new trustworthy source-side condition and provenance metadata are obtained; do not substitute random splits or augmentation. Host retains the route decision.",
+  "input_sha256": {
+    "PROTOCOL.md": "b66c61fa2a61b12bd72591a9f1f6f3de263119b460c885ec19f7ff2f6896118d",
+    "configs/datasets.json": "c3edbfeaf83553f63e6b5a12fa6e1dc5049346c1f8eb3b54bedf7760408b6b28",
+    "scripts/run_temporal_screening.py": "3b5f9f7357bd5c166d30dd24b6e5aeb1e974a40019eaccce26b4e495db74a89c",
+    "splits_v3.json": "0f322e9a418f0e96eff3e3d7ceca7237219f2ea6cb910c061fdd7f8025f3f142",
+    "split_content_audit_v4.json": "3f147f1c39d4469bd34be510d3635f7691f0d9617d00ff456eee29f784c2d249",
+    "data_isolation_audit.json": "6f1da408573f70cdf5ed64b80c9ce7b83ed56691a88208cb86a607403b3a17d6",
+    "train.npz": "2994271abc43bc3e3513924367da475e0a724b2cdfce9212968f6dc05763c882",
+    "valid.npz": "e0f3ea5b170ecd9476c70dbc24c712266f014727b43fb8a377a546eed5c7ab62"
+  }
+}

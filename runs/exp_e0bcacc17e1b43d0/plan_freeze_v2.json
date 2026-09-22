@@ -1,0 +1,9 @@
+{
+  "plan": "CORRECTION_PLAN_v2.md",
+  "sha256": "15a5db0df04c266e17d254f8ec681b0bbf2bb54cf7e1ef02f319ac82b34e1320",
+  "frozen_before_future_scoring": true,
+  "frozen_day0_parameters_present_at_freeze": false,
+  "future_logits_present_at_freeze": false,
+  "source_only_preflight_unsupported_classes": [4, 8, 23, 43],
+  "host_authorized_amendment": true
+}

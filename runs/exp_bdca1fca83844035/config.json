@@ -1,0 +1,20 @@
+{
+  "id": "exp_bdca1fca83844035",
+  "status": "completed",
+  "dataset_root": "/mnt/data2/ren/datasets/TemporalDrift",
+  "files": ["train.npz", "day14.npz", "day30.npz", "day90.npz", "day150.npz", "day270.npz"],
+  "source_split": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json",
+  "observation_length": 5000,
+  "direction_transform": "sign",
+  "burst_definition": "maximal run of equal nonzero direction in the common observed packet prefix",
+  "analysis_seed": 20260918,
+  "day0_resamples": 200,
+  "packet_windows": 10,
+  "burst_order_bins": 10,
+  "sensitivity_burst_order_bins": [5, 20],
+  "equal_budget_sensitivity_length": 500,
+  "training_runs": 0,
+  "gpu_allowed": false,
+  "verdict": "SUPPORTS_FOLLOWUP",
+  "future_labels_use": "descriptive same-site/different-site statistics only; never fit weights, selectors, thresholds, or deployable rules"
+}

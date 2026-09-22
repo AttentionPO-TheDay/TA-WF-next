@@ -1,0 +1,15 @@
+{
+  "id": "exp_9121b664a1854097",
+  "status": "completed",
+  "protocol_source": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc",
+  "split": {
+    "path": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json",
+    "sha256": "0f322e9a418f0e96eff3e3d7ceca7237219f2ea6cb910c061fdd7f8025f3f142",
+    "schema_version": 3
+  },
+  "dataset_root": "/mnt/data2/ren/datasets/TemporalDrift",
+  "models": ["df", "varcnn_direction"],
+  "training": {"seed": 6238, "epochs": 30, "batch_size": 64, "learning_rate": 0.001, "weight_decay": 0.0001, "selection": "maximum source_validation macro_f1; earliest epoch on exact tie", "maximum_new_training_runs": 2},
+  "evaluation": {"revision": 4, "methods": ["A", "B", "C", "D", "E"], "dates": ["source_holdout", "day14", "day30", "day90", "day150", "day270"], "query_labels_available_to_inference": false, "future_labels_use": "scoring_and_post_hoc_diagnostics_only"},
+  "output_root": "/home/rbf/TA-WF-next/runs/exp_9121b664a1854097"
+}

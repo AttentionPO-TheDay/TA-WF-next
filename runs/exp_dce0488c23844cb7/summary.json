@@ -1,0 +1,45 @@
+{
+  "experiment_id": "exp_dce0488c23844cb7",
+  "status": "completed",
+  "decision": "STOP_NO_USABLE_INTERFERENCE",
+  "evidence_role": "TemporalDrift development evidence",
+  "first_gate_passed": false,
+  "gates": {
+    "self_usable": true,
+    "cross_damage": false,
+    "mixed_cancellation": false,
+    "exceeds_random": true,
+    "magnitude_not_simple": true
+  },
+  "oracle_directed_groups": 102,
+  "random_control_repeats": 5,
+  "evaluation_samples": 22071,
+  "oracle": {
+    "self_accuracy_delta_mean": 0.01297029311170706,
+    "self_true_probability_delta_mean": 0.014057288221920317,
+    "self_positive_rate": 0.7058823529411765,
+    "cross_accuracy_delta_mean": -0.0025004551647673343,
+    "cross_true_probability_delta_mean": -0.0018470024716211186,
+    "cross_negative_rate": 0.4019607843137255,
+    "mixed_accuracy_delta_mean": 0.005779197215403985,
+    "mixed_cancellation_rate_among_positive_self": 0.4444444444444444,
+    "interference_contrast_mean": 0.015470748276474393,
+    "self_positive_cross_negative_rate": 0.30392156862745096
+  },
+  "aggregate": {
+    "baseline": {"accuracy": 0.6414299306782656, "macro_f1": 0.6178027181802783, "true_probability": 0.5981931090354919},
+    "self": {"accuracy": 0.6543428027728694, "macro_f1": 0.6303482452314635, "true_probability": 0.6121813058853149},
+    "cross": {"accuracy": 0.6389379729056227, "macro_f1": 0.6155437563966252, "true_probability": 0.596355676651001},
+    "mixed": {"accuracy": 0.6471387793937746, "macro_f1": 0.6235096163160352, "true_probability": 0.6048749089241028}
+  },
+  "permissions": {
+    "training_runs": 0,
+    "backbone_modifications": 0,
+    "checkpoint_outputs": 0,
+    "temporary_tta_updates_final_run": 918,
+    "temporary_tta_updates_total_including_schema_rerun": 1836,
+    "external_test_access": false,
+    "stage2_executed": false,
+    "burst_used": false
+  }
+}

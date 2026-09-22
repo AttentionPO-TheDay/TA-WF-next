@@ -1,0 +1,27 @@
+{
+  "id": "exp_dce0488c23844cb7",
+  "status": "frozen",
+  "evidence_role": "TemporalDrift development evidence",
+  "date": "day90",
+  "dataset": "/mnt/data2/ren/datasets/TemporalDrift/day90.npz",
+  "checkpoint": "/home/rbf/TA-WF/outputs/df_source_tent_seed3407_pilot-20260905-194436/best.pt",
+  "checkpoint_seed": 3407,
+  "input": "raw signed relative timestamps, float32, first 5000",
+  "split_seed": 20260919,
+  "adaptation_per_oracle_group": 64,
+  "mixed_per_oracle_group": 32,
+  "pairs": "(0,1),(2,3),...,(100,101)",
+  "random_control_seeds": [20260920, 20260921, 20260922, 20260923, 20260924],
+  "tta": {
+    "parameters": "all BatchNorm affine gamma/beta",
+    "source_bn_statistics": true,
+    "learning_rate": 0.005,
+    "steps": 5,
+    "confidence_threshold": 0.5,
+    "accept_if_support_entropy_nonincreasing": true,
+    "episodic_reset": true
+  },
+  "external_test": false,
+  "new_training_runs": 0,
+  "new_checkpoints": 0
+}

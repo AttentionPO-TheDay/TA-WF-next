@@ -1,0 +1,76 @@
+{
+  "experiment_id": "exp_dce0488c23844cb7",
+  "evidence_role": "TemporalDrift development evidence",
+  "checkpoint_sha256": "27491ed4f488f517cea31a5b50f661e9d90f843ae5a43d0509688de19e6913f4",
+  "dataset_sha256": "eaa25c23657f22509ab3ac9018a63a12736fab007db45cfa2ea05cbb6c0b25a6",
+  "device": "cuda",
+  "static_logits_first64_sha256": "220c1647cf2db86c2314935ac45e73663dbfceae2f75849eb627c15bf96d75f0",
+  "oracle_directed_groups": 102,
+  "random_repeats_completed": 5,
+  "first_gate": {
+    "self_usable": true,
+    "cross_damage": false,
+    "mixed_cancellation": false,
+    "exceeds_random": true,
+    "magnitude_not_simple": true
+  },
+  "first_gate_passed": false,
+  "decision": "STOP_NO_USABLE_INTERFERENCE",
+  "oracle_summary": {
+    "self_accuracy_mean": 0.01297029311170706,
+    "self_true_probability_mean": 0.014057288221920317,
+    "self_positive_rate": 0.7058823529411765,
+    "cross_accuracy_mean": -0.0025004551647673343,
+    "cross_true_probability_mean": -0.0018470024716211186,
+    "cross_negative_rate": 0.4019607843137255,
+    "mixed_accuracy_mean": 0.005779197215403985,
+    "interference_contrast_mean": 0.015470748276474393,
+    "self_positive_cross_negative_rate": 0.30392156862745096
+  },
+  "random_summaries": [
+    {
+      "repeat": 1,
+      "contrast_mean": -0.0006356048961755786,
+      "direction_rate": 0.0
+    },
+    {
+      "repeat": 2,
+      "contrast_mean": 5.611480839752466e-05,
+      "direction_rate": 0.049019607843137254
+    },
+    {
+      "repeat": 3,
+      "contrast_mean": -0.0004968840669220975,
+      "direction_rate": 0.06862745098039216
+    },
+    {
+      "repeat": 4,
+      "contrast_mean": -0.0007326602469652423,
+      "direction_rate": 0.029411764705882353
+    },
+    {
+      "repeat": 5,
+      "contrast_mean": -0.0005747855990112734,
+      "direction_rate": 0.0
+    }
+  ],
+  "magnitude_audit": {
+    "effective_medians": [
+      0.8875,
+      0.884375,
+      0.85625
+    ],
+    "relative_delta_medians": [
+      0.0006382454334777541,
+      0.0006168168450074668,
+      0.0005174251665246375
+    ],
+    "relative_delta_median_ratio": 1.2335028807443282,
+    "rho_contrast_effective": 0.025940729690370506,
+    "rho_contrast_relative_delta": 0.2725471545769667
+  },
+  "runtime_seconds": 57.31633138656616,
+  "training_runs": 0,
+  "checkpoint_outputs": 0,
+  "external_test": false
+}
