@@ -1,0 +1,17 @@
+{
+  "id": "20260922T055557Z_cpu_generator_aux_training_68a9328c",
+  "status": "frozen",
+  "gpu": false,
+  "seeds": [1729,3407,2026],
+  "conditions": ["baseline","window_aux","run_aux"],
+  "epochs": 15,
+  "batch_size": 128,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "aux_weight": 0.1,
+  "threads": 4,
+  "wall_seconds": 600,
+  "manifest_source": "20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37",
+  "roles": ["source","valid"],
+  "selection": "valid_macro_f1_earliest_tie"
+}

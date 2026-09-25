@@ -1,0 +1,12 @@
+{
+  "id": "20260923T043131Z_cpu_window_tail_adapter_12d25c24",
+  "status": "frozen",
+  "gpu": false,
+  "threads": 4,
+  "epochs": 15,
+  "batch_size": 128,
+  "training_seeds": [1729, 3407, 2026],
+  "conditions": ["window_full", "window_adapter", "window_tail_neutral"],
+  "selection": "valid macro-F1 only; future days development scoring only",
+  "sampling_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json"
+}

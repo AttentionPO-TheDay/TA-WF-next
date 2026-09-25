@@ -1,0 +1,11 @@
+{
+  "id": "20260925T125021Z_transformer_real_smoke_0b6d2365",
+  "status": "frozen",
+  "status_scope": "source_only_structural_smoke",
+  "dataset": "proteus_temporal/train.npz",
+  "rows": [8800, 15843, 687, 10601],
+  "seed": 6238,
+  "data_access": "source only; no valid/future labels",
+  "training": "one pretrain step, one finetune step, one adapter-only TTA step",
+  "device": "cpu"
+}

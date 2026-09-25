@@ -1,0 +1,21 @@
+{
+  "id": "20260922T111009Z_cpu_exact_increment_control_d4ccdda7",
+  "status": "frozen",
+  "gpu": false,
+  "threads": 3,
+  "wall_seconds": 600,
+  "seeds": [1729, 3407, 2026],
+  "arms": ["bucket_mlp", "fixed_bias", "fixed_bucket", "fixed_exact"],
+  "epochs": 15,
+  "batch_size": 128,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "roles": ["source", "valid"],
+  "source_run": "20260922T060351Z_cpu_token_native_classifier_6463ceb7",
+  "selection": "valid_macro_f1_earliest_tie",
+  "permissions": {"source": "gradient_training", "valid": "selection_and_development_scoring", "future": "closed", "adaptation": false},
+  "observation_budget": 5000,
+  "run_width": 512,
+  "fixed_scale": 0.1,
+  "primary_pair": ["fixed_exact", "fixed_bucket"]
+}

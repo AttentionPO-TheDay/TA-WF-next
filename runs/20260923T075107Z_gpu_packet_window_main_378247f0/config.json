@@ -1,0 +1,17 @@
+{
+  "id": "20260923T075107Z_gpu_packet_window_main_378247f0",
+  "status": "frozen",
+  "device": "cuda:0",
+  "gpu": true,
+  "threads": 4,
+  "epochs": 45,
+  "batch_size": 128,
+  "training_seeds": [1729, 3407, 2026],
+  "conditions": ["packet_only", "window_only", "fusion"],
+  "input_budget": 5000,
+  "window_sizes": [50, 250],
+  "window_rule": "tail-neutral partial window, normalized with full source window statistics",
+  "selection": "earliest maximum valid macro-F1 within 45 epochs, separately per condition and seed",
+  "future_label_use": "TemporalDrift development scoring after selection only",
+  "time_limit_seconds": 1200
+}

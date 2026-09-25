@@ -1,0 +1,19 @@
+{
+  "id": "20260922T015431Z_cpu_tiny_multiview_learning_2a2e1036",
+  "status": "frozen",
+  "seed": 1729,
+  "source_per_class": 20,
+  "valid_per_class": 5,
+  "target_per_class": 20,
+  "observation_budget": 5000,
+  "run_width": 512,
+  "epochs": 15,
+  "cpu_threads": 4,
+  "wall_seconds": 1200,
+  "batch_size": 128,
+  "optimizer": {"name": "AdamW", "lr": 0.001, "weight_decay": 0.0001},
+  "views": ["packet", "windows_50_250", "exact_runs", "coarse_runs"],
+  "selection": "source_valid_macro_f1",
+  "gpu": false,
+  "target_status": "development_exposed_only"
+}

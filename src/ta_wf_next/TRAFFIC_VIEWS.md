@@ -28,6 +28,12 @@
 
 同方向间隔可能跨越中间反向观测，不能称混合序列相邻包间隔。时间信息开启须显式选择且记录，默认关闭；None掩码转换/collator留待模型适配阶段，不能当0直接喂模型。不能把异常计数当已验证漂移检测信号。
 
+## Batch adapter
+
+`batch_views.py` 将单 trace 视角转换为右侧 padding 的 PyTorch batch。所有输出均包含 `mask`、原始 `token_count`、`source_observed_count` 和 `truncated`，观察预算与 token 宽度分开设置。packet/exact/coarse/window 使用独立函数，避免无意联合输入。
+
+exact run 通道为 direction/count/左右观察边界；coarse run 只含 direction、log2 count bin、相邻 bin 差及差值有效位、左右边界，不含 exact count。window 保留 observed_count 和 partial。time/size 的 None 语义尚未冻结，因此 adapter 暂不转换这两个视角。
+
 ## 下一阶段边界
 
-窗口50/250是未调优的工程默认值，不是论文最佳设置。当前只有单trace生成、字段检查与单元测试，没有batch collator、embedding、模型融合或蒸馏。应先冻结视角、预算、选模机会及数据角色，再比较各视角和互补性；不直接堆全部字段并宣称创新或泛化。
+窗口50/250是未调优的工程默认值，不是论文最佳设置。当前已有单trace生成和显式batch adapter，没有embedding、模型融合或蒸馏。应先冻结视角、预算、选模机会及数据角色，再比较各视角和互补性；不直接堆全部字段并宣称创新或泛化。

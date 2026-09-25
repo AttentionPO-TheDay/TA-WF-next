@@ -1,0 +1,19 @@
+{
+  "id": "20260922T022343Z_cpu_run_order_ablation_5c3b1b73",
+  "status": "frozen",
+  "gpu": false,
+  "training_seeds": [1729, 3407, 2026],
+  "sampling_seed": 1729,
+  "permutation_seed_base": 9001,
+  "epochs": 15,
+  "batch_size": 128,
+  "threads": 4,
+  "wall_seconds": 1200,
+  "selection": "source_valid_macro_f1_earliest_tie",
+  "views": ["exact", "coarse"],
+  "conditions": ["ordered", "shuffled"],
+  "run_width": 512,
+  "observation_budget": 5000,
+  "lr": 0.001,
+  "weight_decay": 0.0001
+}

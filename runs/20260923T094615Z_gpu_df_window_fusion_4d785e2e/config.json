@@ -1,0 +1,20 @@
+{
+  "id": "20260923T094615Z_gpu_df_window_fusion_4d785e2e",
+  "status": "frozen",
+  "device": "cuda:0",
+  "gpu": true,
+  "threads": 4,
+  "epochs": 45,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "training_seeds": [1729, 3407, 2026],
+  "conditions": ["df_only", "df_constant", "df_window"],
+  "sampling_run": "20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37",
+  "input_budget": 5000,
+  "window_sizes": [50, 250],
+  "window_rule": "tail-neutral partial window, standardized using full source windows",
+  "selection": "earliest maximum valid macro-F1 within 45 epochs, per condition and seed",
+  "future_label_use": "TemporalDrift development scoring after selection only",
+  "time_limit_seconds": 1800
+}

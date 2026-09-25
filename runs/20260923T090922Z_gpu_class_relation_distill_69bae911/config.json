@@ -1,0 +1,21 @@
+{
+  "id": "20260923T090922Z_gpu_class_relation_distill_69bae911",
+  "status": "frozen",
+  "device": "cuda:0",
+  "gpu": true,
+  "threads": 4,
+  "training_seeds": [1729, 3407, 2026],
+  "conditions": ["ce", "relation_packet", "relation_window"],
+  "student_epochs": 45,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "relation_scale": 10.0,
+  "relation_loss_weight": 0.5,
+  "input_budget": 5000,
+  "sampling_run": "20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37",
+  "teacher_feature_run": "20260923T090023Z_frozen_feature_transfer_probe_18dd81c9",
+  "student_selection": "earliest maximum valid macro-F1",
+  "future_label_use": "TemporalDrift development scoring only after selection",
+  "time_limit_seconds": 1200
+}

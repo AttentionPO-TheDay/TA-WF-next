@@ -1,0 +1,17 @@
+{
+  "id": "20260923T090023Z_frozen_feature_transfer_probe_18dd81c9",
+  "status": "frozen",
+  "device": "cuda:0",
+  "gpu": true,
+  "threads": 4,
+  "seeds": [1729, 3407, 2026],
+  "input_budget": 5000,
+  "window_sizes": [50, 250],
+  "ridge_alpha": 10.0,
+  "feature_standard_deviation_floor": 0.001,
+  "source_run": "20260923T082606Z_gpu_feature_distill_b4f0ceb2",
+  "sampling_run": "20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37",
+  "roles": ["source", "valid"],
+  "label_use": "source fits ridge probes; valid labels score only",
+  "time_limit_seconds": 180
+}

@@ -1,0 +1,19 @@
+{
+  "id": "20260923T122727Z_gpu_varcnn_window_fusion_f65c399f",
+  "status": "frozen",
+  "device": "cuda:0",
+  "gpu": true,
+  "threads": 4,
+  "epochs": 45,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "training_seeds": [1729, 3407, 2026],
+  "conditions": ["varcnn_only", "varcnn_constant", "varcnn_window"],
+  "sampling_run": "20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37",
+  "input_budget": 5000,
+  "window_sizes": [50, 250],
+  "selection": "earliest maximum valid macro-F1 within 45 epochs per condition and seed",
+  "future_label_use": "TemporalDrift development scoring after selection only",
+  "time_limit_seconds": 1800
+}

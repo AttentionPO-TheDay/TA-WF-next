@@ -2,6 +2,11 @@
   "schema_version": 1,
   "data_root": "/mnt/data2/ren/datasets",
   "datasets": {
+    "pcap_unlabeled": {
+      "path": "PCAP",
+      "input": "raw_pcap_or_pcapng",
+      "exposure": "external_unlabeled_pretraining_only; provenance_and_license_pending"
+    },
     "proteus_temporal": {
       "path": "TemporalDrift",
       "input": "signed_packet_timestamp",

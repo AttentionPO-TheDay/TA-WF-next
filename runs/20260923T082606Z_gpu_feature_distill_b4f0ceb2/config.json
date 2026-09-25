@@ -1,0 +1,23 @@
+{
+  "id": "20260923T082606Z_gpu_feature_distill_b4f0ceb2",
+  "status": "frozen",
+  "device": "cuda:0",
+  "gpu": true,
+  "threads": 4,
+  "training_seeds": [1729, 3407, 2026],
+  "student_conditions": ["ce", "align_packet", "align_window"],
+  "teacher_epochs": 45,
+  "student_epochs": 45,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "feature_loss_weight": 0.5,
+  "feature_standard_deviation_floor": 0.001,
+  "input_budget": 5000,
+  "window_sizes": [50, 250],
+  "window_rule": "tail-neutral partial, normalized with full source windows",
+  "teacher_selection": "earliest maximum valid macro-F1",
+  "student_selection": "earliest maximum valid macro-F1",
+  "future_label_use": "TemporalDrift development scoring only after student selection",
+  "time_limit_seconds": 1200
+}

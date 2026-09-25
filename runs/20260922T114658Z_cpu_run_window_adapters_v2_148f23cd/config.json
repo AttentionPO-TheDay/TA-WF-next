@@ -1,0 +1,7 @@
+{
+  "id":"20260922T114658Z_cpu_run_window_adapters_v2_148f23cd","status":"frozen","gpu":false,"threads":3,
+  "seeds":[1729,3407,2026],"epochs":15,"batch_size":128,"lr":0.001,"weight_decay":0.0001,
+  "roles":["source","valid"],"source_run":"20260922T060351Z_cpu_token_native_classifier_6463ceb7","observation_budget":5000,"run_width":512,
+  "selection":"valid_macro_f1_earliest_tie","permissions":{"source":"gradient_training","valid":"selection_and_development_scoring","future":"closed","adaptation":false},
+  "arms":["run_pair","window_pair","fusion","fusion_shared","fusion_specific"]
+}

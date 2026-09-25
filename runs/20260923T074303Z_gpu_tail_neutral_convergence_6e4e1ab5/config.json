@@ -1,0 +1,17 @@
+{
+  "id": "20260923T074303Z_gpu_tail_neutral_convergence_6e4e1ab5",
+  "status": "frozen",
+  "device": "cuda:0",
+  "gpu": true,
+  "threads": 4,
+  "epochs": 45,
+  "batch_size": 128,
+  "training_seeds": [1729, 3407, 2026],
+  "conditions": ["full", "tail_neutral"],
+  "input_budget": 5000,
+  "window_sizes": [50, 250],
+  "standardization": "shared full-source mean/std",
+  "selection": "earliest maximum valid macro-F1 over epochs 1-45",
+  "future_label_use": "TemporalDrift development scoring only; no gradient or checkpoint selection",
+  "time_limit_seconds": 900
+}

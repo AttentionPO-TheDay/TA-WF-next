@@ -1,0 +1,12 @@
+{
+  "id": "20260923T045507Z_cpu_tail_neutral_matched_564216a8",
+  "status": "frozen",
+  "gpu": false,
+  "threads": 4,
+  "epochs": 15,
+  "batch_size": 128,
+  "training_seeds": [1729, 3407, 2026],
+  "conditions": ["window_full", "window_tail_neutral"],
+  "standardization": "full source statistics shared by both conditions",
+  "selection": "valid macro-F1 only; future days development scoring only"
+}

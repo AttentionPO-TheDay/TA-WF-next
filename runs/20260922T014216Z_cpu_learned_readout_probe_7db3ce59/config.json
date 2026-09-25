@@ -1,0 +1,14 @@
+{
+  "id": "20260922T014216Z_cpu_learned_readout_probe_7db3ce59",
+  "status": "frozen",
+  "seed": 1729,
+  "source_per_class": 20,
+  "valid_per_class": 5,
+  "target_per_class": 20,
+  "views": ["packet_direction", "direction_windows"],
+  "classifier": {"kind": "SGDClassifier", "loss": "log_loss", "alpha": 0.0001, "max_iter": 50, "tol": 0.001},
+  "selection": "none",
+  "gpu": false,
+  "neural_training": false,
+  "target_status": "development_exposed_only"
+}

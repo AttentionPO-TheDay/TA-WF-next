@@ -1,0 +1,11 @@
+{
+  "id": "20260925T124119Z_transformer_generator_prototype_ea2ff5b2",
+  "status": "frozen",
+  "scope": "synthetic_cpu_structure_only",
+  "data_access": "none",
+  "views": ["packet_direction", "exact_runs", "direction_windows"],
+  "pretrain_target": "same_raw_span_masked_cross_view_reconstruction",
+  "tta": "frozen_teacher_confident_kl_plus_view_consistency_adapter_only",
+  "tests": "tests/test_transformer_proto.py",
+  "budget": "CPU only; no real-data training"
+}

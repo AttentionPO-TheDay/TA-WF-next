@@ -1,0 +1,23 @@
+{
+  "id": "20260925T121122Z_pcap_ssl_three_way_c275715d",
+  "status": "frozen",
+  "devices": ["cuda:0", "cuda:1", "cuda:2"],
+  "gpu": true,
+  "threads": 4,
+  "pcap_root": "/mnt/data2/ren/datasets/PCAP",
+  "pcap_packet_cap": 30000,
+  "max_pcap_files": 140,
+  "max_external_sequences": 512,
+  "input_budget": 5000,
+  "window_sizes": [50, 250],
+  "few_shot_per_class": 5,
+  "pretrain_epochs": 8,
+  "finetune_epochs": 20,
+  "training_seeds": [1729, 3407, 2026],
+  "conditions": ["scratch_fusion", "pcap_packet_pretrain", "pcap_window_pretrain"],
+  "batch_size": 64,
+  "pretrain_mask_probability": 0.15,
+  "selection": "earliest maximum official TemporalDrift valid macro-F1 per condition and seed",
+  "future_label_use": "development scoring after valid selection only",
+  "time_limit_seconds": 900
+}

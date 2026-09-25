@@ -1,0 +1,12 @@
+{
+  "id": "20260922T064229Z_cpu_token_branch_diagnostic_aa17da3e",
+  "status": "frozen",
+  "source_run": "20260922T062732Z_cpu_token_typed_encoding_df081d9e",
+  "seeds": [1729, 3407, 2026],
+  "roles": ["source", "valid"],
+  "interventions": ["full", "off", "bias_only"],
+  "threads": 1,
+  "gpu": false,
+  "wall_seconds": 180,
+  "permissions": {"source": "diagnostic_scoring_only", "valid": "diagnostic_scoring_only", "future": "closed", "WTT": "closed", "AWF": "closed", "training": false, "adaptation": false, "selection": false}
+}

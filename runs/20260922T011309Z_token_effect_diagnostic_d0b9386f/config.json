@@ -1,0 +1,14 @@
+{
+  "id": "20260922T011309Z_token_effect_diagnostic_d0b9386f",
+  "status": "frozen_cpu_probe",
+  "seed": 1729,
+  "budget": 5000,
+  "source_per_class": 20,
+  "valid_per_class": 5,
+  "target_per_class_cap": 20,
+  "target_development": ["NetworkDrift/JP.npz", "BehaviorDrift/subpage.npz"],
+  "selection": "none",
+  "readout": "source-standardized cosine nearest class centroid",
+  "gpu": false,
+  "neural_training": false
+}

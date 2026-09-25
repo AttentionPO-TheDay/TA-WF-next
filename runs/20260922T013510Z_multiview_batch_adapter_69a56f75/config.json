@@ -1,0 +1,11 @@
+{
+  "id": "20260922T013510Z_multiview_batch_adapter_69a56f75",
+  "status": "frozen",
+  "real_data": false,
+  "labels": "none",
+  "training": false,
+  "gpu": false,
+  "views": ["packet_direction", "exact_runs", "coarse_runs", "direction_windows"],
+  "timing_and_size": "deferred",
+  "selection": "none"
+}

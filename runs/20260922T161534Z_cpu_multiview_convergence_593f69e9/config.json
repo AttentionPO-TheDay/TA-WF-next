@@ -1,0 +1,11 @@
+{
+  "id": "20260922T161534Z_cpu_multiview_convergence_593f69e9",
+  "status": "frozen",
+  "gpu": false,"threads":3,"wall_seconds":1200,
+  "seeds":[1729,3407,2026],"epochs":45,"batch_size":128,"lr":0.001,"weight_decay":0.0001,
+  "roles":["source","valid"],"source_run":"20260922T060351Z_cpu_token_native_classifier_6463ceb7",
+  "selection":"valid_macro_f1_earliest_tie",
+  "permissions":{"source":"gradient_training","valid":"selection_and_development_scoring","future":"closed","adaptation":false},
+  "arms":["run_pair","window_pair","fusion","fusion_shared","fusion_specific"],
+  "budget_checkpoints":[15,30,45]
+}

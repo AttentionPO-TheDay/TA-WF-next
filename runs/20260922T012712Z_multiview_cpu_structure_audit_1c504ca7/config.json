@@ -1,0 +1,16 @@
+{
+  "id": "20260922T012712Z_multiview_cpu_structure_audit_1c504ca7",
+  "status": "frozen",
+  "dataset": "TemporalDrift",
+  "files": ["train.npz", "valid.npz", "JP.npz", "../BehaviorDrift/subpage.npz"],
+  "input": "signed_packet_timestamp_X_only_first_5000",
+  "labels": "not_loaded",
+  "gpu": false,
+  "training": false,
+  "packet_budgets": [256, 512, 1000, 2500, 5000],
+  "run_token_budgets": [64, 128, 256, 512, 1024],
+  "run_position_probes": [32, 64, 128, 256, 512],
+  "window_sizes": [50, 250],
+  "seed": null,
+  "selection": "none"
+}

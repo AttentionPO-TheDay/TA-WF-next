@@ -1,0 +1,23 @@
+{
+  "id": "20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37",
+  "status": "frozen",
+  "revision": 2,
+  "gpu": false,
+  "sampling_seed": 1729,
+  "source_rule": "exclude all direction hashes in official valid; retain minimum source row per remaining direction hash; then 20 per class",
+  "training_seeds": [1729, 3407, 2026],
+  "epochs": 15,
+  "batch_size": 128,
+  "threads": 4,
+  "wall_seconds": 1200,
+  "observation_budget": 5000,
+  "run_width": 512,
+  "source_per_class": 20,
+  "valid_per_class": 5,
+  "future_per_class_cap": 20,
+  "views": ["packet", "windows", "exact", "coarse"],
+  "future_dates": [14, 30, 90, 150, 270],
+  "selection": "source_valid_macro_f1_earliest_tie",
+  "lr": 0.001,
+  "weight_decay": 0.0001
+}
