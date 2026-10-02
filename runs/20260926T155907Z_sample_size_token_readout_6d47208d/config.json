@@ -1,0 +1,108 @@
+{
+  "id": "20260926T155907Z_sample_size_token_readout_6d47208d",
+  "status": "frozen",
+  "device": "cpu",
+  "gpu_access": false,
+  "future_access": false,
+  "dataset": "proteus_temporal",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "prior_prepared": "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/artifacts/prepared.pt",
+  "prior_prepared_sha256": "31f9cb3f1c38d8430f20df0a0f855a512dbd25c312f28d3a7d58fb556edb5c53",
+  "prior_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json",
+  "prior_manifest_sha256": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "sampling_seed": 20260927,
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "batch_size": 64,
+  "blocks": 100,
+  "steps_per_block": 32,
+  "optimizer_steps": 3200,
+  "eval_every_blocks": 5,
+  "selection": "earliest maximum valid Macro-F1 at steps160,320,...,3200",
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "generator_anchor_lambda": 0.0,
+  "conditions": [
+    {
+      "id": "A_20_cls",
+      "per_class": 20,
+      "readout": "cls"
+    },
+    {
+      "id": "B_20_mean",
+      "per_class": 20,
+      "readout": "masked_mean"
+    },
+    {
+      "id": "C_80_cls",
+      "per_class": 80,
+      "readout": "cls"
+    },
+    {
+      "id": "D_80_mean",
+      "per_class": 80,
+      "readout": "masked_mean"
+    }
+  ],
+  "source_label_use": "source labels only for supervised CE and diagnostics",
+  "valid_label_use": "fixed510 earliest-best selection and development evaluation only; no gradients",
+  "full_valid_input_use": "X-only direction duplicate exclusion, no extra scoring or training",
+  "input_rule": "sign(float32(first5000 signed timestamps)); same packet/run/window extraction as prior",
+  "selection_rule": "small source indices unchanged, subset of expanded; remove all full-valid overlaps, invalid suffix padding and conflicting-label direction groups; deduplicate retaining small rows then increasing raw index; choose60 extras per class using fixed sampling seed",
+  "resource": {
+    "workers": 6,
+    "threads_per_worker": 2,
+    "job_seconds": 5400,
+    "job_grace_seconds": 180,
+    "pipeline_seconds": 11400,
+    "verify_seconds": 600,
+    "rss_gib_per_worker": 4,
+    "total_rss_gib": 24
+  },
+  "gate": {
+    "mean_f1_delta_min_pp": 1.0,
+    "positive_seeds": 3,
+    "mean_accuracy_delta_min_pp": 0.0
+  },
+  "comparisons": [
+    [
+      "B_20_mean",
+      "A_20_cls"
+    ],
+    [
+      "C_80_cls",
+      "A_20_cls"
+    ],
+    [
+      "D_80_mean",
+      "C_80_cls"
+    ],
+    [
+      "D_80_mean",
+      "B_20_mean"
+    ],
+    [
+      "D_80_mean",
+      "A_20_cls"
+    ]
+  ],
+  "sampling_comparison_limit": "one nested subset draw; model seeds do not replicate training-set sampling; no new independent validation",
+  "training_comparison_limit": "same full batches, optimizer steps and eval opportunities; approx100.39/25.10 data passes, not equal epochs; measured runtime may differ by readout",
+  "user_scope": "execute four-condition CPU parallel experiment; no continuous assistant polling after startup",
+  "frozen_utc": "2026-09-26T16:07:17.163615+00:00",
+  "prepared_sha256": "7d6aee4613247c7e98cb544332f09224098a9191ffe37415f1c33f8823893734",
+  "manifest_sha256": "ea10639b62b5b6346820cffd46765620f4245dcdd51f7a03f2c7d99810117850",
+  "source_counts": {
+    "20": 2040,
+    "80": 8160
+  },
+  "valid_count": 510
+}

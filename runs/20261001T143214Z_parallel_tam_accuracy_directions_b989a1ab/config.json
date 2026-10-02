@@ -1,0 +1,285 @@
+{
+  "id": "20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab",
+  "status": "frozen",
+  "method_version": "tam_parallel_single_factor_v1",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "dataset": "TemporalDrift",
+  "dataset_config": "configs/datasets.json",
+  "prepared_input": "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/artifacts/prepared.pt",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "source_rows": 15300,
+  "valid_rows": 510,
+  "source_per_class": 150,
+  "valid_per_class": 5,
+  "num_classes": 102,
+  "permissions": {
+    "source_labels": "classification_gradient_and_metrics",
+    "valid_labels": "predeclared_checkpoint_selection_and_metrics_only",
+    "valid_gradient": false,
+    "adaptation": false,
+    "external_datasets": false,
+    "query_adaptation": false,
+    "pretrained_checkpoint": false,
+    "historical_checkpoint": "only explicit baseline source/valid reproduction audit; no warm start, teacher or distillation"
+  },
+  "input": {
+    "signed_timestamps": 5000,
+    "timestamp_scaling": "clamp(abs(t),80)/80",
+    "tam_shape": [
+      2,
+      1800
+    ],
+    "tam_scale": "log1p",
+    "stored_order": true,
+    "packet_tokens": 100,
+    "time_tokens": 120,
+    "packet_features": 100,
+    "time_features": 110,
+    "fixed_summary_features": [
+      20,
+      30
+    ],
+    "learned_added_features": 80,
+    "augmentation": "none",
+    "sorting": false,
+    "cross_direction_differences": false
+  },
+  "model": {
+    "d_model": 128,
+    "layers": 2,
+    "heads": 4,
+    "transformer_ff": 256,
+    "mlp_ff": 512,
+    "dropout": 0.1,
+    "generator_channels": 16,
+    "generator_kernel": 5,
+    "generator_layers": 2,
+    "readout": "per_view_masked_mean_concat",
+    "classification_input_projections": "classifier_parameters",
+    "attention_slots": 220,
+    "disabled_view": "all corresponding tokens masked; readout half zero; inactive branch parameters frozen"
+  },
+  "batch_size": 64,
+  "eval_batch_size": 64,
+  "optimizer_steps": 12800,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "lr_schedule": [
+    [
+      1,
+      6400,
+      0.001
+    ],
+    [
+      6401,
+      9600,
+      0.0003
+    ],
+    [
+      9601,
+      12800,
+      0.0001
+    ]
+  ],
+  "eval_steps": [
+    3680,
+    4160,
+    4640,
+    5120,
+    5600,
+    6080,
+    6560,
+    7040,
+    7520,
+    8000,
+    8480,
+    8960,
+    9440,
+    9920,
+    10400,
+    10880,
+    11360,
+    11840,
+    12320,
+    12800
+  ],
+  "checkpoint_selection": "maximum_valid_accuracy_earliest_strict_improvement",
+  "early_stop": false,
+  "precision": "float32_no_amp_no_tf32",
+  "deterministic": true,
+  "physical_gpu": 0,
+  "pipeline_seconds": 36000,
+  "historical_references": {
+    "rf": {
+      "run": "20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b",
+      "accuracy": 0.8594771241830066,
+      "role": "historical_performance_reference_only"
+    },
+    "direction_cnn_mlp_mask": {
+      "run": "20261001T053149Z_gpu_source_size_span_mask_812f0250",
+      "accuracy": 0.7398692810457516,
+      "role": "historical_performance_reference_only"
+    }
+  },
+  "environment": {
+    "python": "/home/rbf/TA-WF/.venv/bin/python",
+    "torch": "2.12.1+cu130",
+    "old_code_imports": false
+  },
+  "view_rules": {
+    "all_conditions": "TAM-only, direction-conditioned counts; packet masked, raw timestamp values cannot affect logits"
+  },
+  "gpu_conditions": [
+    "scale_concat",
+    "attention_readout",
+    "relative_time",
+    "span_mask",
+    "supcon",
+    "cosine_lr"
+  ],
+  "cpu_conditions": [
+    "cpu_baseline",
+    "cpu_temporal_cnn"
+  ],
+  "conditions": [
+    "scale_concat",
+    "attention_readout",
+    "relative_time",
+    "span_mask",
+    "supcon",
+    "cosine_lr",
+    "cpu_baseline",
+    "cpu_temporal_cnn"
+  ],
+  "historical_run": "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde",
+  "historical_condition": "d2_w16",
+  "max_gpu_parallel": 3,
+  "max_cpu_parallel": 2,
+  "gpu_threads": 2,
+  "cpu_threads": 4,
+  "gpu_job_seconds": 3600,
+  "cpu_job_seconds": 10800,
+  "decision_gate": {
+    "accuracy_gain": 0.01,
+    "positive_seed_count": 3,
+    "mean_macro_f1_no_decline": true,
+    "absolute_accuracy": 0.9
+  },
+  "variant_rules": {
+    "scale_concat": "concatenate three 16-channel scale maps and learn 48->16 kernel1 projection; initial blockwise I/3, bias0; unchanged token110 interface",
+    "attention_readout": "time-token dot-query softmax readout, query128 initial0 so initial mean; no extra view information",
+    "relative_time": "reconstruct counts from first5000 signed timestamps; each observed abs timestamp / per-trace max(abs) *1799, floor and cap1799; direction retained, padding omitted; empty all0; no sorting/gaps; only this input changes",
+    "span_mask": "source-only p0.5 independently each trace; zero both TAM directions in one shared contiguous 90-bin interval with uniform start0..1710; no masking during source/valid evaluation",
+    "supcon": "CE +0.05 supervised contrastive loss on L2-normalized 128-dimensional temporal readout; tau0.1; same-label positives in same fixed batch excluding self; anchors with no positives excluded; no extra sampling/views/labels",
+    "cosine_lr": "replace only LR schedule with .0001+.5*(.001-.0001)*(1+cos(pi*(step-1)/12799)); same optimizer/steps",
+    "cpu_baseline": "same baseline architecture and recipe, trained from scratch on CPU to control device numerical effects",
+    "cpu_temporal_cnn": "two temporal residual blocks, each LayerNorm128 and kernel3 Conv128->128/GELU/dropout.1/Conv128->128/dropout.1; same time projection/position/generator/mean readout; compare CPU baseline"
+  },
+  "parameter_counts": {
+    "scale_concat": {
+      "total": 350790,
+      "trainable": 323510,
+      "generator_total": 3808,
+      "generator_trainable": 2256
+    },
+    "attention_readout": {
+      "total": 350134,
+      "trainable": 322854,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "relative_time": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "span_mask": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "supcon": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "cosine_lr": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "cpu_baseline": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "cpu_temporal_cnn": {
+      "total": 282678,
+      "trainable": 255398,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    }
+  },
+  "candidate_hyperparameters": {
+    "scale_concat": {
+      "scale_count": 3,
+      "kernel": 1,
+      "input_channels": 48,
+      "output_channels": 16,
+      "initial_weight_blocks": "I/3"
+    },
+    "attention_readout": {
+      "query_dim": 128,
+      "initial_query": 0,
+      "score_divisor": "sqrt128"
+    },
+    "relative_time": {
+      "denominator": "own trace maximum abs observed timestamp",
+      "bins": 1800,
+      "preserve_direction": true
+    },
+    "span_mask": {
+      "probability": 0.5,
+      "span_bins": 90,
+      "start_min": 0,
+      "start_max_inclusive": 1710,
+      "joint_direction_mask": true,
+      "source_train_only": true
+    },
+    "supcon": {
+      "weight": 0.05,
+      "temperature": 0.1,
+      "feature_dim": 128,
+      "same_batch_positive_only": true,
+      "exclude_no_positive_anchors": true
+    },
+    "cosine_lr": {
+      "start": 0.001,
+      "end": 0.0001,
+      "steps": 12800
+    },
+    "cpu_temporal_cnn": {
+      "blocks": 2,
+      "convolutions_per_block": 2,
+      "channels": 128,
+      "kernel": 3,
+      "dropout": 0.1
+    }
+  }
+}

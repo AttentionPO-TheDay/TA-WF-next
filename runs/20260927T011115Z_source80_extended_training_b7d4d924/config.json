@@ -1,0 +1,150 @@
+{
+  "id": "20260927T011115Z_source80_extended_training_b7d4d924",
+  "status": "frozen",
+  "device": "cpu",
+  "gpu_access": false,
+  "future_access": false,
+  "dataset": "proteus_temporal",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "prior_prepared": "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/artifacts/prepared.pt",
+  "prior_prepared_sha256": "31f9cb3f1c38d8430f20df0a0f855a512dbd25c312f28d3a7d58fb556edb5c53",
+  "prior_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json",
+  "prior_manifest_sha256": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "sampling_seed": 20260927,
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "batch_size": 64,
+  "blocks": 400,
+  "steps_per_block": 32,
+  "optimizer_steps": 12800,
+  "eval_every_blocks": 15,
+  "selection": "earliest maximum valid Macro-F1 among NEW phase steps 3680,4160,...,12800 (20 opportunities); historical best reported separately",
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "generator_anchor_lambda": 0.0,
+  "conditions": [
+    {
+      "id": "C_80_cls",
+      "per_class": 80,
+      "readout": "cls"
+    },
+    {
+      "id": "D_80_mean",
+      "per_class": 80,
+      "readout": "masked_mean"
+    }
+  ],
+  "source_label_use": "same8160 source CE; existing source20 common subset diagnostics",
+  "valid_label_use": "fixed510 earliest-best selection and development evaluation only; no gradients",
+  "full_valid_input_use": "X-only direction duplicate exclusion, no extra scoring or training",
+  "input_rule": "sign(float32(first5000 signed timestamps)); same packet/run/window extraction as prior",
+  "selection_rule": "small source indices unchanged, subset of expanded; remove all full-valid overlaps, invalid suffix padding and conflicting-label direction groups; deduplicate retaining small rows then increasing raw index; choose60 extras per class using fixed sampling seed",
+  "resource": {
+    "workers": 6,
+    "threads_per_worker": 2,
+    "job_seconds": 10800,
+    "job_grace_seconds": 180,
+    "pipeline_seconds": 12000,
+    "verify_seconds": 600,
+    "rss_gib_per_worker": 4,
+    "total_rss_gib": 24
+  },
+  "gate": {
+    "mean_f1_delta_min_pp": 1.0,
+    "positive_seeds": 3,
+    "mean_accuracy_delta_min_pp": 0.0
+  },
+  "comparisons": [
+    [
+      "D_80_mean",
+      "C_80_cls"
+    ]
+  ],
+  "sampling_comparison_limit": "one nested subset draw; model seeds do not replicate training-set sampling; no new independent validation",
+  "training_comparison_limit": "9600 additional updates after explicit3200-step resume; schedule plus duration intervention, not pure step count; old20 and new20 selection opportunities; already observed development valid",
+  "user_scope": "continue six current-project checkpoints to total12800 steps on CPU; startup check only, no continuous assistant polling",
+  "prepared_sha256": "7d6aee4613247c7e98cb544332f09224098a9191ffe37415f1c33f8823893734",
+  "manifest_sha256": "ea10639b62b5b6346820cffd46765620f4245dcdd51f7a03f2c7d99810117850",
+  "source_counts": {
+    "20": 2040,
+    "80": 8160
+  },
+  "valid_count": 510,
+  "prior_run": "runs/20260926T155907Z_sample_size_token_readout_6d47208d",
+  "prepared_input": "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/prepared.pt",
+  "sampling_manifest": "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/manifest.json",
+  "resume_step": 3200,
+  "resume_block": 100,
+  "lr_schedule": [
+    {
+      "first_step": 3201,
+      "last_step": 6400,
+      "lr": 0.001
+    },
+    {
+      "first_step": 6401,
+      "last_step": 9600,
+      "lr": 0.0003
+    },
+    {
+      "first_step": 9601,
+      "last_step": 12800,
+      "lr": 0.0001
+    }
+  ],
+  "anchor_sha256": {
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/C_80_cls_21729_latest.pt": "0efd5cf8bd9a775b1dff36c54cdd0f70d7de5903a89dc7c4b3f8be488922434f",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/C_80_cls_21729_best.pt": "5b2b81b870949ab07c9db75c0e1a979ca0860abbfbe40e898b755c5f76c1dffe",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_21729/report.json": "20c99026e9aa5c03dff45856f5d650c2990fedd5d7082f270c007e6413f34d3a",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_21729/history.json": "7a20e4d3a2edcdc88abee088fb9e79b91e94151d97dfb80141d1234e8635106f",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_21729/index_stream.pt": "dfe23362ba6247e9ab85b11cf49cff375530452d3e97747ff4ee7e31e860e77b",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_21729/predictions.npz": "5e712c08d2c4db971033ed3dd240017c7b069c8635bdeb2381b631d9a5a22f9d",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_21729/verification.json": "7e241449e30196299b53baf93bd0054b8346ab51cea9e3276e8c076bb08dc718",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/C_80_cls_23407_latest.pt": "a80ca7864e88083afc90b03372b648deecf7569d2c6b9337b832852c1dbfb15d",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/C_80_cls_23407_best.pt": "92cdb4711bb603b91c47b6ad228a768096966b1131f12ebc21373dce22ee4819",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_23407/report.json": "fe3cfc06c9b9c8dcc2edc4c59161768387aa8d6acde4df73b95120ccac70eaf0",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_23407/history.json": "262e1ddbf366a26595b69c81a73befa07739cccb26d45cde720933d6ec573f21",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_23407/index_stream.pt": "868e8b1c165c8e52c4b446ed4099493dffa79fbb873a47072042c9dfed8bdeaf",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_23407/predictions.npz": "115ca6cd6551f1ce41cf52b00f2456b7d96fde671f0e70475cb2ae67e41f77dc",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_23407/verification.json": "656730c684eae4aad8fdd416c749a94ff12d607f999a93e3a0e02feb83c835c5",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/C_80_cls_22026_latest.pt": "53100f85b262bbd2489b21b678457cf0dc2518813acbbce71f036fcf13a4e07a",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/C_80_cls_22026_best.pt": "ca34bfe8d9fb4e93fb05f63f5ccf800e12d938dd0aac486bc060c0fd59ee6a7d",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_22026/report.json": "d24e09f79e651d87dac5b6af54a62900155e6959aac2ab4e444500aa3234247e",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_22026/history.json": "00b7f5bef4870f4d6217b23e6f46e0252629d4d06fb3f175aa20714ded137b21",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_22026/index_stream.pt": "f0684ef5c67d9bbee6b0b46bb1f669d383e9cd20332ec6c9d874168732f07521",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_22026/predictions.npz": "b1347e8915064e82ee73bf3e60497196e312c774ef2c7290878424a1f4bcf051",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/C_80_cls_22026/verification.json": "703daadfdba3fcd15d012a3fcaa73b47caee0f9248260d6ed2fc5e2175a19223",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/D_80_mean_21729_latest.pt": "144b8f791e415078739ef0f5d55a4bdd15c249ac29ca0279f08aa169b83aad1b",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/D_80_mean_21729_best.pt": "f48c878eedcb766782107dc629ab06f57b71947031c5bdd1816e9d0f612a4a40",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_21729/report.json": "5f138cd9540f1fa5b907461025bd0d216b754f343900fdc96db366f68d9e8647",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_21729/history.json": "7e626949b973f914d6c1004885cfcfc4b2af0753adb85c5daf30fd41a48b26ff",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_21729/index_stream.pt": "dfe23362ba6247e9ab85b11cf49cff375530452d3e97747ff4ee7e31e860e77b",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_21729/predictions.npz": "8adf610dd2268235c7f72f254657e35c987348c925ebba5e98acc5accba0fbaa",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_21729/verification.json": "986405a33fc2a4cb45c0e4dc1750b7e1bb57a858db8778571f0ca11e1765707f",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/D_80_mean_23407_latest.pt": "71577f42d9fb29658d3efe8f8494a6d4352dd1325d563ebe5dd4059c211ee42e",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/D_80_mean_23407_best.pt": "185aa82eb011f3e44cf0a8b774917c609fb5d3d9cc085669a3e0b7f7da21f117",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_23407/report.json": "248c116281ce71caa8a79d1c6f443942b809aee2f6d898d521d3f42a9156bb10",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_23407/history.json": "6731966c6ea0a7157cc94e0ed8adda543557e557eb447084c21ff7e6209a178e",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_23407/index_stream.pt": "868e8b1c165c8e52c4b446ed4099493dffa79fbb873a47072042c9dfed8bdeaf",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_23407/predictions.npz": "172989faec90fc6c00d23f43c8e0c1b0d7950b8a5fd258f0ad6e7504e682eea3",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_23407/verification.json": "73bd6c4d0bc30ff8e0b8b8ed8a8f1227ff3678576073ee042a54a2fea7fdbc73",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/D_80_mean_22026_latest.pt": "16968427b6cc99b141d728fe482496a50f69f1537ee7179d4477622eea9d870b",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/D_80_mean_22026_best.pt": "2feebd3a7bf79517bb82191727e21d3d95918e5e2c77144293e000ea10d5dfd7",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_22026/report.json": "e7bf95b4473906668c72fb1a94588234bb94a6e79a6c52af195102b08d86b07b",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_22026/history.json": "91f0a3b18179075b23f37fd333c879f4dbc56b945f617b7bdd52beb0059815c3",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_22026/index_stream.pt": "f0684ef5c67d9bbee6b0b46bb1f669d383e9cd20332ec6c9d874168732f07521",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_22026/predictions.npz": "481eedee92144a050050c14d1327b76e96d2b0d863d3c93a22b2ebba347ded46",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/D_80_mean_22026/verification.json": "185d53fb73c1e1262fb78a25544b0dfb254369102ed368bcc77cc0377fe5f16d",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/integrity.json": "04431325317d440ff61d4e77f883aefff94643f2d958da7b83db0344a39df52c",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/input_audit.json": "6fb90c9c1b31ec45e91b3f36eb3529b3f5cfc0e74ac6d0f08a80a39d99e956fd"
+  },
+  "frozen_utc": "2026-09-27T01:17:07.722394+00:00"
+}

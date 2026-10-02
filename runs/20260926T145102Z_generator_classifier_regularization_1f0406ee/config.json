@@ -1,0 +1,200 @@
+{
+  "id": "20260926T145102Z_generator_classifier_regularization_1f0406ee",
+  "status": "frozen",
+  "device": "cpu",
+  "gpu_access": false,
+  "dataset": "proteus_temporal",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "train_label_count": 2040,
+  "valid_label_count": 510,
+  "source_label_use": "classification gradients and train diagnostics",
+  "valid_label_use": "earliest best checkpoint selection and development comparison only; no gradients",
+  "future_access": false,
+  "query_adaptation": "forbidden",
+  "prepared_input": "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/artifacts/prepared.pt",
+  "prepared_input_sha256": "31f9cb3f1c38d8430f20df0a0f855a512dbd25c312f28d3a7d58fb556edb5c53",
+  "sampling_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json",
+  "sampling_manifest_sha256": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "conditions": [
+    {
+      "id": "R00_baseline",
+      "pool": "masked_segment_attention",
+      "generator_trainable": true,
+      "generator_lr": 0.001,
+      "generator_weight_decay": 0.0001,
+      "classifier_dropout": 0.1,
+      "classifier_weight_decay": 0.0001,
+      "anchor_lambda": 0.0,
+      "generator_constraint": false,
+      "classifier_regularization": false
+    },
+    {
+      "id": "R01_classifier_reg",
+      "pool": "masked_segment_attention",
+      "generator_trainable": true,
+      "generator_lr": 0.001,
+      "generator_weight_decay": 0.0001,
+      "classifier_dropout": 0.3,
+      "classifier_weight_decay": 0.01,
+      "anchor_lambda": 0.0,
+      "generator_constraint": false,
+      "classifier_regularization": true
+    },
+    {
+      "id": "R10_generator_anchor",
+      "pool": "masked_segment_attention",
+      "generator_trainable": true,
+      "generator_lr": 0.001,
+      "generator_weight_decay": 0.0001,
+      "classifier_dropout": 0.1,
+      "classifier_weight_decay": 0.0001,
+      "anchor_lambda": 0.01,
+      "generator_constraint": true,
+      "classifier_regularization": false
+    },
+    {
+      "id": "R11_both",
+      "pool": "masked_segment_attention",
+      "generator_trainable": true,
+      "generator_lr": 0.001,
+      "generator_weight_decay": 0.0001,
+      "classifier_dropout": 0.3,
+      "classifier_weight_decay": 0.01,
+      "anchor_lambda": 0.01,
+      "generator_constraint": true,
+      "classifier_regularization": true
+    }
+  ],
+  "seeds": [
+    11729,
+    13407,
+    12026
+  ],
+  "epochs": 100,
+  "batch_size": 64,
+  "eval_every": 5,
+  "selection": "earliest maximum valid macro-F1 among epochs 5,10,...,100",
+  "optimizer": "AdamW",
+  "classifier_lr": 0.001,
+  "classifier_weight_decay": "condition-specific .0001 or .01",
+  "scheduler": "none",
+  "loss": "source cross entropy + lambda/2 * sum_generator_parameters((theta-theta_initial)^2)",
+  "generator_proposal": {
+    "input_channels": [
+      "direction",
+      "observed_mask"
+    ],
+    "packet_budget": 5000,
+    "convs": [
+      {
+        "in_channels": 2,
+        "out_channels": 16,
+        "kernel": 5,
+        "stride": 1,
+        "padding": 2
+      },
+      {
+        "in_channels": 16,
+        "out_channels": 16,
+        "kernel": 5,
+        "stride": 1,
+        "padding": 2
+      }
+    ],
+    "activation": "GELU",
+    "normalization": "none",
+    "dropout": 0.0,
+    "mask_after_each_layer": true,
+    "patch_size": 50,
+    "subbins_per_patch": 5,
+    "subbin_size": 10,
+    "pool_scorer": "shared Linear(16,1,bias=False), zero initialized; exists in all conditions; disabled/frozen in A",
+    "token_features": "5x16 pooled features + original mean/transition + 5 observed fractions",
+    "token_projection": [
+      87,
+      52
+    ],
+    "token_count": 100,
+    "generator_owns_projection": true
+  },
+  "classifier_proposal": {
+    "base": "HierarchicalViewTransformer",
+    "packet_projection": "Identity; generator supplies d52 tokens",
+    "d_model": 52,
+    "nhead": 4,
+    "dim_feedforward": 104,
+    "dropout": "condition-specific .1 or .3; all explicit Dropout and attention dropout",
+    "num_classes": 102,
+    "max_runs": 128,
+    "window_sizes": [
+      50,
+      250
+    ],
+    "run_window_unchanged": true
+  },
+  "resource_proposal": {
+    "concurrent_training_workers": 6,
+    "threads_per_worker": 2,
+    "interop_threads": 1,
+    "max_training_threads": 12,
+    "max_process_rss_gib": 4,
+    "max_total_task_rss_gib": 24,
+    "time_limit_seconds_per_seed": 3600,
+    "supervisor_grace_seconds": 180,
+    "max_pipeline_wall_seconds": 7800,
+    "nominal_max_training_cpu_thread_hours": 24,
+    "max_training_jobs": 12,
+    "retry_new_seeds": false,
+    "benchmark": "same implementation/shapes and 6x2 CPU slots as completed joint run; no expanded capacity; new synthetic boundary checks"
+  },
+  "checkpoint_policy": "atomic latest every epoch: model, optimizer, RNG, history, cumulative runtime; best on valid improvement; no automatic budget extension",
+  "forbidden": [
+    "old project runtime imports",
+    "validation gradients",
+    "future data",
+    "pretraining",
+    "distillation",
+    "TTA",
+    "extra hyperparameter search"
+  ],
+  "diagnostic_source_indices": "first source occurrence of labels 0 through 31",
+  "code_source": "runs/20260926T040212Z_classifier_generator_parallel_946c81c4",
+  "new_training_only": true,
+  "old_checkpoints": false,
+  "comparisons": [
+    {
+      "left": "R01_classifier_reg",
+      "right": "R00_baseline"
+    },
+    {
+      "left": "R10_generator_anchor",
+      "right": "R00_baseline"
+    },
+    {
+      "left": "R11_both",
+      "right": "R00_baseline"
+    },
+    {
+      "left": "R11_both",
+      "right": "R01_classifier_reg"
+    },
+    {
+      "left": "R11_both",
+      "right": "R10_generator_anchor"
+    }
+  ],
+  "mechanism_gate": {
+    "mean_valid_f1_delta_min_pp": 1.0,
+    "positive_seed_count": 3,
+    "mean_valid_accuracy_delta_min_pp": 0.0,
+    "interpretation": "development screening, not significance or unique causal attribution"
+  },
+  "factorial_analysis": "generator main effect=((R10-R00)+(R11-R01))/2; classifier main effect=((R01-R00)+(R11-R10))/2; interaction=R11-R10-R01+R00; each per seed, descriptive",
+  "paired_initialization": "same fresh model state per seed across all four conditions; dropout probability has no learned parameters; same per-epoch sample order; no earlier checkpoints",
+  "user_scope": "user authorized four-condition regularization experiment; keep running in background; do not continually poll after startup",
+  "frozen_utc": "2026-09-26T14:55:28.747316+00:00",
+  "preflight_complete": true
+}

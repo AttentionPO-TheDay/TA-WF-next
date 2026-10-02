@@ -1,0 +1,222 @@
+{
+  "id": "20260926T040212Z_classifier_generator_parallel_946c81c4",
+  "status": "frozen",
+  "execution_status": "authorized_ready_to_start",
+  "device": "cpu",
+  "gpu_access": false,
+  "dataset": "proteus_temporal",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "train_label_count": 2040,
+  "valid_label_count": 510,
+  "source_label_use": "classification gradients and train diagnostics",
+  "valid_label_use": "earliest best checkpoint selection and development comparison only; no gradients",
+  "future_access": false,
+  "query_adaptation": "forbidden",
+  "prepared_input": "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/artifacts/prepared.pt",
+  "prepared_input_sha256": "31f9cb3f1c38d8430f20df0a0f855a512dbd25c312f28d3a7d58fb556edb5c53",
+  "sampling_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json",
+  "sampling_manifest_sha256": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "conditions": [
+    {
+      "id": "A_local_mean_joint",
+      "pool": "masked_segment_mean",
+      "generator_trainable": true,
+      "generator_lr": 0.001,
+      "generator_weight_decay": 0.0001,
+      "question": "local learnable encoding with fixed aggregation"
+    },
+    {
+      "id": "B_local_attention_joint",
+      "pool": "masked_segment_attention",
+      "generator_trainable": true,
+      "generator_lr": 0.001,
+      "generator_weight_decay": 0.0001,
+      "question": "learn token aggregation from classification feedback"
+    },
+    {
+      "id": "C_local_attention_frozen",
+      "pool": "masked_segment_attention",
+      "generator_trainable": false,
+      "generator_lr": null,
+      "generator_weight_decay": null,
+      "question": "feedback ablation; random initialized generator frozen; NOT a strong baseline"
+    },
+    {
+      "id": "D_local_attention_slow",
+      "pool": "masked_segment_attention",
+      "generator_trainable": true,
+      "generator_lr": 0.0003,
+      "generator_weight_decay": 0.0003333333333333334,
+      "question": "slower generator updates with same per-step AdamW decay factor"
+    }
+  ],
+  "seeds": [
+    1729,
+    3407,
+    2026
+  ],
+  "epochs": 100,
+  "batch_size": 64,
+  "eval_every": 5,
+  "selection": "earliest maximum valid macro-F1 among epochs 5,10,...,100",
+  "optimizer": "AdamW",
+  "classifier_lr": 0.001,
+  "classifier_weight_decay": 0.0001,
+  "scheduler": "none",
+  "loss": "source cross entropy only",
+  "generator_proposal": {
+    "input_channels": [
+      "direction",
+      "observed_mask"
+    ],
+    "packet_budget": 5000,
+    "convs": [
+      {
+        "in_channels": 2,
+        "out_channels": 16,
+        "kernel": 5,
+        "stride": 1,
+        "padding": 2
+      },
+      {
+        "in_channels": 16,
+        "out_channels": 16,
+        "kernel": 5,
+        "stride": 1,
+        "padding": 2
+      }
+    ],
+    "activation": "GELU",
+    "normalization": "none",
+    "dropout": 0.0,
+    "mask_after_each_layer": true,
+    "patch_size": 50,
+    "subbins_per_patch": 5,
+    "subbin_size": 10,
+    "pool_scorer": "shared Linear(16,1,bias=False), zero initialized; exists in all conditions; disabled/frozen in A",
+    "token_features": "5x16 pooled features + original mean/transition + 5 observed fractions",
+    "token_projection": [
+      87,
+      52
+    ],
+    "token_count": 100,
+    "generator_owns_projection": true
+  },
+  "classifier_proposal": {
+    "base": "HierarchicalViewTransformer",
+    "packet_projection": "Identity; generator supplies d52 tokens",
+    "d_model": 52,
+    "nhead": 4,
+    "dim_feedforward": 104,
+    "dropout": 0.1,
+    "num_classes": 102,
+    "max_runs": 128,
+    "window_sizes": [
+      50,
+      250
+    ],
+    "run_window_unchanged": true
+  },
+  "paired_initialization": "same state dict by seed for all four conditions; pool scorer zero init ensures same step-zero tokens; no old checkpoint",
+  "comparisons": [
+    {
+      "left": "B_local_attention_joint",
+      "right": "C_local_attention_frozen",
+      "question": "does supervised feedback help?"
+    },
+    {
+      "left": "B_local_attention_joint",
+      "right": "A_local_mean_joint",
+      "question": "does adaptive pooling add value?"
+    },
+    {
+      "left": "D_local_attention_slow",
+      "right": "B_local_attention_joint",
+      "question": "do smaller generator updates improve generalization?"
+    }
+  ],
+  "mechanism_gate": {
+    "mean_valid_f1_delta_min_pp": 1.0,
+    "positive_seed_count": 3,
+    "mean_valid_accuracy_delta_min_pp": 0.0,
+    "interpretation": "development candidate evidence, not significance or confirmation"
+  },
+  "practical_reference": {
+    "run": "20260926T024929Z_cpu_packet_ordered_representation_67b648d4",
+    "summary_valid_accuracy": 0.2647058823529412,
+    "summary_valid_macro_f1": 0.24654986374011445,
+    "ordered_valid_accuracy": 0.18496732026143792,
+    "ordered_valid_macro_f1": 0.17162025087494037,
+    "repeat_training": false,
+    "interpretation": "historical development reference; architecture/active capacity differ"
+  },
+  "resource_proposal": {
+    "concurrent_training_workers": 6,
+    "threads_per_worker": 2,
+    "interop_threads": 1,
+    "max_training_threads": 12,
+    "max_process_rss_gib": 4,
+    "max_total_task_rss_gib": 24,
+    "time_limit_seconds_per_seed": 3600,
+    "supervisor_grace_seconds": 180,
+    "max_pipeline_wall_seconds": 7800,
+    "nominal_max_training_cpu_thread_hours": 24,
+    "max_training_jobs": 12,
+    "retry_new_seeds": false,
+    "benchmark": "synthetic-only, all four conditions; record single-worker and six-worker aggregate throughput; lower concurrency only before freeze, never add epochs or runs",
+    "freeze_decision": "six workers x two threads retained; synthetic median step .364-.440s under six-way load, aggregate13.375 steps/s; no real validation scores inspected"
+  },
+  "checkpoint_policy": "atomic latest every epoch: model, optimizer, RNG, history, cumulative runtime; best on valid improvement; no automatic budget extension",
+  "provenance": {
+    "git_base": "d84ab13678c92fd2feed62f7bb3811374ffb01ce",
+    "user_scope": "User explicitly authorized executing the planned four-condition CPU experiment; 12 seed jobs only."
+  },
+  "freeze_requirements": [
+    "implement trainable generator and explicit freeze boundary",
+    "pass CPU masks/gradient/feedback/frozen-state/init/restart tests",
+    "measure throughput and parameter counts without validation scores",
+    "record final code hashes and budget then set status=frozen"
+  ],
+  "forbidden": [
+    "old project runtime imports",
+    "validation gradients",
+    "future data",
+    "pretraining",
+    "distillation",
+    "TTA",
+    "extra hyperparameter search"
+  ],
+  "frozen_utc": "2026-09-26T04:23:24.464577+00:00",
+  "parameter_counts": {
+    "B_local_attention_joint": {
+      "total": 119578,
+      "trainable": 119578,
+      "generator_total": 6064,
+      "generator_trainable": 6064
+    },
+    "A_local_mean_joint": {
+      "total": 119578,
+      "trainable": 119562,
+      "generator_total": 6064,
+      "generator_trainable": 6048
+    },
+    "D_local_attention_slow": {
+      "total": 119578,
+      "trainable": 119578,
+      "generator_total": 6064,
+      "generator_trainable": 6064
+    },
+    "C_local_attention_frozen": {
+      "total": 119578,
+      "trainable": 113514,
+      "generator_total": 6064,
+      "generator_trainable": 0
+    }
+  },
+  "diagnostic_source_indices": "first source occurrence of labels 0 through 31",
+  "input_audit_sha256": "44109424811c47d5163ee5b56cc2f053e75ce2f3cb13ba657c13257b5b9431b7",
+  "freeze_requirements_completed": true
+}

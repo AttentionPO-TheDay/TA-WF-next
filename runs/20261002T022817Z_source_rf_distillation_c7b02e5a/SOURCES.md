@@ -1,0 +1,3 @@
+# 显式来源
+学生链、worker/supervisor/preflight由 `runs/20261002T013714Z_tam_generator_norm_hierarchy_f3920b88` 显式复制并修改；generator_base为该run flat_none，不复用其新候选。CE产物复制flat_none三seed，report保留origin_run/origin_task，最终来自span_mask历史训练。
+RF代码从 `runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/rf_native.py` 复制；官方 https://github.com/robust-fingerprinting/RF commit b75680148429c5f554114b78a0f846541b39f0ec，RF/models/RF.py sha4cf9ff1a71a3601aeab61756327467add251475fa3bfd9c19eeb43e658effa19。教师checkpoint/源logits同run显式使用。无旧项目代码导入；旧venv只提供依赖。

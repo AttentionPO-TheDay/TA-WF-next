@@ -1,0 +1,199 @@
+{
+  "id": "20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9",
+  "status": "frozen",
+  "method_version": "tam_weight_shared_context_generator_v1",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "dataset": "TemporalDrift",
+  "dataset_config": "configs/datasets.json",
+  "prepared_input": "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/prepared.pt",
+  "conditions": [
+    "context_d9",
+    "multiscale_d139"
+  ],
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "source_rows": 15300,
+  "valid_rows": 510,
+  "source_per_class": 150,
+  "valid_per_class": 5,
+  "num_classes": 102,
+  "permissions": {
+    "source_labels": "classification_gradient_and_metrics",
+    "valid_labels": "predeclared_checkpoint_selection_and_metrics_only",
+    "valid_gradient": false,
+    "adaptation": false,
+    "external_datasets": false,
+    "query_adaptation": false,
+    "pretrained_checkpoint": false,
+    "historical_checkpoint": "explicit TAM-only reproduction audit; all new training from scratch"
+  },
+  "input": {
+    "signed_timestamps": 5000,
+    "timestamp_scaling": "clamp(abs(t),80)/80",
+    "tam_shape": [
+      2,
+      1800
+    ],
+    "tam_scale": "log1p",
+    "stored_order": true,
+    "packet_tokens": 100,
+    "time_tokens": 120,
+    "packet_features": 100,
+    "time_features": 110,
+    "fixed_summary_features": [
+      20,
+      30
+    ],
+    "learned_added_features": 80,
+    "augmentation": "none",
+    "sorting": false,
+    "cross_direction_differences": false
+  },
+  "model": {
+    "d_model": 128,
+    "layers": 2,
+    "heads": 4,
+    "transformer_ff": 256,
+    "mlp_ff": 512,
+    "dropout": 0.1,
+    "generator_channels": 16,
+    "generator_kernel": 5,
+    "generator_layers": 2,
+    "readout": "per_view_masked_mean_concat",
+    "classification_input_projections": "classifier_parameters",
+    "attention_slots": 220,
+    "disabled_view": "all corresponding tokens masked; readout half zero; inactive branch parameters frozen"
+  },
+  "batch_size": 64,
+  "eval_batch_size": 64,
+  "optimizer_steps": 12800,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "lr_schedule": [
+    [
+      1,
+      6400,
+      0.001
+    ],
+    [
+      6401,
+      9600,
+      0.0003
+    ],
+    [
+      9601,
+      12800,
+      0.0001
+    ]
+  ],
+  "eval_steps": [
+    3680,
+    4160,
+    4640,
+    5120,
+    5600,
+    6080,
+    6560,
+    7040,
+    7520,
+    8000,
+    8480,
+    8960,
+    9440,
+    9920,
+    10400,
+    10880,
+    11360,
+    11840,
+    12320,
+    12800
+  ],
+  "checkpoint_selection": "maximum_valid_accuracy_earliest_strict_improvement",
+  "early_stop": false,
+  "precision": "float32_no_amp_no_tf32",
+  "deterministic": true,
+  "cpu_threads_per_task": 2,
+  "physical_gpu": 0,
+  "max_parallel": 2,
+  "job_seconds": 3600,
+  "pipeline_seconds": 14400,
+  "decision_gate": {
+    "accuracy_gain": 0.01,
+    "positive_seed_count": 3,
+    "mean_macro_f1_no_decline": true,
+    "absolute_accuracy": 0.9,
+    "comparisons": [
+      "context_d9 - local_d1",
+      "multiscale_d139 - local_d1",
+      "multiscale_d139 - context_d9"
+    ]
+  },
+  "historical_references": {
+    "rf": {
+      "run": "20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b",
+      "accuracy": 0.8594771241830066,
+      "role": "historical_performance_reference_only"
+    },
+    "direction_cnn_mlp_mask": {
+      "run": "20261001T053149Z_gpu_source_size_span_mask_812f0250",
+      "accuracy": 0.7398692810457516,
+      "role": "historical_performance_reference_only"
+    }
+  },
+  "environment": {
+    "python": "/home/rbf/TA-WF/.venv/bin/python",
+    "torch": "2.12.1+cu130",
+    "old_code_imports": false
+  },
+  "reported_conditions": [
+    "local_d1",
+    "context_d9",
+    "multiscale_d139"
+  ],
+  "historical_run": "runs/20261001T113740Z_gpu_generator_view_ablation_35fd3e98",
+  "historical_condition": "tam_only",
+  "historical_reuse": "three completed tam_only seeds; reload audit only, no warm start",
+  "view_rules": {
+    "all_conditions": "TAM-only, direction-conditioned counts; packet masked, raw timestamp values cannot affect logits"
+  },
+  "encoder_rules": {
+    "local_d1": [
+      1
+    ],
+    "multiscale_d139": [
+      1,
+      3,
+      9
+    ],
+    "conv_channels": 16,
+    "kernel": 5,
+    "layers": 2,
+    "scale_fusion": "arithmetic_mean_of_GELU_second_layer_features",
+    "weights": "shared across scales, initialized exactly as historical generator",
+    "per_scale_receptive_field_bins": [
+      9,
+      25,
+      73
+    ],
+    "tokens": 120,
+    "subbins_per_token": 5,
+    "bins_per_subbin": 3,
+    "fixed_feature_dims": 30,
+    "learned_feature_dims": 80,
+    "additional_parameters": 0,
+    "additional_generator_dropout": 0,
+    "context_d9": [
+      9
+    ]
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "id": "20261002T022817Z_source_rf_distillation_c7b02e5a",
+  "status": "frozen",
+  "method_version": "source_rf_kd_v1",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "dataset": "TemporalDrift",
+  "dataset_config": "configs/datasets.json",
+  "prepared_input": "runs/20261002T022817Z_source_rf_distillation_c7b02e5a/artifacts/prepared.pt",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "source_rows": 15300,
+  "valid_rows": 510,
+  "source_per_class": 150,
+  "valid_per_class": 5,
+  "num_classes": 102,
+  "permissions": {
+    "source_labels": "classification_gradient_and_metrics",
+    "valid_labels": "predeclared_checkpoint_selection_and_metrics_only",
+    "valid_gradient": false,
+    "adaptation": false,
+    "external_datasets": false,
+    "query_adaptation": false,
+    "pretrained_checkpoint": true,
+    "historical_checkpoint": "same-seed RF fixed best teacher, explicitly authorized source-only soft targets; student from scratch"
+  },
+  "input": {
+    "signed_timestamps": 5000,
+    "timestamp_scaling": "clamp(abs(t),80)/80",
+    "tam_shape": [
+      2,
+      1800
+    ],
+    "tam_scale": "log1p in all conditions",
+    "stored_order": true,
+    "packet_tokens": 100,
+    "time_tokens": 120,
+    "packet_features": 100,
+    "time_features": 110,
+    "fixed_summary_features": [
+      20,
+      30
+    ],
+    "learned_added_features": 80,
+    "augmentation": "source-only span mask p0.5, 90 bins, same interval across directions, start uniform0..1710",
+    "sorting": false,
+    "cross_direction_differences": false
+  },
+  "model": {
+    "d_model": 128,
+    "layers": 2,
+    "heads": 4,
+    "transformer_ff": 256,
+    "mlp_ff": 512,
+    "dropout": 0.1,
+    "generator_channels": 16,
+    "generator_kernel": 5,
+    "generator_layers": 2,
+    "readout": "per_view_masked_mean_concat",
+    "classification_input_projections": "classifier_parameters",
+    "attention_slots": 220,
+    "disabled_view": "all corresponding tokens masked; readout half zero; inactive branch parameters frozen"
+  },
+  "batch_size": 64,
+  "eval_batch_size": 64,
+  "optimizer_steps": 12800,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "lr_schedule": [
+    [
+      1,
+      6400,
+      0.001
+    ],
+    [
+      6401,
+      9600,
+      0.0003
+    ],
+    [
+      9601,
+      12800,
+      0.0001
+    ]
+  ],
+  "eval_steps": [
+    3680,
+    4160,
+    4640,
+    5120,
+    5600,
+    6080,
+    6560,
+    7040,
+    7520,
+    8000,
+    8480,
+    8960,
+    9440,
+    9920,
+    10400,
+    10880,
+    11360,
+    11840,
+    12320,
+    12800
+  ],
+  "checkpoint_selection": "maximum_valid_accuracy_earliest_strict_improvement",
+  "early_stop": false,
+  "precision": "float32_no_amp_no_tf32",
+  "deterministic": true,
+  "physical_gpu": 0,
+  "pipeline_seconds": 18000,
+  "historical_references": {
+    "rf": {
+      "run": "20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b",
+      "accuracy": 0.8594771241830066,
+      "role": "historical_performance_reference_only"
+    },
+    "direction_cnn_mlp_mask": {
+      "run": "20261001T053149Z_gpu_source_size_span_mask_812f0250",
+      "accuracy": 0.7398692810457516,
+      "role": "historical_performance_reference_only"
+    }
+  },
+  "environment": {
+    "python": "/home/rbf/TA-WF/.venv/bin/python",
+    "torch": "2.12.1+cu130",
+    "old_code_imports": false
+  },
+  "view_rules": {
+    "all_conditions": "TAM-only, direction-conditioned counts; packet masked, raw timestamp values cannot affect logits"
+  },
+  "gpu_conditions": [
+    "kd_01",
+    "kd_05",
+    "shuffled_05"
+  ],
+  "cpu_conditions": [],
+  "conditions": [
+    "kd_01",
+    "kd_05",
+    "shuffled_05"
+  ],
+  "historical_run": "runs/20261002T013714Z_tam_generator_norm_hierarchy_f3920b88",
+  "historical_condition": "flat_none",
+  "max_gpu_parallel": 3,
+  "max_cpu_parallel": 0,
+  "gpu_threads": 2,
+  "cpu_threads": 4,
+  "gpu_job_seconds": 3600,
+  "cpu_job_seconds": 10800,
+  "decision_gate": {
+    "accuracy_gain": 0.01,
+    "positive_seed_count": 3,
+    "mean_macro_f1_no_decline": true,
+    "absolute_accuracy": 0.9
+  },
+  "reported_conditions": [
+    "ce_only",
+    "kd_01",
+    "kd_05",
+    "shuffled_05"
+  ],
+  "factors": {},
+  "augmentation": {
+    "probability": 0.5,
+    "span_bins": 90,
+    "seed_offset": 50000,
+    "train_source_only": true,
+    "joint_directions": true
+  },
+  "generator_rules": {
+    "conv_layers": 2,
+    "conv_channels": [
+      2,
+      16,
+      16
+    ],
+    "kernel": 5,
+    "dilations": [
+      1,
+      3,
+      9
+    ],
+    "shared_across_scales": true,
+    "fusion": "equal average at the same output grid location",
+    "normalization": "none",
+    "hierarchical": false,
+    "flat": "both convolutions1800 bins, GELU each, then3-bin mean ->600 learned feature grid",
+    "fixed_30_dimensions": "always raw log1p counts2x15-bin reshape; unchanged",
+    "support_limit": "span endpoints of grid-aligned support, dilated sparse samples; not a claim of dense coverage",
+    "convolution_grid_support_span_bins": {
+      "flat_before_final_pool": [
+        9,
+        25,
+        73
+      ],
+      "hier_after_intermediate_pool": [
+        19,
+        51,
+        147
+      ]
+    },
+    "learned_subbin_support_span_bins": {
+      "flat_after_final_pool": [
+        11,
+        27,
+        75
+      ],
+      "hierarchical": [
+        19,
+        51,
+        147
+      ]
+    }
+  },
+  "parameter_counts": {
+    "kd_01": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "kd_05": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "shuffled_05": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "ce_only": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    }
+  },
+  "distillation": {
+    "temperature": 2.0,
+    "weights": {
+      "kd_01": 0.1,
+      "kd_05": 0.5,
+      "shuffled_05": 0.5
+    },
+    "loss": "CE + lambda*T^2*KL(teacher_softmax || student_softmax), batchmean",
+    "teacher_run": "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b",
+    "teacher_policy": "same-seed prior valid-selected best; clean source logits in-sample; no teacher gradient",
+    "student_input": "existing masked source input, clean evaluation",
+    "shuffle": "one fixed source-row permutation per seed using seed+70000, independent of labels; same marginal targets",
+    "teacher_budget": "reuse 3 historical RF fits, 30epochs each; no new teacher training",
+    "target_file": "source_logits,source_rows,source_labels only"
+  }
+}

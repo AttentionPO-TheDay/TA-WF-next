@@ -1,0 +1,161 @@
+{
+  "device": "cpu",
+  "gpu_access": false,
+  "future_access": false,
+  "dataset": "proteus_temporal",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "batch_size": 64,
+  "blocks": 400,
+  "steps_per_block": 32,
+  "optimizer_steps": 12800,
+  "eval_steps": [
+    3680,
+    4160,
+    4640,
+    5120,
+    5600,
+    6080,
+    6560,
+    7040,
+    7520,
+    8000,
+    8480,
+    8960,
+    9440,
+    9920,
+    10400,
+    10880,
+    11360,
+    11840,
+    12320,
+    12800
+  ],
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "lr_schedule": [
+    {
+      "first_step": 1,
+      "last_step": 6400,
+      "lr": 0.001
+    },
+    {
+      "first_step": 6401,
+      "last_step": 9600,
+      "lr": 0.0003
+    },
+    {
+      "first_step": 9601,
+      "last_step": 12800,
+      "lr": 0.0001
+    }
+  ],
+  "id": "20260928T015718Z_source150_ordered_token_residual_17a21a31",
+  "status": "frozen",
+  "roles": [
+    "source150",
+    "common_source80",
+    "valid"
+  ],
+  "prior_run": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7",
+  "prepared_input": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/prepared.pt",
+  "sampling_manifest": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/manifest.json",
+  "prepared_sha256": "da8ccb9b5adf475f76ec97b17d959a21419b1920de4c0bd4a7bb7fc9d3eeb2a3",
+  "manifest_sha256": "44b3357c8236cdde77e5718cb013eddccc7c76e575fbd19445ee5249369eb72a",
+  "anchor_sha256": {
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/checkpoints/B_150_l1_21729_best.pt": "2e929412c4095aa0dfbcbe8c3519443a41115205c951c9d0b055ebf1f9691f03",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_21729/predictions.npz": "e6196736e3f9831904c03e3a5607c541145abe641180a9f8d20153b506c55651",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/checkpoints/B_150_l1_21729_latest.pt": "45752a9873c8f551ca2c8c2f3ee4362d472954ec8a795df6308ba902f1b873a4",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_21729/predictions_last.npz": "1965cf8c16552ef9eef97b072bc16bf56fae6e0c5b8a423d24d929a0fb71f59d",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_21729/report.json": "9a56f1fb46d0732ff038d4569c93ae1735ec5170317a43796a97c38897451b9d",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_21729/history.json": "170ebab68c2f4ace2914825055450edd6c60c3f13b9d6fed54c5be6b5a1c64ee",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_21729/index_stream.pt": "173a5f0f60948bad93c42f621b1252385de213ceb25169d4706307afa3d0d75a",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_21729/sample_visits.pt": "76bc91a04050ae488b2ac725faebd03a72f18babf2c15d9d96e6a284d291ddb4",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_21729/verification.json": "7669f7e87e334cd9b8417ae8606151207df2d2b36d515a023d664260015125ae",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/checkpoints/B_150_l1_23407_best.pt": "17b5a33db418dbdaa1856adcdce05a1fb7dfdc8a9b4dded21f89e489a3a324fb",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_23407/predictions.npz": "012a98d6e943876fd45333adce13d8eb8ee387b354afbb8256eb94f4b36dce6e",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/checkpoints/B_150_l1_23407_latest.pt": "0a8d9b5e10c5074a845a14852aa7cdbf236d6a58791e6a4c657c6f9fd6b7d15e",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_23407/predictions_last.npz": "c73dfefe8f9d1022a395cbdb8b0e73e658c78581becff4f2287f39d56f9ee2c3",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_23407/report.json": "1d9fb7f0fdc9e28cde5af1bedb3e03a4b2a185e7da46501f26333ae41b8f8fef",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_23407/history.json": "2f7a9aabd86cffbeeb1d5bd6d05ba01b82c6f9e5c76519b2903a9fb1903cec32",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_23407/index_stream.pt": "1922e3ce26022c9df87bab1040fd1d6a8ed4c7052264127a08cd4b6267617b94",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_23407/sample_visits.pt": "490485f52e8b6294c548395f7ba83310eb11c7464d50a7fdba41e4ca3a78106f",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_23407/verification.json": "ab72a63937bac9a153d95de6c618a579909c4599e5d549b09a9d7910755683e8",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/checkpoints/B_150_l1_22026_best.pt": "2ecf370c92f9aa39c04c4b761d8fbbce3b0d0f79c351340187b2219fc9729cfa",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_22026/predictions.npz": "2b99317681e3831ada89105f5ed81a3ec741183198679bb1c967200770a96533",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/checkpoints/B_150_l1_22026_latest.pt": "0001e64d35325c0c8679cc571d2288ab24ceb9b386f40a0998ed682a6f5700cb",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_22026/predictions_last.npz": "4fe549bf1360aa0ab2311ff19911f9c2053e8fd32dab51f04f4fdd7c501ac837",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_22026/report.json": "b07c0e55af21a5319c5d9d31f7e96d51f128937951dcf09f5c90b779ab282975",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_22026/history.json": "f52b22cf189693c668468d97d6dcf148d2335ccc2aa8fbb7719d8c284b74c65d",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_22026/index_stream.pt": "ee2c894f80415b44a1d21560924cb34f4a691f923c8e308f38e2636d7ee7a8d6",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_22026/sample_visits.pt": "8eb190876ed4b46056ce4f75a650138de978ca2f735ba1eeb9cbeed8df71742c",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_22026/verification.json": "ec2531d8f3f0a73f300d618052354cf421fad80e267ebd5652aa6d3e085d46ac",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/config.json": "ef238f2939d5a45fffece2478b84f61d2836c02d51866cfc5a1caea0223e83e5",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/freeze.json": "775616b9711399461bcc9d6bcd4f923db8f750679a7daa8cc92a912313695f9c",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/input_audit.json": "f29c71f666973985fc5512e97fcc741d14bc2fc30d07f0649111571ddd51aba9",
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/integrity.json": "82e2eec1013c7b1f55062c6a8172457a85494aebc07f070e992f075e3916780e"
+  },
+  "conditions": [
+    {
+      "id": "A_base",
+      "per_class": 150,
+      "local_layers": 1,
+      "residual": "none",
+      "reuse": true
+    },
+    {
+      "id": "B_counts",
+      "per_class": 150,
+      "local_layers": 1,
+      "residual": "counts",
+      "reuse": false
+    },
+    {
+      "id": "C_ordered",
+      "per_class": 150,
+      "local_layers": 1,
+      "residual": "ordered",
+      "reuse": false
+    }
+  ],
+  "resource": {
+    "workers": 6,
+    "threads_per_worker": 2,
+    "job_seconds": 14400,
+    "job_grace_seconds": 180,
+    "pipeline_seconds": 16200,
+    "verify_seconds": 900,
+    "rss_gib_per_worker": 4,
+    "total_rss_gib": 24
+  },
+  "selection": "earliest maximum fixed valid Macro-F1 at steps3680..12800;20 opportunities; no future",
+  "input_rule": "existing5000 directions; residual each50-packet patch uses50 directions and50 observed flags; counts repeats mean of each ordered10-position bin, ordered uses raw signed directions",
+  "source_label_use": "source150 CE training and source/common_source diagnostics only",
+  "valid_label_use": "fixed510 earliest-best checkpoint selection and evaluation; no gradients",
+  "comparisons": [
+    [
+      "B_counts",
+      "A_base"
+    ],
+    [
+      "C_ordered",
+      "A_base"
+    ],
+    [
+      "C_ordered",
+      "B_counts"
+    ]
+  ],
+  "gate": {
+    "mean_accuracy_delta_min_pp": 1.0,
+    "positive_accuracy_seeds": 3,
+    "mean_f1_delta_min_pp": 0.0
+  },
+  "baseline_verification": "reuse existing checkpoint replay evidence, verify frozen artifact hashes and independently recalculate stored prediction metrics; not new inference repeat",
+  "frozen_utc": "2026-09-28T02:03:00.263133+00:00"
+}

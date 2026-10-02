@@ -1,4 +1,58 @@
 # 当前进度
+当前wide+BN窄优化配方对照：`20261002T062832Z_wide_bn_recipe_refine_37f6ab67`。9项新训练+3项历史基线完成；baseline89.150/lr05 88.301/wd05 88.954/组合87.582%，三种新配方均FAIL。汇总脚本误用上轮比较键，已从完整产物恢复汇总；47hash、48组指标、初始化/索引/20次选模复核通过。保留89.150%候选，停止本轮配方扫描；冻结生成器权重跨头复用尚未启动，未来关闭。
+当前逐级生成器容量BN与Mixup对照：`20261002T053706Z_progressive_capacity_bn_mixup_1ad233da`。12项新训练+3项历史基线完成；baseline=86.536%/wide=85.882%/bn=88.366%/wide_bn=89.150%/mixup=87.582%；通过候选['bn', 'wide_bn']；60组预测指标和冻结hash通过。
+当前网站指纹生成器跨头对照：`20261002T045631Z_wf_generator_head_transfer_4ed54f62`。12新+3历史完成；旧Transformer77.647/旧MLP71.373/新Transformer86.536/新MLP84.641/RF同配方91.699%。新生成器在两头均3/3提升（+8.889/+13.268pp），跨头结构门槛PASS；Transformer对新MLP+1.895pp且3/3正。自有开发基线升为86.536（距90%3.464pp），RF91.699单列强对照。48hash/60指标组完成后复核通过；下一候选冻结生成器权重跨头复用尚未启动，未来关闭。
+当前下一轮设计复审：已复核原计数完整保留、旧加深为1×1残差的限制。建议逐级跨时间卷积生成器×Transformer/逐tokenMLP后均值2×2，另加同log1p/AdamW/mask配方RF对照；12新任务+明确历史参考，现已完成并复核，结果见顶部生成器跨头run。详见最新soft_targets_mixup RESULTS.md设计复审；未来关闭。
+当前软目标与Mixup对照：`20261002T032948Z_soft_targets_mixup_3e1aa98f`。12新+6历史完成；CE77.647/打乱78.824/均匀77.778/边际77.712/Mixup78.824/组合77.059%。四新候选均FAIL，Mixup+1.176pp但2/3正，组合相对Mixup3/3负。80hash/72指标组完成后复核通过；RF概率边际接近均匀。保留原基线，下一建议逐级卷积生成器×Transformer/mean-MLP头2×2（尚未执行），未来关闭。
+当前源期RF蒸馏对照：`20261002T022817Z_source_rf_distillation_c7b02e5a`。9新+3历史完成；CE77.647/KD0.1 78.039/KD0.5 78.627/打乱78.824%。真实KD均FAIL；打乱+1.176pp、3/3正/F1+1.351pp过数值门槛，但不支持样本知识迁移，列软目标正则化开发候选，不自动采用随机教师设计。完成后59hash/48指标组及初始化/索引/选模复核通过，12/12末步低于best。下一建议常量教师边际分布/均匀目标对照尚未执行；距90%11.176pp，未来关闭。
+当前TAM生成器归一化层级对照：`20261002T013714Z_tam_generator_norm_hierarchy_f3920b88`。9新+3历史完成；accuracy flat_none77.647/flat_norm78.497/hier_none77.255/hier_norm78.627%。全部增量未过门槛；最高+0.980pp、2/3正，保留77.647%基线，78.627%仅观察候选（距90%11.373pp）。完成后49hash及48指标组/初始化/索引/选模复核通过。既有RF/current预测同valid行/TAM/标签核验：baseline三seed共同错53条中RF三seed全对22条，仅诊断不作oracle路由。下一候选source-only RF蒸馏对照尚未执行，未来关闭。
+当前TAM输入配方对照：`20261001T235245Z_tam_input_recipe_factorial_ba217e20`。9项新训练+3项mask历史复用完成；log_current77.647/raw_current74.118/log_rfstyle70.196/raw_rfstyle69.542%。所有新候选对原方案3/3seed下降，不采用。完成后53冻结hash及48预测指标组、初始化/索引/选模复核通过。保留log1p+原AdamW配方+多尺度生成器+Transformer+mask77.647%（距90%12.353pp）。RF输入/优化设置移植未复现其优势，单一瓶颈未定位；下一候选是当前TAM生成器的局部归一化或逐级编码对照，尚未执行，未来关闭。
+当前GPU卷积分类器对照：`20261001T154039Z_gpu_tam_temporal_cnn_b0a9af83`。3项GPU CNN完成、3项GPU Transformer基线历史复用；accuracy73.203%/F1 72.371% vs baseline75.948%/75.295%，差−2.745/−2.925pp，3/3seed下降，不采用本版卷积替代。完成后本run41及前run67冻结hash、24本轮+12历史mask指标组复核通过。当前自有框架候选保持多尺度生成器+Transformer+mask77.647%（距90%12.353pp）。下一步建议先审计与历史RF参考的编码/配方差异再设计有界对照，未新增训练；未来关闭。
+当前TAM并行方向实验：`20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab`。用户授权CPU转GPU，原队列stopped，18GPU+1CPU完成及CPU部分checkpoint保留。GPU仅mask77.647%（+1.699pp、3/3正）过门槛。CPU结构对照未完成、不作结论；替代GPU三seed对照见顶部，旧产物和结果暴露完整保留。
+当前TAM生成器深度容量实验：`20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde`。9项新训练完成、3项2层16通道多尺度基线历史复用；valid accuracy d2_w16=75.948%/d2_w32=76.863%/d4_w16=76.209%/d4_w32=75.817%。完成后57文件hash、48组预测指标及选模日程复核通过。宽32最高但+0.915pp、2/3正，全部增量未过预定门槛；保留d2_w16开发基线，停止本轮点位残差加深/加宽扩张。最高距90%仍13.137pp；末轮source接近100%、valid全部低于best，无延长训练依据。下一候选为固定生成器结构与输入的Transformer/保序卷积分类器对照，尚未执行；未来及漂移调整关闭。
+当前TAM多尺度生成器实验：`20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9`。6项新训练完成、3项原TAM编码历史复用；valid accuracy local73.333/context73.987/multi75.948%。multi−local+2.614pp、3/3正，过门槛；multi−context+1.961pp、2/3正，未过门槛。56文件hash及36组指标完成后复核通过；multi为新开发候选，90%仍差14.052pp。后续固定尺度的生成器深度/容量对照已完成（见顶部）；未来关闭。
+当前生成器视角消融实验：`20261001T113740Z_gpu_generator_view_ablation_35fd3e98`。9项新训练完成、3项fusion历史复用；valid accuracy方向56.405/原packet70.523/TAM73.333/fusion74.183%。fusion−TAM+0.850pp、2/3正，未过门槛；packet时间增量+14.118pp过门槛。55文件冻结hash及48组指标完成后复核通过。后续TAM生成器编码受控比较已完成（见顶部）；90%未达，未来关闭。
+当前多视角生成器×分类器实验：`20261001T104959Z_gpu_multiview_generator_head_factorial_cf47d62c`。12任务完成；A/B/C/D valid accuracy=63.203/67.582/66.797/74.183%；生成器D−B+6.601pp、Transformer D−C+7.386pp，均3/3seed正。D source99.776%，90%目标未达；保留组合候选，下一候选为本版单视角/融合归因。完成后冻结hash与48组预测指标复核通过；无新训练或未来评价。
+当前研究目标（2026-10-01用户明确）：先设计自有生成器+分类模型，再针对该系统设计缓解时间漂移的调整机制。基础框架可按证据切换，Transformer不是必须保留；基础源期accuracy三seed平均≥90%仍为目标。新多视角2×2实验只检查基础编码/分类器，不自动进入未来日期评分或漂移适应。
+当前原生基线实验：`20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b`。6任务完成；valid accuracy varcnn=68.497%/rf=85.948%；12份best预测重载与独立指标核验通过。
+当前强基线审计：`20261001T064615Z_wf_native_multimodel_audit_912c432f`。DF/RF/Var-CNN/ARES四模型源码审计完成，无训练或新数据访问。优先官方Var-CNN纯方向配置；RF需单列方向+时间TAM并审计源期接口；DF复用70.784% accuracy；ARES10000包及随机eval问题待解。目标明确为固定源期valid三seed平均accuracy≥90%，不保证可达；后续草案见run/NEXT_EXPERIMENT.md。
+当前分段汇聚实验：`20261001T061340Z_gpu_packet_segment_readout_a42dcd83`。6任务完成；valid F1 historical_mean=73.394%/global_repeat=71.885%/segments=72.394%；12份新预测与6份历史预测指标核验通过。
+当前样本量遮挡实验：`20261001T053149Z_gpu_source_size_span_mask_812f0250`。9任务完成；valid F1 s150_clean=71.416%/s150_mask=73.394%/all_clean=72.795%/all_mask=72.982%；18份新预测与6份历史预测指标核验通过。
+当前源期审计：`20261001T052912Z_source_error_capacity_audit_b32edd4f`。完成：可用18553条，新增3253；每类156–190；MLP三seed共同错83/510；6份历史checkpoint预测核验一致，未来关闭。
+当前渐进packet实验：`20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae`。6任务完成；CNN-Transformer/MLP valid F1=70.994/71.416%；重载核验12份新预测、历史指标核验12份通过。
+当前GPU源期诊断：`20261001T041301Z_gpu_source_fit_native_baseline_ee3c7640`。小集99%拟合门槛=True；DF/Transformer valid F1=69.643/50.881%；DF相对差距门槛=True；9任务完成、重载预测及独立指标核验通过。
+
+当前分离学习率实验：`20260928T114412Z_source150_separate_learning_rates_944201ea`。分离学习率完成：A/B/C/D valid F1 52.440/49.369/48.348/42.028%；通过比较[]；48/48预测核验。
+
+当前有序残差实验：`20260928T015718Z_source150_ordered_token_residual_17a21a31`。150条有序残差完成：A/B/C valid accuracy 54.248/48.627/48.301%，F1 52.440/46.917/46.397%；有序候选PASS=False；36/36新预测重载、18/18历史指标复核。 两个新条件训练与验证均低于基线，不采用该残差接法；不能据此证明局部顺序信息无用或唯一归因于过拟合。当前最好仍为150条/类+1层无残差，valid accuracy54.248%、F1 52.440%；Day14未访问。
+
+当前150条锚定×dropout实验：`20260927T091205Z_source150_generator_anchor_dropout_5b9c49f3`。150条锚定×dropout完成：R00/R10/R01/R11 valid F1 52.440/50.385/46.447/46.798%；通过比较[]；72/72预测核验（含18历史复核）。
+
+当前优先级修正（2026-09-27）：用户明确54.248%源期验证准确率尚不满足要求，继续提升基础模型，暂不进行Day14评价。B150×1层仅为当前开发对照，不视作达标模型。复查三seed曲线：best为10880/11360步，12800末步valid F1均未超过best；不把增加步数视为必然提升，也未证明唯一瓶颈。下一候选有两类：生成器信息保留，以及固定150条/1层下的温和优化约束。后者已获用户授权，见顶部当前实验（初始化锚定lambda0.001 × dropout0.1/0.15）；这是较小改动的拟议筛查，不是瓶颈已定位。保序残差作为后续表示候选，历史固定保序表示阴性仍有效。此处是设计来源记录，执行状态以上述当前实验为准；未来评分仍关闭。
+
+当前样本规模×深度实验：`20260927T032819Z_source_size_local_depth_factorial_dae714b7`。80/150条×1/2层完成：A/B/C/D valid F1 46.939/52.440/44.567/51.949%；通过比较['B_150_l1−A_80_l1', 'D_150_l2−C_80_l2', 'D_150_l2−A_80_l1']；72/72预测核验（含18历史复核）。
+
+Proteus 文献核对（2026-09-27）：已核对本地《Enhancing Website Fingerprinting Attacks against Traffic Drift》原文第7–9页及附录A，并目视检查图5。图5准确率与表III的P/R/F1均从Day14开始，未找到明确的Day0评价数值；附录A将2024-03-13定义为训练流量采集Day0。表III未加Proteus基线的Day14 F1：BAPM 62.08%、ARES 68.82%、DF 71.94%、Tik-Tok 77.89%、Var-CNN 79.77%、RF 87.63%；这些不能标为Day0准确率，也不能直接等同本项目固定valid Macro-F1。论文说明使用官方基线代码、调参及5折交叉验证，精确训练样本预算和源期留出规则仍需核对。当前仅核对文献，未启动训练或未来评分。
+
+当前充分训练实验：`20260927T011115Z_source80_extended_training_b7d4d924`。80条充分训练完成：CLS/mean valid F1 46.939/43.393%；共同提高门槛{'C_80_cls': True, 'D_80_mean': True}；36/36预测核验。
+
+性能目标修正（2026-09-27）：用户明确要求与已有WF模型各自配套的原生输入和训练流程达到的准确率比较，不能把输入不适配当前方向/时间表示的DF结果当作当前模型性能目标。历史DF数值仅作架构不匹配的背景，不作准入门槛。后续应先审计同数据、同类别、同标签权限和同评价角色的原生WF基线，再冻结当前Transformer的源期与时间漂移比较目标。
+
+当前样本规模与汇聚实验：`20260926T155907Z_sample_size_token_readout_6d47208d`。样本规模×汇聚完成：A/B/C/D valid F1 21.898/21.271/35.848/37.644%；通过比较['C_80_cls−A_20_cls', 'D_80_mean−C_80_cls', 'D_80_mean−B_20_mean', 'D_80_mean−A_20_cls']；36/36预测核验。
+
+当前正则化实验（2026-09-26）：`20260926T145102Z_generator_classifier_regularization_1f0406ee`。2×2正则化完成：R00/R01/R10/R11 valid F1 21.329/15.062/23.029/16.359%；通过比较['R11_both−R01_classifier_reg']；24/24预测与约束核验通过。 无新条件稳定胜过R00；唯一PASS仅为R11相对受损R01。强分类器正则化不采用；生成器锚定+1.700pp但2/3seed正，仅保留候选，未追加实验。
+
+当前固定生成器重训（2026-09-26）：`20260926T081359Z_frozen_generator_classifier_retrain_ccaff3b4`。固定B/C生成器重训完成：INCONCLUSIVE；B−C valid F1 +0.433pp，B恢复 +1.879pp；12/12新预测重载核验。
+
+当前归因诊断（2026-09-26）：`20260926T075128Z_generator_classifier_diagnostic_52a460a4`。C/B/D冻结token诊断完成：INCONCLUSIVE；B−C packet F1 +1.202pp，B all_views探针−原模型 -7.594pp；18原预测/108探针预测/54拟合核验通过。
+
+诊断解释及后续完成情况：B−C packet探针source F1 +18.869pp，valid仅+1.202pp且正则敏感性方向不稳，提示训练集偏向，但尚不能归因于生成器单独过拟合；线性探针也未超过原分类器，未证明分类器利用不足。此前建议的固定B/C生成器、配对重训非线性分类器现已完成（见顶部记录），故更正“尚未启动”状态：新B−新C valid F1 +0.433pp，逐seed两正一负；B相对原模型恢复+1.879pp，亦两正一负，未过一致性门槛。训练集F1差+17.018pp，训练集偏向迹象仍在，唯一归因未决。线性探针有效结果为v2，CPU推理数值修正及首版作废记录见该run的PLAN.md/RESULTS.md。
+
+当前并行实验设计（2026-09-26）：`20260926T040212Z_classifier_generator_parallel_946c81c4`。CPU生成器四条件完成：A/B/C/D valid F1 23.104/23.229/24.979/24.520%；24/24预测与反馈边界核验通过。
+
+当前设计要求（2026-09-26）：用户明确当前只提升基础分类器；生成器也须通过分类训练反馈学习特征→token转换。已核对：现有统计提取/patch构造为固定规则，模型内线性投影已随分类损失训练；不能把已有投影改名就称为新增生成器学习机制。下一版拟把可学习局部编码和汇聚置于原始方向细节被压缩之前，作为生成器参数与分类器端到端联合训练；首轮仍固定输入预算、token数及run/window边界，暂不同时学习离散切分。反馈首先定义为source分类损失梯度，valid只按预定规则选模/评价，不进入梯度。建议配套冻结/可训练生成器对照并保留强摘要基线，不能仅凭参数更新或训练准确率提高判为有效。本次仅登记设计要求与拟议实现，未新增训练；现有CPU保序实验阴性结论不变。
+
+当前CPU首轮实验（2026-09-26）：`20260926T024929Z_cpu_packet_ordered_representation_67b648d4`。CPU保序表示完成：summary/ordered valid F1 24.655/17.162%，差-7.493pp，0/3 seed正，FAIL_CANDIDATE；12/12重载核验通过。
 
 最新收口（2026-09-26）：`20260925T161437Z_transformer_fullsource_capacity_cpu_0de7931a`。全部 source2040 标签监督训练，层次化三 seed×100 epochs 完成：valid accuracy 27.320%、Macro-F1 25.235%，比历史 DF-only 性能标尺低 21.830/22.909pp。平铺仅 seed1729 完成（valid 27.451%/25.854%），seed3407 在预定 5400 秒上限超时、seed2026 未开始；8/12 已产生预测及checkpoint复算通过，完整实验按预算停止，不作两结构稳定性比较。当前自有基础 Transformer 仍未接近成熟 DF 水准；下一步应单独预定保序 packet 表示/模型能力与计算可行性实验，暂不叠加预训练、蒸馏或漂移模块。
 

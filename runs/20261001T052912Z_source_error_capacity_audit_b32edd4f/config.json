@@ -1,0 +1,34 @@
+{
+  "status": "frozen",
+  "id": "20261001T052912Z_source_error_capacity_audit_b32edd4f",
+  "prior_run": "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae",
+  "prepared_input": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/prepared.pt",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "budget_cpu_seconds": 900,
+  "input_hashes": {
+    "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/prepared.pt": "da8ccb9b5adf475f76ec97b17d959a21419b1920de4c0bd4a7bb7fc9d3eeb2a3",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/model.py": "1f65e664762c852489c33ded47f2e5a1d6c3ba3ad342dbb402bf998525db01e1",
+    "configs/datasets.json": "31c98344c1aa683030f313fc3f3e31252e49a6a49c8cb2db011afb7a353eb8c0",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/checkpoints/mlp_21729_best.pt": "ce01bbe34cd06c415687509694b59efcae9528a357b86af87ff532f63f393748",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/artifacts/mlp_21729/predictions_best.npz": "1546e00d1c1bd1d082504fcbdd427215b909d0a52cfdfe18ddde51ce7da094aa",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/checkpoints/mlp_23407_best.pt": "7c67b6637fafb8b2cbd3e79b5c59ca6124f90e3841869add396a9941bed9ab78",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/artifacts/mlp_23407/predictions_best.npz": "aa2d7f34e04b18585b547d86e9a6d43a282abcff25584791e3733c21eead7c40",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/checkpoints/mlp_22026_best.pt": "542d0a7d9ec58b87919321796107470c7cd4ddbf103cbad8402e2745e99a38ed",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/artifacts/mlp_22026/predictions_best.npz": "c92151c1fe5db85a72d524af60e2650068c892920e9ca06065070b7ca64dedf9",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/checkpoints/transformer_21729_best.pt": "30d9ea8bf1fe1062546c751ea917342bd1195e056541ca1d26193894976f4a19",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/artifacts/transformer_21729/predictions_best.npz": "132d7e9a38f3d05f4d068b57786777c35ff0473b938be5d0878f38e705879650",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/checkpoints/transformer_23407_best.pt": "a331fab33f2ae6f101058f795d3f8a21eee25a6b2ea18195cc4089a41a9e175b",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/artifacts/transformer_23407/predictions_best.npz": "98ba49171a7dfee108cf174e37cad4f9af4d2f483c2598b6310d7a2758a97e45",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/checkpoints/transformer_22026_best.pt": "d20a267592fa5dffaf54a49fc0a9c84f3f0cf33e2ecf5a6e770f1022133df56d",
+    "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae/artifacts/transformer_22026/predictions_best.npz": "4217a1a3d7584d16206440ae958cfecbdeb5e7756bbed86c9a9bd7736ac4e86a"
+  }
+}

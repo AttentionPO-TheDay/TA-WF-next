@@ -1,0 +1,273 @@
+{
+  "id": "20261002T045631Z_wf_generator_head_transfer_4ed54f62",
+  "status": "frozen",
+  "method_version": "wf_generator_head_adaptability_v1",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "dataset": "TemporalDrift",
+  "dataset_config": "configs/datasets.json",
+  "prepared_input": "runs/20261002T045631Z_wf_generator_head_transfer_4ed54f62/artifacts/prepared.pt",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "source_rows": 15300,
+  "valid_rows": 510,
+  "source_per_class": 150,
+  "valid_per_class": 5,
+  "num_classes": 102,
+  "permissions": {
+    "source_labels": "classification_gradient_and_metrics",
+    "valid_labels": "predeclared_checkpoint_selection_and_metrics_only",
+    "valid_gradient": false,
+    "adaptation": false,
+    "external_datasets": false,
+    "query_adaptation": false,
+    "pretrained_checkpoint": false,
+    "historical_checkpoint": "Historical baseline replay only; all new models from scratch; no teacher targets"
+  },
+  "input": {
+    "signed_timestamps": 5000,
+    "timestamp_scaling": "clamp(abs(t),80)/80",
+    "tam_shape": [
+      2,
+      1800
+    ],
+    "tam_scale": "log1p in all conditions",
+    "stored_order": true,
+    "packet_tokens": 100,
+    "time_tokens": 120,
+    "packet_features": 100,
+    "time_features": 110,
+    "fixed_summary_features": [
+      20,
+      30
+    ],
+    "learned_added_features": 80,
+    "augmentation": "source-only span mask p0.5, 90 bins, same interval across directions, start uniform0..1710",
+    "sorting": false,
+    "cross_direction_differences": false
+  },
+  "model": {
+    "d_model": 128,
+    "layers": 2,
+    "heads": 4,
+    "transformer_ff": 256,
+    "mlp_ff": 512,
+    "dropout": 0.1,
+    "generator_channels": "condition_specific",
+    "generator_kernel": 5,
+    "generator_layers": "2 shallow or6 progressive plus residual/output projections",
+    "readout": "per_view_masked_mean_concat",
+    "classification_input_projections": "classifier_parameters",
+    "attention_slots": 220,
+    "disabled_view": "all corresponding tokens masked; readout half zero; inactive branch parameters frozen"
+  },
+  "batch_size": 64,
+  "eval_batch_size": 64,
+  "optimizer_steps": 12800,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "lr_schedule": [
+    [
+      1,
+      6400,
+      0.001
+    ],
+    [
+      6401,
+      9600,
+      0.0003
+    ],
+    [
+      9601,
+      12800,
+      0.0001
+    ]
+  ],
+  "eval_steps": [
+    3680,
+    4160,
+    4640,
+    5120,
+    5600,
+    6080,
+    6560,
+    7040,
+    7520,
+    8000,
+    8480,
+    8960,
+    9440,
+    9920,
+    10400,
+    10880,
+    11360,
+    11840,
+    12320,
+    12800
+  ],
+  "checkpoint_selection": "maximum_valid_accuracy_earliest_strict_improvement",
+  "early_stop": false,
+  "precision": "float32_no_amp_no_tf32",
+  "deterministic": true,
+  "physical_gpu": 0,
+  "pipeline_seconds": 18000,
+  "historical_references": {
+    "rf": {
+      "run": "20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b",
+      "accuracy": 0.8594771241830066,
+      "role": "historical_performance_reference_only"
+    },
+    "direction_cnn_mlp_mask": {
+      "run": "20261001T053149Z_gpu_source_size_span_mask_812f0250",
+      "accuracy": 0.7398692810457516,
+      "role": "historical_performance_reference_only"
+    }
+  },
+  "environment": {
+    "python": "/home/rbf/TA-WF/.venv/bin/python",
+    "torch": "2.12.1+cu130",
+    "old_code_imports": false
+  },
+  "view_rules": {
+    "all_conditions": "TAM-only, direction-conditioned counts; packet masked, raw timestamp values cannot affect logits"
+  },
+  "gpu_conditions": [
+    "shallow_mlp",
+    "progressive_transformer",
+    "progressive_mlp",
+    "rf_matched"
+  ],
+  "cpu_conditions": [],
+  "conditions": [
+    "shallow_mlp",
+    "progressive_transformer",
+    "progressive_mlp",
+    "rf_matched"
+  ],
+  "historical_run": "runs/20261002T032948Z_soft_targets_mixup_3e1aa98f",
+  "historical_condition": "ce_only",
+  "max_gpu_parallel": 3,
+  "max_cpu_parallel": 0,
+  "gpu_threads": 2,
+  "cpu_threads": 4,
+  "gpu_job_seconds": 3600,
+  "cpu_job_seconds": 10800,
+  "decision_gate": {
+    "accuracy_gain": 0.01,
+    "positive_seed_count": 3,
+    "mean_macro_f1_no_decline": true,
+    "absolute_accuracy": 0.9
+  },
+  "reported_conditions": [
+    "shallow_transformer",
+    "shallow_mlp",
+    "progressive_transformer",
+    "progressive_mlp",
+    "rf_matched"
+  ],
+  "factors": {},
+  "augmentation": {
+    "probability": 0.5,
+    "span_bins": 90,
+    "seed_offset": 50000,
+    "train_source_only": true,
+    "joint_directions": true
+  },
+  "generator_rules": {
+    "shallow": "original shared dilation1/3/9 two Conv1d layers2->16->16, learned ordered subbins unchanged",
+    "progressive": {
+      "channels": [
+        32,
+        64,
+        128
+      ],
+      "kernel": 5,
+      "padding": 2,
+      "dilation": 1,
+      "stage": "GELU(conv2(GELU(conv1(x))) + projection1x1(x)); all bias=True; no normalization/dropout in generator",
+      "pool_after_stages": [
+        3,
+        5,
+        1
+      ],
+      "pool": "ordered nonoverlap average, no padding",
+      "output": "Conv1d128->80 kernel1, no final activation; transpose120x80",
+      "fixed_branch": "all original log1p TAM counts reshape120x30; concatenate fixed30+learned80",
+      "initialization": "PyTorch default Conv1d Kaiming uniform, isolated CPU RNG; same progressive generator across heads"
+    },
+    "class_count_independent": true
+  },
+  "parameter_counts": {
+    "shallow_transformer": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_trainable": 1472
+    },
+    "shallow_mlp": {
+      "total": 348982,
+      "trainable": 321702,
+      "generator_trainable": 1472
+    },
+    "progressive_transformer": {
+      "total": 528870,
+      "trainable": 501590,
+      "generator_trainable": 180336
+    },
+    "progressive_mlp": {
+      "total": 527846,
+      "trainable": 500566,
+      "generator_trainable": 180336
+    },
+    "rf_matched": {
+      "total": 1040562,
+      "trainable": 1040562,
+      "generator_trainable": null
+    }
+  },
+  "max_rf_parallel": 1,
+  "head_rules": {
+    "transformer": "existing2 pre-norm layers d128 heads4 FF256 dropout.1 with same positions/projection/readout",
+    "mlp": "existingTokenMLP two residual per-token blocks LN128 Linear128->512 GELU Dropout.1 Linear512->128 Dropout.1, then existing final LN/masked per-view mean/classifier; no cross-token mixing",
+    "rf_matched": "official RF102 from scratch, log1p TAM[:,None], original BN/ReLU/pools/dropouts; current AdamW batch64 mask schedule and20eval"
+  },
+  "scope": "WF generator architecture adaptable across jointly-trained heads on one time-aware dataset; not frozen-weight transfer, missing-time support, external universality or drift robustness",
+  "comparisons": [
+    [
+      "shallow_mlp",
+      "shallow_transformer"
+    ],
+    [
+      "progressive_transformer",
+      "shallow_transformer"
+    ],
+    [
+      "progressive_mlp",
+      "shallow_mlp"
+    ],
+    [
+      "progressive_mlp",
+      "shallow_transformer"
+    ],
+    [
+      "progressive_transformer",
+      "progressive_mlp"
+    ],
+    [
+      "rf_matched",
+      "shallow_transformer"
+    ],
+    [
+      "rf_matched",
+      "progressive_transformer"
+    ]
+  ]
+}

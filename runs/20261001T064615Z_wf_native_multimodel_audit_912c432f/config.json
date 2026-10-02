@@ -1,0 +1,16 @@
+{
+  "id": "20261001T064615Z_wf_native_multimodel_audit_912c432f",
+  "status": "frozen",
+  "mode": "source_code_audit",
+  "models": [
+    "DF",
+    "Var-CNN",
+    "RF",
+    "ARES"
+  ],
+  "training_access": false,
+  "raw_data_access": false,
+  "future_access": false,
+  "target": "fixed source validation mean accuracy >= .90 across seeds21729/23407/22026",
+  "prior_metrics": "explicit historical reuse only"
+}

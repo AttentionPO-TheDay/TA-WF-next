@@ -26,12 +26,13 @@ class HierarchicalViewTransformer(nn.Module):
         num_classes: int = 102,
         dropout: float = 0.1,
         max_lengths: tuple[int, int, int] = (100, 128, 120),
+        packet_dim: int = 2,
     ) -> None:
         super().__init__()
-        if d_model % nhead or any(length <= 0 for length in max_lengths):
+        if d_model % nhead or any(length <= 0 for length in max_lengths) or packet_dim <= 0:
             raise ValueError("invalid hierarchical dimensions")
         self.max_lengths = dict(zip(self.VIEW_ORDER, max_lengths))
-        widths = {"packet": 2, "runs": 4, "windows": 4}
+        widths = {"packet": packet_dim, "runs": 4, "windows": 4}
         self.projections = nn.ModuleDict({name: nn.Linear(widths[name], d_model) for name in self.VIEW_ORDER})
         self.local_cls = nn.ParameterDict({name: nn.Parameter(torch.zeros(1, 1, d_model)) for name in self.VIEW_ORDER})
         self.local_position = nn.ParameterDict({

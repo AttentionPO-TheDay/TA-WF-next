@@ -1,0 +1,108 @@
+{
+  "id": "20261001T053149Z_gpu_source_size_span_mask_812f0250",
+  "status": "frozen",
+  "device": "cuda:0",
+  "physical_gpu": 0,
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "conditions": [
+    "s150_mask",
+    "all_clean",
+    "all_mask"
+  ],
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "prepared_input": "runs/20261001T052912Z_source_error_capacity_audit_b32edd4f/artifacts/prepared.pt",
+  "sampling_manifest": "runs/20261001T052912Z_source_error_capacity_audit_b32edd4f/artifacts/manifest.json",
+  "historical_run": "runs/20261001T044328Z_gpu_progressive_packet_transformer_b7ba43ae",
+  "optimizer_steps": 12800,
+  "batch_size": 64,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "lr_schedule": [
+    [
+      1,
+      6400,
+      0.001
+    ],
+    [
+      6401,
+      9600,
+      0.0003
+    ],
+    [
+      9601,
+      12800,
+      0.0001
+    ]
+  ],
+  "eval_steps": [
+    3680,
+    4160,
+    4640,
+    5120,
+    5600,
+    6080,
+    6560,
+    7040,
+    7520,
+    8000,
+    8480,
+    8960,
+    9440,
+    9920,
+    10400,
+    10880,
+    11360,
+    11840,
+    12320,
+    12800
+  ],
+  "model": {
+    "channels": [
+      32,
+      64,
+      128
+    ],
+    "conv_kernel": 7,
+    "pool_kernel_stride": 4,
+    "tokens": 79,
+    "d_model": 128,
+    "layers": 2,
+    "ff": 256,
+    "attention_heads": 4,
+    "dropout": 0.1,
+    "readout": "masked_mean",
+    "head": "mlp"
+  },
+  "selection": "earliest max valid Macro-F1 among 20 checks",
+  "source_label_use": "CE training and diagnostic scoring",
+  "valid_label_use": "selection/evaluation only; no gradients/adaptation",
+  "initialization": "scratch, shared components same state by seed; no pretrained checkpoint",
+  "job_seconds": 3600,
+  "pipeline_seconds": 14400,
+  "max_parallel": 2,
+  "threads_per_worker": 2,
+  "gate": {
+    "mean_f1_delta_pp": 1.0,
+    "positive_seeds": 3,
+    "accuracy_not_lower": true
+  },
+  "resource_policy": "GPU0 only; no auto retries or budget extensions",
+  "augmentation": {
+    "probability": 0.5,
+    "fraction": 0.02,
+    "max_span": 32,
+    "preserve_observed_mask": true,
+    "rng_offset": 700000
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "id": "20260927T032819Z_source_size_local_depth_factorial_dae714b7",
+  "status": "frozen",
+  "device": "cpu",
+  "gpu_access": false,
+  "future_access": false,
+  "dataset": "proteus_temporal",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "prior_prepared": "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/prepared.pt",
+  "prior_prepared_sha256": "7d6aee4613247c7e98cb544332f09224098a9191ffe37415f1c33f8823893734",
+  "prior_manifest": "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/manifest.json",
+  "prior_manifest_sha256": "ea10639b62b5b6346820cffd46765620f4245dcdd51f7a03f2c7d99810117850",
+  "prior_run": "runs/20260927T011115Z_source80_extended_training_b7d4d924",
+  "sampling_seed": 20260928,
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "conditions": [
+    {
+      "id": "A_80_l1",
+      "per_class": 80,
+      "local_layers": 1,
+      "reuse": true
+    },
+    {
+      "id": "B_150_l1",
+      "per_class": 150,
+      "local_layers": 1,
+      "reuse": false
+    },
+    {
+      "id": "C_80_l2",
+      "per_class": 80,
+      "local_layers": 2,
+      "reuse": false
+    },
+    {
+      "id": "D_150_l2",
+      "per_class": 150,
+      "local_layers": 2,
+      "reuse": false
+    }
+  ],
+  "batch_size": 64,
+  "blocks": 400,
+  "steps_per_block": 32,
+  "optimizer_steps": 12800,
+  "eval_steps": [
+    3680,
+    4160,
+    4640,
+    5120,
+    5600,
+    6080,
+    6560,
+    7040,
+    7520,
+    8000,
+    8480,
+    8960,
+    9440,
+    9920,
+    10400,
+    10880,
+    11360,
+    11840,
+    12320,
+    12800
+  ],
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "lr_schedule": [
+    {
+      "first_step": 1,
+      "last_step": 6400,
+      "lr": 0.001
+    },
+    {
+      "first_step": 6401,
+      "last_step": 9600,
+      "lr": 0.0003
+    },
+    {
+      "first_step": 9601,
+      "last_step": 12800,
+      "lr": 0.0001
+    }
+  ],
+  "selection": "earliest maximum fixed valid Macro-F1 among 20 steps 3680..12800; identical to reused A late-phase selection",
+  "input_rule": "sign(float32(first5000 signed timestamps)); original packet/run/window extraction unchanged",
+  "source_label_use": "source CE gradients and diagnostic evaluation only; no label smoothing/augmentation/pretraining/TTA",
+  "valid_label_use": "fixed510 selection/evaluation only, no gradients; other full-valid X only for direction duplicate exclusion",
+  "initialization": "common generator/classifier weights identical by seed; new local layer independently initialized with seed+50000+view_index in fork_rng; global layer remains1",
+  "resource": {
+    "workers": 6,
+    "threads_per_worker": 2,
+    "job_seconds": 14400,
+    "job_grace_seconds": 180,
+    "pipeline_seconds": 30000,
+    "verify_seconds": 900,
+    "rss_gib_per_worker": 4,
+    "total_rss_gib": 24
+  },
+  "gate": {
+    "mean_f1_delta_min_pp": 1.0,
+    "positive_seeds": 3,
+    "mean_accuracy_delta_min_pp": 0.0
+  },
+  "comparisons": [
+    [
+      "B_150_l1",
+      "A_80_l1"
+    ],
+    [
+      "C_80_l2",
+      "A_80_l1"
+    ],
+    [
+      "D_150_l2",
+      "B_150_l1"
+    ],
+    [
+      "D_150_l2",
+      "C_80_l2"
+    ],
+    [
+      "D_150_l2",
+      "A_80_l1"
+    ]
+  ],
+  "limits": "one nested source draw, observed valid, historical A not new replicate; depth changes capacity/compute as well as interaction; equal updates not equal epochs/FLOPs",
+  "anchor_sha256": {
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/checkpoints/C_80_cls_21729_best.pt": "ca1348b576bc2dd0a8add6691fa7efe68df7e547a4d73cd41a11a062fcec86b5",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_21729/predictions.npz": "6832ced50fadab18b12f47e187454117654fca7b983dd7ab2585ef1460ddd6b1",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/checkpoints/C_80_cls_21729_latest.pt": "d5a734a99340e7344ef1a264a0ac1ba9d01ebfe3617301a7674b9465c6f30f65",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_21729/predictions_last.npz": "f696dd9d21dbf88e7d2df56793d42fbb8d12dccecb7f0c693473cbb8655cce0f",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_21729/report.json": "562d351b7cc418eb69cb88484193d2b05c2afebd8e6ca37e1dbdcae0d118ecbc",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_21729/history.json": "f3c98ae65a9d40a231d44caa03e33bcc829026f99be783920014929f3285d3f1",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_21729/resume_audit.json": "4859f4ad2a7cb50bf3028b721f38dfbb91efde262f47255eeb848dbb60cd083c",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_21729/index_stream.pt": "abc1fb45422c983e35c1d85ed3384cfd15667cb0cb77c61b2d976d0befa84865",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_21729/sample_visits.pt": "506177c17a98c12618c4c20b928e3012bfcd2a16dc54a4c4d40579c6c5962e20",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_21729/verification.json": "f8499466075b2e445ae03e8e49d065b47d34957ece2c71e01dd680fdae3426b6",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/checkpoints/C_80_cls_23407_best.pt": "3b6f906f58403ebc83035feb36b69ff23d9ae844da828a4f1c7d2f599e476d25",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_23407/predictions.npz": "95332544ec0c0360739e5bdcc87d9aa5769da3ae9550ac503ae03eea3a5292cf",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/checkpoints/C_80_cls_23407_latest.pt": "8c4f8224021273eacb56018b0575549f6f5b26b93bd4212327fa27f1dd61e7dc",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_23407/predictions_last.npz": "c913822c47a4197cd0c2a2080b4c740aa8797d6c6038efef294918b418e5d836",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_23407/report.json": "6656f9d5571638841e448e7756cac0d115b30f99d6d5b44a0c2c5f636202c33d",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_23407/history.json": "d9598d99bfe84dbc01703386fcfa52673980c6ce37c1532d3c99f0d181cbf03d",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_23407/resume_audit.json": "bbfa055712cf2de08e56bc4bcf40240c25fc54e3a62c764de21c98cac97e3637",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_23407/index_stream.pt": "4909fe9c7dfb9cf76aa55a939969f50480375b1e87b697833a252bd7c7dcb07c",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_23407/sample_visits.pt": "b47fb38103b2a71ae4350ac86beb5fed08377aea5aeee9ba1ac94a6daee1f478",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_23407/verification.json": "d41c9191f9c316ff93ac52efb32e0c2589c82aec4f1c081726c9f08012a35e7a",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/checkpoints/C_80_cls_22026_best.pt": "e5a32b6a72cf0a4ee31f61b4872d7e600a8371cbec7aaa88b9a298c70667c7ae",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/predictions.npz": "4351d569155eb4d9603994943a8c7a9698edc5aadf0643d45c0929266843419b",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/checkpoints/C_80_cls_22026_latest.pt": "d011e9d5d1a620994982a74c698c418e3f56680ff475a4b65648754eb6f14fc1",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/predictions_last.npz": "429dd2b18a4e9c1c0b929c6eb2acefa22111b06f2f077e1d1a6f0c5c3f1d967f",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/report.json": "d7d65838dc8046a29d2d41d7a9dcfc2ffb7e7cd959fdd280dd9ea3efe999eefc",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/history.json": "82cef73551fd76c8ef5c6c6973a06a3525b849053847555c409b08541b8be550",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/resume_audit.json": "a15263b95f64df53ffe15067b7316ce9b2e1c7953f9c7e544d997388e4038616",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/index_stream.pt": "af8289cb9ab1c12fdf795f357b7ea20d182272b2ec699416ded88c97bff51d2a",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/sample_visits.pt": "c215743c67680ae9790c6db5841ed7b9fa7cb95c1ab077aaaef7d70bdb59a77b",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/verification.json": "a2d387613b1e2303200b8921f227893cd088a72f2c38f4b84ef87a1d19bff471",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/config.json": "64e70bf9b62fb47902c8318a3fee890863a9248e05eba155f34e2b724561f439"
+  },
+  "prepared_input": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/prepared.pt",
+  "sampling_manifest": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/manifest.json",
+  "frozen_utc": "2026-09-27T03:34:50.772784+00:00",
+  "prepared_sha256": "da8ccb9b5adf475f76ec97b17d959a21419b1920de4c0bd4a7bb7fc9d3eeb2a3",
+  "manifest_sha256": "44b3357c8236cdde77e5718cb013eddccc7c76e575fbd19445ee5249369eb72a"
+}

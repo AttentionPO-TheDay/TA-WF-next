@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "input_rule": "First 5000 signed stored-order timestamps cast float32. No sorting, no per-packet interarrival inference. TAM is exact prior cache Bx1x2x1800 squeezed to Bx2x1800; independent author-bin reconstruction abs(float32) promoted to float64, int(time*1799/80), time>=80 in last bin.",
+  "mapping": {
+    "timestamp_sign_positive": "positive_direction/channel0",
+    "timestamp_sign_negative": "negative_direction/channel1",
+    "timestamp_zero": "suffix_padding"
+  },
+  "selected_input_hashes": {
+    "source": {
+      "raw_file": "/mnt/data2/ren/datasets/TemporalDrift/train.npz",
+      "raw_sha256": "2994271abc43bc3e3513924367da475e0a724b2cdfce9212968f6dc05763c882",
+      "selected_arrays": {
+        "timestamps": "936895de302aef86479b594e468b52312e57c7cde4c6199699d31302920e7c97",
+        "tam": "a7b5dd73256003c8e7f5c44740239aad0c9a33d25e9c9847ef50201c2331c56e",
+        "labels": "4c618df99289eac5e05c360ea247e07c81ae88c17adb85e0ef2e10f365427e9a",
+        "rows": "85806e814ca3a6f688a8ffadee7e4c6e2b373e1633f321adeeecf9c6e6581954"
+      },
+      "direction_array_sha256": "0b8d7fa821314834f96a0b81764206cb4724ffd289e25db1153e64fd2a5cccf3"
+    },
+    "valid": {
+      "raw_file": "/mnt/data2/ren/datasets/TemporalDrift/valid.npz",
+      "raw_sha256": "e0f3ea5b170ecd9476c70dbc24c712266f014727b43fb8a377a546eed5c7ab62",
+      "selected_arrays": {
+        "timestamps": "6ab8e8a9b5c2e1fb3879579e432c1fdd9d081bc8e23ac01c848be7bf84ef309f",
+        "tam": "cd12e9cb05c0125a7cf0a77af83d69d556e8e7e5215d52cf52bd1e115773b38a",
+        "labels": "f521b6dd579c52b2204b7688e40d46f663c4d6d9a1fdb73a05d9c7fe2ac85569",
+        "rows": "e40cabeee8a8bf557102df24c1913368b729948bfdf505decc330d2990938494"
+      },
+      "direction_array_sha256": "df84f36a159ab75cbc34d3257d77a916a5e4cb23de422c87a560e13affc0a8c0"
+    }
+  },
+  "hashes": {
+    "configs/datasets.json": "31c98344c1aa683030f313fc3f3e31252e49a6a49c8cb2db011afb7a353eb8c0",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/artifacts/native_prepared.pt": "73d5962676b4b3af170f1e68967f7a1975362db7934caef13fd51359cd5fcbb8",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/artifacts/prep_manifest.json": "40c10065783adc733f2cd4e9ddb4ad8efd658fd27bd6951af639bd90bdc1cf5a",
+    "runs/20261001T052912Z_source_error_capacity_audit_b32edd4f/artifacts/manifest.json": "0779ca5816b7b8ef4c0fbc15cf4359b88a742888b53ac38ea31a495674b599bf",
+    "runs/20261001T104959Z_gpu_multiview_generator_head_factorial_cf47d62c/prepare.py": "d9c0be144c30ec7d754d5e08cf9919a5b23fc04b95c01ac988506b00f425ca3e",
+    "runs/20261001T104959Z_gpu_multiview_generator_head_factorial_cf47d62c/artifacts/prepared.pt": "49b01254108433528398d17fd5a4df9618a7632ba03c0a63864236786e9fc4db"
+  },
+  "audits": {
+    "source": {
+      "rows": 15300,
+      "width": 5000,
+      "nonfinite": 0,
+      "internal_zero_rows": 0,
+      "packet_count": 22213300,
+      "padding_count": 54286700,
+      "ge80_packets": 1923663,
+      "positive_packets": 4483199,
+      "negative_packets": 17730101,
+      "mixed": {
+        "negative_deltas": 42250,
+        "rows_with_negative_delta": 9762
+      },
+      "positive": {
+        "negative_deltas": 0,
+        "rows_with_negative_delta": 0
+      },
+      "negative": {
+        "negative_deltas": 0,
+        "rows_with_negative_delta": 0
+      },
+      "tam_independent_parity_rows": 15300,
+      "prior_direction_labels_rows_exact": true,
+      "per_row_channel_count_conservation": true
+    },
+    "valid": {
+      "rows": 510,
+      "width": 5000,
+      "nonfinite": 0,
+      "internal_zero_rows": 0,
+      "packet_count": 729953,
+      "padding_count": 1820047,
+      "ge80_packets": 68340,
+      "positive_packets": 149515,
+      "negative_packets": 580438,
+      "mixed": {
+        "negative_deltas": 1484,
+        "rows_with_negative_delta": 346
+      },
+      "positive": {
+        "negative_deltas": 0,
+        "rows_with_negative_delta": 0
+      },
+      "negative": {
+        "negative_deltas": 0,
+        "rows_with_negative_delta": 0
+      },
+      "tam_independent_parity_rows": 510,
+      "prior_direction_labels_rows_exact": true,
+      "per_row_channel_count_conservation": true
+    }
+  },
+  "selected_source_valid_direction_overlap": 0,
+  "prior_overlap_audit": {
+    "manifest": "runs/20261001T052912Z_source_error_capacity_audit_b32edd4f/artifacts/manifest.json",
+    "source_excluded_for_full_valid_overlap": 168,
+    "full_valid_not_reanalyzed": true
+  },
+  "exposure": {
+    "raw_files": [
+      "train.npz",
+      "valid.npz"
+    ],
+    "selected_source_rows": 15300,
+    "selected_valid_rows": 510,
+    "raw_member_access": "NPZ whole X/y member decompression; only fixed selected first5000 X and selected y retained/analyzed; file-byte hashes include full archives without additional semantic analysis.",
+    "future": false,
+    "wtt_time": false,
+    "awf": false,
+    "model_evaluation": false,
+    "training": false,
+    "cpu_only": true
+  },
+  "elapsed_seconds": 10.994839671067894,
+  "reuse": {
+    "run": "20261001T113740Z_gpu_generator_view_ablation_35fd3e98",
+    "cache_operation": "byte-for-byte copy",
+    "new_raw_data_access": false,
+    "source_valid_selection_changed": false,
+    "future_access": false
+  },
+  "cached_input": "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/prepared.pt"
+}

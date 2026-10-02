@@ -1,0 +1,3 @@
+# 来源
+
+学生链和训练入口显式复制 `runs/20261002T022817Z_source_rf_distillation_c7b02e5a` 并修改训练损失和输入混合，run-local imports，无旧项目代码依赖。历史CE/shuffled预测和初始化保留origin字段；不是重新训练。prepared/source-only教师目标从该run复制并按其冻结hash核验。RF源代码与历史教师选模来源见上一run SOURCES.md；此run不加载教师checkpoint训练。NumPy Beta/批次排列实现标准Mixup，统计目标不称原创模型结构。旧venv仅提供第三方依赖。

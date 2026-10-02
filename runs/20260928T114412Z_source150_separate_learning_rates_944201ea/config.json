@@ -1,0 +1,134 @@
+{
+  "id": "20260928T114412Z_source150_separate_learning_rates_944201ea",
+  "status": "frozen",
+  "device": "cpu",
+  "gpu_access": false,
+  "future_access": false,
+  "dataset": "proteus_temporal",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "prior_prepared": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/prepared.pt",
+  "prior_prepared_sha256": "da8ccb9b5adf475f76ec97b17d959a21419b1920de4c0bd4a7bb7fc9d3eeb2a3",
+  "prior_manifest": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/manifest.json",
+  "prior_manifest_sha256": "44b3357c8236cdde77e5718cb013eddccc7c76e575fbd19445ee5249369eb72a",
+  "prior_run": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7",
+  "prior_baseline": "B_150_l1",
+  "sampling_seed": 20260928,
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "conditions": [
+    {
+      "id": "A_1x1x",
+      "classifier_lr_multiplier": 1.0,
+      "generator_lr_multiplier": 1.0
+    },
+    {
+      "id": "B_1x0.3x",
+      "classifier_lr_multiplier": 1.0,
+      "generator_lr_multiplier": 0.3
+    },
+    {
+      "id": "C_1x0.1x",
+      "classifier_lr_multiplier": 1.0,
+      "generator_lr_multiplier": 0.1
+    },
+    {
+      "id": "D_0.3x1x",
+      "classifier_lr_multiplier": 0.3,
+      "generator_lr_multiplier": 1.0
+    }
+  ],
+  "batch_size": 64,
+  "blocks": 400,
+  "steps_per_block": 32,
+  "optimizer_steps": 12800,
+  "eval_steps": [
+    3680,
+    4160,
+    4640,
+    5120,
+    5600,
+    6080,
+    6560,
+    7040,
+    7520,
+    8000,
+    8480,
+    8960,
+    9440,
+    9920,
+    10400,
+    10880,
+    11360,
+    11840,
+    12320,
+    12800
+  ],
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "lr_schedule": [
+    {
+      "first_step": 1,
+      "last_step": 6400,
+      "lr": 0.001
+    },
+    {
+      "first_step": 6401,
+      "last_step": 9600,
+      "lr": 0.0003
+    },
+    {
+      "first_step": 9601,
+      "last_step": 12800,
+      "lr": 0.0001
+    }
+  ],
+  "selection": "earliest maximum fixed valid Macro-F1 among 20 steps 3680..12800",
+  "input_rule": "sign(float32(first5000 signed timestamps)); source/valid tensors copied from audited prepared input",
+  "source_label_use": "source CE gradients and diagnostic evaluation only; no label smoothing/augmentation/pretraining/TTA",
+  "valid_label_use": "fixed510 selection/evaluation only, no gradients",
+  "initialization": "common generator/classifier weights identical by seed; 1 local Transformer layer per view",
+  "resource": {
+    "workers": 6,
+    "threads_per_worker": 2,
+    "job_seconds": 14400,
+    "job_grace_seconds": 180,
+    "pipeline_seconds": 30000,
+    "verify_seconds": 900,
+    "rss_gib_per_worker": 4,
+    "total_rss_gib": 24
+  },
+  "gate": {
+    "mean_f1_delta_min_pp": 1.0,
+    "positive_seeds": 3,
+    "mean_accuracy_delta_min_pp": 0.0,
+    "macro_f1_not_lower": true
+  },
+  "comparisons": [
+    [
+      "B_1x0.3x",
+      "A_1x1x"
+    ],
+    [
+      "C_1x0.1x",
+      "A_1x1x"
+    ],
+    [
+      "D_0.3x1x",
+      "A_1x1x"
+    ]
+  ],
+  "limits": "All four conditions are new training; fixed valid is observed development data; separated rates alter both module trajectories and cannot establish causal attribution to only one module.",
+  "prepared_input": "runs/20260928T114412Z_source150_separate_learning_rates_944201ea/artifacts/prepared.pt",
+  "sampling_manifest": "runs/20260928T114412Z_source150_separate_learning_rates_944201ea/artifacts/manifest.json",
+  "prepared_sha256": "da8ccb9b5adf475f76ec97b17d959a21419b1920de4c0bd4a7bb7fc9d3eeb2a3",
+  "manifest_sha256": "44b3357c8236cdde77e5718cb013eddccc7c76e575fbd19445ee5249369eb72a",
+  "frozen_utc": "2026-09-28T12:01:30.616123+00:00"
+}

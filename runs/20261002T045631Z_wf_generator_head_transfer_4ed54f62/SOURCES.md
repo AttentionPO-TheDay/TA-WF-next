@@ -1,0 +1,5 @@
+# 显式来源
+
+学生链从 `runs/20261002T032948Z_soft_targets_mixup_3e1aa98f` 显式复制，原始实现来源延续该run SOURCES.md；worker来自本项目norm_hierarchy run纯CE入口。本轮新增LocalStage/ProgressiveGenerator及头选择适配，非现有成熟模型完整复现，不声称科学创新已建立。
+RFNative从 `runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/rf_native.py` 显式复制，官方 https://github.com/robust-fingerprinting/RF commit b75680148429c5f554114b78a0f846541b39f0ec，RF/models/RF.py sha4cf9ff1a71a3601aeab61756327467add251475fa3bfd9c19eeb43e658effa19。只wrapper log1p输入和统一训练配方，官方网络代码不改。无旧项目代码导入，旧venv只提供第三方依赖。
+A历史产物从上轮ce_only复制，保留origin_run/origin_task及historical_reuse。非新增独立重复。原RF历史参考单列训练成本/信息，不是同预算归因。

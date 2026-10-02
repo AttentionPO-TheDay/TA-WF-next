@@ -1,0 +1,110 @@
+{
+  "id": "20261001T041301Z_gpu_source_fit_native_baseline_ee3c7640",
+  "status": "frozen",
+  "device": "cuda:0",
+  "physical_gpu": 0,
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "prepared_input": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/prepared.pt",
+  "sampling_manifest": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/manifest.json",
+  "tiny_steps": 3000,
+  "tiny_per_class": 2,
+  "tiny_stop_accuracy": 0.99,
+  "df_epochs": 30,
+  "df_batch_size": 128,
+  "df_optimizer": {
+    "name": "Adamax",
+    "lr": 0.002,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0
+  },
+  "df_eval_steps": [
+    120,
+    240,
+    360,
+    480,
+    600,
+    720,
+    840,
+    960,
+    1080,
+    1200,
+    1440,
+    1680,
+    1920,
+    2160,
+    2400,
+    2640,
+    2880,
+    3120,
+    3360,
+    3600
+  ],
+  "transformer_steps": 12800,
+  "transformer_batch_size": 64,
+  "transformer_optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "transformer_dropout": 0.1,
+  "transformer_schedule": [
+    [
+      1,
+      6400,
+      0.001
+    ],
+    [
+      6401,
+      9600,
+      0.0003
+    ],
+    [
+      9601,
+      12800,
+      0.0001
+    ]
+  ],
+  "transformer_eval_steps": [
+    3680,
+    4160,
+    4640,
+    5120,
+    5600,
+    6080,
+    6560,
+    7040,
+    7520,
+    8000,
+    8480,
+    8960,
+    9440,
+    9920,
+    10400,
+    10880,
+    11360,
+    11840,
+    12320,
+    12800
+  ],
+  "selection": "earliest max fixed valid Macro-F1 in 20 checks; tiny source accuracy only",
+  "source_label_use": "CE gradients and diagnostic metrics",
+  "valid_label_use": "selection and evaluation only; no gradients or adaptation",
+  "initialization": "scratch, no historical checkpoint",
+  "job_seconds": 2700,
+  "pipeline_seconds": 14400,
+  "threads": 4,
+  "torch_environment": "/home/rbf/TA-WF/.venv/bin/python; no old project code imports"
+}

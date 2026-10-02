@@ -1,0 +1,72 @@
+{
+  "id": "20260926T024929Z_cpu_packet_ordered_representation_67b648d4",
+  "status": "frozen",
+  "dataset": "proteus_temporal",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "sampling_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json",
+  "sampling_manifest_sha256": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "historical_prepared": "runs/20260925T130044Z_transformer_temporal_pretrain_fewshot_7098625e/artifacts/prepared.pt",
+  "historical_prepared_sha256": "4dc489bf088246c59b73cdb071bb22459c975051ed84b27962bbbf0067d70b24",
+  "conditions": [
+    "summary",
+    "ordered"
+  ],
+  "seeds": [
+    1729,
+    3407,
+    2026
+  ],
+  "train_label_count": 2040,
+  "valid_label_count": 510,
+  "input_budget": 5000,
+  "packet_patch": 50,
+  "packet_dim": 102,
+  "max_runs": 128,
+  "window_sizes": [
+    50,
+    250
+  ],
+  "model": {
+    "d_model": 52,
+    "nhead": 4,
+    "dim_feedforward": 104,
+    "num_classes": 102,
+    "dropout": 0.1,
+    "packet_dim": 102
+  },
+  "epochs": 100,
+  "eval_every": 5,
+  "batch_size": 64,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "scheduler": "none",
+  "device": "cpu",
+  "threads_per_worker": 2,
+  "concurrent_workers": 6,
+  "time_limit_seconds_per_seed": 3600,
+  "selection": "earliest maximum valid macro-F1 among epochs 5,10,...,100",
+  "candidate_gate": {
+    "mean_f1_delta_min_pp": 1.0,
+    "positive_f1_seeds_required": 3,
+    "mean_accuracy_delta_min_pp": 0.0
+  },
+  "source_label_use": "supervised gradient training and diagnostic evaluation",
+  "valid_label_use": "checkpoint selection and development comparison only; no gradients",
+  "future_label_use": "none",
+  "query_adaptation": "forbidden",
+  "pretraining": false,
+  "distillation": false,
+  "adapter": false,
+  "tta": false,
+  "git_base": "d84ab13678c92fd2feed62f7bb3811374ffb01ce",
+  "preflight_budget": "synthetic timing only: 1/2/4 threads x 2 conditions x 7 forward/backward steps, no optimizer updates",
+  "checkpoint_policy": "atomic latest state every epoch, best state every improvement; accumulated time bound survives resume",
+  "prepared_sha256": "31f9cb3f1c38d8430f20df0a0f855a512dbd25c312f28d3a7d58fb556edb5c53",
+  "budget_stop": "check cumulative time at epoch boundaries; supervisor terminates after wall3600+180 seconds including setup",
+  "nominal_max_training_cpu_thread_hours": 12,
+  "frozen_utc": "2026-09-26T02:59:08.447669+00:00"
+}

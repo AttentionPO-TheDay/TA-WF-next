@@ -1,0 +1,5 @@
+# 显式来源
+
+学生链/worker/supervisor来自 `runs/20261002T045631Z_wf_generator_head_transfer_4ed54f62` 的显式副本；其model.py复制为framework_base.py。本轮NormStage保留旧卷积参数添加BatchNorm；WideGenerator扩大三个stage通道；Transformer原样保留。Mixup函数沿用本项目soft_targets_mixup run定义（Beta.2、source TAM/标签同步混合），无teacher。rf_native.py仅为已复制framework_base的导入依赖，本轮不构造或训练RF，不使用其checkpoint。
+
+历史baseline产物来源上轮progressive_transformer三seed，report保留origin/historical，不是新增重复。旧venv只提供PyTorch/NumPy/sklearn，不隐式导入旧项目代码。官方RF来源说明延续上一run SOURCES.md。
