@@ -1,4 +1,5 @@
 # 当前进度
+当前wide+BN全局统计支路实验：`20261003T003017Z_wide_bn_stats_branch_e6967866`。12项新训练+3项历史基线完成；baseline89.150/zero_add87.712/stats_add86.144/zero_gate88.170/stats_gate86.797%，真实统计支路相对zero控制下降，全部FAIL。监督汇总键错误已由postrun_audit恢复；18冻结hash、60指标组、15组history/选模、30组logit复算和30组checkpoint重载推理通过；未来关闭。
 当前wide+BN集成审计：`20261003T001601Z_wide_bn_ensemble_audit_48e133df`。无训练读取3个wide+BN seed、MLP和RF logits；wide+BN固定多数投票valid accuracy91.569%/F1 91.435%，z-score均值90.784%，相对单seed均值89.150%提升2.418pp并超过90%。RF融合94.118%仅强对照，不计自有生成器成绩；9份logit与prepared hash核验，未来关闭。下一步为固定集成候选后做局部token+全局统计支路有界对照。
 当前wide+BN窄优化配方对照：`20261002T062832Z_wide_bn_recipe_refine_37f6ab67`。9项新训练+3项历史基线完成；baseline89.150/lr05 88.301/wd05 88.954/组合87.582%，三种新配方均FAIL。汇总脚本误用上轮比较键，已从完整产物恢复汇总；47hash、48组指标、初始化/索引/20次选模复核通过。保留89.150%候选，停止本轮配方扫描；冻结生成器权重跨头复用尚未启动，未来关闭。
 当前逐级生成器容量BN与Mixup对照：`20261002T053706Z_progressive_capacity_bn_mixup_1ad233da`。12项新训练+3项历史基线完成；baseline=86.536%/wide=85.882%/bn=88.366%/wide_bn=89.150%/mixup=87.582%；通过候选['bn', 'wide_bn']；60组预测指标和冻结hash通过。
