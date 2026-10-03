@@ -1,4 +1,5 @@
 # 当前进度
+当前wide+BN集成审计：`20261003T001601Z_wide_bn_ensemble_audit_48e133df`。无训练读取3个wide+BN seed、MLP和RF logits；wide+BN固定多数投票valid accuracy91.569%/F1 91.435%，z-score均值90.784%，相对单seed均值89.150%提升2.418pp并超过90%。RF融合94.118%仅强对照，不计自有生成器成绩；9份logit与prepared hash核验，未来关闭。下一步为固定集成候选后做局部token+全局统计支路有界对照。
 当前wide+BN窄优化配方对照：`20261002T062832Z_wide_bn_recipe_refine_37f6ab67`。9项新训练+3项历史基线完成；baseline89.150/lr05 88.301/wd05 88.954/组合87.582%，三种新配方均FAIL。汇总脚本误用上轮比较键，已从完整产物恢复汇总；47hash、48组指标、初始化/索引/20次选模复核通过。保留89.150%候选，停止本轮配方扫描；冻结生成器权重跨头复用尚未启动，未来关闭。
 当前逐级生成器容量BN与Mixup对照：`20261002T053706Z_progressive_capacity_bn_mixup_1ad233da`。12项新训练+3项历史基线完成；baseline=86.536%/wide=85.882%/bn=88.366%/wide_bn=89.150%/mixup=87.582%；通过候选['bn', 'wide_bn']；60组预测指标和冻结hash通过。
 当前网站指纹生成器跨头对照：`20261002T045631Z_wf_generator_head_transfer_4ed54f62`。12新+3历史完成；旧Transformer77.647/旧MLP71.373/新Transformer86.536/新MLP84.641/RF同配方91.699%。新生成器在两头均3/3提升（+8.889/+13.268pp），跨头结构门槛PASS；Transformer对新MLP+1.895pp且3/3正。自有开发基线升为86.536（距90%3.464pp），RF91.699单列强对照。48hash/60指标组完成后复核通过；下一候选冻结生成器权重跨头复用尚未启动，未来关闭。

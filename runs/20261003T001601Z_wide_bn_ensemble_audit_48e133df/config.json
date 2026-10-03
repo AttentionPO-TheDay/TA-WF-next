@@ -1,0 +1,14 @@
+{
+  "id": "20261003T001601Z_wide_bn_ensemble_audit_48e133df",
+  "status": "frozen",
+  "roles": ["source", "valid"],
+  "future_access": false,
+  "training": false,
+  "source_run": "runs/20261002T053706Z_progressive_capacity_bn_mixup_1ad233da",
+  "head_run": "runs/20261002T045631Z_wf_generator_head_transfer_4ed54f62",
+  "conditions": ["wide_bn_seed_mean", "wide_bn_z_mean", "wide_bn_vote", "mlp_fusion", "rf_fusion"],
+  "fixed_weights": [0.25, 0.5, 0.75],
+  "selection": "no valid-based fusion-weight selection; all weights pre-registered",
+  "metric": ["accuracy", "macro_f1"],
+  "budget": "CPU-only logit analysis; no new training"
+}
