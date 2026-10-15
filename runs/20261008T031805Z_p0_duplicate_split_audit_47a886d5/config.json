@@ -1,0 +1,37 @@
+{
+  "id": "20261008T031805Z_p0_duplicate_split_audit_47a886d5",
+  "status": "frozen",
+  "device": "cpu",
+  "training": false,
+  "tta": false,
+  "datasets": [
+    "Shusterman",
+    "TemporalDrift",
+    "VersionDrift",
+    "NetworkDrift",
+    "BehaviorDrift"
+  ],
+  "checks": [
+    "hdf5_exact_duplicate_and_conflict",
+    "hdf5_same_date_train_test",
+    "npz_full_row_hash",
+    "npz_cross_split_overlap",
+    "npz_label_conflict"
+  ],
+  "derived_cache_policy": "skip TemporalDrift tam_*.npz",
+  "source_data_mutation": false,
+  "version": 2,
+  "cpu_threads": 2,
+  "wall_time_budget_seconds": 1800,
+  "source_array_chunk_rows": 256,
+  "max_output_bytes": 2000000000,
+  "external_future_performance_access": false,
+  "external_future_structure_access": "Shusterman all 142 HDF5 for integrity/duplicates only, including original WTT future dates; no training, normalization, selection or scoring",
+  "core_views": [
+    "raw10000_float64_bytes",
+    "first5000_float32_bytes",
+    "first5000_direction_int8_bytes"
+  ],
+  "existing_evaluation_roles": "retained; exclusion CSVs are reviewable candidates only",
+  "freeze_before_valid_run": true
+}

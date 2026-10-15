@@ -1,0 +1,41 @@
+{
+  "id": "20261012T160518Z_proteus_bn_weight_swap_diagnostic_v3_64ffdbec",
+  "status": "frozen",
+  "method_version": "proteus_strength025_bn_weight_swap_v1",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "base_checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "adapted_run": "runs/20261011T042912Z_proteus_strength_sweep800_b022cde2",
+  "prepared": {
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "conditions": [
+    "frozen",
+    "weights_only",
+    "bn_stats_only",
+    "full_strength025"
+  ],
+  "physical_gpu": 0,
+  "python": "/home/rbf/TA-WF/.venv/bin/python",
+  "eval_batch_size": 128,
+  "permissions": {
+    "support_labels": false,
+    "query_labels": "metrics after fixed inference only",
+    "adaptation": "none in this diagnostic"
+  },
+  "decision": {
+    "report": "component source decomposition; mixed states are diagnostic and not additive causal effects"
+  },
+  "comparison_run": "runs/20261010T072743Z_proteus_loss_ablation_a37b4fe6"
+}

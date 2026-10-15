@@ -27,6 +27,24 @@
       "path": "processed/wtt_time/exp_26dd67e087824c2f",
       "input": "frozen_indices_and_manifests",
       "exposure": "inherits_wtt_time_protocol"
+    },
+    "proteus_version": {
+      "path": "VersionDrift",
+      "input": "signed_packet_timestamp_release_semantics_pending",
+      "exposure": "prior_structure_and_development_audits; row_roles_must_be_explicit",
+      "warning": "Shared samples and version aggregation require duplicate-group isolation; numeric label equality is not a site mapping."
+    },
+    "proteus_network": {
+      "path": "NetworkDrift",
+      "input": "signed_packet_timestamp_release_semantics_pending",
+      "exposure": "prior_structure_and_development_audits; row_roles_must_be_explicit",
+      "warning": "Shared samples and version aggregation require duplicate-group isolation; numeric label equality is not a site mapping."
+    },
+    "proteus_behavior": {
+      "path": "BehaviorDrift",
+      "input": "signed_packet_timestamp_release_semantics_pending",
+      "exposure": "prior_structure_and_development_audits; row_roles_must_be_explicit",
+      "warning": "Shared samples and version aggregation require duplicate-group isolation; numeric label equality is not a site mapping."
     }
   }
 }

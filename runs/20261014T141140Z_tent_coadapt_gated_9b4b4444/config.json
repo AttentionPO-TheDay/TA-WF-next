@@ -1,0 +1,142 @@
+{
+  "id": "20261014T141140Z_tent_coadapt_gated_9b4b4444",
+  "status": "frozen",
+  "method_version": "source_free_full_model_entropy_bn_momentum01_gate02_04_v1",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "base_checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "comparison_run": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "conditions": [
+    "tent_coadapt_gated"
+  ],
+  "historical_references": {
+    "frozen": "runs/20261014T084100Z_tent_fixedstats_ln_34b46eca/artifacts/scores.json",
+    "no_pseudo_fixed": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/artifacts/scores.json",
+    "tent_bn": "runs/20261014T084100Z_tent_fixedstats_ln_34b46eca/artifacts/scores.json",
+    "bn_batchstats_no_update": "runs/20261014T084100Z_tent_fixedstats_ln_34b46eca/artifacts/scores.json",
+    "tent_fixedstats_ln": "runs/20261014T084100Z_tent_fixedstats_ln_34b46eca/artifacts/scores.json",
+    "tent_entropy_gate": "runs/20261014T090952Z_tent_entropy_gate_84251331/artifacts/scores.json",
+    "tent_relative_entropy_gate": "runs/20261014T095104Z_tent_relative_entropy_gate_v2_a374468e/artifacts/scores.json"
+  },
+  "adaptation": {
+    "candidate_updates": 800,
+    "target_support_rows": 1024,
+    "target_batch_size": 128,
+    "base_learning_rate": 0.00025,
+    "optimizer": "Adam",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0,
+    "loss": "mean softmax conditional entropy on retained target samples only",
+    "trainable": "all model.parameters(), identical scope to no_pseudo_fixed; inactive parameters remain naturally without gradient",
+    "bn_stats": "track_running_stats=True; support train BN batch normalization and running statistics update momentum=0.10; query eval uses terminal running statistics",
+    "episodic": false,
+    "steps_per_batch": 1,
+    "source_replay": false,
+    "pseudo_labels": false,
+    "gmm": false,
+    "dropout_seed_per_update": "2024+100000+step",
+    "selection": "terminal update800",
+    "target_loader_seed": 2026,
+    "trainable_parameter_count": 1048838,
+    "dropout": "train support / eval query; same seed rule as existing baseline",
+    "entropy_gating": true,
+    "tau_low_nats": 0.2,
+    "tau_high_nats": 0.4,
+    "gating_rule": "same train-forward loss mask as absolute gate: retain 0.20 <= H <= 0.40 nats; full support batch still supplies BN statistics",
+    "gate_threshold_selection": "user-specified previous absolute thresholds, no scan",
+    "bn_momentum": 0.1,
+    "source_inputs_used": false,
+    "source_labels_used": false,
+    "baseline_config": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/config.json",
+    "baseline_runner": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/runner.py",
+    "trainable_tensor_count": 71
+  },
+  "permissions": {
+    "source_labels": "none for adaptation; source/valid read only for existing split identity audit",
+    "support_labels": false,
+    "query_adaptation": false,
+    "query_gradient_updates": false,
+    "query_forward_batch_statistics": false,
+    "query_labels": "metrics after final prediction only",
+    "external_datasets": false,
+    "other_factor_slices": false
+  },
+  "measurement": {
+    "cuda_synchronize": true,
+    "record": [
+      "adaptation_step_seconds_including_forward_backward_optimizer",
+      "task_seconds",
+      "query_inference_seconds",
+      "peak_allocated_bytes",
+      "trainable_parameters",
+      "support_entropy",
+      "support_class_histogram",
+      "bn_forward_batches",
+      "retained_sample_fraction",
+      "executed_updates",
+      "target_backward_trace_exposures",
+      "loss_sample_masks"
+    ],
+    "timing_caveat": "shared GPU1; descriptive timing only"
+  },
+  "decision": {
+    "primary": "9-cell mean Macro-F1 >0.72; report >0.725 stretch and delta/NAR vs tent_bn separately",
+    "report": "all seed/date pairs and Macro-F1/NAR/recovery contrasts; no early stopping or tuning",
+    "collapse_diagnostic": "report finite logits, predicted unique classes and max predicted-class fraction; no query-based tuning",
+    "selection": "no tuning; terminal step800; no early stopping based on labels",
+    "macro_f1_threshold": 0.72,
+    "interpretation": "joint recipe efficacy only; no isolated proof of branch mismatch or universality; no_pseudo_fixed uses source replay unlike this method",
+    "gate_metrics": [
+      "retained_sample_fraction",
+      "skipped_update_count",
+      "target_backward_trace_exposures"
+    ],
+    "primary_f1_threshold": 0.72,
+    "stretch_f1_threshold": 0.725,
+    "baseline_gain_target_pp": 1.5
+  },
+  "physical_gpu": 1,
+  "threads": 2,
+  "eval_batch_size": 128,
+  "python": "/home/rbf/TA-WF-local-backup/.venv/bin/python3",
+  "budget": {
+    "new_tasks": 9,
+    "new_inference_controls": 0,
+    "historical_rows": 63,
+    "gpu_processes": 1,
+    "max_task_seconds": 2400,
+    "max_wall_seconds": 7200,
+    "max_output_gib": 1.0
+  },
+  "inference_controls": [],
+  "evaluation": {
+    "protocol": "target support-only adaptation, terminal tracked-BN query inference; no query statistics or updates",
+    "query_batch_size": 128,
+    "query_order": "existing query index order; no shuffle",
+    "model_mode": "support all modules train; BN momentum0.10; query eval",
+    "control": "63 historical rows in 7 conditions, matched seed/date/query; no repeated training",
+    "caveat": "TENT-inspired full-parameter entropy adaptation, not original norm-only TENT; no source BN forward, so momentum matches baseline but BN trajectory differs"
+  },
+  "development_exposure": {
+    "basis": "user hypothesis based on previously observed TemporalDrift TENT and Proteus/no_pseudo outcomes; all thresholds and budget fixed before this run",
+    "dataset": "TemporalDrift observed development data; not independent confirmation"
+  }
+}

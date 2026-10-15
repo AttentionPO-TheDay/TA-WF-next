@@ -1,0 +1,5 @@
+# 来源与实现范围
+
+模型、loader、metrics、runner骨架显式复制本项目runs/20261014T090952Z_tent_entropy_gate_84251331；不导入归档训练项目。模型源链见该run/SOURCES.md。全参范围、Adam设置和BN momentum来自已审计MVI的no_pseudo_fixed分支：runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/runner.py及config.json。官方熵定义来源DequanWang/tent commit e9e926a668d85244c66a6d5c006efbd2b82e83e8，许可和源码保留。
+
+新的coadapt.py仅目标熵、全参优化与BN tracked统计更新；不含Source CE、MMD、边缘熵、多样性、伪标签或回放。不声称原版TENT配置，也不声称源样本不参与基线训练。本run适应无需源样本，但split核验仍读取source/valid输入以保持数据身份隔离。

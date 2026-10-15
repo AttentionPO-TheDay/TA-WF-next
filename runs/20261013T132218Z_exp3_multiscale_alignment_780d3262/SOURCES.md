@@ -1,0 +1,1 @@
+显式复制本项目MVI run-local架构/数据/指标 helper：runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b；基础checkpoint与prepared来源在config中。Python使用旧环境的解释器，仅作为安装依赖环境；不通过sys.path加载旧项目实现，不使用旧项目checkpoint。mechanism.py为本run新实现。历史参考包括MVI原预测，标记historical_reference。

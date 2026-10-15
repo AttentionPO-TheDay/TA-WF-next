@@ -1,0 +1,104 @@
+{
+  "id": "20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b",
+  "status": "frozen",
+  "method_version": "mvi_no_pseudo_dynamic_lr_bn_v1",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "base_checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "comparison_run": "runs/20261012T155207Z_proteus_lowlr_loss_attribution_14931ed8",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "conditions": [
+    "no_pseudo_fixed",
+    "dynamic_lr_only",
+    "bn_interp_only",
+    "mvi_joint",
+    "mvi_joint_skip"
+  ],
+  "historical_references": {
+    "frozen": "runs/20261012T155207Z_proteus_lowlr_loss_attribution_14931ed8/artifacts/scores.json",
+    "proteus_strength025": "runs/20261011T042912Z_proteus_strength_sweep800_b022cde2/artifacts/scores.json",
+    "rollback10": "runs/20261011T041813Z_proteus_rollback_budget800_v2_4b96c033/artifacts/scores.json"
+  },
+  "adaptation": {
+    "epochs": 100,
+    "candidate_updates": 800,
+    "target_support_rows": 1024,
+    "target_batch_size": 128,
+    "source_batch_size": 128,
+    "base_learning_rate": 0.00025,
+    "optimizer": "Adam",
+    "loss": "source_ce + target_entropy_diversity + feature_mmd",
+    "pseudo_labels": false,
+    "gmm": false,
+    "entropy_reference": "initial_support_mean_entropy",
+    "lr_scale": "clip(initial_support_entropy / max(current_batch_entropy, 1e-8), 0.25, 1.0)",
+    "bn_momentum": "target momentum = 0.01 + 0.09 * lr_scale; source momentum remains 0.10",
+    "initial_bn_momentum": 0.1,
+    "skip_condition": "mvi_joint_skip retains target traces with normalized eval entropy in [0.02,0.50]; if none retained skip entire optimizer update and all train-mode forwards",
+    "dropout_seed_per_update": "2024+100000+global_update",
+    "skip_normalized_entropy_min": 0.02,
+    "skip_normalized_entropy_max": 0.5
+  },
+  "permissions": {
+    "source_labels": "source CE only",
+    "support_labels": false,
+    "query_adaptation": false,
+    "query_labels": "final prediction metrics only",
+    "external_datasets": false,
+    "other_factor_slices": false
+  },
+  "measurement": {
+    "record": [
+      "forward_seconds",
+      "backward_seconds",
+      "optimizer_seconds",
+      "task_seconds",
+      "query_inference_seconds",
+      "query_latency_ms_per_trace",
+      "peak_memory_bytes",
+      "executed_updates",
+      "skipped_updates"
+    ],
+    "cuda_synchronize": true,
+    "inference_profile": {
+      "warmup": 5,
+      "repeats": 30,
+      "batch_sizes": [
+        1,
+        128
+      ],
+      "inputs": "support only; model state preserved"
+    },
+    "timing_caveat": "GPU1 shared with existing jobs; synchronized wall timings are descriptive, not exclusive GPU latency"
+  },
+  "decision": {
+    "primary_goal": "aggregate Macro-F1 > 74.5% and negative_adaptation_rate < 2%",
+    "secondary": "report per-date metrics and adaptation/inference cost",
+    "no_posthoc_tuning": "all five new conditions and rules frozen before execution"
+  },
+  "physical_gpu": 1,
+  "threads": 2,
+  "eval_batch_size": 128,
+  "python": "/home/rbf/TA-WF/.venv/bin/python",
+  "budget": {
+    "new_tasks": 45,
+    "historical_rows": 27,
+    "max_task_seconds": 2400,
+    "max_wall_seconds": 21600,
+    "gpu_processes": 1
+  }
+}

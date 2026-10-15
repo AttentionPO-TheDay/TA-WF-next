@@ -1,0 +1,10 @@
+{
+  "id": "20261013T132218Z_exp1_baseline_reference_f144732d",
+  "status": "frozen",
+  "method_version": "reference_no_pseudo_fixed_v1",
+  "source_run": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b",
+  "reuse_only": true,
+  "training_started": false,
+  "query_adaptation": false,
+  "metrics_source": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/RESULTS.md"
+}

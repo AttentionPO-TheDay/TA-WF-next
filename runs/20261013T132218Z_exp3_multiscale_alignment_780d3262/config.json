@@ -1,0 +1,102 @@
+{
+  "id": "20261013T132218Z_exp3_multiscale_alignment_780d3262",
+  "status": "frozen",
+  "method_version": "scale_topology_implementation_v2",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "base_checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "comparison_run": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "conditions": [
+    "scale_topology"
+  ],
+  "historical_references": {
+    "frozen": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/artifacts/scores.json",
+    "no_pseudo_fixed": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/artifacts/scores.json",
+    "dynamic_lr_only": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/artifacts/scores.json"
+  },
+  "adaptation": {
+    "epochs": 100,
+    "candidate_updates": 800,
+    "target_support_rows": 1024,
+    "target_batch_size": 128,
+    "source_batch_size": 128,
+    "base_learning_rate": 0.00025,
+    "optimizer": "Adam",
+    "loss": "source_ce + target_entropy_diversity + feature_mmd",
+    "pseudo_labels": false,
+    "gmm": false,
+    "bn_momentum": "fixed 0.10 for source and target; no BN interpolation",
+    "initial_bn_momentum": 0.1,
+    "dropout_seed_per_update": "2024+100000+global_update"
+  },
+  "permissions": {
+    "source_labels": "source CE only",
+    "support_labels": false,
+    "query_adaptation": false,
+    "query_labels": "final prediction metrics only",
+    "external_datasets": false,
+    "other_factor_slices": false
+  },
+  "measurement": {
+    "record": [
+      "forward_seconds",
+      "backward_seconds",
+      "optimizer_seconds",
+      "task_seconds",
+      "query_inference_seconds",
+      "query_latency_ms_per_trace",
+      "peak_memory_bytes",
+      "executed_updates",
+      "skipped_updates"
+    ],
+    "cuda_synchronize": true,
+    "inference_profile": {
+      "warmup": 5,
+      "repeats": 30,
+      "batch_sizes": [
+        1,
+        128
+      ],
+      "inputs": "support only; model state preserved"
+    },
+    "timing_caveat": "GPU1 shared with existing jobs; synchronized wall timings are descriptive, not exclusive GPU latency"
+  },
+  "decision": {
+    "screen": "Macro-F1 > historical no_pseudo_fixed and negative adaptation <2%; paired cells and all negative results reported",
+    "aspirational": "Macro-F1 >74.5% and negative adaptation <2%",
+    "selection": "terminal student at update800; no query-based checkpoint/threshold tuning"
+  },
+  "physical_gpu": 1,
+  "threads": 2,
+  "eval_batch_size": 128,
+  "python": "/home/rbf/TA-WF-local-backup/.venv/bin/python3",
+  "budget": {
+    "new_tasks": 9,
+    "historical_rows": 27,
+    "max_task_seconds": 2400,
+    "max_wall_seconds": 21600,
+    "gpu_processes": 1
+  },
+  "mechanism": {
+    "weight": 0.25,
+    "bins": 24,
+    "layers": "generator.stages[0,1,2] outputs before temporal pooling: Bx64x1800/Bx128x600/Bx256x120",
+    "loss": "mean MSE between adjacent normalized temporal-bin cosine Gram matrices; only target forward; no additional model/teacher",
+    "lr": "fixed 0.00025"
+  }
+}

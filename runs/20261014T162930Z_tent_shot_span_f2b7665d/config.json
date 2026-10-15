@@ -1,0 +1,129 @@
+{
+  "id": "20261014T162930Z_tent_shot_span_f2b7665d",
+  "status": "frozen",
+  "method_version": "tent_shot_span_scale_lock_invariance_v1",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "base_checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "comparison_run": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "conditions": [
+    "tent_shot_span"
+  ],
+  "historical_references": {
+    "frozen": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/artifacts/scores.json",
+    "no_pseudo_fixed": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/artifacts/scores.json",
+    "tent_bn": "runs/20261014T070454Z_tent_baseline_v3_83d48bf3/artifacts/scores.json",
+    "bn_batchstats_no_update": "runs/20261014T070454Z_tent_baseline_v3_83d48bf3/artifacts/scores.json",
+    "tent_fixedstats_ln": "runs/20261014T084100Z_tent_fixedstats_ln_34b46eca/artifacts/scores.json",
+    "tent_entropy_gate": "runs/20261014T090952Z_tent_entropy_gate_84251331/artifacts/scores.json",
+    "tent_relative_entropy_gate": "runs/20261014T095104Z_tent_relative_entropy_gate_v2_a374468e/artifacts/scores.json",
+    "tent_coadapt_gated": "runs/20261014T141140Z_tent_coadapt_gated_9b4b4444/artifacts/scores.json"
+  },
+  "adaptation": {
+    "candidate_updates": 800,
+    "target_support_rows": 1024,
+    "target_batch_size": 128,
+    "base_learning_rate": 0.00025,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0,
+    "loss": "cosine-decayed clean entropy plus masked-view stop-gradient consistency on retained samples",
+    "trainable": "generator BN1d affine + time_projection + time_positions + head LayerNorm affine; final_norm/classifier frozen",
+    "bn_stats": "track_running_stats=True; all BN eval during support/query; source running_mean/var/num_batches_tracked immutable",
+    "episodic": false,
+    "steps_per_batch": 1,
+    "source_replay": false,
+    "pseudo_labels": false,
+    "gmm": false,
+    "dropout_seed_per_update": "2024+100000+step",
+    "selection": "terminal update800",
+    "source_loader_seed": 2025,
+    "target_loader_seed": 2026,
+    "mask_fraction": 0.05,
+    "mask_len_bins": 90,
+    "mask_seed": "20260000+step",
+    "tau_low_nats": 0.2,
+    "tau_high_nats": 0.6,
+    "cosine_decay": true,
+    "dropout": "support model.train with BN eval; query model.eval",
+    "trainable_parameter_count": 32384,
+    "trainable_tensor_count": 23
+  },
+  "permissions": {
+    "source_labels": "not used for adaptation; source/valid inputs only for split verification",
+    "support_labels": false,
+    "query_adaptation": false,
+    "query_forward_batch_statistics": false,
+    "query_labels": "metrics after final prediction only",
+    "external_datasets": false,
+    "other_factor_slices": false
+  },
+  "measurement": {
+    "cuda_synchronize": true,
+    "record": [
+      "adaptation_step_seconds_including_two_views_backward_optimizer",
+      "task_seconds",
+      "query_inference_seconds",
+      "peak_allocated_bytes",
+      "trainable_parameters",
+      "support_entropy",
+      "retained_sample_fraction",
+      "executed_updates",
+      "target_backward_trace_exposures",
+      "mask_agreement_fraction"
+    ],
+    "timing_caveat": "shared GPU; descriptive timing only"
+  },
+  "decision": {
+    "primary": "9-cell mean Macro-F1 >0.72 and paired mean delta vs tent_bn >0",
+    "report": "all seed/date pairs and Macro-F1/NAR/recovery contrasts; no early stopping or tuning",
+    "collapse_diagnostic": "report finite logits, predicted unique classes and max predicted-class fraction; no query-based tuning",
+    "selection": "no tuning; terminal step800; no early stopping based on labels",
+    "macro_f1_threshold": 0.72,
+    "retention_target": "30% to 50% descriptive target; not used for tuning",
+    "interpretation": "joint Scale-Lock plus Span-Invariance efficacy on observed TemporalDrift; no isolated component causality or cross-dataset claim"
+  },
+  "physical_gpu": 1,
+  "threads": 2,
+  "eval_batch_size": 128,
+  "python": "/home/rbf/TA-WF-local-backup/.venv/bin/python3",
+  "budget": {
+    "new_tasks": 9,
+    "new_inference_controls": 0,
+    "historical_rows": 72,
+    "gpu_processes": 1,
+    "max_task_seconds": 2400,
+    "max_wall_seconds": 14400,
+    "max_output_gib": 1.0
+  },
+  "inference_controls": [],
+  "evaluation": {
+    "protocol": "independent unlabeled support adaptation then fixed-state query; no query statistics or gradients",
+    "query_batch_size": 128,
+    "query_order": "existing query index order; no shuffle",
+    "model_mode": "support train with BN eval and locked output head; query model.eval",
+    "control": "72 historical rows in 8 conditions, matched seed/date/query; no repeated training",
+    "caveat": "Scale-Lock and Span-Invariance are jointly changed relative to TENT; this run cannot isolate their separate effects"
+  },
+  "development_exposure": {
+    "basis": "user-specified hypothesis motivated by observed TENT logit collapse and repeated support updates",
+    "dataset": "observed TemporalDrift development data; not independent confirmation"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "status": "frozen",
+  "method_version": "wide_bn_ce_frozen_day14_day90_eval_v1",
+  "dataset_config": "configs/datasets.json",
+  "dataset_key": "proteus_temporal",
+  "roles": [
+    "valid",
+    "day14",
+    "day90"
+  ],
+  "target_files": [
+    "day14.npz",
+    "day90.npz"
+  ],
+  "selection": "all target rows in stored order; no sampling; unchanged labels 0..101",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "model_kind": "wide_bn",
+  "checkpoint_source": "runs/20261002T053706Z_progressive_capacity_bn_mixup_1ad233da",
+  "checkpoint_selection": "existing source-valid maximum accuracy, earliest strict improvement; verified against saved training histories; no target selection",
+  "input": {
+    "length": 5000,
+    "cast": "float32 before abs and binning",
+    "tam_bins": 1800,
+    "time_cap_seconds": 80,
+    "rule": "positive channel0 / negative channel1; ignore zero padding; floor(float64(abs(float32(t)))*1799/80), t>=80 last bin; log1p inside frozen model",
+    "augmentation": false,
+    "packet_view": "disabled in original architecture; verified zero timestamp logits parity"
+  },
+  "permissions": {
+    "training": false,
+    "tta": false,
+    "bn_update": false,
+    "target_inputs": "inference and structural/overlap audit only",
+    "target_labels": "fixed-vocabulary metrics and class-coverage audit only",
+    "target_checkpoint_selection": false,
+    "target_tuning": false,
+    "other_dates": false,
+    "wtt_time": false,
+    "awf": false
+  },
+  "exposure": "TemporalDrift observed development benchmark; Day14/Day90 scores are development diagnostic exposure, not independent confirmation; subsequent method selection requires a new declared experiment",
+  "metrics": [
+    "accuracy",
+    "macro_f1_fixed_102_classes",
+    "per_seed_source_valid_minus_target_pp",
+    "mean_and_sample_std_across_training_seeds"
+  ],
+  "interpretation": "source_valid is a selected 510-row development reference, not an independent Day0 test; date performance differences do not isolate a causal temporal factor",
+  "eval_batch_size": 64,
+  "physical_gpu": 0,
+  "threads": 2,
+  "precision": "float32, deterministic, no AMP/TF32",
+  "budget": {
+    "max_wall_seconds": 3600,
+    "max_gpu_processes": 1,
+    "training_steps": 0,
+    "adaptation_steps": 0
+  },
+  "stop_conditions": [
+    "source validation predictions mismatch",
+    "input nonfinite/empty/internal-zero/unknown label",
+    "freeze hash mismatch",
+    "metric audit mismatch",
+    "timeout or resource error"
+  ],
+  "environment": {
+    "python": "/home/rbf/TA-WF/.venv/bin/python",
+    "old_code_imports": false
+  }
+}

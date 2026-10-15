@@ -1,0 +1,114 @@
+{
+  "id": "20261011T041813Z_proteus_rollback_budget800_v2_4b96c033",
+  "status": "frozen",
+  "method_version": "proteus_full_loss_unlabeled_rollback_budget800_v1",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "base_checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "comparison_run": "runs/20261010T072743Z_proteus_loss_ablation_a37b4fe6",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "conditions": [
+    "full_control",
+    "rollback_10",
+    "rollback_25",
+    "rollback_50"
+  ],
+  "rollback_intervals": {
+    "full_control": null,
+    "rollback_10": 10,
+    "rollback_25": 25,
+    "rollback_50": 50
+  },
+  "loss_weights": {
+    "full_control": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "rollback_10": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "rollback_25": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "rollback_50": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "loss_order": [
+    "source_ce",
+    "pseudo_ce",
+    "entropy_diversity",
+    "mmd"
+  ],
+  "adaptation": {
+    "epochs": 100,
+    "updates_per_epoch": 8,
+    "updates": 800,
+    "target_support_rows": 1024,
+    "target_batch_size": 128,
+    "source_batch_size": 128,
+    "learning_rate": 0.001,
+    "optimizer": "Adam",
+    "gmm_refresh_every_epochs": 5,
+    "gmm_components": 2,
+    "gmm_tol": 1e-06,
+    "gmm_threshold": 0.6,
+    "entropy_minimum_improvement": 1e-07,
+    "confidence_tolerance": 1e-07,
+    "confidence_threshold": 0.8,
+    "independent_loader_generators": true,
+    "dropout_seed_per_update": "2024+100000+epoch*8+batch_index"
+  },
+  "permissions": {
+    "source_labels": "source CE only",
+    "support_labels": false,
+    "query_adaptation": false,
+    "query_labels": "final predictions only",
+    "external_and_other_factor_datasets": false
+  },
+  "precision": "float32; no AMP or TF32; GMM float64 normalization inherited from port v1",
+  "physical_gpu": 0,
+  "threads": 2,
+  "eval_batch_size": 128,
+  "budget": {
+    "tasks": 36,
+    "max_task_seconds": 2400,
+    "max_wall_seconds": 21600,
+    "gpu_processes": 1,
+    "updates_per_task": 800
+  },
+  "decision": {
+    "primary": "rollback_10",
+    "compare_to": "full_control",
+    "macro_f1_delta_pp": ">=0",
+    "negative_adaptation_delta_pp": "<=-1.0",
+    "cells_with_lower_negative_adaptation": ">=6/9",
+    "note": "development screening threshold; no query labels used for acceptance"
+  },
+  "python": "/home/rbf/TA-WF/.venv/bin/python"
+}

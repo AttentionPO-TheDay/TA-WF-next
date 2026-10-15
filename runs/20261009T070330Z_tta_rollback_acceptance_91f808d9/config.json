@@ -1,0 +1,89 @@
+{
+  "id": "20261009T070330Z_tta_rollback_acceptance_91f808d9",
+  "status": "frozen",
+  "method_version": "global_entropy_adapter_rollback_v1",
+  "dataset_config": "configs/datasets.json",
+  "dataset_key": "proteus_temporal",
+  "roles": ["day14", "day90", "day270"],
+  "conditions": ["frozen", "global", "stepwise_rollback", "episode_rollback"],
+  "seeds": [21729, 23407, 22026],
+  "checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "comparison_run": "runs/20261009T053533Z_generator_factor_split_adaptation_87d59d18",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "split": {
+    "fingerprint": "sha256 contiguous float32 first-5000 signed timestamps",
+    "source_overlap": "excluded",
+    "within_date_duplicates": "minimum raw row representative",
+    "ordering": "sha256(role|fingerprint|20261009)",
+    "support_rows": 1024,
+    "query": "all remaining unique non-source-overlap rows",
+    "must_match_comparison_run": true
+  },
+  "adapter": {
+    "input_dim": 110,
+    "bottleneck": 16,
+    "last_layer_zero_initialized": true,
+    "tokens": 120
+  },
+  "adaptation": {
+    "objective": "mean prediction entropy on support only",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "steps": 10,
+    "batch_size": 64,
+    "monitor": "complete support after every attempted step",
+    "confidence_threshold": 0.8,
+    "entropy_minimum_improvement": 1e-7,
+    "confidence_tolerance": 1e-7,
+    "stepwise_restore_optimizer": true,
+    "episode_criterion": "final support entropy improves from initial by at least 1e-7"
+  },
+  "permissions": {
+    "source_labels": false,
+    "target_support_inputs": "adaptation and unlabeled rollback monitoring",
+    "target_support_labels": false,
+    "query_inputs": "post-adaptation inference only",
+    "query_labels": "metrics after predictions are fixed",
+    "query_adaptation": false,
+    "bn_update": false,
+    "target_step_selection": "support entropy and confidence only",
+    "wtt_time": false,
+    "awf": false,
+    "other_drift_datasets": false
+  },
+  "metrics": [
+    "accuracy",
+    "macro_f1_fixed_102",
+    "negative_adaptation_rate",
+    "recovery_rate",
+    "changed_rate",
+    "accepted_steps",
+    "support_entropy_trajectory",
+    "support_high_confidence_trajectory",
+    "relative_feature_change"
+  ],
+  "physical_gpu": 1,
+  "python": "/home/rbf/TA-WF/.venv/bin/python",
+  "threads": 2,
+  "eval_batch_size": 128,
+  "precision": "float32; no AMP or TF32",
+  "budget": {
+    "max_wall_seconds": 10800,
+    "max_gpu_processes": 1,
+    "adaptation_tasks": 27,
+    "attempted_steps_per_task": 10
+  },
+  "decision": {
+    "primary": "stepwise_rollback",
+    "macro_f1_minus_global_mean_pp": ">=0",
+    "negative_adaptation_minus_global_mean_pp": "<=-0.2",
+    "cells_with_lower_negative_adaptation": ">=6/9",
+    "secondary": "episode_rollback reported separately under identical thresholds"
+  }
+}

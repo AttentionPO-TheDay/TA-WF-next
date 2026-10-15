@@ -1,0 +1,68 @@
+{
+  "id": "20261009T014641Z_generator_token_selective_tta_b7b531fa",
+  "status": "frozen",
+  "method_version": "generator_local_selective_entropy_adapter_v1",
+  "dataset_config": "configs/datasets.json",
+  "dataset_key": "proteus_temporal",
+  "roles": ["day14", "day90", "day270"],
+  "conditions": ["frozen", "global", "drift_selective", "random_selective"],
+  "seeds": [21729, 23407, 22026],
+  "checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "split": {
+    "fingerprint": "sha256 contiguous float32 first-5000 signed timestamps",
+    "source_overlap": "excluded",
+    "within_date_duplicates": "minimum raw row representative",
+    "ordering": "sha256(role|fingerprint|20261009)",
+    "support_rows": 1024,
+    "query": "all remaining unique non-source-overlap rows"
+  },
+  "source_reference_rows": 2048,
+  "adapter": {
+    "input_dim": 110,
+    "bottleneck": 16,
+    "last_layer_zero_initialized": true,
+    "selective_tokens": 60,
+    "total_tokens": 120
+  },
+  "adaptation": {
+    "objective": "mean prediction entropy on support only",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "steps": 10,
+    "batch_size": 64,
+    "rollback": false
+  },
+  "permissions": {
+    "source_inputs": "unlabeled generator reference statistics",
+    "source_labels": false,
+    "target_support_inputs": "adaptation and selection",
+    "target_support_labels": false,
+    "query_inputs": "post-adaptation inference only",
+    "query_labels": "metrics after predictions are fixed",
+    "query_adaptation": false,
+    "bn_update": false,
+    "target_step_selection": false,
+    "wtt_time": false,
+    "awf": false,
+    "other_drift_datasets": false
+  },
+  "metrics": ["accuracy", "macro_f1_fixed_102", "negative_adaptation_rate", "recovery_rate", "support_entropy_before_after"],
+  "physical_gpu": 1,
+  "threads": 2,
+  "eval_batch_size": 128,
+  "precision": "float32; no AMP or TF32",
+  "budget": {"max_wall_seconds": 10800, "max_gpu_processes": 1, "adaptation_tasks": 27, "steps_per_task": 10},
+  "decision": {
+    "selective_minus_global_macro_f1_mean": ">0",
+    "selective_minus_global_positive_cells": ">=6/9",
+    "selective_negative_adaptation_minus_global": "<0",
+    "selective_minus_random_macro_f1_mean": ">0"
+  }
+}

@@ -32,6 +32,9 @@ datasets/
 # Generated tables and per-sample evidence remain on disk, outside Git.
 runs/*/checkpoints/
 runs/*/logs/
+# Runtime output may use ``lgs`` plus a ``logs`` compatibility symlink.
+runs/*/lgs/
+runs/*/logs
 runs/**/*.log
 runs/*/artifacts/
 runs/**/*.csv

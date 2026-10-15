@@ -1,0 +1,73 @@
+{
+  "id": "20261009T053533Z_generator_factor_split_adaptation_87d59d18",
+  "status": "frozen",
+  "method_version": "generator_factor_split_entropy_adapter_v1",
+  "dataset_config": "configs/datasets.json",
+  "dataset_key": "proteus_temporal",
+  "roles": ["day14", "day90", "day270"],
+  "conditions": ["frozen", "full_global", "full_masked_learned_global", "learned_global", "learned_drift_selective", "learned_random_selective"],
+  "seeds": [21729, 23407, 22026],
+  "checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "split": {
+    "fingerprint": "sha256 contiguous float32 first-5000 signed timestamps",
+    "source_overlap": "excluded",
+    "within_date_duplicates": "minimum raw row representative",
+    "ordering": "sha256(role|fingerprint|20261009)",
+    "support_rows": 1024,
+    "query": "all remaining unique non-source-overlap rows"
+  },
+  "source_reference_rows": 2048,
+  "adapter": {
+    "full_input_dim": 110,
+    "learned_input_dim": 80,
+    "fixed_input_dim": 30,
+    "bottleneck": 16,
+    "last_layer_zero_initialized": true,
+    "selective_tokens": 60,
+    "total_tokens": 120
+  },
+  "adaptation": {
+    "objective": "mean prediction entropy on support only",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "steps": 10,
+    "batch_size": 64,
+    "rollback": false
+  },
+  "permissions": {
+    "source_inputs": "unlabeled generator reference statistics",
+    "source_labels": false,
+    "target_support_inputs": "adaptation and selection",
+    "target_support_labels": false,
+    "query_inputs": "post-adaptation inference only",
+    "query_labels": "metrics after predictions are fixed",
+    "query_adaptation": false,
+    "bn_update": false,
+    "target_step_selection": false,
+    "wtt_time": false,
+    "awf": false,
+    "other_drift_datasets": false
+  },
+  "metrics": ["accuracy", "macro_f1_fixed_102", "negative_adaptation_rate", "recovery_rate", "support_entropy_before_after"],
+  "physical_gpu": 1,
+  "threads": 2,
+  "eval_batch_size": 128,
+  "precision": "float32; no AMP or TF32",
+  "budget": {"max_wall_seconds": 10800, "max_gpu_processes": 1, "adaptation_tasks": 45, "steps_per_task": 10},
+  "parameter_control": "full_masked_learned_global uses the identical full_global adapter initialization and structure, with its first 30 output coordinates masked to zero",
+  "feature_change": "support: full 110-coordinate residual L2 norm divided by full 110-coordinate original token L2 norm; fixed/learned RMS reported separately",
+  "decision": {
+    "learned_global_minus_full_global_macro_f1_mean": ">0",
+    "learned_drift_minus_learned_global_macro_f1_mean": ">0",
+    "learned_drift_positive_cells": ">=6/9",
+    "learned_drift_negative_adaptation_minus_learned_global": "<0",
+    "learned_drift_minus_random_macro_f1_mean": ">0"
+  }
+}

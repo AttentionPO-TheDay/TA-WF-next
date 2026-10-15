@@ -1,0 +1,7 @@
+# 来源
+
+模型闭包及port_base.py逐字节复制自本项目20261009T085657Z_proteus_mechanism_baseline_b5571868。port_base只调用本run本地model及依赖，旧工作区仅提供第三方Python环境。source/valid及日期prepared、checkpoint显式引用config指定的本项目只读产物。
+
+原始Proteus算法来源Xinhao-Deng/Adaptive-WF-Attack提交4cdab4163bf3de7036a2498dac533c888b97664d exp/proteus.py。与上轮端口一致：MMD合并距离动态带宽（不同于论文公式仅跨域距离形式）、float64熵归一化、全模型训练。新实现仅增加损失权重、配对调度、完整记录和独立审计，不引入回退机制。
+
+本轮历史对照只读复用上轮结果并逐字节hash核对。logs→lgs为本run内部相对链接，延续前两轮文件系统无法直接mkdir logs的兼容方式。未经完整组件消融不声称GMM是已证明的退化原因。

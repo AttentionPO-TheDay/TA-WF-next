@@ -1,0 +1,55 @@
+{
+  "id": "20261009T085657Z_proteus_mechanism_baseline_b5571868",
+  "status": "frozen",
+  "method_version": "proteus_mechanism_port_wide_bn_v1",
+  "dataset_config": "configs/datasets.json",
+  "dataset_key": "proteus_temporal",
+  "roles": ["day14", "day90", "day270"],
+  "seeds": [21729, 23407, 22026],
+  "base_checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "comparison_run": "runs/20261009T070330Z_tta_rollback_acceptance_91f808d9",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "conditions": ["frozen", "global_entropy_adapter", "stepwise_rollback", "proteus_port"],
+  "adaptation": {
+    "epochs": 100,
+    "target_support_rows": 1024,
+    "target_batch_size": 128,
+    "source_batch_size": 128,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "gmm_refresh_every_epochs": 5,
+    "gmm_components": 2,
+    "gmm_tol": 1e-6,
+    "gmm_threshold": 0.6,
+    "mmd": "official biased Gaussian kernel; dynamic mean squared-distance bandwidth",
+    "loss": "source_ce + pseudo_ce + target_entropy + marginal_entropy_term + mmd"
+  },
+  "permissions": {
+    "source_labels": "source CE only",
+    "target_support_inputs": "adaptation, GMM, pseudo-label updates",
+    "target_support_labels": false,
+    "query_inputs": "post-adaptation inference only",
+    "query_labels": "metrics after predictions are fixed",
+    "query_model_selection": false,
+    "wtt_time": false,
+    "awf": false,
+    "other_drift_datasets": false
+  },
+  "metrics": ["accuracy", "macro_f1_fixed_102", "negative_adaptation_rate", "recovery_rate", "changed_rate", "pseudo_coverage", "loss_trajectory"],
+  "python": "/home/rbf/TA-WF/.venv/bin/python",
+  "physical_gpu": 0,
+  "threads": 2,
+  "eval_batch_size": 128,
+  "precision": "float32; no AMP or TF32",
+  "budget": {"max_wall_seconds_per_task": 10800, "max_gpu_processes": 1, "proteus_tasks": 9},
+  "decision": {
+    "primary": "proteus_port vs frozen and global on query Macro-F1",
+    "secondary": "negative_adaptation_rate and pseudo_coverage",
+    "no_query_label_selection": true
+  }
+}

@@ -1,0 +1,5 @@
+# 来源
+
+显式复用本项目 runs/20261002T053706Z_progressive_capacity_bn_mixup_1ad233da 的 wide_bn 三seed最优checkpoint、模型构造依赖闭包和固定prepared输入。模型文件逐字复制并核对原freeze；训练/优化辅助函数仅为构造依赖，不调用。未导入旧项目训练代码；只借用其Python虚拟环境。详细sha256和逐文件来源见 artifacts/provenance.json。
+
+TAM规则来源：runs/20261001T104959Z_gpu_multiview_generator_head_factorial_cf47d62c/prepare.py 的 independent_tam；本次另用add.at实现交叉核验。全部结果只属于当前run。

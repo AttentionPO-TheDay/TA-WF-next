@@ -1,0 +1,13 @@
+{
+  "id": "20261008T025416Z_dataset_identity_hdf5_audit_71a0de93",
+  "status": "frozen",
+  "device": "cpu",
+  "training": false,
+  "tta": false,
+  "external_future_access": false,
+  "target_label_use": "structure_and_duplicate_audit_only",
+  "hdf5_mode": "read_only",
+  "npz_duplicate_scope": "deterministic_sample_rows_only",
+  "datasets": ["TemporalDrift", "VersionDrift", "NetworkDrift", "BehaviorDrift", "Defense", "OpenWorld", "AWF", "Shusterman", "WTT-Time"],
+  "wtt_action": "manifest_boundary_only"
+}

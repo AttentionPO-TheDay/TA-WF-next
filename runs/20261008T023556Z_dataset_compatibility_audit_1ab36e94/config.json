@@ -1,0 +1,13 @@
+{
+  "id": "20261008T023556Z_dataset_compatibility_audit_1ab36e94",
+  "status": "frozen",
+  "name": "dataset_compatibility_audit",
+  "device": "cpu",
+  "training": false,
+  "tta": false,
+  "external_future_access": false,
+  "sample_level_label_use": false,
+  "candidates": ["TemporalDrift", "VersionDrift", "NetworkDrift", "BehaviorDrift", "Defense", "OpenWorld", "AWF", "Shusterman", "WTT-Time", "PCAP"],
+  "checks": ["container_inventory", "npz_schema", "role_path_audit", "modality_compatibility", "duplicate_boundary", "adapter_plan"],
+  "limitations": ["numpy_and_h5py_not_required_for_this_structural_pass", "hdf5_internal_schema_not_decoded", "sample_level_label_mapping_not_claimed", "sample_level_duplicate_detection_not_claimed"]
+}

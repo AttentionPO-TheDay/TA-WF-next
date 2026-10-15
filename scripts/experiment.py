@@ -20,6 +20,7 @@ def main():
     new = sub.add_parser('new')
     new.add_argument('--name', required=True)
     new.add_argument('--question', required=True)
+    new.add_argument('--resume-id', help='Register an unregistered directory left by an interrupted creation.')
     status = sub.add_parser('status')
     status.add_argument('--id', required=True)
     status.add_argument('--state', required=True, choices=['planned', 'running', 'completed', 'failed', 'stopped'])
@@ -47,14 +48,33 @@ def main():
         if args.command == 'new':
             if not re.fullmatch(r'[a-z0-9][a-z0-9_-]{0,47}', args.name):
                 raise SystemExit('Use a short lowercase name, digits, underscores or hyphens.')
-            run_id = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ') + '_' + args.name + '_' + uuid.uuid4().hex[:8]
+            run_id = args.resume_id or datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ') + '_' + args.name + '_' + uuid.uuid4().hex[:8]
             run = root / 'runs' / run_id
-            run.mkdir(parents=True, exist_ok=False)
-            for folder in ['logs', 'checkpoints', 'artifacts']:
-                (run / folder).mkdir()
-            (run / 'PLAN.md').write_text('# ' + run_id + '\n\n问题：' + args.question + '\n\n状态：planned；配置尚未冻结。\n\n待填写：数据及代码版本、标签权限、对照、指标、seeds、选模规则、预算、停止条件。\n')
-            (run / 'config.json').write_text(json.dumps({'id': run_id, 'status': 'draft'}, indent=2) + '\n')
-            (run / 'RESULTS.md').write_text('# 实验结果\n\n尚未执行。\n')
+            if args.resume_id:
+                if not re.fullmatch(r'[0-9]{8}T[0-9]{6}Z_' + re.escape(args.name) + r'_[0-9a-f]{8}', run_id):
+                    raise SystemExit('resume-id does not match the requested experiment name')
+                if any(r['id'] == run_id for r in rows):
+                    raise SystemExit('Experiment already registered')
+                if not run.is_dir() or run.is_symlink():
+                    raise SystemExit('Interrupted experiment directory missing or symlinked')
+                if not all((run / p).exists() for p in ['PLAN.md', 'RESULTS.md', 'config.json', 'logs', 'checkpoints', 'artifacts']):
+                    raise SystemExit('Restore the interrupted run files before registering')
+                if json.loads((run / 'config.json').read_text()).get('id') != run_id:
+                    raise SystemExit('Config ID must match resume-id')
+            else:
+                run.mkdir(parents=True, exist_ok=False)
+                # Keep logs in a physical directory named ``lgs`` and expose
+                # the stable ``logs`` path as a relative symlink.  Some
+                # shared workspaces mount/overlay ``logs`` and reject a
+                # direct mkdir, while the protocol requires both paths to be
+                # available to run-local code.
+                (run / 'lgs').mkdir()
+                (run / 'logs').symlink_to('lgs', target_is_directory=True)
+                for folder in ['checkpoints', 'artifacts']:
+                    (run / folder).mkdir()
+                (run / 'PLAN.md').write_text('# ' + run_id + '\n\n问题：' + args.question + '\n\n状态：planned；配置尚未冻结。\n\n待填写：数据及代码版本、标签权限、对照、指标、seeds、选模规则、预算、停止条件。\n')
+                (run / 'config.json').write_text(json.dumps({'id': run_id, 'status': 'draft'}, indent=2) + '\n')
+                (run / 'RESULTS.md').write_text('# 实验结果\n\n尚未执行。\n')
             rows.append(dict(zip(FIELDS, [run_id, args.name, 'planned', args.question, ''])))
             print(run)
         else:

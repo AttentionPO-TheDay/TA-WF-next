@@ -1,0 +1,135 @@
+{
+  "id": "20261014T093930Z_tent_relative_entropy_gate_5d90d230",
+  "status": "frozen",
+  "method_version": "relative_entropy_gate_v1",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "base_checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "comparison_run": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "conditions": [
+    "tent_relative_entropy_gate"
+  ],
+  "historical_references": {
+    "frozen": "runs/20261014T084100Z_tent_fixedstats_ln_34b46eca/artifacts/scores.json",
+    "no_pseudo_fixed": "runs/20261014T084100Z_tent_fixedstats_ln_34b46eca/artifacts/scores.json",
+    "tent_bn": "runs/20261014T084100Z_tent_fixedstats_ln_34b46eca/artifacts/scores.json",
+    "bn_batchstats_no_update": "runs/20261014T084100Z_tent_fixedstats_ln_34b46eca/artifacts/scores.json",
+    "tent_fixedstats_ln": "runs/20261014T084100Z_tent_fixedstats_ln_34b46eca/artifacts/scores.json",
+    "tent_entropy_gate": "runs/20261014T090952Z_tent_entropy_gate_84251331/artifacts/scores.json"
+  },
+  "adaptation": {
+    "candidate_updates": 800,
+    "target_support_rows": 1024,
+    "target_batch_size": 128,
+    "base_learning_rate": 0.00025,
+    "optimizer": "Adam",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0,
+    "loss": "target entropy only; official forward_and_adapt",
+    "trainable": "6 BN1d affine + head.0.norm1/norm2 + head.1.norm1/norm2 + final_norm affine only",
+    "bn_stats": "track_running_stats=True; BN eval in support and query; running_mean/var/num_batches_tracked immutable",
+    "episodic": false,
+    "steps_per_batch": 1,
+    "source_replay": false,
+    "pseudo_labels": false,
+    "gmm": false,
+    "dropout_seed_per_update": "2024+100000+step",
+    "selection": "terminal update800",
+    "source_loader_seed": 2025,
+    "target_loader_seed": 2026,
+    "trainable_parameter_count": 3072,
+    "dropout": "unchanged: train mode during support; eval during query",
+    "entropy_gating": true,
+    "tau_low_nats": 0.4624972813284271,
+    "tau_high_nats": 2.3124864066421353,
+    "gating_rule": "retain samples with 0.1 <= H/ln(102) <= 0.5; low/high relative entropy samples no backward",
+    "gate_threshold_selection": "fixed class-count normalized thresholds; no query scan",
+    "h_max_nats": 4.624972813284271,
+    "entropy_threshold_relative": true
+  },
+  "permissions": {
+    "source_labels": "not used for adaptation; source/valid inputs only for existing split verification",
+    "support_labels": false,
+    "query_adaptation": false,
+    "query_gradient_updates": false,
+    "query_forward_batch_statistics": false,
+    "query_labels": "metrics after final prediction only",
+    "external_datasets": false,
+    "other_factor_slices": false
+  },
+  "measurement": {
+    "cuda_synchronize": true,
+    "record": [
+      "adaptation_step_seconds_including_forward_backward_optimizer",
+      "task_seconds",
+      "query_inference_seconds",
+      "peak_allocated_bytes",
+      "trainable_parameters",
+      "support_entropy",
+      "support_class_histogram"
+    ],
+    "timing_caveat": "shared GPU1; descriptive timing only"
+  },
+  "decision": {
+    "primary": "9-cell mean Macro-F1 > 0.72 and paired mean delta vs tent_entropy_gate > 0",
+    "report": "all seed/date pairs and Macro-F1/NAR/recovery contrasts; no early stopping or tuning",
+    "collapse_diagnostic": "report finite logits, predicted unique classes and max predicted-class fraction; no query-based tuning",
+    "selection": "no tuning; terminal step800; no early stopping based on labels",
+    "macro_f1_threshold": 0.72,
+    "interpretation": "only joint recipe efficacy on observed TemporalDrift; no capacity-causality or cross-algorithm universal claim",
+    "gate_metrics": [
+      "retained_sample_fraction",
+      "skipped_update_count",
+      "target_backward_trace_exposures"
+    ],
+    "relative_thresholds": {
+      "low_fraction": 0.1,
+      "high_fraction": 0.5,
+      "h_max_nats": 4.624972813284271
+    }
+  },
+  "physical_gpu": 1,
+  "threads": 2,
+  "eval_batch_size": 128,
+  "python": "/home/rbf/TA-WF-local-backup/.venv/bin/python3",
+  "budget": {
+    "new_tasks": 9,
+    "new_inference_controls": 0,
+    "historical_rows": 45,
+    "gpu_processes": 1,
+    "max_task_seconds": 2400,
+    "max_wall_seconds": 7200,
+    "max_output_gib": 1.0
+  },
+  "inference_controls": [],
+  "evaluation": {
+    "protocol": "independent unlabeled support adaptation then fixed-state query; no query statistics or gradients",
+    "query_batch_size": 128,
+    "query_order": "existing query index order; no shuffle",
+    "model_mode": "support dropout train with BN eval; query model eval; BN always source running statistics",
+    "control": "historical tent_entropy_gate, tent_fixedstats_ln, tent_bn, frozen, no_pseudo_fixed and bn_batchstats_no_update; no rerun",
+    "caveat": "sample-level gate with relative thresholds H/ln(102) in [0.1,0.5]; numeric thresholds 0.462497281/2.312486407 nats frozen before formal run"
+  },
+  "development_exposure": {
+    "basis": "class-count normalization motivated by previous absolute gate support entropy scale; relative fractions fixed before formal run",
+    "dataset": "observed TemporalDrift day14/day90/day270; query labels not used for threshold selection"
+  }
+}

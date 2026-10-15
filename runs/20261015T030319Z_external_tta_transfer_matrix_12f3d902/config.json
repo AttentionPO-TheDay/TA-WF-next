@@ -1,0 +1,138 @@
+{
+  "id": "20261015T030319Z_external_tta_transfer_matrix_12f3d902",
+  "status": "frozen",
+  "method_version": "external_direction_frontend_tta_matrix_v1",
+  "dataset_config": "configs/datasets.json",
+  "audit_run": "runs/20261015T023855Z_external_transfer_audit_e405d268",
+  "datasets": {
+    "wtt_time": {
+      "path": "processed/wtt_time/exp_26dd67e087824c2f",
+      "classes": 100,
+      "input": "signed_packet_size_to_direction_only",
+      "source_phase": "historical",
+      "source_dates": [
+        "2021-08-27",
+        "2021-09-05",
+        "2021-09-12",
+        "2021-09-24",
+        "2021-09-28",
+        "2021-10-03",
+        "2021-10-10",
+        "2021-10-17",
+        "2021-10-24",
+        "2021-10-31",
+        "2021-11-07",
+        "2021-11-14",
+        "2021-11-21",
+        "2021-11-28",
+        "2021-12-05"
+      ],
+      "development_dates": [
+        "2021-12-12",
+        "2021-12-19",
+        "2021-12-26",
+        "2022-01-02",
+        "2022-01-09"
+      ],
+      "future_dates": [
+        "2022-01-16",
+        "2022-01-23",
+        "2022-01-30",
+        "2022-02-06",
+        "2022-02-16",
+        "2022-02-21",
+        "2022-04-03"
+      ],
+      "reference_split": "same-date train.h5; deterministic 1024 rows, labels never used for adaptation",
+      "query_split": "same-date test.h5; labels only after terminal prediction"
+    },
+    "awf": {
+      "path": "awf_concept_drift_200w",
+      "classes": "190_common_across_source_and_all_queries",
+      "input": "signed_packet_direction_only",
+      "source_file": "tor_200w_2500tr.npz",
+      "query_files": [
+        "tor_time_test10d_200w_100tr.npz",
+        "tor_time_test2w_200w_100tr.npz",
+        "tor_time_test3d_200w_100tr.npz",
+        "tor_time_test4w_200w_100tr.npz",
+        "tor_time_test6w_200w_100tr.npz"
+      ],
+      "source_budget": "first 100 deterministic rows per class",
+      "reference_split": "first 1024 deterministic query rows as unlabeled support; transductive diagnostic, not strict confirmation",
+      "query_split": "remaining query rows; labels only after terminal prediction",
+      "label_policy": "intersection of site names across source and five query files; 190 common classes"
+    }
+  },
+  "conditions": [
+    "frozen",
+    "tent_bn",
+    "tent_entropy_gate",
+    "proteus_default",
+    "no_pseudo_fixed"
+  ],
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "model": {
+    "architecture": "wide_bn Transformer from run-local model.py",
+    "direction_adapter": "pad/truncate direction sequence to 5000; construct positional 2x1800 sign histogram TAM; no packet magnitude or timestamp values",
+    "source_epochs": 45,
+    "source_batch_size": 128,
+    "source_learning_rate": 0.001,
+    "source_optimizer": "AdamW(weight_decay=0.0001, betas=(0.9,0.999))",
+    "checkpoint_selection": "terminal epoch 45; no target-date labels or tuning",
+    "source_rows_per_class": 100
+  },
+  "adaptation": {
+    "support_rows": 1024,
+    "batch_size": 128,
+    "candidate_updates": 800,
+    "learning_rate": 0.00025,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0,
+    "tent_entropy_gate_low_nats": 0.2,
+    "tent_entropy_gate_high_nats": 0.4,
+    "proteus": "source CE + feature MMD + entropy/diversity + GMM pseudo-label fine-tuning, fixed low-lr port; no target-label use",
+    "no_pseudo_fixed": "source CE + feature MMD + entropy/diversity, fixed lr and tracked BN update; no pseudo-labels",
+    "selection": "terminal update 800; no query labels, no early stopping"
+  },
+  "permissions": {
+    "wtt_historical_labels": "source training only",
+    "wtt_development_query_labels": "post-hoc development scoring only",
+    "wtt_future_query_labels": "post-hoc exposed diagnostic scoring; not independent confirmation",
+    "awf_source_labels": "source training only",
+    "awf_query_labels": "post-hoc diagnostic scoring only",
+    "query_adaptation": false,
+    "query_forward_batch_statistics": false,
+    "other_factor_slices": "deferred pending role/duplicate audit"
+  },
+  "decision": {
+    "primary": "report all five conditions by dataset/slice; no pass threshold transferred from TemporalDrift",
+    "claim_boundary": "external transferability/development evidence; WTT future and AWF remain exposed diagnostic unless a separate confirmation audit permits otherwise",
+    "report": [
+      "accuracy",
+      "macro_f1",
+      "negative_adaptation_rate",
+      "recovery_rate",
+      "retention",
+      "runtime",
+      "peak_memory",
+      "logit_norm"
+    ]
+  },
+  "physical_gpu": 1,
+  "threads": 2,
+  "python": "/home/rbf/TA-WF-local-backup/.venv/bin/python3",
+  "budget": {
+    "max_task_seconds": 2400,
+    "max_wall_seconds": 172800,
+    "max_output_gib": 4.0,
+    "gpu_processes": 1
+  }
+}

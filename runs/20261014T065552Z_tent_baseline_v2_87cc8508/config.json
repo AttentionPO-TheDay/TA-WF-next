@@ -1,0 +1,109 @@
+{
+  "id": "20261014T065552Z_tent_baseline_v2_87cc8508",
+  "status": "frozen",
+  "method_version": "official_tent_bn1d_support_v1_repaired_startup",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "base_checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "comparison_run": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "conditions": [
+    "tent_bn",
+    "bn_batchstats_no_update"
+  ],
+  "historical_references": {
+    "frozen": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/artifacts/scores.json",
+    "no_pseudo_fixed": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b/artifacts/scores.json"
+  },
+  "adaptation": {
+    "candidate_updates": 800,
+    "target_support_rows": 1024,
+    "target_batch_size": 128,
+    "base_learning_rate": 0.00025,
+    "optimizer": "Adam",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0,
+    "loss": "target entropy only; official forward_and_adapt",
+    "trainable": "BN1d/BN2d affine scale and bias only; LN frozen",
+    "bn_stats": "track_running_stats=False; running_mean/var=None",
+    "episodic": false,
+    "steps_per_batch": 1,
+    "source_replay": false,
+    "pseudo_labels": false,
+    "gmm": false,
+    "dropout_seed_per_update": "2024+100000+step",
+    "selection": "terminal update800"
+  },
+  "permissions": {
+    "source_labels": "not used for adaptation; source/valid inputs only for existing split verification",
+    "support_labels": false,
+    "query_adaptation": false,
+    "query_gradient_updates": false,
+    "query_forward_batch_statistics": true,
+    "query_labels": "metrics after final prediction only",
+    "external_datasets": false,
+    "other_factor_slices": false
+  },
+  "measurement": {
+    "cuda_synchronize": true,
+    "record": [
+      "adaptation_step_seconds_including_forward_backward_optimizer",
+      "task_seconds",
+      "query_inference_seconds",
+      "peak_allocated_bytes",
+      "trainable_parameters",
+      "support_entropy",
+      "support_class_histogram"
+    ],
+    "timing_caveat": "shared GPU1; descriptive timing only"
+  },
+  "decision": {
+    "primary": "paired Macro-F1/NAR/recovery versus bn_batchstats_no_update; frozen and no_pseudo_fixed descriptive references",
+    "report": "all seeds/dates; negative, neutral and positive outcomes; do not presume collapse",
+    "collapse_diagnostic": "report finite logits, predicted unique classes and max predicted-class fraction; no query-based tuning",
+    "selection": "no tuning; terminal step800; no early stopping based on labels"
+  },
+  "physical_gpu": 1,
+  "threads": 2,
+  "eval_batch_size": 128,
+  "python": "/home/rbf/TA-WF-local-backup/.venv/bin/python3",
+  "budget": {
+    "new_tasks": 18,
+    "new_inference_controls": 9,
+    "historical_rows": 18,
+    "gpu_processes": 1,
+    "max_task_seconds": 2400,
+    "max_wall_seconds": 10800,
+    "max_output_gib": 1.0
+  },
+  "inference_controls": [
+    "bn_batchstats_no_update"
+  ],
+  "evaluation": {
+    "protocol": "support gradient adaptation then terminal query; explicit batch-stat transductive forward only",
+    "query_batch_size": 128,
+    "query_order": "existing query index order; no shuffle",
+    "model_mode": "eval disables dropout; BN still uses current query batch because buffers=None",
+    "control": "source weights with same BN batch-stat configuration, no optimizer updates",
+    "caveat": "TENT mechanism port, not official online same-query forward-update protocol; reference no_pseudo_fixed uses tracked BN stats; cross-protocol differences reported"
+  },
+  "repair_of": "20261014T050956Z_tent_baseline_2805cba7",
+  "repair_reason": "preflight smoke test legitimately created artifacts/events.jsonl; v2 uses launch.json plus runner_started.json as startup guard and permits preflight events."
+}

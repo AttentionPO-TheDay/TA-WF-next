@@ -1,0 +1,28 @@
+{
+  "id": "20261014T003143Z_inference_margin_gate_b1f6deab",
+  "status": "frozen",
+  "method_version": "inference_margin_entropy_gate_v1",
+  "source_run": "runs/20261013T091631Z_mvi_dynamic_bn_tta_a79d0c0b",
+  "source_condition": "frozen",
+  "adapted_condition": "no_pseudo_fixed",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "query_labels": "metrics_and_threshold_selection_only",
+  "adaptation": "none",
+  "external_datasets": false,
+  "thresholds": {
+    "margin_grid": "linspace(0,0.99,100)",
+    "normalized_entropy_grid": "linspace(0,1,101)",
+    "selection": "maximize mean Macro-F1 subject to mean negative adaptation <0.02; tie lower negative then smaller threshold"
+  },
+  "primary": "margin_gate",
+  "secondary": "entropy_gate"
+}
