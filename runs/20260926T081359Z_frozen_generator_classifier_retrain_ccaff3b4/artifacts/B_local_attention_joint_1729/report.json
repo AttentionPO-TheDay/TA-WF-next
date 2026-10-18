@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "condition": "B_local_attention_joint",
+  "seed": 1729,
+  "best_epoch": 70,
+  "epochs_completed": 100,
+  "initial_classifier_sha256": "f61da8dc45e2a4e0776badafbed938b45c3a9e6dbc20fb635d8d83ec1d128bf6",
+  "generator_sha256": "c7c0809ec770d96ebef0c50fde4c146bd907249b54642aaea80693261441e7b4",
+  "cache_sha256": "ed82b8e383efa1dccb8826f66d6aea047c962cefd675e1949785798f1e932293",
+  "config_sha256": "b7c289398e0a37ce776b6ff44d7e815ef2b2f1f18851175118e72a7da61015d2",
+  "original_replay": {
+    "source": {
+      "accuracy": 0.6593137254901961,
+      "macro_f1": 0.6491719260219497
+    },
+    "valid": {
+      "accuracy": 0.22941176470588234,
+      "macro_f1": 0.21363023944293297
+    }
+  },
+  "generator_unchanged": true,
+  "elapsed_seconds": 974.7915161326528,
+  "source": {
+    "accuracy": 0.7436274509803922,
+    "macro_f1": 0.7375817889917111
+  },
+  "valid": {
+    "accuracy": 0.26666666666666666,
+    "macro_f1": 0.25210702407934243
+  }
+}

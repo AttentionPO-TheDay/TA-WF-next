@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "mmd_value_and_gradient_upstream_parity": true,
+  "entropy_upstream_parity": true,
+  "gpu_smoke_batch": 128,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "peak_memory_bytes": 3469848064,
+  "upstream_sha256": "177dc36bafd2568beed262edee09f10ffcceaff7226e649cd024314333db041c"
+}

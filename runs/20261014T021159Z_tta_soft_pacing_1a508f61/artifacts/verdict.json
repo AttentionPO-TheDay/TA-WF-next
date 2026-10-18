@@ -1,0 +1,11 @@
+{
+  "soft_pacing": {
+    "macro_f1": 0.7256567055892863,
+    "negative_adaptation_rate": 0.042120807850562686,
+    "f1_delta_vs_fixed_pp": -0.9381560319289273,
+    "negative_delta_vs_fixed_pp": 0.24861714584663297,
+    "positive_paired_cells": 1,
+    "screen_pass": false,
+    "aspirational_goal_pass": false
+  }
+}

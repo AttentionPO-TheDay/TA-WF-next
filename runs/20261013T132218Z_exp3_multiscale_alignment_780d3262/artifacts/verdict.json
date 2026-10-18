@@ -1,0 +1,11 @@
+{
+  "scale_topology": {
+    "macro_f1": 0.7314081302957072,
+    "negative_adaptation_rate": 0.046076014200581994,
+    "f1_delta_vs_fixed_pp": -0.36301356128684015,
+    "negative_delta_vs_fixed_pp": 0.6441377808485638,
+    "positive_paired_cells": 0,
+    "screen_pass": false,
+    "aspirational_goal_pass": false
+  }
+}

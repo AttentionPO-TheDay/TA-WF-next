@@ -1,0 +1,27 @@
+{
+  "exit_codes": {
+    "train_R11_23407": 0,
+    "train_R10_21729": 0,
+    "train_R10_23407": 0,
+    "verify_R11_23407": 0,
+    "train_R01_23407": 0,
+    "train_R01_21729": 0,
+    "train_R11_21729": 0,
+    "verify_R10_21729": 0,
+    "verify_R10_23407": 0,
+    "verify_R01_23407": 0,
+    "verify_R01_21729": 0,
+    "verify_R11_21729": 0,
+    "train_R10_22026": 0,
+    "verify_R10_22026": 0,
+    "train_R11_22026": 0,
+    "train_R01_22026": 0,
+    "verify_R11_22026": 0,
+    "verify_R01_22026": 0
+  },
+  "stop_reasons": {},
+  "cancelled": [],
+  "finalize_exit_code": 0,
+  "finished_unix": 1790513536.8522635,
+  "elapsed_seconds": 12322.1241515195
+}

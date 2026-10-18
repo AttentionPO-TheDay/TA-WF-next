@@ -1,0 +1,24 @@
+{
+  "config_sha256": "9608d7083814e8b633210fdeebc9cc28e1ad7ae882b53dfa28e104b5b4ef081e",
+  "code_sha256": {
+    "runs/20260926T075128Z_generator_classifier_diagnostic_52a460a4/summarize.py": "0e568f49a3e4b2bb15a76801f7f13e34dbc7b7e278c8b6bf6a804d78f88a8bd3",
+    "runs/20260926T075128Z_generator_classifier_diagnostic_52a460a4/diagnose.py": "cbbed4f9d76ec4070cd9884ab62785d3f0dbd5554997f414c46a4baf38cb135d",
+    "runs/20260926T075128Z_generator_classifier_diagnostic_52a460a4/check.py": "ab2c95c785037b991e9b52abfd2709f3e962a339a439a5975b7485187748d014",
+    "runs/20260926T075128Z_generator_classifier_diagnostic_52a460a4/verify_probe.py": "62bace3a6dc64cd3b85f05dedb947ab67322a181af388e3fb0f405d1c0db21dd",
+    "runs/20260926T075128Z_generator_classifier_diagnostic_52a460a4/run.py": "83ae38c3843e5a107731b4fcbf4049c80404bded84b5d7e99cb15f1dd1ec8cd8",
+    "src/ta_wf_next/learnable_generator.py": "9ba80e7dbda5ab2b7d1f8b386f65678a9a89f216fafdf0b18df85599a0c6267f",
+    "src/ta_wf_next/batch_views.py": "e67b54acde0e36b7b1487d4972d73c7109a89e6de41c2217e11356d38f96f44f",
+    "src/ta_wf_next/packet_patches.py": "e31785c8731cd8b1a3f702619efaef64b87de1e190be735965bc9498b10e8f6b",
+    "src/ta_wf_next/hierarchical_transformer.py": "1812342811ef5a79d8773c8608824750313a9be2a4fb24e488487487caaff366",
+    "src/ta_wf_next/transformer_proto.py": "ba921e57111694effd9df4b00e3da7adf3b538a931c047a15f64d1626fc868b6",
+    "src/ta_wf_next/__init__.py": "4ec6fe32603e569463dbe921a0b4f703c316a93dc046c9f71049b457c0a3ff64",
+    "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+    "src/ta_wf_next/screening.py": "d86b1f6a5f5b2b5f498a5acfb5eb47ba44c937459f151f7e4bc4ffec89e45d51",
+    "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+    "src/ta_wf_next/models/df.py": "869f912d04df8e03bf4ba791ba9ccf95a70fd14a2d1fe51c1d1afce58207bf99",
+    "src/ta_wf_next/models/__init__.py": "8475e22fda1367672f479cdb252f47aff47a9adaafbd80c5fddf62e5e4b0697e",
+    "src/ta_wf_next/models/varcnn.py": "3468e4be163eba14e123b349dde66a652a9ef9df6b6b0c52f00a20d1f68d944c",
+    "runs/20260926T075128Z_generator_classifier_diagnostic_52a460a4/PLAN.md": "42551fa641349aad107ab4b9a0622d87c39f064a2c3e62cf7ba6add1e6ecfdc3",
+    "configs/datasets.json": "31c98344c1aa683030f313fc3f3e31252e49a6a49c8cb2db011afb7a353eb8c0"
+  }
+}

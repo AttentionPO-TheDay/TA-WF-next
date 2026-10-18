@@ -1,0 +1,45 @@
+{
+  "metrics": [
+    {
+      "role": "valid",
+      "view": "packet",
+      "accuracy": 0.11568627450980393,
+      "macro_f1": 0.09933186161464398
+    },
+    {
+      "role": "valid",
+      "view": "windows",
+      "accuracy": 0.20980392156862746,
+      "macro_f1": 0.20117148326490888
+    },
+    {
+      "role": "jp",
+      "view": "packet",
+      "accuracy": 0.09037328094302555,
+      "macro_f1": 0.08043260173698244
+    },
+    {
+      "role": "jp",
+      "view": "windows",
+      "accuracy": 0.1694499017681729,
+      "macro_f1": 0.16068978951991447
+    },
+    {
+      "role": "subpage",
+      "view": "packet",
+      "accuracy": 0.04852941176470588,
+      "macro_f1": 0.04238644297155167
+    },
+    {
+      "role": "subpage",
+      "view": "windows",
+      "accuracy": 0.0892156862745098,
+      "macro_f1": 0.08051723652653214
+    }
+  ],
+  "dimensions": {
+    "packet": 5000,
+    "windows": 480
+  },
+  "config": "fixed CPU SGD; no target tuning; predictions sealed before scoring"
+}

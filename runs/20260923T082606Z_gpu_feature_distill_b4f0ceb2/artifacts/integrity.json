@@ -1,0 +1,8 @@
+{
+  "student_prediction_arrays": 63,
+  "metric_rows": 63,
+  "student_replays": 63,
+  "teacher_feature_target_arrays": 18,
+  "source_valid_overlap": 0,
+  "errors": []
+}

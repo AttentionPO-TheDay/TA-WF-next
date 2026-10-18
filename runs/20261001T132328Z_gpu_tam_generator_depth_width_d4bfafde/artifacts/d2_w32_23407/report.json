@@ -1,0 +1,48 @@
+{
+  "task": "d2_w32_23407",
+  "kind": "d2_w32",
+  "seed": 23407,
+  "best_step": 11360,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 351462,
+  "parameters_trainable": 324182,
+  "generator_parameter_delta_l2": 5.249796632885045,
+  "generator_parameter_deltas_squared": {
+    "packet_conv.0.weight": 0.0,
+    "packet_conv.0.bias": 0.0,
+    "packet_conv.1.weight": 0.0,
+    "packet_conv.1.bias": 0.0,
+    "time_conv.0.weight": 6.517110824584961,
+    "time_conv.0.bias": 0.26299142837524414,
+    "time_conv.1.weight": 20.776731491088867,
+    "time_conv.1.bias": 0.003530942602083087
+  },
+  "inactive_parameters_unchanged": true,
+  "elapsed_seconds": 301.187277296558,
+  "peak_cuda_bytes": 985259008,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "best": {
+    "source": {
+      "accuracy": 0.9962745098039215,
+      "macro_f1": 0.996181848568716
+    },
+    "valid": {
+      "accuracy": 0.7745098039215687,
+      "macro_f1": 0.771043281337399
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.998562091503268,
+      "macro_f1": 0.9985562433932681
+    },
+    "valid": {
+      "accuracy": 0.7666666666666667,
+      "macro_f1": 0.7635722121016237
+    }
+  }
+}

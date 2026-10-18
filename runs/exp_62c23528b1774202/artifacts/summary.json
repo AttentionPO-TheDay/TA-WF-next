@@ -1,0 +1,803 @@
+{
+  "ablation": {
+    "late_mean": 0.0038205790674940795,
+    "late_positive_units": 11
+  },
+  "day14_D_minus_A": {
+    "df": -0.0670817075538936,
+    "varcnn_direction": -0.10464429550654997
+  },
+  "initial_mechanism_signal": false,
+  "late_deltas": {
+    "A_support_cv_3shot": {
+      "by_backbone": {
+        "df": -0.0331261396207685,
+        "varcnn_direction": -0.024536831232550866
+      },
+      "by_date": {
+        "day270": -0.027398408227977834,
+        "day90": -0.030264562625341534
+      },
+      "mean": -0.028831485426659684,
+      "positive_units": 1
+    },
+    "B_plain_multiprototype": {
+      "by_backbone": {
+        "df": -0.002322027013511021,
+        "varcnn_direction": -0.004535138503970314
+      },
+      "by_date": {
+        "day270": -0.006628666043875002,
+        "day90": -0.00022849947360633246
+      },
+      "mean": -0.003428582758740667,
+      "positive_units": 3
+    },
+    "C_site_global_weight": {
+      "by_backbone": {
+        "df": 0.002895086455494004,
+        "varcnn_direction": 0.0047460716794941555
+      },
+      "by_date": {
+        "day270": 0.002583433780352501,
+        "day90": 0.005057724354635658
+      },
+      "mean": 0.0038205790674940795,
+      "positive_units": 11
+    }
+  },
+  "new_backbone_training_runs": 0,
+  "schema_version": 1,
+  "stop_complex_region_route": true,
+  "substantially_equivalent_to_D_in_both_backbones": {
+    "B_plain_multiprototype": true,
+    "C_site_global_weight": true
+  },
+  "success_checks": {
+    "both_backbones_and_both_late_dates_positive": false,
+    "budget_and_firewall": true,
+    "day14_no_more_than_1pp_harm_vs_A": false,
+    "late_vs_A_B_C_at_least_1pp_and_9of12": false,
+    "region_ablation_loses_0_5pp_and_9of12": false
+  },
+  "unit_records": [
+    {
+      "backbone": "df",
+      "conflicted_regions": 27,
+      "date": "day14",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.7261270444331187,
+          "macro_f1": 0.7245573304766216,
+          "macro_precision": 0.7264754436900012,
+          "macro_recall": 0.726029438460142
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.6599175276838253,
+          "macro_f1": 0.6584250000904583,
+          "macro_precision": 0.6653551112649453,
+          "macro_recall": 0.6598224694766067
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.6485196682574248,
+          "macro_f1": 0.6394807214656523,
+          "macro_precision": 0.654054504084186,
+          "macro_recall": 0.648294193577453
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.6485196682574248,
+          "macro_f1": 0.6394807214656523,
+          "macro_precision": 0.654054504084186,
+          "macro_recall": 0.648294193577453
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.6646434693972108,
+          "macro_f1": 0.6603763471826296,
+          "macro_precision": 0.6681433455725726,
+          "macro_recall": 0.6644787012020782
+        }
+      },
+      "query_count": 21583,
+      "query_rows_sha256": "b4591be27efc1a49342e2bc823a53b068e286fa90c803ea64e923317e481920f",
+      "seed": 1729,
+      "sites_with_conflict": 23
+    },
+    {
+      "backbone": "df",
+      "conflicted_regions": 27,
+      "date": "day14",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.7257563823379511,
+          "macro_f1": 0.724155723007149,
+          "macro_precision": 0.725974132392445,
+          "macro_recall": 0.7256847819699432
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.6660797850159847,
+          "macro_f1": 0.6633096195590922,
+          "macro_precision": 0.6679507906989385,
+          "macro_recall": 0.6659315966461378
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.6645508038734189,
+          "macro_f1": 0.6568868572117366,
+          "macro_precision": 0.6665898362162297,
+          "macro_recall": 0.6641816582323645
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.6645508038734189,
+          "macro_f1": 0.6568868572117366,
+          "macro_precision": 0.6665898362162297,
+          "macro_recall": 0.6641816582323645
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.6666357781587361,
+          "macro_f1": 0.6600029052867128,
+          "macro_precision": 0.6637262754208658,
+          "macro_recall": 0.6662468976496839
+        }
+      },
+      "query_count": 21583,
+      "query_rows_sha256": "8801a5894bfa8d0c4a61d8147f4be11556762c811ba1ad6955ed286d8aebf09c",
+      "seed": 6238,
+      "sites_with_conflict": 23
+    },
+    {
+      "backbone": "df",
+      "conflicted_regions": 26,
+      "date": "day14",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.7247370615762405,
+          "macro_f1": 0.723075536734623,
+          "macro_precision": 0.7251115843120973,
+          "macro_recall": 0.7246145496575533
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.6603808553027846,
+          "macro_f1": 0.6584618066870924,
+          "macro_precision": 0.6630400074244556,
+          "macro_recall": 0.6602202834142457
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.6471760181624426,
+          "macro_f1": 0.6366595677819217,
+          "macro_precision": 0.6500888148636669,
+          "macro_recall": 0.6465310472258285
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.6471760181624426,
+          "macro_f1": 0.6366595677819217,
+          "macro_precision": 0.6500888148636669,
+          "macro_recall": 0.6465310472258285
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.6568595653986934,
+          "macro_f1": 0.6501642150873704,
+          "macro_precision": 0.6563486284438341,
+          "macro_recall": 0.6567075254445053
+        }
+      },
+      "query_count": 21583,
+      "query_rows_sha256": "0cd32f01daae2e3477120afdfd3df361bbccb8edba190c113e2eec4b07593b76",
+      "seed": 20260916,
+      "sites_with_conflict": 22
+    },
+    {
+      "backbone": "df",
+      "conflicted_regions": 18,
+      "date": "day90",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.5862794154972987,
+          "macro_f1": 0.5758619728727684,
+          "macro_precision": 0.5832582723338124,
+          "macro_recall": 0.5874297586634856
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.5510714674208637,
+          "macro_f1": 0.5421743045583499,
+          "macro_precision": 0.5454659248701945,
+          "macro_recall": 0.552089368793521
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.5536821494615468,
+          "macro_f1": 0.5447555881065679,
+          "macro_precision": 0.5550710088665549,
+          "macro_recall": 0.5545716928338829
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.5536821494615468,
+          "macro_f1": 0.5447555881065679,
+          "macro_precision": 0.5550710088665549,
+          "macro_recall": 0.5545716928338829
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.5547699336451648,
+          "macro_f1": 0.5452603718936259,
+          "macro_precision": 0.5494225092473036,
+          "macro_recall": 0.5557188081547823
+        }
+      },
+      "query_count": 27579,
+      "query_rows_sha256": "f0432694e9e28047d29683aef2d11a42b7be06a61a9ef21e50605b048831ea6d",
+      "seed": 1729,
+      "sites_with_conflict": 16
+    },
+    {
+      "backbone": "df",
+      "conflicted_regions": 11,
+      "date": "day90",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.5701076906341782,
+          "macro_f1": 0.5573606394893265,
+          "macro_precision": 0.5559669391042417,
+          "macro_recall": 0.5709130139001277
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.5468653685775409,
+          "macro_f1": 0.5395869589103851,
+          "macro_precision": 0.5422758090591419,
+          "macro_recall": 0.5479140649133056
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.5437107944450488,
+          "macro_f1": 0.5329756627867882,
+          "macro_precision": 0.5393518439205368,
+          "macro_recall": 0.5445518850324089
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.5437107944450488,
+          "macro_f1": 0.5329756627867882,
+          "macro_precision": 0.5393518439205368,
+          "macro_recall": 0.5445518850324089
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.5457050654483484,
+          "macro_f1": 0.5366814095365605,
+          "macro_precision": 0.5399001685652761,
+          "macro_recall": 0.546536606117811
+        }
+      },
+      "query_count": 27579,
+      "query_rows_sha256": "8fdf1d24c28750e9e8d7ffe6d82a18e6f22ca254737c6bbcb46521e6b6a2ff69",
+      "seed": 6238,
+      "sites_with_conflict": 9
+    },
+    {
+      "backbone": "df",
+      "conflicted_regions": 21,
+      "date": "day90",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.5969397004967548,
+          "macro_f1": 0.5842516605896095,
+          "macro_precision": 0.5929514523176239,
+          "macro_recall": 0.5980261268265646
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.56053518981834,
+          "macro_f1": 0.5514942450388659,
+          "macro_precision": 0.5548965393704959,
+          "macro_recall": 0.5613937380726585
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.5617680118931071,
+          "macro_f1": 0.5521526301101333,
+          "macro_precision": 0.5613892278361841,
+          "macro_recall": 0.562175431520898
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.5617680118931071,
+          "macro_f1": 0.5521526301101333,
+          "macro_precision": 0.5613892278361841,
+          "macro_recall": 0.562175431520898
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.5664454838826644,
+          "macro_f1": 0.5577696384371571,
+          "macro_precision": 0.561722688162164,
+          "macro_recall": 0.5673069692303749
+        }
+      },
+      "query_count": 27579,
+      "query_rows_sha256": "f0e9a656206a9313838fb35a3361024eeb18b35bcb459269789069b789d85f2b",
+      "seed": 20260916,
+      "sites_with_conflict": 19
+    },
+    {
+      "backbone": "df",
+      "conflicted_regions": 29,
+      "date": "day270",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.5182659265133492,
+          "macro_f1": 0.49368386573349204,
+          "macro_precision": 0.5018201426896024,
+          "macro_recall": 0.5165891442956173
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.4754956383822363,
+          "macro_f1": 0.4617024858823524,
+          "macro_precision": 0.4661706593951571,
+          "macro_recall": 0.475081798555131
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.4712661908538197,
+          "macro_f1": 0.44968925860506853,
+          "macro_precision": 0.46778015030154946,
+          "macro_recall": 0.4711958424655907
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.4712661908538197,
+          "macro_f1": 0.44968925860506853,
+          "macro_precision": 0.46778015030154946,
+          "macro_recall": 0.4711958424655907
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.4732223103357124,
+          "macro_f1": 0.454569887720093,
+          "macro_precision": 0.4627679137806834,
+          "macro_recall": 0.4728678021470566
+        }
+      },
+      "query_count": 18915,
+      "query_rows_sha256": "933a6ddb66dbd74d0630dd7f249233912f3d556eb77e53c6088f86f187f6421a",
+      "seed": 1729,
+      "sites_with_conflict": 27
+    },
+    {
+      "backbone": "df",
+      "conflicted_regions": 33,
+      "date": "day270",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.5133491937615648,
+          "macro_f1": 0.4898561922989381,
+          "macro_precision": 0.495175484626248,
+          "macro_recall": 0.5114969138225114
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.4710547184773989,
+          "macro_f1": 0.45786899238260653,
+          "macro_precision": 0.46401849208642415,
+          "macro_recall": 0.4704404200284818
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.470314565159926,
+          "macro_f1": 0.45250959496699666,
+          "macro_precision": 0.46691755471475294,
+          "macro_recall": 0.46987259635430967
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.470314565159926,
+          "macro_f1": 0.45250959496699666,
+          "macro_precision": 0.46691755471475294,
+          "macro_recall": 0.46987259635430967
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.4676182923605604,
+          "macro_f1": 0.45159148010455485,
+          "macro_precision": 0.45767930877184926,
+          "macro_recall": 0.4669073084627811
+        }
+      },
+      "query_count": 18915,
+      "query_rows_sha256": "be7dcc760327f92a0bf07cbc31d06448e09fd9521d28660488ee9cac5da5990d",
+      "seed": 6238,
+      "sites_with_conflict": 27
+    },
+    {
+      "backbone": "df",
+      "conflicted_regions": 24,
+      "date": "day270",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.5215966164419773,
+          "macro_f1": 0.49599082608540745,
+          "macro_precision": 0.501111604032667,
+          "macro_recall": 0.5194512543525337
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.47449114459423736,
+          "macro_f1": 0.4593534946534373,
+          "macro_precision": 0.46023528799354935,
+          "macro_recall": 0.4733519872781815
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.46798836901929686,
+          "macro_f1": 0.44879506603641245,
+          "macro_precision": 0.4561404341794053,
+          "macro_recall": 0.4670319314780154
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.46798836901929686,
+          "macro_f1": 0.44879506603641245,
+          "macro_precision": 0.4561404341794053,
+          "macro_recall": 0.4670319314780154
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.46936293946603225,
+          "macro_f1": 0.4523755316529397,
+          "macro_precision": 0.45318037129665134,
+          "macro_recall": 0.46831780602561546
+        }
+      },
+      "query_count": 18915,
+      "query_rows_sha256": "f7df3a2ff9e66ccf0a0f35ca0caa8d718e8fe7ace1716a47bf0faddfdf58286a",
+      "seed": 20260916,
+      "sites_with_conflict": 21
+    },
+    {
+      "backbone": "varcnn_direction",
+      "conflicted_regions": 17,
+      "date": "day14",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.7086132604364546,
+          "macro_f1": 0.7072391039780306,
+          "macro_precision": 0.7090582331097536,
+          "macro_recall": 0.7086507306382024
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.5977389612194783,
+          "macro_f1": 0.595299580420205,
+          "macro_precision": 0.6019764267543377,
+          "macro_recall": 0.5974281064678331
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.5885187416021869,
+          "macro_f1": 0.5829431688799838,
+          "macro_precision": 0.5917564246855274,
+          "macro_recall": 0.5883105628249257
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.5885187416021869,
+          "macro_f1": 0.5829431688799838,
+          "macro_precision": 0.5917564246855274,
+          "macro_recall": 0.5883105628249257
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.5940323402678034,
+          "macro_f1": 0.5896684635540684,
+          "macro_precision": 0.5958548866728091,
+          "macro_recall": 0.5937580871611712
+        }
+      },
+      "query_count": 21583,
+      "query_rows_sha256": "b4591be27efc1a49342e2bc823a53b068e286fa90c803ea64e923317e481920f",
+      "seed": 1729,
+      "sites_with_conflict": 16
+    },
+    {
+      "backbone": "varcnn_direction",
+      "conflicted_regions": 12,
+      "date": "day14",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.708335263865079,
+          "macro_f1": 0.7068102835684593,
+          "macro_precision": 0.7105526702536654,
+          "macro_recall": 0.708385233296994
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.6146504193114951,
+          "macro_f1": 0.6117548860011931,
+          "macro_precision": 0.617412458348409,
+          "macro_recall": 0.6143169141987015
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.6095538155029421,
+          "macro_f1": 0.6023480345688594,
+          "macro_precision": 0.6062070791433268,
+          "macro_recall": 0.60908016601016
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.6095538155029421,
+          "macro_f1": 0.6023480345688594,
+          "macro_precision": 0.6062070791433268,
+          "macro_recall": 0.60908016601016
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.6134921002640967,
+          "macro_f1": 0.609145292539197,
+          "macro_precision": 0.6142136615319499,
+          "macro_recall": 0.6130807656896706
+        }
+      },
+      "query_count": 21583,
+      "query_rows_sha256": "8801a5894bfa8d0c4a61d8147f4be11556762c811ba1ad6955ed286d8aebf09c",
+      "seed": 6238,
+      "sites_with_conflict": 10
+    },
+    {
+      "backbone": "varcnn_direction",
+      "conflicted_regions": 14,
+      "date": "day14",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.7045823101515082,
+          "macro_f1": 0.703084776808005,
+          "macro_precision": 0.7082274806837635,
+          "macro_recall": 0.7045959638274226
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.6113144604549877,
+          "macro_f1": 0.6090625347251494,
+          "macro_precision": 0.6159202984584968,
+          "macro_recall": 0.6110260684409613
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.5978316267432702,
+          "macro_f1": 0.5915277665756862,
+          "macro_precision": 0.5991750117233888,
+          "macro_recall": 0.5978097943805822
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.5978316267432702,
+          "macro_f1": 0.5915277665756862,
+          "macro_precision": 0.5991750117233888,
+          "macro_recall": 0.5978097943805822
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.60821016540796,
+          "macro_f1": 0.6043875217415795,
+          "macro_precision": 0.611906087437018,
+          "macro_recall": 0.6079237909259088
+        }
+      },
+      "query_count": 21583,
+      "query_rows_sha256": "0cd32f01daae2e3477120afdfd3df361bbccb8edba190c113e2eec4b07593b76",
+      "seed": 20260916,
+      "sites_with_conflict": 14
+    },
+    {
+      "backbone": "varcnn_direction",
+      "conflicted_regions": 9,
+      "date": "day90",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.5720657021646905,
+          "macro_f1": 0.5596167519353838,
+          "macro_precision": 0.5569074923563407,
+          "macro_recall": 0.5729528017886294
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.5349722615033178,
+          "macro_f1": 0.528662952173969,
+          "macro_precision": 0.5327132444373559,
+          "macro_recall": 0.53640989430717
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.5308749410783568,
+          "macro_f1": 0.52361446305088,
+          "macro_precision": 0.529385520562918,
+          "macro_recall": 0.5322769088884906
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.5308749410783568,
+          "macro_f1": 0.52361446305088,
+          "macro_precision": 0.529385520562918,
+          "macro_recall": 0.5322769088884906
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.5314913521157403,
+          "macro_f1": 0.5245713999476427,
+          "macro_precision": 0.5284403223780878,
+          "macro_recall": 0.5330079151611863
+        }
+      },
+      "query_count": 27579,
+      "query_rows_sha256": "f0432694e9e28047d29683aef2d11a42b7be06a61a9ef21e50605b048831ea6d",
+      "seed": 1729,
+      "sites_with_conflict": 9
+    },
+    {
+      "backbone": "varcnn_direction",
+      "conflicted_regions": 16,
+      "date": "day90",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.5833061387287429,
+          "macro_f1": 0.5741401195512179,
+          "macro_precision": 0.5810807346064706,
+          "macro_recall": 0.5844946233753444
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.5341382936292106,
+          "macro_f1": 0.5269794940966964,
+          "macro_precision": 0.5307338073248047,
+          "macro_recall": 0.5356206598688218
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.5263062475071613,
+          "macro_f1": 0.5140290317239026,
+          "macro_precision": 0.5222914104452615,
+          "macro_recall": 0.5275652436733786
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.5263062475071613,
+          "macro_f1": 0.5140290317239026,
+          "macro_precision": 0.5222914104452615,
+          "macro_recall": 0.5275652436733786
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.5319627252619747,
+          "macro_f1": 0.5226842063283896,
+          "macro_precision": 0.527345128478792,
+          "macro_recall": 0.5332588885400512
+        }
+      },
+      "query_count": 27579,
+      "query_rows_sha256": "8fdf1d24c28750e9e8d7ffe6d82a18e6f22ca254737c6bbcb46521e6b6a2ff69",
+      "seed": 6238,
+      "sites_with_conflict": 15
+    },
+    {
+      "backbone": "varcnn_direction",
+      "conflicted_regions": 16,
+      "date": "day90",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.572537075310925,
+          "macro_f1": 0.5540940465988956,
+          "macro_precision": 0.5501767435901499,
+          "macro_recall": 0.5731953161372225
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.5432394212988143,
+          "macro_f1": 0.5362108573485243,
+          "macro_precision": 0.5407382749756265,
+          "macro_recall": 0.5447508390471189
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.5355161535951267,
+          "macro_f1": 0.5258640933790667,
+          "macro_precision": 0.5336896019085238,
+          "macro_recall": 0.537211012963699
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.5355161535951267,
+          "macro_f1": 0.5258640933790667,
+          "macro_precision": 0.5336896019085238,
+          "macro_recall": 0.537211012963699
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.5442184270640705,
+          "macro_f1": 0.5367707891417768,
+          "macro_precision": 0.5421404978230975,
+          "macro_recall": 0.5457854411753914
+        }
+      },
+      "query_count": 27579,
+      "query_rows_sha256": "f0e9a656206a9313838fb35a3361024eeb18b35bcb459269789069b789d85f2b",
+      "seed": 20260916,
+      "sites_with_conflict": 15
+    },
+    {
+      "backbone": "varcnn_direction",
+      "conflicted_regions": 19,
+      "date": "day270",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.5274121067935501,
+          "macro_f1": 0.5054123690229592,
+          "macro_precision": 0.5120106426159089,
+          "macro_recall": 0.5262477432037779
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.4993920169177901,
+          "macro_f1": 0.4899128097390071,
+          "macro_precision": 0.4952088897831278,
+          "macro_recall": 0.50075285263857
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.4978059740946339,
+          "macro_f1": 0.4865098873939308,
+          "macro_precision": 0.49140952304594304,
+          "macro_recall": 0.49922120999412617
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.4978059740946339,
+          "macro_f1": 0.4865098873939308,
+          "macro_precision": 0.49140952304594304,
+          "macro_recall": 0.49922120999412617
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.4979645783769495,
+          "macro_f1": 0.48669101216879573,
+          "macro_precision": 0.49004907776340595,
+          "macro_recall": 0.49933299382139895
+        }
+      },
+      "query_count": 18915,
+      "query_rows_sha256": "933a6ddb66dbd74d0630dd7f249233912f3d556eb77e53c6088f86f187f6421a",
+      "seed": 1729,
+      "sites_with_conflict": 17
+    },
+    {
+      "backbone": "varcnn_direction",
+      "conflicted_regions": 16,
+      "date": "day270",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.5214908802537669,
+          "macro_f1": 0.5005149334209952,
+          "macro_precision": 0.508265875977219,
+          "macro_recall": 0.5203370838492201
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.48765530002643404,
+          "macro_f1": 0.47739365932446387,
+          "macro_precision": 0.482323235151424,
+          "macro_recall": 0.4894868927213471
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.47903780068728524,
+          "macro_f1": 0.46533429853027786,
+          "macro_precision": 0.4710280453828967,
+          "macro_recall": 0.4810070159034032
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.47903780068728524,
+          "macro_f1": 0.46533429853027786,
+          "macro_precision": 0.4710280453828967,
+          "macro_recall": 0.4810070159034032
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.48210415014538727,
+          "macro_f1": 0.4700911358947267,
+          "macro_precision": 0.4733322741708353,
+          "macro_recall": 0.4840824181193979
+        }
+      },
+      "query_count": 18915,
+      "query_rows_sha256": "be7dcc760327f92a0bf07cbc31d06448e09fd9521d28660488ee9cac5da5990d",
+      "seed": 6238,
+      "sites_with_conflict": 16
+    },
+    {
+      "backbone": "varcnn_direction",
+      "conflicted_regions": 26,
+      "date": "day270",
+      "methods": {
+        "A_support_cv_3shot": {
+          "accuracy": 0.4934707903780069,
+          "macro_f1": 0.4652840064076562,
+          "macro_precision": 0.46382648032566254,
+          "macro_recall": 0.49066896228856516
+        },
+        "B_plain_multiprototype": {
+          "accuracy": 0.49003436426116836,
+          "macro_f1": 0.479892297882964,
+          "macro_precision": 0.48487736001223014,
+          "macro_recall": 0.4916427920425337
+        },
+        "C_site_global_weight": {
+          "accuracy": 0.4832143801215966,
+          "macro_f1": 0.46801303538677985,
+          "macro_precision": 0.4733020822498583,
+          "macro_recall": 0.4850738223072082
+        },
+        "D_ablation_uniform_site_retention": {
+          "accuracy": 0.4832143801215966,
+          "macro_f1": 0.46801303538677985,
+          "macro_precision": 0.4733020822498583,
+          "macro_recall": 0.4850738223072082
+        },
+        "D_region_conflict_suppression": {
+          "accuracy": 0.4831615120274914,
+          "macro_f1": 0.4710326960604712,
+          "macro_precision": 0.4754053101850936,
+          "macro_recall": 0.485038062906663
+        }
+      },
+      "query_count": 18915,
+      "query_rows_sha256": "f7df3a2ff9e66ccf0a0f35ca0caa8d718e8fe7ace1716a47bf0faddfdf58286a",
+      "seed": 20260916,
+      "sites_with_conflict": 24
+    }
+  ]
+}

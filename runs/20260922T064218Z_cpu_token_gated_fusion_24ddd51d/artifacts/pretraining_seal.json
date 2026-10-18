@@ -1,0 +1,12 @@
+{
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/PLAN.md": "ea8f52b090306572f45b53e5188c5aa9fe6e3775cd1567b96c127d124dd5d745",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/config.json": "216abaf135135bfd94b685e24e765ac86711f301468edc5dbe8b7bed963c28cb",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/train.py": "a22a58ba7aa37d1087276cda528b7ad5fb0a2952cd8c8a74ee3335091bb2fdbe",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/verify.py": "5d5c2337ecbc806d0d33ab910cdb4e0951e3fd67684ecaac8fadd229a249f249",
+  "configs/datasets.json": "c3edbfeaf83553f63e6b5a12fa6e1dc5049346c1f8eb3b54bedf7760408b6b28",
+  "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+  "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/artifacts/source_tokens.npz": "b8dc7100225eaec663ed2566e5af6ef31cc809422a7a93c0c512b732529d5204",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/artifacts/valid_tokens.npz": "56b1722a19385b18c10031768cabb8465efffe1d551e5b13e9439560628e8265",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/artifacts/manifest.json": "c89804aa8475f5ea0e308f1c5b19c0a34f3fb71a2a83f998c450ff7ab203446c"
+}

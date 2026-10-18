@@ -1,0 +1,23 @@
+{
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/separate_gate_1729.pt": "e38ac6ae70dd782dd5042466d2c8994af8f81edc463b3b0379a8970f61f0ca91",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/hybrid_2026.pt": "bbe34065b4a4924d727bc0bb0ae5649e3fef6718f8923c8d03faa13324907d86",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/separate_fixed_2026.pt": "662230443802f2f949250e810948ed4a0b363a369b5166c9e73698447ac7f8cc",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/bucket_1729.pt": "8a05970e766497b696c78dcc7e5877c069dc67d0b8cb5e02f288b64e1333c4c3",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/hybrid_1729.pt": "b0049ca512351f0fc8a8aa2094377a8586a4447d6adca90b6050e57df3866426",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/separate_gate_3407.pt": "d2416cbeb56d9b9409b31dca8af7d4f5d22289cd4099e06003478a87a6a43834",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/separate_gate_2026.pt": "d7073c971c1f14ebfa9d55500b680896c14c62159622d3e59a6d3371276bc1f0",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/separate_3407.pt": "d9381f10882bd43788296854fd42d6494866de130a60d2f7b8a723bb9d997d4f",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/bucket_3407.pt": "de55bacb8d72f50c9a760d046f921f2a6c0dc0426dc87faaf374532a946de267",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/hybrid_3407.pt": "75bfb166c0973e934be7455d9ef9c639142a7ea4432623aec77eedb8fd26a824",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/separate_1729.pt": "e58e75f60bf680f54a6953315f3648267a20e30ec92c3492ab1d8d8519a81ae2",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/separate_fixed_3407.pt": "49d1c81b7fa0718aea488d102ae9175d2980e49e2d0bce0e2bc69df7e617e0cb",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/separate_2026.pt": "9734ffe65b6acec7260a6d6f3f2f6350ce4dd0be87a8cc2cb8f7c2db7ee4d7a3",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/separate_fixed_1729.pt": "585105e347aac4b0ecaf90fc844560e55a3d0542ef1019f53de51f7717cd5d0b",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/checkpoints/bucket_2026.pt": "f184ddcbfa214454fd0de3b010484df24494e659af4c959dc205d7ef1d8c2f78",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/artifacts/source_inputs.npz": "c1ec73c9c1dc4f7e1f423f141da950b4d89e19e690063cf6e56fa8f040de9b02",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/artifacts/predictions.npz": "a7bc5737f355136e84dc8637f0274af05af8e8a93c59e143e68089a1f92776c5",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/artifacts/valid_inputs.npz": "bda65a3203dd9a8e7dd96699903ee92d3b9561431f812b98d73953be3c640c55",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/artifacts/history.json": "1a8bfe73f2cbca387b4559dfe51e722b02be3b67fa4dd53d931a33f7e00bbd45",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/artifacts/metrics.json": "0afdbe09a61fb66a27fd30ed792dad6afa0d55aa8ef36afb7d9a0bf56bea204f",
+  "runs/20260922T064218Z_cpu_token_gated_fusion_24ddd51d/artifacts/manifest.json": "c89804aa8475f5ea0e308f1c5b19c0a34f3fb71a2a83f998c450ff7ab203446c"
+}

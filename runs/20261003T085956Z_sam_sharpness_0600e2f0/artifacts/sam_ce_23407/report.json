@@ -1,0 +1,46 @@
+{
+  "task": "sam_ce_23407",
+  "kind": "sam_ce",
+  "seed": 23407,
+  "device": "cuda",
+  "best_step": 7040,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "sam_used": true,
+  "rho": 0.05,
+  "bn_buffer_restore_checks": 12800,
+  "parameter_restore_checks": 12800,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 0.9771241830065359,
+      "macro_f1": 0.9761528489830974
+    },
+    "valid": {
+      "accuracy": 0.8705882352941177,
+      "macro_f1": 0.8671278612455083
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9930718954248366,
+      "macro_f1": 0.9929552047966246
+    },
+    "valid": {
+      "accuracy": 0.8686274509803922,
+      "macro_f1": 0.8638842638842639
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.8705882352941177,
+    "masked_accuracy": 0.8588235294117647,
+    "prediction_agreement": 0.9764705882352941
+  },
+  "elapsed_seconds": 920.8680419800803
+}

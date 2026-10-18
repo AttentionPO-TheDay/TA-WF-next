@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "freeze_hashes_verified": 17,
+  "training_tasks_completed": 12,
+  "metric_groups_verified": 48,
+  "logit_groups_verified": 24,
+  "checkpoint_replay_groups_verified": 24,
+  "fixed_view_diagnostic_groups_verified": 12,
+  "history_selection_groups_verified": 12,
+  "initialization_groups_verified": 12,
+  "index_streams_verified": 12,
+  "historical_ce_predictions_reproduced": true,
+  "single_network_verified": true,
+  "fixed_teacher_loaded": false,
+  "ema_loaded": false,
+  "comparisons": {
+    "mask_peer - dual_mask_ce": {
+      "accuracy_mean_delta_pp": 1.045751633986932,
+      "accuracy_per_seed_pp": [
+        0.9803921568627527,
+        0.9803921568627527,
+        1.17647058823529
+      ],
+      "macro_f1_mean_delta_pp": 1.0642063093043608,
+      "positive_seed_count": 3,
+      "pass": true
+    },
+    "cross_peer - dual_cross_ce": {
+      "accuracy_mean_delta_pp": 0.26143790849672743,
+      "accuracy_per_seed_pp": [
+        -0.7843137254902044,
+        0.19607843137254832,
+        1.3725490196078383
+      ],
+      "macro_f1_mean_delta_pp": 0.2867103847495889,
+      "positive_seed_count": 2,
+      "pass": false
+    },
+    "dual_mask_ce - ce_only": {
+      "accuracy_mean_delta_pp": -0.7189542483660143,
+      "accuracy_per_seed_pp": [
+        -0.19607843137254832,
+        -0.7843137254902044,
+        -1.17647058823529
+      ],
+      "macro_f1_mean_delta_pp": -0.6619451717490972,
+      "positive_seed_count": 0,
+      "pass": false
+    },
+    "dual_cross_ce - ce_only": {
+      "accuracy_mean_delta_pp": -1.6339869281045694,
+      "accuracy_per_seed_pp": [
+        0.19607843137255943,
+        -2.7450980392156876,
+        -2.35294117647058
+      ],
+      "macro_f1_mean_delta_pp": -1.6852646264410927,
+      "positive_seed_count": 1,
+      "pass": false
+    },
+    "mask_peer - ce_only": {
+      "accuracy_mean_delta_pp": 0.32679738562091754,
+      "accuracy_per_seed_pp": [
+        0.7843137254902044,
+        0.19607843137254832,
+        0.0
+      ],
+      "macro_f1_mean_delta_pp": 0.40226113755526355,
+      "positive_seed_count": 2,
+      "pass": false
+    },
+    "cross_peer - ce_only": {
+      "accuracy_mean_delta_pp": -1.3725490196078418,
+      "accuracy_per_seed_pp": [
+        -0.588235294117645,
+        -2.5490196078431393,
+        -0.9803921568627416
+      ],
+      "macro_f1_mean_delta_pp": -1.398554241691504,
+      "positive_seed_count": 0,
+      "pass": false
+    }
+  },
+  "future_access": false
+}

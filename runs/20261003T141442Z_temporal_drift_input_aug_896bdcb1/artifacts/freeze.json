@@ -1,0 +1,19 @@
+{
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/PLAN.md": "5c2fe0c315d44308416aedb1bb750c930bd5752be642dfb9ce865382d96319da",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/SOURCES.md": "cf6d3fd4757a29405d46084a967305fa95a14b68b96018249b7b5451519d802f",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/config.json": "7ca9427577617f5c79b72997bb77adac2e4cfd8c0ff713e91269180ec6a237b7",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/common.py": "542226fa0668386bd2aab547a9bc0db919ab9d83e7359a5180967eef5ac1a6e5",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/base_model.py": "2997108ffa67b71556c54a4df2fbba0b5861926820c6de44e08be9b8d55de289",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/candidate_base.py": "7b9687ad96e9fc4e476986aff6b448519f70e77d112b053ace5796b0a0dd4c65",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/encoder_base.py": "baf3c12794d850b68261ef70131c818ac7be25333d766127725f3f040a114c5a",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/framework_base.py": "e530ca3f369cb729f6f9b802bff03fb18ffcec90ebb5ad58db04a4b077a1a148",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/generator_base.py": "5b55eee433f26f7ecade39b0a1f26862819aa94c594885bf09f696bd6ad100d4",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/input_base.py": "1bc1ca5b7aa2b414793171907efba8d5aa5ced701bb2e851d55d511288aaeb62",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/rf_native.py": "8ffd968ba4a750fb66edda53e8146ed367b9a62e1e1330416b3eb600b4060617",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/view_base.py": "aa41abb7d1eec425dc367b3b6a4e85fdfa60d35bcdbad6123754f2a63a0c44dd",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/model.py": "c7c49a5e1c3f67f637309141e5a6a4a84f190c7351c9fcc1279cd68de13797dc",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/worker.py": "43c459b8a426df5c158eea4874849a70047ec9e8e13ee6e41d2a01620cad3164",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/supervisor.py": "43d863d9c9ea6834df37491550542b761f5e5e387eb7caf4ddae12ffbb4a4488",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/postrun_audit.py": "bbd493291cd173c2689796bb62e27f049d595d2ce338642b10a0ad3ded7ff7eb",
+  "runs/20261003T141442Z_temporal_drift_input_aug_896bdcb1/artifacts/prepared.pt": "49b01254108433528398d17fd5a4df9618a7632ba03c0a63864236786e9fc4db"
+}

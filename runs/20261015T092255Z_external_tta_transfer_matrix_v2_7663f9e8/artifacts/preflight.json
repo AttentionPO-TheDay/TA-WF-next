@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "summary": {
+    "wtt_time": {
+      "source_rows": 10000,
+      "classes": 100,
+      "targets": {
+        "2021-12-12": {
+          "reference_rows": 1024,
+          "query_rows": 1980,
+          "phase": "development"
+        },
+        "2021-12-19": {
+          "reference_rows": 1024,
+          "query_rows": 1980,
+          "phase": "development"
+        },
+        "2021-12-26": {
+          "reference_rows": 1024,
+          "query_rows": 1980,
+          "phase": "development"
+        },
+        "2022-01-02": {
+          "reference_rows": 1024,
+          "query_rows": 1690,
+          "phase": "development"
+        },
+        "2022-01-09": {
+          "reference_rows": 1024,
+          "query_rows": 1980,
+          "phase": "development"
+        },
+        "2022-01-16": {
+          "reference_rows": 1024,
+          "query_rows": 1970,
+          "phase": "future"
+        },
+        "2022-01-23": {
+          "reference_rows": 1024,
+          "query_rows": 1980,
+          "phase": "future"
+        },
+        "2022-01-30": {
+          "reference_rows": 1024,
+          "query_rows": 1980,
+          "phase": "future"
+        },
+        "2022-02-06": {
+          "reference_rows": 1024,
+          "query_rows": 1980,
+          "phase": "future"
+        },
+        "2022-02-16": {
+          "reference_rows": 1024,
+          "query_rows": 1925,
+          "phase": "future"
+        },
+        "2022-02-21": {
+          "reference_rows": 1024,
+          "query_rows": 1980,
+          "phase": "future"
+        },
+        "2022-04-03": {
+          "reference_rows": 1024,
+          "query_rows": 1980,
+          "phase": "future"
+        }
+      }
+    },
+    "awf": {
+      "source_rows": 18900,
+      "classes": 189,
+      "targets": {
+        "tor_time_test10d_200w_100tr.npz": {
+          "reference_rows": 1024,
+          "query_rows": 17876,
+          "phase": "diagnostic"
+        },
+        "tor_time_test2w_200w_100tr.npz": {
+          "reference_rows": 1024,
+          "query_rows": 17876,
+          "phase": "diagnostic"
+        },
+        "tor_time_test3d_200w_100tr.npz": {
+          "reference_rows": 1024,
+          "query_rows": 17876,
+          "phase": "diagnostic"
+        },
+        "tor_time_test4w_200w_100tr.npz": {
+          "reference_rows": 1024,
+          "query_rows": 17876,
+          "phase": "diagnostic"
+        },
+        "tor_time_test6w_200w_100tr.npz": {
+          "reference_rows": 1024,
+          "query_rows": 17638,
+          "phase": "diagnostic"
+        }
+      }
+    }
+  },
+  "query_adaptation": false,
+  "direction_frontend": true,
+  "config_sha": "7d2f2cf53ab3e6d6fbc37f845617134987656b21f407fdd232a94ef914790124",
+  "code_sha": {
+    "runner.py": "687c8e1bc6b727d0cce301f10a10b0e4439eec7f70143e613155b6d3d68076fb",
+    "external_data.py": "0b48e68e396706c9b3c93299068811db141c94ad0fcfb40ef68e9f17b7769a9e",
+    "port_base.py": "6f8280f0974ef2838c71183217c91833f4a2b2310fdf73f64565f7a6515ef3e1",
+    "model.py": "b6f59add5040dbb9d80f2469cac46412b37c87a2dbd66c0df01fc00e24b67212"
+  }
+}

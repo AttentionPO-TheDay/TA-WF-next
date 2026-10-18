@@ -1,0 +1,7 @@
+{
+  "errors": 0,
+  "metric_rows": 18,
+  "predictions_checked": 27516,
+  "seals_verified": 5,
+  "scope": "independent scalar metric calculation and prediction sealing; no feature refit"
+}

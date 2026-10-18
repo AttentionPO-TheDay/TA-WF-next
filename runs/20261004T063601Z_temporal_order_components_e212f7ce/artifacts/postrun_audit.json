@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "frozen_files": 17,
+  "checks": {
+    "metrics": 30,
+    "logits": 30,
+    "fixed_mask": 15,
+    "initialization": 15,
+    "index": 15,
+    "selection": 15
+  },
+  "means": {
+    "ce_control": {
+      "accuracy": 0.8915032679738562,
+      "macro_f1": 0.8894366163974006
+    },
+    "hard_scalar": {
+      "accuracy": 0.8993464052287582,
+      "macro_f1": 0.8964035419917771
+    },
+    "soft_scalar": {
+      "accuracy": 0.8901960784313726,
+      "macro_f1": 0.8888740344622698
+    },
+    "hard_shape": {
+      "accuracy": 0.8875816993464052,
+      "macro_f1": 0.8854490825079059
+    },
+    "soft_shape": {
+      "accuracy": 0.8823529411764706,
+      "macro_f1": 0.8815147815147815
+    }
+  },
+  "comparisons": {
+    "hard_scalar": {
+      "accuracy_mean_delta_pp": 0.7843137254902007,
+      "accuracy_per_seed_pp": [
+        0.7843137254902044,
+        1.17647058823529,
+        0.39215686274510775
+      ],
+      "macro_f1_mean_delta_pp": 0.6966925594376505,
+      "positive_seed_count": 3,
+      "pass": false
+    },
+    "soft_scalar": {
+      "accuracy_mean_delta_pp": -0.13071895424836186,
+      "accuracy_per_seed_pp": [
+        0.7843137254902044,
+        0.588235294117645,
+        -1.764705882352935
+      ],
+      "macro_f1_mean_delta_pp": -0.05625819351309606,
+      "positive_seed_count": 2,
+      "pass": false
+    },
+    "hard_shape": {
+      "accuracy_mean_delta_pp": -0.39215686274509665,
+      "accuracy_per_seed_pp": [
+        0.0,
+        -1.3725490196078494,
+        0.19607843137255943
+      ],
+      "macro_f1_mean_delta_pp": -0.39875338894946877,
+      "positive_seed_count": 1,
+      "pass": false
+    },
+    "soft_shape": {
+      "accuracy_mean_delta_pp": -0.9150326797385588,
+      "accuracy_per_seed_pp": [
+        -1.9607843137254832,
+        1.3725490196078383,
+        -2.1568627450980316
+      ],
+      "macro_f1_mean_delta_pp": -0.7921834882619216,
+      "positive_seed_count": 1,
+      "pass": false
+    }
+  },
+  "future_access": false,
+  "audit_script_sha256": "9f9e0ac0c542e5880bcdefbbdc0a62dc5ffb21a94fe2dfb4c9566cda26bd9140"
+}

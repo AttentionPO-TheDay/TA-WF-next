@@ -1,0 +1,29 @@
+{
+  "day14": {
+    "raw_rows": 22603,
+    "source_overlap_excluded": 0,
+    "unique_after_source_exclusion": 22603,
+    "support_rows": 1024,
+    "query_rows": 21579,
+    "query_classes": 102,
+    "query_fp_unique": 21579
+  },
+  "day90": {
+    "raw_rows": 28599,
+    "source_overlap_excluded": 0,
+    "unique_after_source_exclusion": 28599,
+    "support_rows": 1024,
+    "query_rows": 27575,
+    "query_classes": 102,
+    "query_fp_unique": 27575
+  },
+  "day270": {
+    "raw_rows": 19935,
+    "source_overlap_excluded": 0,
+    "unique_after_source_exclusion": 19935,
+    "support_rows": 1024,
+    "query_rows": 18911,
+    "query_classes": 102,
+    "query_fp_unique": 18911
+  }
+}

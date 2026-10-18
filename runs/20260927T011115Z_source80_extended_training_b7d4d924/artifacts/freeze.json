@@ -1,0 +1,29 @@
+{
+  "config_sha256": "64e70bf9b62fb47902c8318a3fee890863a9248e05eba155f34e2b724561f439",
+  "plan_sha256": "37bda9ea8cafb9f4a3d9a7fafc5a0075cf16867d74202e301a48a3eef0b45cc7",
+  "datasets_sha256": "31c98344c1aa683030f313fc3f3e31252e49a6a49c8cb2db011afb7a353eb8c0",
+  "code_sha256": {
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/common.py": "b5de194478327c313ae8a28febc463e26bdbdee2be68f8a5371f4c27deb43374",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/finalize.py": "fb53d19281c1c285a3aa752be313165c570a4b1e59c067d9f6e2a00b1da3cb7c",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/preflight.py": "282cfd5d1b36685ab0a36fbf5c6ff49642409b85c903341f95b9c1e7ed3620bf",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/verify_one.py": "ad39075b92b878dc356c46987d61401696df4b9c43ce226b732d68522cd58e3f",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/pipeline.py": "1c09ea49d122116d42b10758356408d78512021320d8795f29ad7ea35be64e30",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/train.py": "bb0c488fd1e88c6d85370ec87e434eea45321609565125655d81634d33232451",
+    "src/ta_wf_next/learnable_generator.py": "9ba80e7dbda5ab2b7d1f8b386f65678a9a89f216fafdf0b18df85599a0c6267f",
+    "src/ta_wf_next/batch_views.py": "e67b54acde0e36b7b1487d4972d73c7109a89e6de41c2217e11356d38f96f44f",
+    "src/ta_wf_next/packet_patches.py": "e31785c8731cd8b1a3f702619efaef64b87de1e190be735965bc9498b10e8f6b",
+    "src/ta_wf_next/hierarchical_transformer.py": "1812342811ef5a79d8773c8608824750313a9be2a4fb24e488487487caaff366",
+    "src/ta_wf_next/transformer_proto.py": "ba921e57111694effd9df4b00e3da7adf3b538a931c047a15f64d1626fc868b6",
+    "src/ta_wf_next/__init__.py": "4ec6fe32603e569463dbe921a0b4f703c316a93dc046c9f71049b457c0a3ff64",
+    "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+    "src/ta_wf_next/screening.py": "d86b1f6a5f5b2b5f498a5acfb5eb47ba44c937459f151f7e4bc4ffec89e45d51",
+    "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+    "src/ta_wf_next/models/df.py": "869f912d04df8e03bf4ba791ba9ccf95a70fd14a2d1fe51c1d1afce58207bf99",
+    "src/ta_wf_next/models/__init__.py": "8475e22fda1367672f479cdb252f47aff47a9adaafbd80c5fddf62e5e4b0697e",
+    "src/ta_wf_next/models/varcnn.py": "3468e4be163eba14e123b349dde66a652a9ef9df6b6b0c52f00a20d1f68d944c",
+    "scripts/experiment.py": "4645793ce51bae7c10d065f01551b70732b859178f0b424a36907b3f8439841a"
+  },
+  "prepared_sha256": "7d6aee4613247c7e98cb544332f09224098a9191ffe37415f1c33f8823893734",
+  "manifest_sha256": "ea10639b62b5b6346820cffd46765620f4245dcdd51f7a03f2c7d99810117850",
+  "preflight_sha256": "e17213632a49bfa4c31360c0155d4bef960eb16dbcd33478d770a73828bb0115"
+}

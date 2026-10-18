@@ -1,0 +1,41 @@
+{
+  "task": "shuffled_kd_23407",
+  "kind": "shuffled_kd",
+  "seed": 23407,
+  "device": "cuda",
+  "best_step": 6560,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "teacher_target": "shuffled_ensemble",
+  "temperature": 2.0,
+  "distillation_weight": 0.5,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "bn_eval_buffers_unchanged": true,
+  "best": {
+    "source": {
+      "accuracy": 0.7326797385620915,
+      "macro_f1": 0.7288981772859026
+    },
+    "valid": {
+      "accuracy": 0.6803921568627451,
+      "macro_f1": 0.6654480595657065
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.6416339869281046,
+      "macro_f1": 0.6381113112078871
+    },
+    "valid": {
+      "accuracy": 0.5568627450980392,
+      "macro_f1": 0.5456122309063485
+    }
+  },
+  "elapsed_seconds": 573.2665497204289
+}

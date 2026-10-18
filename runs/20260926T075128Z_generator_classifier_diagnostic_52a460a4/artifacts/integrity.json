@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "original_prediction_sets_checked": 18,
+  "probe_prediction_sets_checked": 108,
+  "expected_probe_prediction_sets": 108,
+  "probe_fits_checked": 54,
+  "errors": [],
+  "network_weights_unchanged": true,
+  "future_access": false
+}

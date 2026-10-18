@@ -1,0 +1,79 @@
+{
+  "condition": "D_80_mean",
+  "seed": 23407,
+  "status": "completed",
+  "steps_completed": 12800,
+  "new_steps_completed": 9600,
+  "blocks_completed": 400,
+  "last": {
+    "source": {
+      "accuracy": 0.8047794117647059,
+      "macro_f1": 0.8016591205086002
+    },
+    "common_source": {
+      "accuracy": 0.807843137254902,
+      "macro_f1": 0.8035348495377062
+    },
+    "valid": {
+      "accuracy": 0.4,
+      "macro_f1": 0.3982754798066216
+    }
+  },
+  "resume_metrics": {
+    "source": {
+      "accuracy": 0.4681372549019608,
+      "macro_f1": 0.44810580847210724
+    },
+    "common_source": {
+      "accuracy": 0.47843137254901963,
+      "macro_f1": 0.45826059331698105
+    },
+    "valid": {
+      "accuracy": 0.35490196078431374,
+      "macro_f1": 0.3304642493223808
+    }
+  },
+  "historical_best": {
+    "source": {
+      "accuracy": 0.45465686274509803,
+      "macro_f1": 0.43884636924637216
+    },
+    "common_source": {
+      "accuracy": 0.4583333333333333,
+      "macro_f1": 0.4409839369656955
+    },
+    "valid": {
+      "accuracy": 0.3607843137254902,
+      "macro_f1": 0.3452038323521699
+    }
+  },
+  "resume_state_sha256": "a9e73fb87dd3a8a5f7019ba7d49d3d56fd628b643d5ffd7410a34259296be405",
+  "best_block": 205,
+  "initial_state_sha256": "acca5885cbbed2cec1a577057788232898659ccde909e37d094a400b76cd7102",
+  "generator_initial_sha256": "36230b89dcefea7f2a59adeed3f437546aa1d3c5619feab1e9e6a372a03c2dbd",
+  "generator_changed": true,
+  "config_sha256": "64e70bf9b62fb47902c8318a3fee890863a9248e05eba155f34e2b724561f439",
+  "source_count": 8160,
+  "sample_visits_min": 100,
+  "sample_visits_max": 101,
+  "samples_presented": 819200,
+  "elapsed_seconds": 4608.487016776577,
+  "parameters": {
+    "total": 119578,
+    "trainable": 119578,
+    "generator_total": 6064,
+    "generator_trainable": 6064
+  },
+  "source": {
+    "accuracy": 0.7003676470588235,
+    "macro_f1": 0.695090276992107
+  },
+  "common_source": {
+    "accuracy": 0.7058823529411765,
+    "macro_f1": 0.6987932508222956
+  },
+  "valid": {
+    "accuracy": 0.4215686274509804,
+    "macro_f1": 0.4144225055989762
+  }
+}

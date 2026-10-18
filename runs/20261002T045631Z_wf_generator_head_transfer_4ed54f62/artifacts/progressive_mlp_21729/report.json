@@ -1,0 +1,90 @@
+{
+  "task": "progressive_mlp_21729",
+  "kind": "progressive_mlp",
+  "seed": 21729,
+  "device": "cuda",
+  "best_step": 12320,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 527846,
+  "parameters_trainable": 500566,
+  "generator_parameter_delta_l2": 36.63146351290909,
+  "parameter_deltas_squared": {
+    "packet_positions": 0.0,
+    "time_positions": 356.2525939941406,
+    "view_types": 0.10040391981601715,
+    "generator.packet_conv.0.weight": 0.0,
+    "generator.packet_conv.0.bias": 0.0,
+    "generator.packet_conv.1.weight": 0.0,
+    "generator.packet_conv.1.bias": 0.0,
+    "generator.stages.0.conv1.weight": 6.620265483856201,
+    "generator.stages.0.conv1.bias": 0.16626127064228058,
+    "generator.stages.0.conv2.weight": 52.9072265625,
+    "generator.stages.0.conv2.bias": 0.14839255809783936,
+    "generator.stages.0.skip.weight": 3.4642386436462402,
+    "generator.stages.0.skip.bias": 0.1485387533903122,
+    "generator.stages.1.conv1.weight": 56.713951110839844,
+    "generator.stages.1.conv1.bias": 0.07474734634160995,
+    "generator.stages.1.conv2.weight": 130.5793914794922,
+    "generator.stages.1.conv2.bias": 0.13022035360336304,
+    "generator.stages.1.skip.weight": 12.494010925292969,
+    "generator.stages.1.skip.bias": 0.13069504499435425,
+    "generator.stages.2.conv1.weight": 352.37091064453125,
+    "generator.stages.2.conv1.bias": 0.1381460428237915,
+    "generator.stages.2.conv2.weight": 637.703857421875,
+    "generator.stages.2.conv2.bias": 0.2755923271179199,
+    "generator.stages.2.skip.weight": 51.257041931152344,
+    "generator.stages.2.skip.bias": 0.2756946384906769,
+    "generator.to_features.weight": 36.200687408447266,
+    "generator.to_features.bias": 0.06424915045499802,
+    "packet_projection.weight": 0.0,
+    "packet_projection.bias": 0.0,
+    "time_projection.weight": 33.23978042602539,
+    "time_projection.bias": 0.10027448832988739,
+    "final_norm.weight": 892.2636108398438,
+    "final_norm.bias": 3.0106563568115234,
+    "classifier.weight": 1020.3867797851562,
+    "classifier.bias": 0.408236563205719,
+    "head.layers.0.0.weight": 1.191106915473938,
+    "head.layers.0.0.bias": 0.5250125527381897,
+    "head.layers.0.1.weight": 441.01202392578125,
+    "head.layers.0.1.bias": 3.462682008743286,
+    "head.layers.0.4.weight": 482.5169982910156,
+    "head.layers.0.4.bias": 0.8753998279571533,
+    "head.layers.1.0.weight": 1.5532636642456055,
+    "head.layers.1.0.bias": 5.458891868591309,
+    "head.layers.1.1.weight": 449.8471984863281,
+    "head.layers.1.1.bias": 6.384855270385742,
+    "head.layers.1.4.weight": 467.1847839355469,
+    "head.layers.1.4.bias": 0.5002015233039856
+  },
+  "inactive_parameters_unchanged": true,
+  "elapsed_seconds": 335.46423224173486,
+  "peak_cuda_bytes": 941086208,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "generator_family": "progressive",
+  "head_family": "mlp",
+  "best": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8431372549019608,
+      "macro_f1": 0.8387218446041974
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8313725490196079,
+      "macro_f1": 0.827836651366063
+    }
+  }
+}

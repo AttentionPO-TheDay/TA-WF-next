@@ -1,0 +1,18 @@
+{
+  "models": {
+    "transformer": {
+      "peak_bytes": 662288384,
+      "parameters": 512262
+    },
+    "mlp": {
+      "peak_bytes": 622698496,
+      "parameters": 379654
+    }
+  },
+  "free_bytes": 24612241408,
+  "two_workers_conservative_estimate": 5619544064,
+  "optimizer_steps": 0,
+  "valid_scored": false,
+  "torch": "2.12.1+cu130",
+  "gpu": "NVIDIA GeForce RTX 4090"
+}

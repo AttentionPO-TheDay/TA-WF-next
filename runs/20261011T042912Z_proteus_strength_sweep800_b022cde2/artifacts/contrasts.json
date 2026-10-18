@@ -1,0 +1,20 @@
+{
+  "strength_025": {
+    "macro_f1_delta_pp": 2.5229272722299356,
+    "negative_delta_pp": -4.43592806547461,
+    "positive_cells": 9,
+    "candidate_signal": true
+  },
+  "strength_050": {
+    "macro_f1_delta_pp": 2.1503821344047935,
+    "negative_delta_pp": -3.1795262772485637,
+    "positive_cells": 9,
+    "candidate_signal": true
+  },
+  "strength_075": {
+    "macro_f1_delta_pp": 0.7171404525688652,
+    "negative_delta_pp": -0.7349917107081148,
+    "positive_cells": 7,
+    "candidate_signal": false
+  }
+}

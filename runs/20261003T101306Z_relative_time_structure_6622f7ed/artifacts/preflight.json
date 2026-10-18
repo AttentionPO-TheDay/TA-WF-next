@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "freeze_files": 16,
+  "same_initialization": true,
+  "batch_size": 64,
+  "feature_cpu_reference": true,
+  "deterministic_forward_backward": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "future_access": false
+}

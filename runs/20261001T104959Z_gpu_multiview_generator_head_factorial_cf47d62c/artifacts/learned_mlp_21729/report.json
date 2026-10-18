@@ -1,0 +1,37 @@
+{
+  "task": "learned_mlp_21729",
+  "kind": "learned_mlp",
+  "seed": 21729,
+  "best_step": 10880,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 348982,
+  "parameters_trainable": 348982,
+  "generator_parameter_delta_l2": 6.666239605188402,
+  "elapsed_seconds": 178.888098962605,
+  "peak_cuda_bytes": 942754304,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "best": {
+    "source": {
+      "accuracy": 0.9998039215686274,
+      "macro_f1": 0.9998043443029379
+    },
+    "valid": {
+      "accuracy": 0.6666666666666666,
+      "macro_f1": 0.653915148032795
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9999346405228758,
+      "macro_f1": 0.9999346397966513
+    },
+    "valid": {
+      "accuracy": 0.6647058823529411,
+      "macro_f1": 0.6519008224890578
+    }
+  }
+}

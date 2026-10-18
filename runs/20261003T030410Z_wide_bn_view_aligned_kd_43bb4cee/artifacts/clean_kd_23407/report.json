@@ -1,0 +1,41 @@
+{
+  "task": "clean_kd_23407",
+  "kind": "clean_kd",
+  "seed": 23407,
+  "device": "cuda",
+  "best_step": 8000,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "teacher_target": "clean_probability_mean",
+  "temperature": 2.0,
+  "distillation_weight": 0.25,
+  "gate_coverage": null,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8725490196078431,
+      "macro_f1": 0.8721424544953956
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8627450980392157,
+      "macro_f1": 0.862740146563676
+    }
+  },
+  "elapsed_seconds": 582.6967972358689
+}

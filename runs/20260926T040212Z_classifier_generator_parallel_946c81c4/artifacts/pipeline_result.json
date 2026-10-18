@@ -1,0 +1,33 @@
+{
+  "exit_codes": {
+    "train_C_local_attention_frozen_1729": 0,
+    "verify_C_local_attention_frozen_1729": 0,
+    "train_B_local_attention_joint_3407": 0,
+    "verify_B_local_attention_joint_3407": 0,
+    "train_B_local_attention_joint_1729": 0,
+    "train_D_local_attention_slow_1729": 0,
+    "verify_B_local_attention_joint_1729": 0,
+    "verify_D_local_attention_slow_1729": 0,
+    "train_A_local_mean_joint_1729": 0,
+    "verify_A_local_mean_joint_1729": 0,
+    "train_A_local_mean_joint_3407": 0,
+    "verify_A_local_mean_joint_3407": 0,
+    "train_C_local_attention_frozen_3407": 0,
+    "verify_C_local_attention_frozen_3407": 0,
+    "train_C_local_attention_frozen_2026": 0,
+    "verify_C_local_attention_frozen_2026": 0,
+    "train_A_local_mean_joint_2026": 0,
+    "train_D_local_attention_slow_3407": 0,
+    "verify_A_local_mean_joint_2026": 0,
+    "verify_D_local_attention_slow_3407": 0,
+    "train_B_local_attention_joint_2026": 0,
+    "verify_B_local_attention_joint_2026": 0,
+    "train_D_local_attention_slow_2026": 0,
+    "verify_D_local_attention_slow_2026": 0
+  },
+  "stop_reasons": {},
+  "cancelled": [],
+  "finalize_exit_code": 0,
+  "finished_unix": 1790399472.2896416,
+  "elapsed_seconds": 2866.25411527697
+}

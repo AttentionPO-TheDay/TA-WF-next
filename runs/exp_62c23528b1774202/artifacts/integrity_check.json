@@ -1,0 +1,21 @@
+{
+  "conflicted_regions_total": 361,
+  "errors": [],
+  "evaluation_units_checked": 18,
+  "extra_seven_used_by_algorithm": false,
+  "formal_shot": 3,
+  "initial_mechanism_signal": false,
+  "metric_rows_checked": 90,
+  "new_backbone_training_runs": 0,
+  "output_sha256": {
+    "budget_audit.json": "9ddb7b53a65dae5e391e88d9bbce7e86997e3d13141f69dec15408a081f25b65",
+    "deltas.csv": "30df932604586e73a8d6dee015eec45da2ba2dbca9ce6280d3122e3c8b8bd947",
+    "metrics_long.csv": "8ad84cba478431106022d3bdcc7643b04e8209b8d16bd8e3a89e5d77d8d00212",
+    "summary.json": "8e1e0d60e78158fcb3f3eaaf109564333c37b8d031da2a10adff2bced81daf41"
+  },
+  "passed": true,
+  "prediction_rows_checked": 2042310,
+  "schema_version": 1,
+  "sealed_files_checked": 25,
+  "shared_history_budget_equal": true
+}

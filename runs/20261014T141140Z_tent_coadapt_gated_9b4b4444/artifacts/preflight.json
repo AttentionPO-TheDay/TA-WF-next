@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "splits": {
+    "day14": {
+      "support_rows": 1024,
+      "query_rows": 21579,
+      "same_historical_split": true
+    },
+    "day90": {
+      "support_rows": 1024,
+      "query_rows": 27575,
+      "same_historical_split": true
+    },
+    "day270": {
+      "support_rows": 1024,
+      "query_rows": 18911,
+      "same_historical_split": true
+    }
+  },
+  "historical_rows": 63,
+  "candidate_smoke_updates": 2,
+  "trainable_parameter_count": 1048838,
+  "all_model_parameters_trainable": true,
+  "source_forward_trace_exposures": 0,
+  "bn_momentum": 0.1,
+  "bn_smoke_deltas": {
+    "generator.stages.0.norm1": 2,
+    "generator.stages.0.norm2": 2,
+    "generator.stages.1.norm1": 2,
+    "generator.stages.1.norm2": 2,
+    "generator.stages.2.norm1": 2,
+    "generator.stages.2.norm2": 2
+  },
+  "config_sha": "5c75c845b80922bcd876a04db1e12e77c816391b5f1317384174e60567c90a44",
+  "code_sha": {
+    "runner.py": "043458c1ed92f9aa522af3a2d32d2e96214264f9157f83983e04c58abf82e3cb",
+    "coadapt.py": "63d38ffbf2bc5f9dbd92c5f24b21f9e64e46b4365c58d325337871d586379c36",
+    "port_base.py": "6f8280f0974ef2838c71183217c91833f4a2b2310fdf73f64565f7a6515ef3e1",
+    "model.py": "b6f59add5040dbb9d80f2469cac46412b37c87a2dbd66c0df01fc00e24b67212",
+    "reporting.py": "aecca3e9c420a1df55b160cf22ba8782888d36b423383b3d12d51f693287235c",
+    "postrun_audit.py": "214a555699fb7635bdc572efc40246ed39d2d2b6aaa87fb59e6340123a4635de"
+  }
+}

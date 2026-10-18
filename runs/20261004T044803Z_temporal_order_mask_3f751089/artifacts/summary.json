@@ -1,0 +1,255 @@
+{
+  "means": {
+    "ce_control": {
+      "accuracy": 0.8915032679738562,
+      "macro_f1": 0.8894366163974006
+    },
+    "temporal_order_mask": {
+      "accuracy": 0.8993464052287582,
+      "macro_f1": 0.8964035419917771
+    }
+  },
+  "comparison_temporal_order_mask_minus_ce_control": {
+    "accuracy_mean_delta_pp": 0.7843137254902007,
+    "accuracy_per_seed_pp": [
+      0.7843137254902044,
+      1.17647058823529,
+      0.39215686274510775
+    ],
+    "macro_f1_mean_delta_pp": 0.6966925594376505,
+    "positive_seed_count": 3,
+    "pass": false
+  },
+  "reports": [
+    {
+      "task": "ce_control_21729",
+      "kind": "ce_control",
+      "seed": 21729,
+      "device": "cuda:2",
+      "best_step": 10400,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8882169029227852
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.8901960784313725,
+        "masked_accuracy": 0.8725490196078431,
+        "prediction_agreement": 0.9745098039215686
+      },
+      "augmentation": {
+        "name": "none",
+        "existing_span_mask": true
+      },
+      "elapsed_seconds": 578.4429648527876
+    },
+    {
+      "task": "temporal_order_mask_21729",
+      "kind": "temporal_order_mask",
+      "seed": 21729,
+      "device": "cuda:2",
+      "best_step": 11840,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9980392156862745,
+          "macro_f1": 0.9980011590034232
+        },
+        "valid": {
+          "accuracy": 0.8980392156862745,
+          "macro_f1": 0.8931521093285797
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.8980392156862745,
+        "masked_accuracy": 0.8862745098039215,
+        "prediction_agreement": 0.9803921568627451
+      },
+      "augmentation": {
+        "name": "temporal_order_mask",
+        "probability": 0.75,
+        "span_bins": 24,
+        "raw_per_bin": 15,
+        "source_only": true,
+        "channel_total_preserved": true
+      },
+      "elapsed_seconds": 702.5259729875252
+    },
+    {
+      "task": "ce_control_23407",
+      "kind": "ce_control",
+      "seed": 23407,
+      "device": "cuda:2",
+      "best_step": 12320,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8941176470588236,
+          "macro_f1": 0.8923945335710041
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.8941176470588236,
+        "masked_accuracy": 0.8862745098039215,
+        "prediction_agreement": 0.984313725490196
+      },
+      "augmentation": {
+        "name": "none",
+        "existing_span_mask": true
+      },
+      "elapsed_seconds": 571.4738953839988
+    },
+    {
+      "task": "temporal_order_mask_23407",
+      "kind": "temporal_order_mask",
+      "seed": 23407,
+      "device": "cuda:2",
+      "best_step": 8000,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9864052287581699,
+          "macro_f1": 0.9863701542321902
+        },
+        "valid": {
+          "accuracy": 0.9058823529411765,
+          "macro_f1": 0.9059317588729352
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.9058823529411765,
+        "masked_accuracy": 0.888235294117647,
+        "prediction_agreement": 0.9745098039215686
+      },
+      "augmentation": {
+        "name": "temporal_order_mask",
+        "probability": 0.75,
+        "span_bins": 24,
+        "raw_per_bin": 15,
+        "source_only": true,
+        "channel_total_preserved": true
+      },
+      "elapsed_seconds": 697.9594301795587
+    },
+    {
+      "task": "ce_control_22026",
+      "kind": "ce_control",
+      "seed": 22026,
+      "device": "cuda:2",
+      "best_step": 7520,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9934640522875817,
+          "macro_f1": 0.9932015106741902
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8876984126984127
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.8901960784313725,
+        "masked_accuracy": 0.8764705882352941,
+        "prediction_agreement": 0.9823529411764705
+      },
+      "augmentation": {
+        "name": "none",
+        "existing_span_mask": true
+      },
+      "elapsed_seconds": 574.4902505911887
+    },
+    {
+      "task": "temporal_order_mask_22026",
+      "kind": "temporal_order_mask",
+      "seed": 22026,
+      "device": "cuda:2",
+      "best_step": 7520,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.984640522875817,
+          "macro_f1": 0.9847011651780057
+        },
+        "valid": {
+          "accuracy": 0.8941176470588236,
+          "macro_f1": 0.8901267577738166
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.8941176470588236,
+        "masked_accuracy": 0.8823529411764706,
+        "prediction_agreement": 0.984313725490196
+      },
+      "augmentation": {
+        "name": "temporal_order_mask",
+        "probability": 0.75,
+        "span_bins": 24,
+        "raw_per_bin": 15,
+        "source_only": true,
+        "channel_total_preserved": true
+      },
+      "elapsed_seconds": 588.6311345212162
+    }
+  ],
+  "future_access": false,
+  "training_tasks_completed": 6
+}

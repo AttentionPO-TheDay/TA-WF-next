@@ -1,0 +1,52 @@
+{
+  "task": "d4_w16_21729",
+  "kind": "d4_w16",
+  "seed": 21729,
+  "best_step": 11840,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 350550,
+  "parameters_trainable": 323270,
+  "generator_parameter_delta_l2": 4.601231648629043,
+  "generator_parameter_deltas_squared": {
+    "packet_conv.0.weight": 0.0,
+    "packet_conv.0.bias": 0.0,
+    "packet_conv.1.weight": 0.0,
+    "packet_conv.1.bias": 0.0,
+    "time_conv.0.weight": 2.946963310241699,
+    "time_conv.0.bias": 0.02610345184803009,
+    "time_conv.1.weight": 13.092880249023438,
+    "time_conv.1.bias": 0.023917604237794876,
+    "depth_mix.0.weight": 2.3767969608306885,
+    "depth_mix.0.bias": 0.015245229937136173,
+    "depth_mix.1.weight": 2.6778037548065186,
+    "depth_mix.1.bias": 0.011622123420238495
+  },
+  "inactive_parameters_unchanged": true,
+  "elapsed_seconds": 329.16028020810336,
+  "peak_cuda_bytes": 1030438400,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "best": {
+    "source": {
+      "accuracy": 0.9997385620915032,
+      "macro_f1": 0.9997387756159292
+    },
+    "valid": {
+      "accuracy": 0.7705882352941177,
+      "macro_f1": 0.7637814255461313
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.7627450980392156,
+      "macro_f1": 0.7568768921710097
+    }
+  }
+}

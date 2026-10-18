@@ -1,0 +1,47 @@
+{
+  "no_pseudo_fixed": {
+    "macro_f1": 0.7350382659085756,
+    "negative_adaptation_rate": 0.039634636392096356,
+    "f1_delta_vs_proteus_pp": 0.07198983982302787,
+    "negative_delta_vs_proteus_pp": -0.08544101884496794,
+    "positive_paired_cells": 6,
+    "target_pass": false,
+    "pre_registered_primary": false
+  },
+  "dynamic_lr_only": {
+    "macro_f1": 0.7347687641596219,
+    "negative_adaptation_rate": 0.0398599906775937,
+    "f1_delta_vs_proteus_pp": 0.04503966492765965,
+    "negative_delta_vs_proteus_pp": -0.06290559029523343,
+    "positive_paired_cells": 5,
+    "target_pass": false,
+    "pre_registered_primary": false
+  },
+  "bn_interp_only": {
+    "macro_f1": 0.7350382659085756,
+    "negative_adaptation_rate": 0.039634636392096356,
+    "f1_delta_vs_proteus_pp": 0.07198983982302787,
+    "negative_delta_vs_proteus_pp": -0.08544101884496794,
+    "positive_paired_cells": 6,
+    "target_pass": false,
+    "pre_registered_primary": false
+  },
+  "mvi_joint": {
+    "macro_f1": 0.7347817067242768,
+    "negative_adaptation_rate": 0.03985557982489774,
+    "f1_delta_vs_proteus_pp": 0.04633392139314907,
+    "negative_delta_vs_proteus_pp": -0.06334667556482931,
+    "positive_paired_cells": 5,
+    "target_pass": false,
+    "pre_registered_primary": true
+  },
+  "mvi_joint_skip": {
+    "macro_f1": 0.6965896969547823,
+    "negative_adaptation_rate": 0.0927691195192936,
+    "f1_delta_vs_proteus_pp": -3.772867055556295,
+    "negative_delta_vs_proteus_pp": 5.228007293874757,
+    "positive_paired_cells": 0,
+    "target_pass": false,
+    "pre_registered_primary": false
+  }
+}

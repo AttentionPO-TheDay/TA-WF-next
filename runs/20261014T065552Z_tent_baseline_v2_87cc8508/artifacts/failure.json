@@ -1,0 +1,5 @@
+{
+  "type": "AssertionError",
+  "message": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/rbf/TA-WF-next/runs/20261014T065552Z_tent_baseline_v2_87cc8508/runner.py\", line 334, in <module>\n    main()\n  File \"/home/rbf/TA-WF-next/runs/20261014T065552Z_tent_baseline_v2_87cc8508/runner.py\", line 310, in main\n    assert reference[\"streams\"] == cost[\"streams\"] if \"streams\" in reference else True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

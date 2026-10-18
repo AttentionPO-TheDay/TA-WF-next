@@ -1,0 +1,36 @@
+{
+  "task": "all_clean_22026",
+  "kind": "all_clean",
+  "historical_reuse": false,
+  "seed": 22026,
+  "best_step": 8000,
+  "steps_completed": 12800,
+  "elapsed_seconds": 383.2214739434421,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "parameters": 379654,
+  "peak_cuda_bytes": 1312631296,
+  "index_sha256": "4eb51c61c21666c2e0a9d25184bea4b046b3797167462b0ce056599f3f03c08b",
+  "best": {
+    "source": {
+      "accuracy": 0.9984908101115723,
+      "macro_f1": 0.9985127853676845
+    },
+    "valid": {
+      "accuracy": 0.7313725490196078,
+      "macro_f1": 0.7253816444992915
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.711764705882353,
+      "macro_f1": 0.7042978807684691
+    }
+  }
+}

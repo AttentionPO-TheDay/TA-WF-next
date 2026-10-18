@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "paired_initial_states": {
+    "11729": "9026235181dcde7463304e09a202e14cefb64aff67457991126f1eb90f46f33e",
+    "13407": "7cf0eeb0a9a0a5e1e062e5f9b1a625ed4077d460da4b840fe83117d2c3e4c56c",
+    "12026": "63305e63b912f60f24c929cb52cab87cff5db7e775240215870c69718e24ecfa"
+  },
+  "same_eval_logits": true,
+  "anchor_gradient_analytic_match": true,
+  "anchor_classifier_isolation": true,
+  "anchor_toward_initialization": true,
+  "lambda_zero_exact_gradient_parity": true,
+  "optimizer_groups_and_dropout_verified": true,
+  "resume_exact": true,
+  "synthetic_three_steps_seconds": 0.14692527055740356,
+  "no_real_data_training": true,
+  "errors": []
+}

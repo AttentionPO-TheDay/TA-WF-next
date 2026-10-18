@@ -1,0 +1,34 @@
+{
+  "task": "transformer_23407",
+  "kind": "transformer",
+  "tiny": false,
+  "seed": 23407,
+  "best_step": 12320,
+  "steps_completed": 12800,
+  "elapsed_seconds": 272.441686226055,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "parameters": 119578,
+  "best": {
+    "source": {
+      "accuracy": 0.5990849673202614,
+      "macro_f1": 0.5912555436910343
+    },
+    "valid": {
+      "accuracy": 0.5137254901960784,
+      "macro_f1": 0.49692390942390935
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.5996732026143791,
+      "macro_f1": 0.5926087730818398
+    },
+    "valid": {
+      "accuracy": 0.503921568627451,
+      "macro_f1": 0.49077376871494516
+    }
+  }
+}

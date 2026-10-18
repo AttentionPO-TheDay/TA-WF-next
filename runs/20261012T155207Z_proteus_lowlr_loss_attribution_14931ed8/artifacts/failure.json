@@ -1,0 +1,5 @@
+{
+  "type": "CalledProcessError",
+  "message": "Command '['/home/rbf/TA-WF/.venv/bin/python', '/home/rbf/TA-WF-next/runs/20261012T155207Z_proteus_lowlr_loss_attribution_14931ed8/postrun_audit.py']' returned non-zero exit status 1.",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/rbf/TA-WF-next/runs/20261012T155207Z_proteus_lowlr_loss_attribution_14931ed8/runner.py\", line 242, in <module>\n    try: main()\n         ^^^^^^\n  File \"/home/rbf/TA-WF-next/runs/20261012T155207Z_proteus_lowlr_loss_attribution_14931ed8/runner.py\", line 228, in main\n    subprocess.run([sys.executable,str(R/'postrun_audit.py')],check=True)\n  File \"/home/rbf/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/home/rbf/TA-WF/.venv/bin/python', '/home/rbf/TA-WF-next/runs/20261012T155207Z_proteus_lowlr_loss_attribution_14931ed8/postrun_audit.py']' returned non-zero exit status 1.\n"
+}

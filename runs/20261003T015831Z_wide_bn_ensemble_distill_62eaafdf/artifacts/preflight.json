@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "source_rows": 15300,
+  "valid_rows": 510,
+  "teacher_files": 3,
+  "teacher_mean_shape": [
+    15300,
+    102
+  ],
+  "future_access": false,
+  "model_forward_and_backward": true
+}

@@ -1,0 +1,81 @@
+{
+  "reviewed_utc": "2026-10-01T12:29:21.662884+00:00",
+  "frozen_hashes": "passed",
+  "independent_prediction_metric_checks": 48,
+  "diagnostics": {
+    "packet_direction": {
+      "best_source_accuracy_mean": 0.861437908496732,
+      "last_source_accuracy_mean": 0.976318082788671,
+      "best_valid_accuracy_mean": 0.5640522875816993,
+      "last_valid_accuracy_mean": 0.5248366013071896,
+      "best_steps": [
+        7520,
+        7520,
+        5600
+      ],
+      "all_seed_wrong": 138
+    },
+    "packet_native": {
+      "best_source_accuracy_mean": 0.9424836601307188,
+      "last_source_accuracy_mean": 0.9889760348583878,
+      "best_valid_accuracy_mean": 0.7052287581699347,
+      "last_valid_accuracy_mean": 0.6810457516339868,
+      "best_steps": [
+        7040,
+        7040,
+        6560
+      ],
+      "all_seed_wrong": 69
+    },
+    "tam_only": {
+      "best_source_accuracy_mean": 0.9710675381263617,
+      "last_source_accuracy_mean": 0.9980174291938999,
+      "best_valid_accuracy_mean": 0.7333333333333334,
+      "last_valid_accuracy_mean": 0.7183006535947712,
+      "best_steps": [
+        6560,
+        8960,
+        7520
+      ],
+      "all_seed_wrong": 57
+    },
+    "fusion": {
+      "best_source_accuracy_mean": 0.9977559912854029,
+      "last_source_accuracy_mean": 0.9999782135076253,
+      "best_valid_accuracy_mean": 0.7418300653594772,
+      "last_valid_accuracy_mean": 0.734640522875817,
+      "best_steps": [
+        11840,
+        7520,
+        12800
+      ],
+      "all_seed_wrong": 60
+    }
+  },
+  "fusion_error_transition_means": {
+    "packet_direction": {
+      "fusion_correct_single_wrong": 132.66666666666666,
+      "fusion_wrong_single_correct": 42.0,
+      "both_wrong": 89.66666666666667
+    },
+    "packet_native": {
+      "fusion_correct_single_wrong": 72.33333333333333,
+      "fusion_wrong_single_correct": 53.666666666666664,
+      "both_wrong": 78.0
+    },
+    "tam_only": {
+      "fusion_correct_single_wrong": 66.33333333333333,
+      "fusion_wrong_single_correct": 62.0,
+      "both_wrong": 69.66666666666667
+    }
+  },
+  "new_training": false,
+  "new_future_or_external_data": false,
+  "next_candidate": {
+    "scope": "source/valid only; no new training started",
+    "priority": "TAM-only generator encoding comparison, current vs order-preserving multiscale local encoding; retain Transformer, input, token/readout shapes and matched training/selection budget",
+    "reason": "fusion vs TAM-only did not pass preregistered gate, while TAM-only is close to fusion; encoding is a candidate, not diagnosed unique cause",
+    "preserve": "self-designed generator -> classifier -> separately designed drift adjustment interface",
+    "time_dependency_limit": "Source time benefit does not prove drift robustness or applicability to missing-timestamp datasets"
+  }
+}

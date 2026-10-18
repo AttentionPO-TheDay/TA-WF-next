@@ -1,0 +1,74 @@
+{
+  "task": "shallow_mlp_22026",
+  "kind": "shallow_mlp",
+  "seed": 22026,
+  "device": "cuda",
+  "best_step": 10400,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 348982,
+  "parameters_trainable": 321702,
+  "generator_parameter_delta_l2": 4.467272355376839,
+  "parameter_deltas_squared": {
+    "packet_positions": 0.0,
+    "time_positions": 205.1314697265625,
+    "view_types": 0.062132999300956726,
+    "generator.packet_conv.0.weight": 0.0,
+    "generator.packet_conv.0.bias": 0.0,
+    "generator.packet_conv.1.weight": 0.0,
+    "generator.packet_conv.1.bias": 0.0,
+    "generator.time_conv.0.weight": 6.262454032897949,
+    "generator.time_conv.0.bias": 0.22654949128627777,
+    "generator.time_conv.1.weight": 13.451086044311523,
+    "generator.time_conv.1.bias": 0.016432728618383408,
+    "packet_projection.weight": 0.0,
+    "packet_projection.bias": 0.0,
+    "time_projection.weight": 118.51640319824219,
+    "time_projection.bias": 0.06223222240805626,
+    "final_norm.weight": 1146.1759033203125,
+    "final_norm.bias": 3.346513032913208,
+    "classifier.weight": 1276.611083984375,
+    "classifier.bias": 0.5612471699714661,
+    "head.layers.0.0.weight": 1.0654979944229126,
+    "head.layers.0.0.bias": 0.32433706521987915,
+    "head.layers.0.1.weight": 582.2540283203125,
+    "head.layers.0.1.bias": 2.854768991470337,
+    "head.layers.0.4.weight": 567.111083984375,
+    "head.layers.0.4.bias": 0.5822522044181824,
+    "head.layers.1.0.weight": 2.1347527503967285,
+    "head.layers.1.0.bias": 3.9045777320861816,
+    "head.layers.1.1.weight": 525.3758544921875,
+    "head.layers.1.1.bias": 6.975900173187256,
+    "head.layers.1.4.weight": 643.8027954101562,
+    "head.layers.1.4.bias": 0.41022050380706787
+  },
+  "inactive_parameters_unchanged": true,
+  "elapsed_seconds": 304.97795100696385,
+  "peak_cuda_bytes": 909379072,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "generator_family": "shallow",
+  "head_family": "mlp",
+  "best": {
+    "source": {
+      "accuracy": 0.9859477124183007,
+      "macro_f1": 0.9859014261123672
+    },
+    "valid": {
+      "accuracy": 0.7098039215686275,
+      "macro_f1": 0.6993611508317391
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9903921568627451,
+      "macro_f1": 0.9903956693760545
+    },
+    "valid": {
+      "accuracy": 0.6941176470588235,
+      "macro_f1": 0.684522177169236
+    }
+  }
+}

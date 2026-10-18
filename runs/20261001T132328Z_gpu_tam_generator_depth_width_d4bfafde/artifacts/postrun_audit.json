@@ -1,0 +1,73 @@
+{
+  "audit_utc": "2026-10-01T14:19:01.772374+00:00",
+  "passed": true,
+  "frozen_hash_checks": 57,
+  "metric_groups_verified": 48,
+  "reports_checked": 12,
+  "new_tasks": 9,
+  "historical_reused_tasks": 3,
+  "evaluation_schedule_and_selection": "passed",
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "new_training": false,
+  "checkpoint_reload": "already verified in worker and historical audit; this audit recomputes stored prediction metrics",
+  "all_last_valid_below_best": true,
+  "means_and_errors": {
+    "d2_w16": {
+      "best_source_accuracy_percent": 98.88671023965142,
+      "best_valid_accuracy_percent": 75.94771241830065,
+      "last_source_accuracy_percent": 99.8867102396514,
+      "last_valid_accuracy_percent": 74.50980392156863,
+      "common_wrong_all_three_seeds": 53,
+      "best_steps": [
+        7040,
+        10400,
+        10400
+      ],
+      "mean_task_seconds": 224.75764717378965
+    },
+    "d2_w32": {
+      "best_source_accuracy_percent": 98.66666666666667,
+      "best_valid_accuracy_percent": 76.86274509803921,
+      "last_source_accuracy_percent": 99.92156862745098,
+      "last_valid_accuracy_percent": 75.88235294117646,
+      "common_wrong_all_three_seeds": 47,
+      "best_steps": [
+        8000,
+        11360,
+        7040
+      ],
+      "mean_task_seconds": 300.65477856900543
+    },
+    "d4_w16": {
+      "best_source_accuracy_percent": 98.31372549019606,
+      "best_valid_accuracy_percent": 76.20915032679738,
+      "last_source_accuracy_percent": 99.86710239651416,
+      "last_valid_accuracy_percent": 75.0326797385621,
+      "common_wrong_all_three_seeds": 48,
+      "best_steps": [
+        11840,
+        6560,
+        12320
+      ],
+      "mean_task_seconds": 343.7961191910629
+    },
+    "d4_w32": {
+      "best_source_accuracy_percent": 98.6470588235294,
+      "best_valid_accuracy_percent": 75.81699346405229,
+      "last_source_accuracy_percent": 99.94771241830065,
+      "last_valid_accuracy_percent": 74.90196078431373,
+      "common_wrong_all_three_seeds": 58,
+      "best_steps": [
+        7520,
+        9920,
+        7040
+      ],
+      "mean_task_seconds": 340.9800830172996
+    }
+  },
+  "pipeline_seconds": 1638.6466103894636
+}

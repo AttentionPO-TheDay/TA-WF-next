@@ -1,0 +1,42 @@
+{
+  "task": "soft_shape_22026",
+  "kind": "soft_shape",
+  "seed": 22026,
+  "device": "cuda:0",
+  "best_step": 10400,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8686274509803922,
+      "macro_f1": 0.8683848286789461
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.8686274509803922,
+    "masked_accuracy": 0.8607843137254902,
+    "prediction_agreement": 0.9803921568627451
+  },
+  "augmentation": {
+    "name": "soft_shape",
+    "probability": 0.75,
+    "span_bins": 24,
+    "raw_per_bin": 15,
+    "alpha": 0.5,
+    "template": "per_offset_interval_mean",
+    "source_only": true,
+    "channel_total_preserved": true
+  },
+  "elapsed_seconds": 218.58881448302418
+}

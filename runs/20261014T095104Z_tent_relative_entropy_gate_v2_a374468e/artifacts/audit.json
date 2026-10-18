@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "total_rows": 63,
+  "historical_rows": 54,
+  "new_tasks": 9,
+  "metrics_recomputed": 63,
+  "checkpoints": 9,
+  "checkpoint_reloads": 9,
+  "trainable_parameter_count": 3072,
+  "bn_buffers_unchanged": true,
+  "query_statistics": false,
+  "paired_cells": 9
+}

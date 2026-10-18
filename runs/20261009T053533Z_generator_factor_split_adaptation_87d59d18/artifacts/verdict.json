@@ -1,0 +1,9 @@
+{
+  "learned_global_minus_full_global_macro_f1_mean_pp": -0.04874955631247735,
+  "selective_minus_global_macro_f1_mean_pp": -0.037264902754574614,
+  "selective_minus_random_macro_f1_mean_pp": -0.006281266709196043,
+  "selective_minus_global_negative_rate_pp": -0.2370101395045429,
+  "positive_cells_vs_global": 2,
+  "positive_cells_vs_random": 4,
+  "pass": false
+}

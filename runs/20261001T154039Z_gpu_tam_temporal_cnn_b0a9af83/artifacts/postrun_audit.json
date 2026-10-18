@@ -1,0 +1,53 @@
+{
+  "audit_utc": "2026-10-01T23:27:15.989142+00:00",
+  "passed": true,
+  "freeze_hash_counts": {
+    "20261001T154039Z_gpu_tam_temporal_cnn_b0a9af83": 41,
+    "20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab": 67
+  },
+  "current_run_metric_groups": 24,
+  "historical_mask_metric_groups": 12,
+  "total_metric_groups": 36,
+  "reports_checked": 9,
+  "initialization_index_schedule_best_selection": "passed",
+  "new_training": false,
+  "future_access": false,
+  "cpu_results_blended": false,
+  "checkpoint_reload": "worker and preflight already verified; this audit recomputes saved metrics",
+  "means": {
+    "baseline": {
+      "best_source_accuracy": 0.9888671023965142,
+      "best_source_macro_f1": 0.9886369919016742,
+      "best_valid_accuracy": 0.7594771241830065,
+      "best_valid_macro_f1": 0.7529537093262583,
+      "last_source_accuracy": 0.9988671023965141,
+      "last_source_macro_f1": 0.998866961908274,
+      "last_valid_accuracy": 0.7450980392156863,
+      "last_valid_macro_f1": 0.7389415958043409,
+      "common_wrong_three_seeds": 53
+    },
+    "temporal_cnn": {
+      "best_source_accuracy": 0.9628540305010893,
+      "best_source_macro_f1": 0.9623974569846956,
+      "best_valid_accuracy": 0.7320261437908497,
+      "best_valid_macro_f1": 0.7237078643941387,
+      "last_source_accuracy": 0.9945533769063181,
+      "last_source_macro_f1": 0.994555576887005,
+      "last_valid_accuracy": 0.7215686274509804,
+      "last_valid_macro_f1": 0.7120293831078145,
+      "common_wrong_three_seeds": 89
+    },
+    "span_mask": {
+      "best_source_accuracy": 0.9744008714596951,
+      "best_source_macro_f1": 0.9740794458057765,
+      "best_valid_accuracy": 0.7764705882352941,
+      "best_valid_macro_f1": 0.7688889904576178,
+      "last_source_accuracy": 0.9929629629629629,
+      "last_source_macro_f1": 0.9929490211855564,
+      "last_valid_accuracy": 0.7640522875816993,
+      "last_valid_macro_f1": 0.757541822737901,
+      "common_wrong_three_seeds": 53
+    }
+  },
+  "elapsed_gpu_pipeline_seconds": 236.44748893659562
+}

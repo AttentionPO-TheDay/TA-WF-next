@@ -1,0 +1,19 @@
+{
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/PLAN.md": "51f15c0bff927d79270adcfe612d3a2907f409d7afcb3d3218c9faf1e8064180",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/SOURCES.md": "806e19816d508e476820cb905bc00d5fa5ad4838a2ee6684db560bd6a0db9b67",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/config.json": "00018c19a4e5e63bfd993fc3064655dc2206d6b3b35ae64d71f8c9c82f705951",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/common.py": "542226fa0668386bd2aab547a9bc0db919ab9d83e7359a5180967eef5ac1a6e5",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/base_model.py": "2997108ffa67b71556c54a4df2fbba0b5861926820c6de44e08be9b8d55de289",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/candidate_base.py": "7b9687ad96e9fc4e476986aff6b448519f70e77d112b053ace5796b0a0dd4c65",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/encoder_base.py": "baf3c12794d850b68261ef70131c818ac7be25333d766127725f3f040a114c5a",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/framework_base.py": "e530ca3f369cb729f6f9b802bff03fb18ffcec90ebb5ad58db04a4b077a1a148",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/generator_base.py": "5b55eee433f26f7ecade39b0a1f26862819aa94c594885bf09f696bd6ad100d4",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/input_base.py": "1bc1ca5b7aa2b414793171907efba8d5aa5ced701bb2e851d55d511288aaeb62",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/rf_native.py": "8ffd968ba4a750fb66edda53e8146ed367b9a62e1e1330416b3eb600b4060617",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/view_base.py": "aa41abb7d1eec425dc367b3b6a4e85fdfa60d35bcdbad6123754f2a63a0c44dd",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/model.py": "c7c49a5e1c3f67f637309141e5a6a4a84f190c7351c9fcc1279cd68de13797dc",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/worker.py": "08518cdd74fcb09b65996827eb0facfdaff85817d20dc669c0a266a71f79c1ee",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/supervisor.py": "53d1f2cd8e491da7857906c12161f67a0b73109d8afb3decb8fc98ba39ac5837",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/postrun_audit.py": "cf5e6c04984c1915835c7fc3116737bf4e00ad5c7e78844eb6a32901dfcaaf90",
+  "runs/20261004T044803Z_temporal_order_mask_3f751089/artifacts/prepared.pt": "49b01254108433528398d17fd5a4df9618a7632ba03c0a63864236786e9fc4db"
+}

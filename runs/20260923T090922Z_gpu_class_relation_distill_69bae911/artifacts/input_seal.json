@@ -1,0 +1,11 @@
+{
+  "runs/20260923T090922Z_gpu_class_relation_distill_69bae911/PLAN.md": "33c93eb1a164d0bb1bcc20adfafd29b066582e68a6b1e5c7750cca3a5392f216",
+  "runs/20260923T090922Z_gpu_class_relation_distill_69bae911/config.json": "0accb6199d6249f4dc5eac4edadc9ff93f70946f1e3465b94f3a7e5efac736f2",
+  "runs/20260923T090922Z_gpu_class_relation_distill_69bae911/train.py": "44bcc42487e626fb95d9136e455e49b2e6d0560d063e2aeda0baf1fb39b8df1f",
+  "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "configs/datasets.json": "c3edbfeaf83553f63e6b5a12fa6e1dc5049346c1f8eb3b54bedf7760408b6b28",
+  "runs/20260923T090023Z_frozen_feature_transfer_probe_18dd81c9/artifacts/features.npz": "f69a7f92574d7eacdfbb3312d04dea4abf2145d9bf09e69a1b8132660a32ea31",
+  "runs/20260923T090023Z_frozen_feature_transfer_probe_18dd81c9/artifacts/input_seal.json": "1d980218b543484e39ba0cc0db4cf52c979e83a350ea47985af987ddec0840fe",
+  "runs/20260923T090023Z_frozen_feature_transfer_probe_18dd81c9/artifacts/output_seal.json": "6b6ba8ac06f58da078b382f32060a139fb4562caab8572cd351b5c27fa9fc587",
+  "runs/20260923T090023Z_frozen_feature_transfer_probe_18dd81c9/artifacts/integrity.json": "ebc67ca5cabfe0da4f5507a131e00c5d02a5d1cdba2b79a68fac4cf7ca6faeba"
+}

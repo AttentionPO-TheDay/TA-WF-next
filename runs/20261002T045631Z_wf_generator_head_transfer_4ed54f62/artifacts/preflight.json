@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "baseline_replays": 6,
+  "fixed_counts_masks_class_independence_checked": true,
+  "shared_initialization_checked": true,
+  "rf_wrapper_parity": true,
+  "real_source_backward_examples_per_condition": 64,
+  "optimizer_updates": 0,
+  "parameter_counts": {
+    "shallow_transformer": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_trainable": 1472
+    },
+    "shallow_mlp": {
+      "total": 348982,
+      "trainable": 321702,
+      "generator_trainable": 1472
+    },
+    "progressive_transformer": {
+      "total": 528870,
+      "trainable": 501590,
+      "generator_trainable": 180336
+    },
+    "progressive_mlp": {
+      "total": 527846,
+      "trainable": 500566,
+      "generator_trainable": 180336
+    },
+    "rf_matched": {
+      "total": 1040562,
+      "trainable": 1040562,
+      "generator_trainable": null
+    }
+  },
+  "per_worker_peak_bytes_including_data_and_moment_buffers": {
+    "shallow_transformer": 933042688,
+    "shallow_mlp": 907067392,
+    "progressive_transformer": 963260416,
+    "progressive_mlp": 937603072,
+    "rf_matched": 7710205440
+  },
+  "aggregate_gpu_bytes_with_reserve": 17152919040,
+  "gpu_total_bytes": 25250627584,
+  "historical_reference_hashes": {
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_21729_best.pt": "f7428f4e1bb56a7fa407115aa2fe4993dc04606ba17945481eb2f060019b17b0",
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_23407_best.pt": "524cb7e4760ea4d63b15e1e935b8d4abe2f1409b87cb134bd274b1f96996fbc4",
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_22026_best.pt": "d099aa6289c04ab1d3e6eeec34f6c271420b55a4419827b665bb03ada1fd59e5"
+  },
+  "future_access": false
+}

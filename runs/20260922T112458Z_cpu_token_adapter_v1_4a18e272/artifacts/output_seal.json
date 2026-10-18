@@ -1,0 +1,17 @@
+{
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/checkpoints/adapter_zero_1729.pt": "bcb9daee487376df13ddf8ad5cb363d980c8017f73902f6f048073303ce5c373",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/checkpoints/adapter_zero_2026.pt": "7f9614d2b51f4e920b38b6fd0632cc78e5d2eadb68023d58164935898f31fd25",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/checkpoints/adapter_random_2026.pt": "1077c50c1872313ce10870b6452a95dfd731f34ad943d8fab852ed77bad974f2",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/checkpoints/adapter_zero_3407.pt": "3419ceda9261d92aa2660e8fa23555197cf601a92566cfdad160c3827ab2b224",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/checkpoints/baseline_1729.pt": "70ba5fd05c5bf2c61357c50a0d1f1478bb3f0f84afaa27363418411ee313656e",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/checkpoints/adapter_random_3407.pt": "c26d5720e2fe62d8f7c626373452a175333d68f73f1cd491b3fc861b7d7fc208",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/checkpoints/adapter_random_1729.pt": "b88e79023ef1e8876a8766246b22d34a63800728ba890deccdb6fc3bd68a2c05",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/checkpoints/baseline_2026.pt": "58eef167a503e7b3d62b476c6769ec149efd8f34f5835b99c4022e864f079efc",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/checkpoints/baseline_3407.pt": "23f39afa4080bfaca6a6c11c62b2e85b0fad67fe4e871fabc03cd1005fd320dc",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/artifacts/source_inputs.npz": "c1ec73c9c1dc4f7e1f423f141da950b4d89e19e690063cf6e56fa8f040de9b02",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/artifacts/predictions.npz": "69382ad1ced82998458fb5ef8138175edfb3a33dab55c6e6414eeb14aec65a1b",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/artifacts/valid_inputs.npz": "bda65a3203dd9a8e7dd96699903ee92d3b9561431f812b98d73953be3c640c55",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/artifacts/history.json": "73b3c860522ce332aa4bd63216e4e2ffefe345afb9f00386c8349c26c08fa109",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/artifacts/metrics.json": "d529d88472341b99409e703a9ed2eb716117024afbc3867c4f0e315ba465abf9",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/artifacts/manifest.json": "c89804aa8475f5ea0e308f1c5b19c0a34f3fb71a2a83f998c450ff7ab203446c"
+}

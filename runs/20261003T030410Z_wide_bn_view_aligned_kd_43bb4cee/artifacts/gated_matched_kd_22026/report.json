@@ -1,0 +1,41 @@
+{
+  "task": "gated_matched_kd_22026",
+  "kind": "gated_matched_kd",
+  "seed": 22026,
+  "device": "cuda",
+  "best_step": 7520,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "teacher_target": "matched_probability_mean",
+  "temperature": 2.0,
+  "distillation_weight": 0.25,
+  "gate_coverage": 3.662109375e-06,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 0.9934640522875817,
+      "macro_f1": 0.9932015106741902
+    },
+    "valid": {
+      "accuracy": 0.8901960784313725,
+      "macro_f1": 0.8876984126984127
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8803921568627451,
+      "macro_f1": 0.8771786492374726
+    }
+  },
+  "elapsed_seconds": 626.1646443605423
+}

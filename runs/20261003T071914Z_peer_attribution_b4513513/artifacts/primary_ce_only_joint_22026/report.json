@@ -1,0 +1,49 @@
+{
+  "task": "primary_ce_only_joint_22026",
+  "kind": "primary_ce_only_joint",
+  "seed": 22026,
+  "device": "cuda",
+  "best_step": 10400,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "single_network": true,
+  "peer_consistency": false,
+  "primary_view_ce_only": true,
+  "temperature": 2.0,
+  "max_peer_weight": 0.0,
+  "ramp_steps": 0.0,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8803921568627451,
+      "macro_f1": 0.8795667839785487
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8803921568627451,
+      "macro_f1": 0.8796597193656016
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.8803921568627451,
+    "masked_accuracy": 0.8647058823529412,
+    "prediction_agreement": 0.9745097756385803,
+    "js_divergence": 0.011419910937547684
+  },
+  "elapsed_seconds": 747.3493887167424
+}

@@ -1,0 +1,45 @@
+{
+  "task": "temporal_origin_jitter_21729",
+  "kind": "temporal_origin_jitter",
+  "seed": 21729,
+  "device": "cuda:2",
+  "best_step": 8000,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 0.9958823529411764,
+      "macro_f1": 0.9958481773778306
+    },
+    "valid": {
+      "accuracy": 0.8980392156862745,
+      "macro_f1": 0.8965297774121302
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.8980392156862745,
+    "masked_accuracy": 0.8823529411764706,
+    "prediction_agreement": 0.9803921568627451
+  },
+  "augmentation": {
+    "name": "temporal_origin_jitter",
+    "probability": 0.75,
+    "offset_bins": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "raw_per_bin": 15,
+    "source_only": true
+  },
+  "elapsed_seconds": 382.4556538145989
+}

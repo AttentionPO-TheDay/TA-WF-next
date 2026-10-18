@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "splits": {
+    "day14": {
+      "support_rows": 1024,
+      "query_rows": 21579,
+      "same_historical_split": true
+    },
+    "day90": {
+      "support_rows": 1024,
+      "query_rows": 27575,
+      "same_historical_split": true
+    },
+    "day270": {
+      "support_rows": 1024,
+      "query_rows": 18911,
+      "same_historical_split": true
+    }
+  },
+  "historical_rows": 72,
+  "candidate_smoke_updates": 2,
+  "trainable_parameter_count": 32384,
+  "trainable_parameter_names": [
+    "model.time_positions",
+    "model.generator.stages.0.norm1.weight",
+    "model.generator.stages.0.norm1.bias",
+    "model.generator.stages.0.norm2.weight",
+    "model.generator.stages.0.norm2.bias",
+    "model.generator.stages.1.norm1.weight",
+    "model.generator.stages.1.norm1.bias",
+    "model.generator.stages.1.norm2.weight",
+    "model.generator.stages.1.norm2.bias",
+    "model.generator.stages.2.norm1.weight",
+    "model.generator.stages.2.norm1.bias",
+    "model.generator.stages.2.norm2.weight",
+    "model.generator.stages.2.norm2.bias",
+    "model.time_projection.weight",
+    "model.time_projection.bias",
+    "model.head.0.norm1.weight",
+    "model.head.0.norm1.bias",
+    "model.head.0.norm2.weight",
+    "model.head.0.norm2.bias",
+    "model.head.1.norm1.weight",
+    "model.head.1.norm1.bias",
+    "model.head.1.norm2.weight",
+    "model.head.1.norm2.bias"
+  ],
+  "locked_output_head": true,
+  "bn_buffers_unchanged": true,
+  "query_statistics": false,
+  "source_forward_trace_exposures": 0,
+  "config_sha": "e12163d4e70ac5c7e648b607011d45478967f9c1b486a60010cf152097933658",
+  "code_sha": {
+    "runner.py": "c37c724cbc201ab4ebcb9b3df2ebcecab1213b9a0fdebe9a6504cf140dfef927",
+    "port_base.py": "6f8280f0974ef2838c71183217c91833f4a2b2310fdf73f64565f7a6515ef3e1",
+    "model.py": "b6f59add5040dbb9d80f2469cac46412b37c87a2dbd66c0df01fc00e24b67212",
+    "reporting.py": "0bb88db35f721b614cbe5f9d9387dea4429df8c0b47ee90588b6d4b5b58c0461",
+    "postrun_audit.py": "62bb6df5f6c1b62c024f8de0481f1ad4aaab34407bf27fe9cb781729a1b4e01e"
+  }
+}

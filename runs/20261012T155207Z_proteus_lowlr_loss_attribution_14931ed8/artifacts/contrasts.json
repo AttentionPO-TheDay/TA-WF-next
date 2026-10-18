@@ -1,0 +1,32 @@
+{
+  "no_pseudo": {
+    "macro_f1_delta_pp": 0.0611384040560492,
+    "negative_delta_pp": 0.03224619368190906,
+    "positive_cells": 6,
+    "candidate_signal": false
+  },
+  "no_mmd": {
+    "macro_f1_delta_pp": -0.08353990884063522,
+    "negative_delta_pp": -0.01226073016087001,
+    "positive_cells": 1,
+    "candidate_signal": false
+  },
+  "no_entropy_diversity": {
+    "macro_f1_delta_pp": -1.0537250111735785,
+    "negative_delta_pp": -0.2881031118058902,
+    "positive_cells": 3,
+    "candidate_signal": false
+  },
+  "no_source_ce": {
+    "macro_f1_delta_pp": -0.9343461943526865,
+    "negative_delta_pp": 2.2466023437832376,
+    "positive_cells": 0,
+    "candidate_signal": false
+  },
+  "source_ce_only": {
+    "macro_f1_delta_pp": -2.398390669598627,
+    "negative_delta_pp": 0.5287249791011784,
+    "positive_cells": 2,
+    "candidate_signal": false
+  }
+}

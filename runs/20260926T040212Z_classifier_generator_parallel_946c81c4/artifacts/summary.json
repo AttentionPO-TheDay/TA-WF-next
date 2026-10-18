@@ -1,0 +1,103 @@
+{
+  "means": {
+    "A_local_mean_joint": {
+      "accuracy": 0.2477124183006536,
+      "macro_f1": 0.23104218350454617
+    },
+    "B_local_attention_joint": {
+      "accuracy": 0.2483660130718954,
+      "macro_f1": 0.23228626558469329
+    },
+    "C_local_attention_frozen": {
+      "accuracy": 0.2699346405228758,
+      "macro_f1": 0.24979192440265105
+    },
+    "D_local_attention_slow": {
+      "accuracy": 0.2594771241830065,
+      "macro_f1": 0.24520340663650927
+    }
+  },
+  "comparisons": [
+    {
+      "left": "B_local_attention_joint",
+      "right": "C_local_attention_frozen",
+      "question": "does supervised feedback help?",
+      "mean_f1_delta_pp": -1.7505658817957763,
+      "mean_accuracy_delta_pp": -2.15686274509804,
+      "paired_f1_delta_pp": [
+        -1.978934462544002,
+        -2.7282450647957894,
+        -0.5445181180475323
+      ],
+      "gate_passed": false
+    },
+    {
+      "left": "B_local_attention_joint",
+      "right": "A_local_mean_joint",
+      "question": "does adaptive pooling add value?",
+      "mean_f1_delta_pp": 0.12440820801471186,
+      "mean_accuracy_delta_pp": 0.06535947712418,
+      "paired_f1_delta_pp": [
+        -0.034015515029897636,
+        -0.6672279388997726,
+        1.0744680779738114
+      ],
+      "gate_passed": false
+    },
+    {
+      "left": "D_local_attention_slow",
+      "right": "B_local_attention_joint",
+      "question": "do smaller generator updates improve generalization?",
+      "mean_f1_delta_pp": 1.2917141051815988,
+      "mean_accuracy_delta_pp": 1.1111111111111098,
+      "paired_f1_delta_pp": [
+        2.0260539776565945,
+        3.173360470983863,
+        -1.3242721330956608
+      ],
+      "gate_passed": false
+    }
+  ],
+  "historical_summary_reference": [
+    {
+      "condition": "A_local_mean_joint",
+      "historical_summary_f1_delta_pp": -1.5507680235568282,
+      "historical_summary_accuracy_delta_pp": -1.6993464052287577,
+      "paired_f1_delta_pp": [
+        -2.3761458463698535,
+        -1.6936677317300113,
+        -0.5824904925706198
+      ]
+    },
+    {
+      "condition": "B_local_attention_joint",
+      "historical_summary_f1_delta_pp": -1.4263598155421164,
+      "historical_summary_accuracy_delta_pp": -1.6339869281045778,
+      "paired_f1_delta_pp": [
+        -2.4101613613997515,
+        -2.360895670629784,
+        0.4919775854031916
+      ]
+    },
+    {
+      "condition": "C_local_attention_frozen",
+      "historical_summary_f1_delta_pp": 0.32420606625366,
+      "historical_summary_accuracy_delta_pp": 0.5228758169934622,
+      "paired_f1_delta_pp": [
+        -0.4312268988557494,
+        0.36734939416600554,
+        1.0364957034507238
+      ]
+    },
+    {
+      "condition": "D_local_attention_slow",
+      "historical_summary_f1_delta_pp": -0.13464571036051753,
+      "historical_summary_accuracy_delta_pp": -0.5228758169934677,
+      "paired_f1_delta_pp": [
+        -0.3841073837431569,
+        0.8124648003540791,
+        -0.8322945476924692
+      ]
+    }
+  ]
+}

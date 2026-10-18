@@ -1,0 +1,52 @@
+{
+  "counts": {
+    "rows": 219668,
+    "valid_values": 398047546,
+    "edges": 397827878,
+    "negative_edges": 513659,
+    "negative_rows": 137225,
+    "same_direction_edges": 290261328,
+    "cross_direction_edges": 107566550,
+    "negative_same_direction_edges": 0,
+    "negative_cross_direction_edges": 513659,
+    "zero_edges": 20612,
+    "negative_gt_1e-09": 513659,
+    "negative_gt_1e-06": 509629,
+    "negative_gt_1e-05": 492426,
+    "negative_gt_0.0001": 40065,
+    "negative_gt_0.001": 241,
+    "negative_gt_0.01": 36,
+    "negative_gt_0.1": 13,
+    "negative_gt_1.0": 0,
+    "negative_gt_10.0": 0,
+    "direction_-1_negative_edges": 0,
+    "direction_-1_negative_rows": 0,
+    "direction_1_negative_edges": 0,
+    "direction_1_negative_rows": 0,
+    "runs": 107786218,
+    "negative_duration_runs": 0,
+    "zero_duration_runs": 61462490
+  },
+  "row_negative_fraction": 0.6246927181018628,
+  "edge_negative_fraction": 0.0012911588865574673,
+  "negative_at_most_100us_fraction": 0.9220007826203765,
+  "negative_at_most_1ms_fraction": 0.9995308171374394,
+  "sampled_rows": 2176,
+  "sorting_changes_direction_rows": 1428,
+  "sorting_changes_run_count_rows": 269,
+  "sample_negative_edges": 5987,
+  "sample_rounded_negative_edges": {
+    "3": 325,
+    "4": 2773,
+    "5": 5888,
+    "6": 5987
+  },
+  "max_negative_seconds": 0.3908050060272217,
+  "evidence_sources_sha256": {
+    "README.md": "8afa48e06c7ceef126657dd8801ef0c5d677166a2b1b0d37891df904003c949b",
+    "wflib_copy/WFlib/tools/data_processor.py": "2adf581c4bf801110182a6a5bda4e5897d2bb6b0c28966c884a5701fdf276658",
+    "exp/dataset_process/gen_tam.py": "ed31aa0d266210873c6a63de7c76fae72332c81842d6ef4244a2fb9605539561"
+  },
+  "integrity_errors": 0,
+  "caveat": "view-weighted counts, not independent traces; artifact arithmetic checks only"
+}

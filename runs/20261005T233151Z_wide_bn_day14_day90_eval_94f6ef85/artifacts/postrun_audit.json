@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "freeze_files_verified": 30,
+  "metric_groups": 9,
+  "checkpoint_replays": 9,
+  "checks": [
+    {
+      "seed": 21729,
+      "role": "valid",
+      "rows": 510,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 21729,
+      "role": "day14",
+      "rows": 22603,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 21729,
+      "role": "day90",
+      "rows": 28599,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 23407,
+      "role": "valid",
+      "rows": 510,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 23407,
+      "role": "day14",
+      "rows": 22603,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 23407,
+      "role": "day90",
+      "rows": 28599,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 22026,
+      "role": "valid",
+      "rows": 510,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 22026,
+      "role": "day14",
+      "rows": 22603,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 22026,
+      "role": "day90",
+      "rows": 28599,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "view": "exact_1729",
+    "accuracy": 0.06862745098039216,
+    "macro_f1": 0.029582531342512913,
+    "best_epoch": 14,
+    "parameters": 79094,
+    "seconds": 8.902359762229025
+  },
+  {
+    "view": "coarse_1729",
+    "accuracy": 0.22549019607843138,
+    "macro_f1": 0.19346961425362447,
+    "best_epoch": 15,
+    "parameters": 79286,
+    "seconds": 8.814976200461388
+  },
+  {
+    "view": "exact_3407",
+    "accuracy": 0.058823529411764705,
+    "macro_f1": 0.02472090025683726,
+    "best_epoch": 15,
+    "parameters": 79094,
+    "seconds": 8.362221604213119
+  },
+  {
+    "view": "coarse_3407",
+    "accuracy": 0.2235294117647059,
+    "macro_f1": 0.19946832153161945,
+    "best_epoch": 12,
+    "parameters": 79286,
+    "seconds": 8.87062765378505
+  },
+  {
+    "view": "exact_2026",
+    "accuracy": 0.056862745098039215,
+    "macro_f1": 0.024044700109390568,
+    "best_epoch": 13,
+    "parameters": 79094,
+    "seconds": 8.286497582681477
+  },
+  {
+    "view": "coarse_2026",
+    "accuracy": 0.2411764705882353,
+    "macro_f1": 0.2218227262626992,
+    "best_epoch": 15,
+    "parameters": 79286,
+    "seconds": 8.837232392281294
+  }
+]

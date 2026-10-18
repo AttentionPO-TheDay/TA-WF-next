@@ -1,0 +1,152 @@
+[
+  {
+    "key": "run_pair_1729",
+    "arm": "run_pair",
+    "seed": 1729,
+    "accuracy": 0.22156862745098038,
+    "macro_f1": 0.20748923469739344,
+    "best_epoch": 12,
+    "parameters": 158470,
+    "seconds": 68.29975458141416
+  },
+  {
+    "key": "window_pair_1729",
+    "arm": "window_pair",
+    "seed": 1729,
+    "accuracy": 0.307843137254902,
+    "macro_f1": 0.2902546599141026,
+    "best_epoch": 21,
+    "parameters": 153766,
+    "seconds": 1.5888001639395952
+  },
+  {
+    "key": "fusion_1729",
+    "arm": "fusion",
+    "seed": 1729,
+    "accuracy": 0.3,
+    "macro_f1": 0.2941039240779725,
+    "best_epoch": 44,
+    "parameters": 156118,
+    "seconds": 27.672156344167888
+  },
+  {
+    "key": "fusion_shared_1729",
+    "arm": "fusion_shared",
+    "seed": 1729,
+    "accuracy": 0.3058823529411765,
+    "macro_f1": 0.2992983051806581,
+    "best_epoch": 32,
+    "parameters": 157190,
+    "seconds": 30.929344141855836
+  },
+  {
+    "key": "fusion_specific_1729",
+    "arm": "fusion_specific",
+    "seed": 1729,
+    "accuracy": 0.30196078431372547,
+    "macro_f1": 0.2870591010296893,
+    "best_epoch": 34,
+    "parameters": 157222,
+    "seconds": 33.28553473763168
+  },
+  {
+    "key": "run_pair_3407",
+    "arm": "run_pair",
+    "seed": 3407,
+    "accuracy": 0.23333333333333334,
+    "macro_f1": 0.2115214188470426,
+    "best_epoch": 10,
+    "parameters": 158470,
+    "seconds": 61.65291995834559
+  },
+  {
+    "key": "window_pair_3407",
+    "arm": "window_pair",
+    "seed": 3407,
+    "accuracy": 0.2980392156862745,
+    "macro_f1": 0.28608481099830585,
+    "best_epoch": 23,
+    "parameters": 153766,
+    "seconds": 1.798404705710709
+  },
+  {
+    "key": "fusion_3407",
+    "arm": "fusion",
+    "seed": 3407,
+    "accuracy": 0.3058823529411765,
+    "macro_f1": 0.29266593483949155,
+    "best_epoch": 20,
+    "parameters": 156118,
+    "seconds": 26.651269869878888
+  },
+  {
+    "key": "fusion_shared_3407",
+    "arm": "fusion_shared",
+    "seed": 3407,
+    "accuracy": 0.296078431372549,
+    "macro_f1": 0.2867932479979466,
+    "best_epoch": 20,
+    "parameters": 157190,
+    "seconds": 33.3787971008569
+  },
+  {
+    "key": "fusion_specific_3407",
+    "arm": "fusion_specific",
+    "seed": 3407,
+    "accuracy": 0.2980392156862745,
+    "macro_f1": 0.2886535033593857,
+    "best_epoch": 20,
+    "parameters": 157222,
+    "seconds": 31.869352240115404
+  },
+  {
+    "key": "run_pair_2026",
+    "arm": "run_pair",
+    "seed": 2026,
+    "accuracy": 0.23137254901960785,
+    "macro_f1": 0.2114628430918724,
+    "best_epoch": 14,
+    "parameters": 158470,
+    "seconds": 62.79850178025663
+  },
+  {
+    "key": "window_pair_2026",
+    "arm": "window_pair",
+    "seed": 2026,
+    "accuracy": 0.307843137254902,
+    "macro_f1": 0.2947431944745731,
+    "best_epoch": 38,
+    "parameters": 153766,
+    "seconds": 1.567072399891913
+  },
+  {
+    "key": "fusion_2026",
+    "arm": "fusion",
+    "seed": 2026,
+    "accuracy": 0.2901960784313726,
+    "macro_f1": 0.27157310918237887,
+    "best_epoch": 18,
+    "parameters": 156118,
+    "seconds": 26.093091000802815
+  },
+  {
+    "key": "fusion_shared_2026",
+    "arm": "fusion_shared",
+    "seed": 2026,
+    "accuracy": 0.2823529411764706,
+    "macro_f1": 0.2701278373683218,
+    "best_epoch": 13,
+    "parameters": 157190,
+    "seconds": 32.79950659349561
+  },
+  {
+    "key": "fusion_specific_2026",
+    "arm": "fusion_specific",
+    "seed": 2026,
+    "accuracy": 0.28627450980392155,
+    "macro_f1": 0.27229555255074284,
+    "best_epoch": 13,
+    "parameters": 157222,
+    "seconds": 30.56135716382414
+  }
+]

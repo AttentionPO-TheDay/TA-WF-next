@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "baseline_reload_checks": 6,
+  "candidate_count": 3,
+  "source_examples_per_candidate": 64,
+  "optimizer_updates": 0,
+  "parameter_counts": {
+    "flat_norm": {
+      "total": 350070,
+      "trainable": 322790,
+      "generator_total": 3088,
+      "generator_trainable": 1536
+    },
+    "hier_none": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "hier_norm": {
+      "total": 350070,
+      "trainable": 322790,
+      "generator_total": 3088,
+      "generator_trainable": 1536
+    },
+    "flat_none": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    }
+  },
+  "aggregate_gpu_bytes_with_reserve": 10942976416,
+  "gpu_total_bytes": 25250627584,
+  "historical_reference_hashes": {
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_21729_best.pt": "f7428f4e1bb56a7fa407115aa2fe4993dc04606ba17945481eb2f060019b17b0",
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_23407_best.pt": "524cb7e4760ea4d63b15e1e935b8d4abe2f1409b87cb134bd274b1f96996fbc4",
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_22026_best.pt": "d099aa6289c04ab1d3e6eeec34f6c271420b55a4419827b665bb03ada1fd59e5",
+    "runs/20261001T235245Z_tam_input_recipe_factorial_ba217e20/artifacts/prepared.pt": "49b01254108433528398d17fd5a4df9618a7632ba03c0a63864236786e9fc4db"
+  },
+  "future_access": false
+}

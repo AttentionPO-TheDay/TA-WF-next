@@ -1,0 +1,38 @@
+{
+  "kind": "zero_gate",
+  "seed": 23407,
+  "device": "cuda",
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "best_step": 10400,
+  "parameters_total": 1121426,
+  "parameters_trainable": 1094146,
+  "best": {
+    "source": {
+      "accuracy": 0.9998692810457517,
+      "macro_f1": 0.9998692752357621
+    },
+    "valid": {
+      "accuracy": 0.9,
+      "macro_f1": 0.8993003184179653
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9996732026143791,
+      "macro_f1": 0.9996740055123351
+    },
+    "valid": {
+      "accuracy": 0.8745098039215686,
+      "macro_f1": 0.872120907415025
+    }
+  },
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "inactive_parameters_unchanged": true,
+  "stats_input": "same span-masked TAM; source-only mean/std; no labels",
+  "future_access": false,
+  "elapsed_seconds": 567.8771800175309
+}

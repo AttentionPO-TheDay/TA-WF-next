@@ -1,0 +1,46 @@
+{
+  "task": "two_pass_control_21729",
+  "kind": "two_pass_control",
+  "seed": 21729,
+  "device": "cuda",
+  "best_step": 12800,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "sam_used": false,
+  "rho": 0.05,
+  "bn_buffer_restore_checks": 12800,
+  "parameter_restore_checks": 0,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 0.9996732026143791,
+      "macro_f1": 0.9996731554020399
+    },
+    "valid": {
+      "accuracy": 0.888235294117647,
+      "macro_f1": 0.8866946778711484
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9996732026143791,
+      "macro_f1": 0.9996731554020399
+    },
+    "valid": {
+      "accuracy": 0.888235294117647,
+      "macro_f1": 0.8866946778711484
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.888235294117647,
+    "masked_accuracy": 0.8745098039215686,
+    "prediction_agreement": 0.9823529411764705
+  },
+  "elapsed_seconds": 735.3512497441843
+}

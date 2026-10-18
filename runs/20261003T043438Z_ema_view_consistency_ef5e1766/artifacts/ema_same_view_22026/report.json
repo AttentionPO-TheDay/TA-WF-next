@@ -1,0 +1,42 @@
+{
+  "task": "ema_same_view_22026",
+  "kind": "ema_same_view",
+  "seed": 22026,
+  "device": "cuda",
+  "best_step": 11840,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "ema_used": true,
+  "ema_decay": 0.999,
+  "temperature": 2.0,
+  "max_consistency_weight": 0.25,
+  "ramp_steps": 3200,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8901960784313725,
+      "macro_f1": 0.8872083798554385
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.884313725490196,
+      "macro_f1": 0.8828852520028988
+    }
+  },
+  "elapsed_seconds": 635.7128053894266
+}

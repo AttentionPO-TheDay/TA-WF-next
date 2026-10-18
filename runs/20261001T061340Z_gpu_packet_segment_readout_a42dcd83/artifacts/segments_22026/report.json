@@ -1,0 +1,36 @@
+{
+  "task": "segments_22026",
+  "kind": "segments",
+  "historical_reuse": false,
+  "seed": 22026,
+  "best_step": 10880,
+  "steps_completed": 12800,
+  "elapsed_seconds": 378.7050914224237,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "parameters": 418822,
+  "peak_cuda_bytes": 941913600,
+  "index_sha256": "f7583d27b72cd75697a6de4bd6b67b7f33036309e4a3c1a704c757297a707aa3",
+  "best": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.7313725490196078,
+      "macro_f1": 0.7203426747544396
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.7274509803921568,
+      "macro_f1": 0.7171127891716126
+    }
+  }
+}

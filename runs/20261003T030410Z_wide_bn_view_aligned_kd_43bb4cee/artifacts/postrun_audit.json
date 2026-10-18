@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "freeze_hashes_verified": 26,
+  "freeze_hashes_ok": true,
+  "training_tasks_completed": 12,
+  "metric_groups_verified": 48,
+  "logit_groups_verified": 24,
+  "history_selection_groups_verified": 12,
+  "initialization_groups_verified": 12,
+  "index_streams_verified": 12,
+  "future_access": false
+}

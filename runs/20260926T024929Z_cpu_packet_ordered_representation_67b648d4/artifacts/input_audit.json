@@ -1,0 +1,22 @@
+{
+  "roles": {
+    "source": {
+      "count": 2040,
+      "raw_path": "/mnt/data2/ren/datasets/TemporalDrift/train.npz",
+      "selected_direction_sha256": "711eea5aa27f803686df8c908253eebda9fb22d63e348302d96421d9be6b8202",
+      "labels_sha256": "3df549f39593119bc3c0d24f9de5565706d3923d81938fc0727a364dec9b61b6",
+      "regenerated_original_matches_history": true
+    },
+    "valid": {
+      "count": 510,
+      "raw_path": "/mnt/data2/ren/datasets/TemporalDrift/valid.npz",
+      "selected_direction_sha256": "d01e650415d48e462a69cacf7a75a45cd7fe1cd66004e932b3f9213789387855",
+      "labels_sha256": "2e98f74d80f87e49ca7bad293587fae6e39ad3c9dfa07eccfb2102e598f28432",
+      "regenerated_original_matches_history": true
+    }
+  },
+  "future_access": false,
+  "gpu_used": false,
+  "source_valid_direction_overlap": 0,
+  "prepared_sha256": "31f9cb3f1c38d8430f20df0a0f855a512dbd25c312f28d3a7d58fb556edb5c53"
+}

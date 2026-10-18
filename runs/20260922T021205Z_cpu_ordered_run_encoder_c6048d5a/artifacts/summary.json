@@ -1,0 +1,51 @@
+{
+  "metrics": [
+    {
+      "role": "valid",
+      "view": "exact",
+      "best_epoch": 15,
+      "accuracy": 0.12549019607843137,
+      "macro_f1": 0.0757238159351001
+    },
+    {
+      "role": "valid",
+      "view": "coarse",
+      "best_epoch": 13,
+      "accuracy": 0.10784313725490197,
+      "macro_f1": 0.07400109970785489
+    },
+    {
+      "role": "jp",
+      "view": "exact",
+      "best_epoch": 15,
+      "accuracy": 0.10265225933202357,
+      "macro_f1": 0.06364763890864678
+    },
+    {
+      "role": "jp",
+      "view": "coarse",
+      "best_epoch": 13,
+      "accuracy": 0.08447937131630648,
+      "macro_f1": 0.05271601884167915
+    },
+    {
+      "role": "subpage",
+      "view": "exact",
+      "best_epoch": 15,
+      "accuracy": 0.061274509803921566,
+      "macro_f1": 0.036663337883070725
+    },
+    {
+      "role": "subpage",
+      "view": "coarse",
+      "best_epoch": 13,
+      "accuracy": 0.04803921568627451,
+      "macro_f1": 0.029205357046606418
+    }
+  ],
+  "best_epochs": {
+    "exact": 15,
+    "coarse": 13
+  },
+  "config": "CPU ordered run CNN; source valid selection; target labels scoring only"
+}

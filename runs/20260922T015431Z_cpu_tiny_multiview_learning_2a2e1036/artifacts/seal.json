@@ -1,0 +1,12 @@
+{
+  "runs/20260922T015431Z_cpu_tiny_multiview_learning_2a2e1036/PLAN.md": "a9753ab10a5f05d9761ecc9a5dce6536237deccbfb015ea5911a916233d9d985",
+  "runs/20260922T015431Z_cpu_tiny_multiview_learning_2a2e1036/config.json": "e9f87c4cd649af338807482f2d8a7fad5b9be77d2430e2a48b01a486f8bf2ff7",
+  "runs/20260922T015431Z_cpu_tiny_multiview_learning_2a2e1036/train.py": "329b8349c1f51bd40654d59e418cad21d0d049ea4fe9648a3aa0e1976fa27b69",
+  "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+  "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+  "runs/20260922T015431Z_cpu_tiny_multiview_learning_2a2e1036/artifacts/source_statistics.npz": "dae0517e1ba881343506c5f7f1b107875a6d2e73d10deb02761cc261c756faed",
+  "runs/20260922T015431Z_cpu_tiny_multiview_learning_2a2e1036/checkpoints/coarse.pt": "3b1ce0bfc6839524701cf5771e1676321ee49fed92141c8ae99e1daac1929320",
+  "runs/20260922T015431Z_cpu_tiny_multiview_learning_2a2e1036/checkpoints/exact.pt": "f605ad5a13144dd6af67e3b3c33c02c6c196d978201cf37c7025ea0f9c7e8a11",
+  "runs/20260922T015431Z_cpu_tiny_multiview_learning_2a2e1036/checkpoints/packet.pt": "5f000d6fd7e96e584e09b10c51d015b421e9760a31cec5bf55fe2866ef305f2a",
+  "runs/20260922T015431Z_cpu_tiny_multiview_learning_2a2e1036/checkpoints/windows.pt": "9a5af5c79316be5dac7ac596126343d3cccbd9b832794ae90abc17b3ccb3fe52"
+}

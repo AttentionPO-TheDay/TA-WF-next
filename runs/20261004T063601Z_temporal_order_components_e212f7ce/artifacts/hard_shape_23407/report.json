@@ -1,0 +1,42 @@
+{
+  "task": "hard_shape_23407",
+  "kind": "hard_shape",
+  "seed": 23407,
+  "device": "cuda:0",
+  "best_step": 12320,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 0.998562091503268,
+      "macro_f1": 0.9985511104862056
+    },
+    "valid": {
+      "accuracy": 0.8803921568627451,
+      "macro_f1": 0.8771999786705668
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.8803921568627451,
+    "masked_accuracy": 0.8686274509803922,
+    "prediction_agreement": 0.9803921568627451
+  },
+  "augmentation": {
+    "name": "hard_shape",
+    "probability": 0.75,
+    "span_bins": 24,
+    "raw_per_bin": 15,
+    "alpha": 1.0,
+    "template": "per_offset_interval_mean",
+    "source_only": true,
+    "channel_total_preserved": true
+  },
+  "elapsed_seconds": 224.18357860017568
+}

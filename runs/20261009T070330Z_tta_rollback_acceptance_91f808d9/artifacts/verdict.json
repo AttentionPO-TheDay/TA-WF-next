@@ -1,0 +1,15 @@
+{
+  "primary_stepwise": {
+    "macro_f1_minus_global_mean_pp": 0.012039939705732472,
+    "negative_adaptation_minus_global_mean_pp": -0.3484408820711428,
+    "cells_with_lower_negative_adaptation": 9,
+    "pass": true
+  },
+  "secondary_episode": {
+    "macro_f1_minus_global_mean_pp": 0.0,
+    "negative_adaptation_minus_global_mean_pp": 0.0,
+    "cells_with_lower_negative_adaptation": 0,
+    "pass": false
+  },
+  "pass": true
+}

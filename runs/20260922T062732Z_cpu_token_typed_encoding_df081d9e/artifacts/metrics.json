@@ -1,0 +1,122 @@
+[
+  {
+    "key": "continuous_1729",
+    "arm": "continuous",
+    "seed": 1729,
+    "accuracy": 0.060784313725490195,
+    "macro_f1": 0.027125921223441547,
+    "best_epoch": 14,
+    "parameters": 79094,
+    "seconds": 9.938962140120566
+  },
+  {
+    "key": "bucket_1729",
+    "arm": "bucket",
+    "seed": 1729,
+    "accuracy": 0.22549019607843138,
+    "macro_f1": 0.20764309700295855,
+    "best_epoch": 15,
+    "parameters": 79286,
+    "seconds": 11.119431149214506
+  },
+  {
+    "key": "hybrid_1729",
+    "arm": "hybrid",
+    "seed": 1729,
+    "accuracy": 0.22156862745098038,
+    "macro_f1": 0.19212327624957382,
+    "best_epoch": 15,
+    "parameters": 79318,
+    "seconds": 10.670950742438436
+  },
+  {
+    "key": "hybrid_norm_1729",
+    "arm": "hybrid_norm",
+    "seed": 1729,
+    "accuracy": 0.22156862745098038,
+    "macro_f1": 0.19382498500373205,
+    "best_epoch": 15,
+    "parameters": 79382,
+    "seconds": 12.640054854564369
+  },
+  {
+    "key": "continuous_3407",
+    "arm": "continuous",
+    "seed": 3407,
+    "accuracy": 0.054901960784313725,
+    "macro_f1": 0.026100781651851895,
+    "best_epoch": 15,
+    "parameters": 79094,
+    "seconds": 9.934017880819738
+  },
+  {
+    "key": "bucket_3407",
+    "arm": "bucket",
+    "seed": 3407,
+    "accuracy": 0.23921568627450981,
+    "macro_f1": 0.22307169049684472,
+    "best_epoch": 14,
+    "parameters": 79286,
+    "seconds": 10.27868809364736
+  },
+  {
+    "key": "hybrid_3407",
+    "arm": "hybrid",
+    "seed": 3407,
+    "accuracy": 0.24509803921568626,
+    "macro_f1": 0.2245628937693225,
+    "best_epoch": 14,
+    "parameters": 79318,
+    "seconds": 10.925749667920172
+  },
+  {
+    "key": "hybrid_norm_3407",
+    "arm": "hybrid_norm",
+    "seed": 3407,
+    "accuracy": 0.24313725490196078,
+    "macro_f1": 0.22229770275693245,
+    "best_epoch": 12,
+    "parameters": 79382,
+    "seconds": 12.454129208810627
+  },
+  {
+    "key": "continuous_2026",
+    "arm": "continuous",
+    "seed": 2026,
+    "accuracy": 0.054901960784313725,
+    "macro_f1": 0.02074288685318933,
+    "best_epoch": 9,
+    "parameters": 79094,
+    "seconds": 9.562079557217658
+  },
+  {
+    "key": "bucket_2026",
+    "arm": "bucket",
+    "seed": 2026,
+    "accuracy": 0.2019607843137255,
+    "macro_f1": 0.180877074068205,
+    "best_epoch": 13,
+    "parameters": 79286,
+    "seconds": 10.052916515618563
+  },
+  {
+    "key": "hybrid_2026",
+    "arm": "hybrid",
+    "seed": 2026,
+    "accuracy": 0.20392156862745098,
+    "macro_f1": 0.17234066234931283,
+    "best_epoch": 15,
+    "parameters": 79318,
+    "seconds": 10.680403933860362
+  },
+  {
+    "key": "hybrid_norm_2026",
+    "arm": "hybrid_norm",
+    "seed": 2026,
+    "accuracy": 0.1803921568627451,
+    "macro_f1": 0.15263144392856648,
+    "best_epoch": 15,
+    "parameters": 79382,
+    "seconds": 12.399082128889859
+  }
+]

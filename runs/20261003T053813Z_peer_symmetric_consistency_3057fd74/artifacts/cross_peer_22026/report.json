@@ -1,0 +1,48 @@
+{
+  "task": "cross_peer_22026",
+  "kind": "cross_peer",
+  "seed": 22026,
+  "device": "cuda",
+  "best_step": 10880,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "single_network": true,
+  "peer_consistency": true,
+  "temperature": 2.0,
+  "max_peer_weight": 0.25,
+  "ramp_steps": 3200,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8803921568627451,
+      "macro_f1": 0.8773469994058227
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8803921568627451,
+      "macro_f1": 0.8765952457128928
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.8803921568627451,
+    "masked_accuracy": 0.8627450980392157,
+    "prediction_agreement": 0.9725490808486938,
+    "js_divergence": 0.02137785777449608
+  },
+  "elapsed_seconds": 733.7675118362531
+}

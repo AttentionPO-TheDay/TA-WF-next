@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "metrics": 18,
+  "predictions": 22950,
+  "full_valid_prediction_matches": 1530,
+  "seal_checks": "passed"
+}

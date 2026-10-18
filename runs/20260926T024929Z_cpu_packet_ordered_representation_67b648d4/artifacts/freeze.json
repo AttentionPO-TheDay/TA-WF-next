@@ -1,0 +1,25 @@
+{
+  "config_sha256": "f16323569b5d99826a2cca1a83baf153f9e35e9fd3244ae013d8571b3eec3363",
+  "code_sha256": {
+    "src/ta_wf_next/batch_views.py": "e67b54acde0e36b7b1487d4972d73c7109a89e6de41c2217e11356d38f96f44f",
+    "src/ta_wf_next/packet_patches.py": "e31785c8731cd8b1a3f702619efaef64b87de1e190be735965bc9498b10e8f6b",
+    "src/ta_wf_next/hierarchical_transformer.py": "1812342811ef5a79d8773c8608824750313a9be2a4fb24e488487487caaff366",
+    "src/ta_wf_next/transformer_proto.py": "ba921e57111694effd9df4b00e3da7adf3b538a931c047a15f64d1626fc868b6",
+    "src/ta_wf_next/__init__.py": "4ec6fe32603e569463dbe921a0b4f703c316a93dc046c9f71049b457c0a3ff64",
+    "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+    "src/ta_wf_next/screening.py": "d86b1f6a5f5b2b5f498a5acfb5eb47ba44c937459f151f7e4bc4ffec89e45d51",
+    "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+    "src/ta_wf_next/models/df.py": "869f912d04df8e03bf4ba791ba9ccf95a70fd14a2d1fe51c1d1afce58207bf99",
+    "src/ta_wf_next/models/__init__.py": "8475e22fda1367672f479cdb252f47aff47a9adaafbd80c5fddf62e5e4b0697e",
+    "src/ta_wf_next/models/varcnn.py": "3468e4be163eba14e123b349dde66a652a9ef9df6b6b0c52f00a20d1f68d944c",
+    "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/prepare.py": "865b176c2778b3dc66fff287545f4fc2ccfd91ed4be908ebac2290de2a78ec77",
+    "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/check_runtime.py": "04d95d4028ff3bfab1b580e17450316ad4e068bdde8f0bdd99d2cbacfd539541",
+    "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/pipeline.py": "584ac7b7e89e1524e44e797ad085c4e2d9b9eaafc155dcd3f1184ed57c0ae783",
+    "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/train.py": "ea716fb06346f4113768699c9e2c5fd898449892c2f5531c8479d8b3e1259baa",
+    "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/verify_report.py": "4baf660d0a808c0a9ce7b7879af7472692e3b3044184843f47dbfa2b7af517cc",
+    "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/PLAN.md": "4ba4bafbea42ee70903664610380cd50f754cab2e910642747f3994649c16971",
+    "configs/datasets.json": "31c98344c1aa683030f313fc3f3e31252e49a6a49c8cb2db011afb7a353eb8c0",
+    "tests/test_packet_patches.py": "133a567e99b58a2f4ebc65a392ba0d9b215b4afd007412eae86a1813c44eb00b"
+  },
+  "frozen_utc": "2026-09-26T02:59:08.447669+00:00"
+}

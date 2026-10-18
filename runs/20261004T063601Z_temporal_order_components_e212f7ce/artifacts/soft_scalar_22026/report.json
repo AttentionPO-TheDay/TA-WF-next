@@ -1,0 +1,42 @@
+{
+  "task": "soft_scalar_22026",
+  "kind": "soft_scalar",
+  "seed": 22026,
+  "device": "cuda:0",
+  "best_step": 12800,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8725490196078431,
+      "macro_f1": 0.87013727013727
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.8725490196078431,
+    "masked_accuracy": 0.8568627450980392,
+    "prediction_agreement": 0.9764705882352941
+  },
+  "augmentation": {
+    "name": "soft_scalar",
+    "probability": 0.75,
+    "span_bins": 24,
+    "raw_per_bin": 15,
+    "alpha": 0.5,
+    "template": "scalar_interval_mean",
+    "source_only": true,
+    "channel_total_preserved": true
+  },
+  "elapsed_seconds": 235.94457103777677
+}

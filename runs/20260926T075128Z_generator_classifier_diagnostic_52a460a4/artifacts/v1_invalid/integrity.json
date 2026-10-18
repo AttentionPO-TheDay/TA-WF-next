@@ -1,0 +1,12 @@
+{
+  "complete": false,
+  "original_prediction_sets_checked": 16,
+  "probe_prediction_sets_checked": 96,
+  "expected_probe_prediction_sets": 108,
+  "probe_fits_checked": 48,
+  "errors": [
+    "D_local_attention_slow_2026: report missing"
+  ],
+  "network_weights_unchanged": true,
+  "future_access": false
+}

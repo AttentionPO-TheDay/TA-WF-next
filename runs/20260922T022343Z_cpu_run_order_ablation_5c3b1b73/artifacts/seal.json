@@ -1,0 +1,21 @@
+{
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/artifacts/permutations.npz": "4ce7a03689dc8aacb19418d7e0004a78087b8eae16e4fe47d98b24d8cfce617d",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/PLAN.md": "1b3e2be30e12ea3cf26159aec4ebff9a201613e2c199e0a2b099b9455a3a0e0a",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/config.json": "f2b6ab65ec8798795f65527b46143edd8fa448e9b68845d3fbcb38ec9c9a6140",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/train.py": "18b0a5008e09181b09e6a60ee072381177499cb3b6fa69f76f07bfb361e08076",
+  "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+  "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/artifacts/source_statistics.npz": "dae0517e1ba881343506c5f7f1b107875a6d2e73d10deb02761cc261c756faed",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/coarse_ordered_1729.pt": "2dbf9c50a483b14b8b8b59eff9a3faf636885912713a7ee25b735d90852dc193",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/coarse_ordered_2026.pt": "202f5c645f247580fbe4a305bddce7b3594be7ccae2022eb934b2b977cb7d320",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/coarse_ordered_3407.pt": "19b5978114a758346344c024a22bac0cd8087d1a3824c333fae1309b5b3e198a",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/coarse_shuffled_1729.pt": "6d7480df28f01e4af54542811a726745a6069ee12f0f245b8f48b4572f0bdcb7",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/coarse_shuffled_2026.pt": "e81a3a31c89035fc2ab865ed00662476a79b28adb472dced84e107a8b2a3ff90",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/coarse_shuffled_3407.pt": "4ad42d7f5febf3c3bfc980705d5ae9c498a9fbb9dd70396ad54aa025f3581a46",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/exact_ordered_1729.pt": "5e63b3c8b7224becdd6db6dc6686593578caa37beddb13131bc9d3ef96dde5cd",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/exact_ordered_2026.pt": "1b8781636e29a55565499fcdcc0f6a06c585d68d4e13c2a7a8be02db6beb56bb",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/exact_ordered_3407.pt": "0a8f04aee72285ddadd2a3d0bd26b66160626867d5189e660e5e510631a43603",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/exact_shuffled_1729.pt": "4c9405ed8cdd55594464e17a3d528bb51aef8d6c32a8186beb0052d0ad6bf8a7",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/exact_shuffled_2026.pt": "e0250d04fcffa593edcbc0471b6482dc1ffb9a76e608d015e720eea8247443b9",
+  "runs/20260922T022343Z_cpu_run_order_ablation_5c3b1b73/checkpoints/exact_shuffled_3407.pt": "d7d6484f3be3660540db53a470f2dfdc14620bf70f00380190da564bf1f02b2b"
+}

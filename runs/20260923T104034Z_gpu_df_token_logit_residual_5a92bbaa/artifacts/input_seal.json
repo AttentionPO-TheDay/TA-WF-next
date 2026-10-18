@@ -1,0 +1,11 @@
+{
+  "runs/20260923T104034Z_gpu_df_token_logit_residual_5a92bbaa/PLAN.md": "43d7217324ca418506fe44fefd8105052e71df93d0ea6db1e63e1a6b36359376",
+  "runs/20260923T104034Z_gpu_df_token_logit_residual_5a92bbaa/config.json": "161067db6f85ed25acfb9cb1ca074fd9fe877afa005f984f4e7a8f1a5817c572",
+  "runs/20260923T104034Z_gpu_df_token_logit_residual_5a92bbaa/train.py": "d02f21d9acd2f4cb430d6d7b85cc9f5154533e1963a282f1dd74d28fc3f8ff83",
+  "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "configs/datasets.json": "c3edbfeaf83553f63e6b5a12fa6e1dc5049346c1f8eb3b54bedf7760408b6b28",
+  "src/ta_wf_next/models/df.py": "869f912d04df8e03bf4ba791ba9ccf95a70fd14a2d1fe51c1d1afce58207bf99",
+  "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+  "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+  "runs/20260923T104034Z_gpu_df_token_logit_residual_5a92bbaa/artifacts/window_statistics.npz": "ab00fc303945e63cc200cf7a3e29872e4d7b40ee6451257cc1a6b2002f9d9659"
+}

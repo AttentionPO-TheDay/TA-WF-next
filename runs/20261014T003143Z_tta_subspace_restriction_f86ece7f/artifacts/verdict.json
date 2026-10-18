@@ -1,0 +1,20 @@
+{
+  "wide_bn_only": {
+    "macro_f1": 0.7214586396485534,
+    "negative_adaptation_rate": 0.04406084160180482,
+    "f1_delta_vs_fixed_pp": -1.3579626260022182,
+    "negative_delta_vs_fixed_pp": 0.44262052097084614,
+    "positive_paired_cells": 1,
+    "screen_pass": false,
+    "aspirational_goal_pass": false
+  },
+  "attention_bn_only": {
+    "macro_f1": 0.7305290944294004,
+    "negative_adaptation_rate": 0.04410862204617019,
+    "f1_delta_vs_fixed_pp": -0.4509171479175178,
+    "negative_delta_vs_fixed_pp": 0.44739856540738365,
+    "positive_paired_cells": 0,
+    "screen_pass": false,
+    "aspirational_goal_pass": false
+  }
+}

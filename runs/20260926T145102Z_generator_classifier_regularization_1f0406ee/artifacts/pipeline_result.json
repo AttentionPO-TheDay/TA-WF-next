@@ -1,0 +1,33 @@
+{
+  "exit_codes": {
+    "train_R10_generator_anchor_11729": 0,
+    "verify_R10_generator_anchor_11729": 0,
+    "train_R00_baseline_13407": 0,
+    "train_R00_baseline_11729": 0,
+    "verify_R00_baseline_13407": 0,
+    "verify_R00_baseline_11729": 0,
+    "train_R01_classifier_reg_11729": 0,
+    "verify_R01_classifier_reg_11729": 0,
+    "train_R11_both_11729": 0,
+    "verify_R11_both_11729": 0,
+    "train_R01_classifier_reg_13407": 0,
+    "verify_R01_classifier_reg_13407": 0,
+    "train_R10_generator_anchor_13407": 0,
+    "verify_R10_generator_anchor_13407": 0,
+    "train_R00_baseline_12026": 0,
+    "verify_R00_baseline_12026": 0,
+    "train_R11_both_13407": 0,
+    "verify_R11_both_13407": 0,
+    "train_R10_generator_anchor_12026": 0,
+    "verify_R10_generator_anchor_12026": 0,
+    "train_R01_classifier_reg_12026": 0,
+    "verify_R01_classifier_reg_12026": 0,
+    "train_R11_both_12026": 0,
+    "verify_R11_both_12026": 0
+  },
+  "stop_reasons": {},
+  "cancelled": [],
+  "finalize_exit_code": 0,
+  "finished_unix": 1790437801.0862463,
+  "elapsed_seconds": 3270.6879100473598
+}

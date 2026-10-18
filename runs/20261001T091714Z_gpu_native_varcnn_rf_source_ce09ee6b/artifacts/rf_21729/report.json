@@ -1,0 +1,37 @@
+{
+  "task": "rf_21729",
+  "kind": "rf",
+  "seed": 21729,
+  "best_epoch": 30,
+  "epochs_completed": 30,
+  "steps_completed": 2310,
+  "validation_opportunities": 20,
+  "stop_reason": "max_epochs",
+  "elapsed_seconds": 214.56013616081327,
+  "parameters": 1040562,
+  "peak_cuda_bytes": 1647201792,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "best": {
+    "source": {
+      "accuracy": 0.9070588235294118,
+      "macro_f1": 0.9021182723770854
+    },
+    "valid": {
+      "accuracy": 0.8686274509803922,
+      "macro_f1": 0.8638726741667918
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9070588235294118,
+      "macro_f1": 0.9021182723770854
+    },
+    "valid": {
+      "accuracy": 0.8686274509803922,
+      "macro_f1": 0.8638726741667918
+    }
+  }
+}

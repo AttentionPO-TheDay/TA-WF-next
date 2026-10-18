@@ -1,0 +1,48 @@
+{
+  "task": "multiscale_d139_23407",
+  "kind": "multiscale_d139",
+  "seed": 23407,
+  "best_step": 10400,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 350006,
+  "parameters_trainable": 322726,
+  "generator_parameter_delta_l2": 4.0260048328967715,
+  "generator_parameter_deltas_squared": {
+    "packet_conv.0.weight": 0.0,
+    "packet_conv.0.bias": 0.0,
+    "packet_conv.1.weight": 0.0,
+    "packet_conv.1.bias": 0.0,
+    "time_conv.0.weight": 3.0896480083465576,
+    "time_conv.0.bias": 0.05845208838582039,
+    "time_conv.1.weight": 13.054949760437012,
+    "time_conv.1.bias": 0.005665057338774204
+  },
+  "inactive_parameters_unchanged": true,
+  "elapsed_seconds": 233.2829608991742,
+  "peak_cuda_bytes": 941206528,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "best": {
+    "source": {
+      "accuracy": 0.9956209150326797,
+      "macro_f1": 0.9956168458167468
+    },
+    "valid": {
+      "accuracy": 0.7549019607843137,
+      "macro_f1": 0.74978044830986
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9987581699346405,
+      "macro_f1": 0.998757011948326
+    },
+    "valid": {
+      "accuracy": 0.7392156862745098,
+      "macro_f1": 0.733045603633839
+    }
+  }
+}

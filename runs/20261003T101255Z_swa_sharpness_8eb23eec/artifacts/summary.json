@@ -1,0 +1,201 @@
+{
+  "means": {
+    "ce_final": {
+      "accuracy": 0.8915032679738562,
+      "macro_f1": 0.8894366163974006
+    },
+    "swa": {
+      "accuracy": 0.8823529411764706,
+      "macro_f1": 0.8797963293061332
+    }
+  },
+  "comparison_swa_minus_ce_final": {
+    "accuracy_mean_delta_pp": -0.9150326797385625,
+    "accuracy_per_seed_pp": [
+      -1.17647058823529,
+      -1.176470588235301,
+      -0.39215686274509665
+    ],
+    "macro_f1_mean_delta_pp": -0.9640287091267444,
+    "positive_seed_count": 0,
+    "pass": false
+  },
+  "reports": [
+    {
+      "task": "ce_trajectory_21729",
+      "seed": 21729,
+      "device": "cuda",
+      "steps_completed": 12800,
+      "best_step": 10400,
+      "swa_steps": [
+        9920,
+        10400,
+        10880,
+        11360,
+        11840,
+        12320,
+        12800
+      ],
+      "parameters_total": 1048838,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "ce_final": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8882169029227852
+        }
+      },
+      "swa": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8784313725490196,
+          "macro_f1": 0.8754965622612682
+        }
+      },
+      "fixed_view_diagnostic": {
+        "ce_final": {
+          "clean_accuracy": 0.8901960784313725,
+          "masked_accuracy": 0.8725490196078431,
+          "prediction_agreement": 0.9745098039215686
+        },
+        "swa": {
+          "clean_accuracy": 0.8784313725490196,
+          "masked_accuracy": 0.8607843137254902,
+          "prediction_agreement": 0.9764705882352941
+        }
+      },
+      "elapsed_seconds": 383.1478917049244
+    },
+    {
+      "task": "ce_trajectory_23407",
+      "seed": 23407,
+      "device": "cuda",
+      "steps_completed": 12800,
+      "best_step": 12320,
+      "swa_steps": [
+        9920,
+        10400,
+        10880,
+        11360,
+        11840,
+        12320,
+        12800
+      ],
+      "parameters_total": 1048838,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "ce_final": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8941176470588236,
+          "macro_f1": 0.8923945335710041
+        }
+      },
+      "swa": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8823529411764706,
+          "macro_f1": 0.881387403446227
+        }
+      },
+      "fixed_view_diagnostic": {
+        "ce_final": {
+          "clean_accuracy": 0.8941176470588236,
+          "masked_accuracy": 0.8862745098039215,
+          "prediction_agreement": 0.984313725490196
+        },
+        "swa": {
+          "clean_accuracy": 0.8823529411764706,
+          "masked_accuracy": 0.8705882352941177,
+          "prediction_agreement": 0.984313725490196
+        }
+      },
+      "elapsed_seconds": 382.9952779598534
+    },
+    {
+      "task": "ce_trajectory_22026",
+      "seed": 22026,
+      "device": "cuda",
+      "steps_completed": 12800,
+      "best_step": 7520,
+      "swa_steps": [
+        9920,
+        10400,
+        10880,
+        11360,
+        11840,
+        12320,
+        12800
+      ],
+      "parameters_total": 1048838,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "ce_final": {
+        "source": {
+          "accuracy": 0.9934640522875817,
+          "macro_f1": 0.9932015106741902
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8876984126984127
+        }
+      },
+      "swa": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8862745098039215,
+          "macro_f1": 0.8825050222109044
+        }
+      },
+      "fixed_view_diagnostic": {
+        "ce_final": {
+          "clean_accuracy": 0.8901960784313725,
+          "masked_accuracy": 0.8764705882352941,
+          "prediction_agreement": 0.9823529411764705
+        },
+        "swa": {
+          "clean_accuracy": 0.8862745098039215,
+          "masked_accuracy": 0.8705882352941177,
+          "prediction_agreement": 0.9784313725490196
+        }
+      },
+      "elapsed_seconds": 235.59053037222475
+    }
+  ],
+  "future_access": false,
+  "training_tasks_completed": 3,
+  "swa_steps": [
+    9920,
+    10400,
+    10880,
+    11360,
+    11840,
+    12320,
+    12800
+  ]
+}

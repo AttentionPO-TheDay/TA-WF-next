@@ -1,0 +1,152 @@
+[
+  {
+    "key": "bucket_1729",
+    "arm": "bucket",
+    "seed": 1729,
+    "accuracy": 0.2196078431372549,
+    "macro_f1": 0.2021595362858338,
+    "best_epoch": 15,
+    "parameters": 79286,
+    "seconds": 13.136867413297296
+  },
+  {
+    "key": "hybrid_1729",
+    "arm": "hybrid",
+    "seed": 1729,
+    "accuracy": 0.21764705882352942,
+    "macro_f1": 0.18953122201392095,
+    "best_epoch": 15,
+    "parameters": 79318,
+    "seconds": 13.197528433986008
+  },
+  {
+    "key": "separate_1729",
+    "arm": "separate",
+    "seed": 1729,
+    "accuracy": 0.23137254901960785,
+    "macro_f1": 0.2028607975474792,
+    "best_epoch": 14,
+    "parameters": 79862,
+    "seconds": 16.4367757961154
+  },
+  {
+    "key": "separate_fixed_1729",
+    "arm": "separate_fixed",
+    "seed": 1729,
+    "accuracy": 0.23137254901960785,
+    "macro_f1": 0.21011583807977904,
+    "best_epoch": 15,
+    "parameters": 79862,
+    "seconds": 16.414587712846696
+  },
+  {
+    "key": "separate_gate_1729",
+    "arm": "separate_gate",
+    "seed": 1729,
+    "accuracy": 0.22549019607843138,
+    "macro_f1": 0.20365122948441106,
+    "best_epoch": 15,
+    "parameters": 79895,
+    "seconds": 17.693322617560625
+  },
+  {
+    "key": "bucket_3407",
+    "arm": "bucket",
+    "seed": 3407,
+    "accuracy": 0.23921568627450981,
+    "macro_f1": 0.22307169049684472,
+    "best_epoch": 14,
+    "parameters": 79286,
+    "seconds": 14.571075098589063
+  },
+  {
+    "key": "hybrid_3407",
+    "arm": "hybrid",
+    "seed": 3407,
+    "accuracy": 0.24509803921568626,
+    "macro_f1": 0.2238808736236345,
+    "best_epoch": 14,
+    "parameters": 79318,
+    "seconds": 14.597891110926867
+  },
+  {
+    "key": "separate_3407",
+    "arm": "separate",
+    "seed": 3407,
+    "accuracy": 0.24705882352941178,
+    "macro_f1": 0.22810376008108663,
+    "best_epoch": 14,
+    "parameters": 79862,
+    "seconds": 17.67973631992936
+  },
+  {
+    "key": "separate_fixed_3407",
+    "arm": "separate_fixed",
+    "seed": 3407,
+    "accuracy": 0.24705882352941178,
+    "macro_f1": 0.22713824526108264,
+    "best_epoch": 14,
+    "parameters": 79862,
+    "seconds": 17.230008667334914
+  },
+  {
+    "key": "separate_gate_3407",
+    "arm": "separate_gate",
+    "seed": 3407,
+    "accuracy": 0.24509803921568626,
+    "macro_f1": 0.22609340230447497,
+    "best_epoch": 14,
+    "parameters": 79895,
+    "seconds": 17.658567209728062
+  },
+  {
+    "key": "bucket_2026",
+    "arm": "bucket",
+    "seed": 2026,
+    "accuracy": 0.20392156862745098,
+    "macro_f1": 0.17594278956810924,
+    "best_epoch": 15,
+    "parameters": 79286,
+    "seconds": 11.763516358099878
+  },
+  {
+    "key": "hybrid_2026",
+    "arm": "hybrid",
+    "seed": 2026,
+    "accuracy": 0.20588235294117646,
+    "macro_f1": 0.17487548189180505,
+    "best_epoch": 15,
+    "parameters": 79318,
+    "seconds": 13.147931332699955
+  },
+  {
+    "key": "separate_2026",
+    "arm": "separate",
+    "seed": 2026,
+    "accuracy": 0.20392156862745098,
+    "macro_f1": 0.18476235750866962,
+    "best_epoch": 14,
+    "parameters": 79862,
+    "seconds": 17.24299523513764
+  },
+  {
+    "key": "separate_fixed_2026",
+    "arm": "separate_fixed",
+    "seed": 2026,
+    "accuracy": 0.2196078431372549,
+    "macro_f1": 0.2004891181179653,
+    "best_epoch": 14,
+    "parameters": 79862,
+    "seconds": 17.612487753853202
+  },
+  {
+    "key": "separate_gate_2026",
+    "arm": "separate_gate",
+    "seed": 2026,
+    "accuracy": 0.2196078431372549,
+    "macro_f1": 0.19951313213924757,
+    "best_epoch": 14,
+    "parameters": 79895,
+    "seconds": 18.17739848792553
+  }
+]

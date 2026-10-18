@@ -1,0 +1,35 @@
+{
+  "task": "ce_control_22026",
+  "kind": "ce_control",
+  "seed": 22026,
+  "device": "cuda",
+  "best_step": 12320,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1049734,
+  "parameters_trainable": 1022454,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8686274509803922,
+      "macro_f1": 0.8646756805926356
+    }
+  },
+  "last": null,
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.8686274509803922,
+    "masked_accuracy": 0.8470588235294118,
+    "prediction_agreement": 0.9725490196078431,
+    "relative_feature_mean": 0.13138197362422943,
+    "relative_feature_std": 0.3301771581172943
+  },
+  "elapsed_seconds": 369.8615597868338
+}

@@ -1,0 +1,48 @@
+{
+  "task": "dual_mask_ce_21729",
+  "kind": "dual_mask_ce",
+  "seed": 21729,
+  "device": "cuda",
+  "best_step": 10880,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "single_network": true,
+  "peer_consistency": false,
+  "temperature": 2.0,
+  "max_peer_weight": 0.0,
+  "ramp_steps": 0,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.888235294117647,
+      "macro_f1": 0.8856750547927016
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8764705882352941,
+      "macro_f1": 0.8733313527431172
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.888235294117647,
+    "masked_accuracy": 0.8823529411764706,
+    "prediction_agreement": 0.988235354423523,
+    "js_divergence": 0.02742716856300831
+  },
+  "elapsed_seconds": 741.978550452739
+}

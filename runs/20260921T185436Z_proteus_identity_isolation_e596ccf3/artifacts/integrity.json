@@ -1,0 +1,15 @@
+{
+  "errors": 0,
+  "manifest_rows_checked": 310503,
+  "files": 23,
+  "checks": "artifact consistency only, not independent payload rerun",
+  "sha256": {
+    "exact_overlap.json": "0bfad940879088fb49cc951dc3380e8dea3a8549a29380c659fd99791e709582",
+    "sign5000_overlap.json": "cbed71c77579d7a7f04b708631fe4845895cbf103c3a7cfec3e245aa2870f651",
+    "summary.json": "6092fb75e28ef9aefe705454ed8833b0203d44678e384f7f894d34cd211cbd9f",
+    "version_045_identity.csv": "35fbf9b5d740216ffaf12f4f613980f438fecf7ca96ccad70e29406d85f53b08",
+    "version_046_identity.csv": "14cc3614c2e0f0429f650fb32fee884753944ad742c97e49b77c4bdfbdd17d25",
+    "version_047_identity.csv": "02092e5e625cbd96bb5fb4d501b7e5794a5b28205d776b0986fc393b33e1ab7e",
+    "version_048_identity.csv": "0ad97f2e2bb7c8ccd4828a130a9c47a807c384be71b4a1f5edcc2cf67306e898"
+  }
+}

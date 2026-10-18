@@ -1,0 +1,80 @@
+{
+  "device": "cpu",
+  "source_examples": 64,
+  "optimizer_updates": 0,
+  "future_access": false,
+  "candidates": {
+    "scale_concat": {
+      "total": 350790,
+      "trainable": 323510,
+      "generator_total": 3808,
+      "generator_trainable": 2256,
+      "forward_backward_seconds": 0.8509053830057383,
+      "source_loss_diagnostic": 4.796696662902832,
+      "peak_cuda_allocated_bytes": 0
+    },
+    "attention_readout": {
+      "total": 350134,
+      "trainable": 322854,
+      "generator_total": 3024,
+      "generator_trainable": 1472,
+      "forward_backward_seconds": 0.767883094958961,
+      "source_loss_diagnostic": 4.796696662902832,
+      "peak_cuda_allocated_bytes": 0
+    },
+    "relative_time": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472,
+      "forward_backward_seconds": 0.6434188354760408,
+      "source_loss_diagnostic": 4.800693035125732,
+      "peak_cuda_allocated_bytes": 0
+    },
+    "span_mask": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472,
+      "forward_backward_seconds": 0.6340506626293063,
+      "source_loss_diagnostic": 4.79606819152832,
+      "peak_cuda_allocated_bytes": 0
+    },
+    "supcon": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472,
+      "forward_backward_seconds": 0.6130990451201797,
+      "source_loss_diagnostic": 4.994454860687256,
+      "peak_cuda_allocated_bytes": 0
+    },
+    "cosine_lr": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472,
+      "forward_backward_seconds": 0.5885864086449146,
+      "source_loss_diagnostic": 4.796696662902832,
+      "peak_cuda_allocated_bytes": 0
+    },
+    "cpu_baseline": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472,
+      "forward_backward_seconds": 0.5708432300016284,
+      "source_loss_diagnostic": 4.796696662902832,
+      "peak_cuda_allocated_bytes": 0
+    },
+    "cpu_temporal_cnn": {
+      "total": 282678,
+      "trainable": 255398,
+      "generator_total": 3024,
+      "generator_trainable": 1472,
+      "forward_backward_seconds": 0.11666305176913738,
+      "source_loss_diagnostic": 4.759295463562012,
+      "peak_cuda_allocated_bytes": 0
+    }
+  }
+}

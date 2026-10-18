@@ -1,0 +1,368 @@
+{
+  "files": {
+    "VersionDrift/045/train.npz": {
+      "rows": 22615,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 16
+      }
+    },
+    "VersionDrift/045/valid.npz": {
+      "rows": 2513,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 19
+      }
+    },
+    "VersionDrift/045/drift.npz": {
+      "rows": 75034,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 17
+      }
+    },
+    "VersionDrift/046/train.npz": {
+      "rows": 17313,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 25
+      }
+    },
+    "VersionDrift/046/valid.npz": {
+      "rows": 1924,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 25
+      }
+    },
+    "VersionDrift/046/drift.npz": {
+      "rows": 80925,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 12
+      }
+    },
+    "VersionDrift/047/train.npz": {
+      "rows": 18036,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 17
+      }
+    },
+    "VersionDrift/047/valid.npz": {
+      "rows": 2005,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 21
+      }
+    },
+    "VersionDrift/047/drift.npz": {
+      "rows": 80121,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 15
+      }
+    },
+    "VersionDrift/048/train.npz": {
+      "rows": 23165,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 19
+      }
+    },
+    "VersionDrift/048/valid.npz": {
+      "rows": 2574,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 23
+      }
+    },
+    "VersionDrift/048/drift.npz": {
+      "rows": 74423,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": null,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 20
+      }
+    },
+    "NetworkDrift/train.npz": {
+      "rows": 16146,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": 0,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 25
+      }
+    },
+    "NetworkDrift/valid.npz": {
+      "rows": 1795,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": 0,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 17
+      }
+    },
+    "NetworkDrift/SG.npz": {
+      "rows": 1994,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": 0,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 22
+      }
+    },
+    "NetworkDrift/JP.npz": {
+      "rows": 3125,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": 0,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 13
+      }
+    },
+    "NetworkDrift/USA.npz": {
+      "rows": 3805,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": 0,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 25
+      }
+    },
+    "NetworkDrift/DE.npz": {
+      "rows": 4217,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": 0,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 21
+      }
+    },
+    "NetworkDrift/UK.npz": {
+      "rows": 3618,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": 0,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 25
+      }
+    },
+    "BehaviorDrift/train.npz": {
+      "rows": 16146,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": 0,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 25
+      }
+    },
+    "BehaviorDrift/valid.npz": {
+      "rows": 1795,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": 0,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 17
+      }
+    },
+    "BehaviorDrift/test.npz": {
+      "rows": 1994,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": 0,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 22
+      }
+    },
+    "BehaviorDrift/subpage.npz": {
+      "rows": 20400,
+      "classes": 102,
+      "duplicate_copies": 0,
+      "sign5000_duplicate_copies": 0,
+      "sample_only": {
+        "rows": 32,
+        "nonfinite": 0,
+        "internal_zero_rows": 0,
+        "decreasing_abs_time_rows": 18
+      }
+    }
+  },
+  "version": {
+    "VersionDrift/045/drift.npz": {
+      "unique": 65017,
+      "label_conflict": 0,
+      "matched_048": 25739,
+      "matched_047": 20041,
+      "unmatched": 10017,
+      "matched_046": 19237
+    },
+    "VersionDrift/046/drift.npz": {
+      "unique": 70908,
+      "label_conflict": 0,
+      "matched_045": 25128,
+      "matched_048": 25739,
+      "unmatched": 10017,
+      "matched_047": 20041
+    },
+    "VersionDrift/047/drift.npz": {
+      "unique": 70104,
+      "label_conflict": 0,
+      "matched_046": 19237,
+      "matched_045": 25128,
+      "matched_048": 25739,
+      "unmatched": 10017
+    },
+    "VersionDrift/048/drift.npz": {
+      "unique": 64406,
+      "label_conflict": 0,
+      "matched_045": 25128,
+      "matched_047": 20041,
+      "matched_046": 19237,
+      "unmatched": 10017
+    }
+  },
+  "label_conflict_content_groups": {
+    "raw_Version": 0,
+    "raw_NetworkBehavior": 0,
+    "sign5000_Version": 0,
+    "sign5000_NetworkBehavior": 0
+  },
+  "url": {
+    "rows": 20400,
+    "unique": 17739,
+    "duplicate_copies": 2661,
+    "repeated_url_groups": 1344,
+    "max_multiplicity": 100,
+    "cross_label_urls": 0,
+    "source_url_overlap": "unverifiable: homepage files lack URL fields"
+  },
+  "version_anchor_unique_content": 90145,
+  "version_anchor_multiversion_content": 0,
+  "limits": [
+    "exact bytes only, not session independence",
+    "sign check only first 5000 for Network/Behavior",
+    "quality checks sampled 32 rows/file",
+    "no source/target split created",
+    "version identity inferred from release views, not independent capture metadata"
+  ],
+  "access": {
+    "explicit_files": [
+      "VersionDrift/045/train.npz",
+      "VersionDrift/045/valid.npz",
+      "VersionDrift/045/drift.npz",
+      "VersionDrift/046/train.npz",
+      "VersionDrift/046/valid.npz",
+      "VersionDrift/046/drift.npz",
+      "VersionDrift/047/train.npz",
+      "VersionDrift/047/valid.npz",
+      "VersionDrift/047/drift.npz",
+      "VersionDrift/048/train.npz",
+      "VersionDrift/048/valid.npz",
+      "VersionDrift/048/drift.npz",
+      "NetworkDrift/train.npz",
+      "NetworkDrift/valid.npz",
+      "NetworkDrift/SG.npz",
+      "NetworkDrift/JP.npz",
+      "NetworkDrift/USA.npz",
+      "NetworkDrift/DE.npz",
+      "NetworkDrift/UK.npz",
+      "BehaviorDrift/train.npz",
+      "BehaviorDrift/valid.npz",
+      "BehaviorDrift/test.npz",
+      "BehaviorDrift/subpage.npz"
+    ],
+    "labels_used_for": "audit only",
+    "training": 0,
+    "scoring": 0
+  }
+}

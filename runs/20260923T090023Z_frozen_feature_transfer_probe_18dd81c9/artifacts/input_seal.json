@@ -1,0 +1,18 @@
+{
+  "runs/20260923T090023Z_frozen_feature_transfer_probe_18dd81c9/PLAN.md": "1e487f8bb4a68750ce8373c3089ea23b1f27666f621bbfc06c6ad98674daa1a5",
+  "runs/20260923T090023Z_frozen_feature_transfer_probe_18dd81c9/config.json": "85a6a79ad4f1c31a103c0450446d35ab89750e09589457c0f2919e68be82072f",
+  "runs/20260923T090023Z_frozen_feature_transfer_probe_18dd81c9/probe.py": "7f80d9a14e8549b45b40209240c0fbc6454ebd49b3c69cd09f1d8aad5da1f17b",
+  "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "runs/20260923T082606Z_gpu_feature_distill_b4f0ceb2/artifacts/manifest.json": "1865ec84d3f98c34bfb4d11b8bc9338511b869d843bb242494292d93c42e1ee1",
+  "runs/20260923T082606Z_gpu_feature_distill_b4f0ceb2/artifacts/integrity.json": "0b4f734d8c6c12b7ad82412bc15b29c6c9095f4a046ad7520ed4d5358542fd3e",
+  "runs/20260923T082606Z_gpu_feature_distill_b4f0ceb2/artifacts/window_statistics.npz": "ab00fc303945e63cc200cf7a3e29872e4d7b40ee6451257cc1a6b2002f9d9659",
+  "configs/datasets.json": "c3edbfeaf83553f63e6b5a12fa6e1dc5049346c1f8eb3b54bedf7760408b6b28",
+  "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+  "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+  "runs/20260923T082606Z_gpu_feature_distill_b4f0ceb2/checkpoints/teacher_1729.pt": "ec78e0fee3dcb5d6d1ec9973baa32bb71dd7cbf6f355c5ffadc4ba3343b8b5aa",
+  "runs/20260923T082606Z_gpu_feature_distill_b4f0ceb2/checkpoints/ce_1729.pt": "5c2ceae5b545af710b3897d31b409088f10fb74d916a0c4aa4a02003f5219ced",
+  "runs/20260923T082606Z_gpu_feature_distill_b4f0ceb2/checkpoints/teacher_3407.pt": "0e3faa7ec3d56d3ab35afa57463e49e3ed679f0fae20126eed6819557f800def",
+  "runs/20260923T082606Z_gpu_feature_distill_b4f0ceb2/checkpoints/ce_3407.pt": "fa50505b533cc27a37c3d9c7cf78422a5f9a26a4b69ed2623bb1c6dd83864fa3",
+  "runs/20260923T082606Z_gpu_feature_distill_b4f0ceb2/checkpoints/teacher_2026.pt": "91d27e1196a07b656a5655bd7e710e5801882e7c4fcef48876c8b485b018b0a5",
+  "runs/20260923T082606Z_gpu_feature_distill_b4f0ceb2/checkpoints/ce_2026.pt": "e8a9a33a153b81901c5a7eb0669aace7c44baa0a228d8d0f63def64ec43c45c7"
+}

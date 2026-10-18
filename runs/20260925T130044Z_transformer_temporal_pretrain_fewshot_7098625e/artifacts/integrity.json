@@ -1,0 +1,9 @@
+{
+  "prediction_sets_checked": 63,
+  "errors": [],
+  "fewshot_total": 510,
+  "fewshot_per_class": 5,
+  "source_unlabeled_pretrain": 2040,
+  "parameters": 110400,
+  "source_valid_roles_only_prepared": true
+}

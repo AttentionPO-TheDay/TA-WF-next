@@ -1,0 +1,21 @@
+{
+  "exit_codes": {
+    "train_C_local_attention_frozen_3407": 0,
+    "train_B_local_attention_joint_1729": 0,
+    "verify_C_local_attention_frozen_3407": 0,
+    "verify_B_local_attention_joint_1729": 0,
+    "train_B_local_attention_joint_3407": 0,
+    "verify_B_local_attention_joint_3407": 0,
+    "train_B_local_attention_joint_2026": 0,
+    "train_C_local_attention_frozen_1729": 0,
+    "train_C_local_attention_frozen_2026": 0,
+    "verify_B_local_attention_joint_2026": 0,
+    "verify_C_local_attention_frozen_1729": 0,
+    "verify_C_local_attention_frozen_2026": 0
+  },
+  "stop_reasons": {},
+  "cancelled": [],
+  "finalize_exit_code": 0,
+  "finished_unix": 1790411828.1300223,
+  "elapsed_seconds": 1030.7541110711172
+}

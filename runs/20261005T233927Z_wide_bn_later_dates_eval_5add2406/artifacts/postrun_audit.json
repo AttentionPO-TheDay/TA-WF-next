@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "freeze_files_verified": 33,
+  "metric_groups": 12,
+  "checkpoint_replays": 12,
+  "checks": [
+    {
+      "seed": 21729,
+      "role": "valid",
+      "rows": 510,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 21729,
+      "role": "day30",
+      "rows": 22867,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 21729,
+      "role": "day150",
+      "rows": 24064,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 21729,
+      "role": "day270",
+      "rows": 19935,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 23407,
+      "role": "valid",
+      "rows": 510,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 23407,
+      "role": "day30",
+      "rows": 22867,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 23407,
+      "role": "day150",
+      "rows": 24064,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 23407,
+      "role": "day270",
+      "rows": 19935,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 22026,
+      "role": "valid",
+      "rows": 510,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 22026,
+      "role": "day30",
+      "rows": 22867,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 22026,
+      "role": "day150",
+      "rows": 24064,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 22026,
+      "role": "day270",
+      "rows": 19935,
+      "prediction_replay_exact": true,
+      "independent_metrics": true,
+      "model_state_unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "splits": {
+    "day14": {
+      "support_rows": 1024,
+      "query_rows": 21579,
+      "same_historical_split": true,
+      "exact_input_disjoint": true
+    },
+    "day90": {
+      "support_rows": 1024,
+      "query_rows": 27575,
+      "same_historical_split": true,
+      "exact_input_disjoint": true
+    },
+    "day270": {
+      "support_rows": 1024,
+      "query_rows": 18911,
+      "same_historical_split": true,
+      "exact_input_disjoint": true
+    }
+  },
+  "candidate_smoke_updates": 2,
+  "wrapper_gradient_checks": true,
+  "gmm_calls": 0,
+  "pseudo_label_calls": 0,
+  "config_sha": "542ae5bd894a6d406534fc92746cfe3dec35002299b9aaf7fcc002b9f31daa59",
+  "runner_sha": "58e25e18ec40bcaa48f30c58098d468e25085b467e8b54f7eed7c490e31c34b1"
+}

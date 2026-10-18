@@ -1,0 +1,37 @@
+{
+  "task": "varcnn_23407",
+  "kind": "varcnn",
+  "seed": 23407,
+  "best_epoch": 49,
+  "epochs_completed": 60,
+  "steps_completed": 18360,
+  "validation_opportunities": 60,
+  "stop_reason": "early_stopping",
+  "elapsed_seconds": 520.1061391495168,
+  "parameters": 3900454,
+  "peak_cuda_bytes": 1483308544,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "best": {
+    "source": {
+      "accuracy": 0.9998039215686274,
+      "macro_f1": 0.9998039193899539
+    },
+    "valid": {
+      "accuracy": 0.7156862745098039,
+      "macro_f1": 0.706401691349788
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9999346405228758,
+      "macro_f1": 0.9999346397966513
+    },
+    "valid": {
+      "accuracy": 0.7098039215686275,
+      "macro_f1": 0.6976100696688932
+    }
+  }
+}

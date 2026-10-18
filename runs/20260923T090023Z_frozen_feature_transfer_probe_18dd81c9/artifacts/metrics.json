@@ -1,0 +1,233 @@
+{
+  "1729": {
+    "teacher_anchor": {
+      "accuracy": 0.33725490196078434,
+      "macro_f1": 0.3270761917820741
+    },
+    "student_anchor": {
+      "accuracy": 0.27647058823529413,
+      "macro_f1": 0.24545004527703487
+    },
+    "constant_dimensions": {
+      "teacher_packet": 42,
+      "teacher_window": 2,
+      "student_packet": 58
+    },
+    "probes": {
+      "teacher_packet": {
+        "source": {
+          "accuracy": 0.37107843137254903,
+          "macro_f1": 0.33955662598899916
+        },
+        "valid": {
+          "accuracy": 0.23529411764705882,
+          "macro_f1": 0.1948437694961526
+        }
+      },
+      "teacher_window": {
+        "source": {
+          "accuracy": 0.6049019607843137,
+          "macro_f1": 0.5884665715401405
+        },
+        "valid": {
+          "accuracy": 0.26666666666666666,
+          "macro_f1": 0.23091270344958204
+        }
+      },
+      "student_packet": {
+        "source": {
+          "accuracy": 0.3318627450980392,
+          "macro_f1": 0.2842753992199751
+        },
+        "valid": {
+          "accuracy": 0.23529411764705882,
+          "macro_f1": 0.18598514470153635
+        }
+      },
+      "teacher_joint": {
+        "source": {
+          "accuracy": 0.6985294117647058,
+          "macro_f1": 0.6920782670778214
+        },
+        "valid": {
+          "accuracy": 0.3196078431372549,
+          "macro_f1": 0.2880562763689699
+        }
+      }
+    },
+    "reconstruction": {
+      "teacher_packet": {
+        "source_mse": 0.12998986004077662,
+        "valid_mse": 0.13590444504227295,
+        "valid_source_mean_r2": 0.7744930637836872,
+        "recovered_probe_valid": {
+          "accuracy": 0.2235294117647059,
+          "macro_f1": 0.17619969124476498
+        }
+      },
+      "teacher_window": {
+        "source_mse": 0.2754368258271128,
+        "valid_mse": 0.28250617894605906,
+        "valid_source_mean_r2": 0.7086126536044808,
+        "recovered_probe_valid": {
+          "accuracy": 0.20392156862745098,
+          "macro_f1": 0.1519801360067984
+        }
+      }
+    }
+  },
+  "3407": {
+    "teacher_anchor": {
+      "accuracy": 0.34705882352941175,
+      "macro_f1": 0.33814313649953787
+    },
+    "student_anchor": {
+      "accuracy": 0.2823529411764706,
+      "macro_f1": 0.2556443596031103
+    },
+    "constant_dimensions": {
+      "teacher_packet": 51,
+      "teacher_window": 2,
+      "student_packet": 49
+    },
+    "probes": {
+      "teacher_packet": {
+        "source": {
+          "accuracy": 0.3352941176470588,
+          "macro_f1": 0.293748030451563
+        },
+        "valid": {
+          "accuracy": 0.21568627450980393,
+          "macro_f1": 0.17895292701794246
+        }
+      },
+      "teacher_window": {
+        "source": {
+          "accuracy": 0.5872549019607843,
+          "macro_f1": 0.5679090752339583
+        },
+        "valid": {
+          "accuracy": 0.27450980392156865,
+          "macro_f1": 0.2420848214965862
+        }
+      },
+      "student_packet": {
+        "source": {
+          "accuracy": 0.346078431372549,
+          "macro_f1": 0.30104998210666806
+        },
+        "valid": {
+          "accuracy": 0.22549019607843138,
+          "macro_f1": 0.17754188274812932
+        }
+      },
+      "teacher_joint": {
+        "source": {
+          "accuracy": 0.6848039215686275,
+          "macro_f1": 0.6718342151491622
+        },
+        "valid": {
+          "accuracy": 0.3156862745098039,
+          "macro_f1": 0.2780567087660513
+        }
+      }
+    },
+    "reconstruction": {
+      "teacher_packet": {
+        "source_mse": 0.10027708687174665,
+        "valid_mse": 0.098466377719997,
+        "valid_source_mean_r2": 0.815044439779427,
+        "recovered_probe_valid": {
+          "accuracy": 0.19411764705882353,
+          "macro_f1": 0.15142941364941
+        }
+      },
+      "teacher_window": {
+        "source_mse": 0.2670511614769586,
+        "valid_mse": 0.278620984211603,
+        "valid_source_mean_r2": 0.7147977968978776,
+        "recovered_probe_valid": {
+          "accuracy": 0.19411764705882353,
+          "macro_f1": 0.14304261711564573
+        }
+      }
+    }
+  },
+  "2026": {
+    "teacher_anchor": {
+      "accuracy": 0.33725490196078434,
+      "macro_f1": 0.32813702861280714
+    },
+    "student_anchor": {
+      "accuracy": 0.27058823529411763,
+      "macro_f1": 0.24510783275352574
+    },
+    "constant_dimensions": {
+      "teacher_packet": 60,
+      "teacher_window": 4,
+      "student_packet": 64
+    },
+    "probes": {
+      "teacher_packet": {
+        "source": {
+          "accuracy": 0.33676470588235297,
+          "macro_f1": 0.2980842949503947
+        },
+        "valid": {
+          "accuracy": 0.20980392156862746,
+          "macro_f1": 0.16753329475867382
+        }
+      },
+      "teacher_window": {
+        "source": {
+          "accuracy": 0.5975490196078431,
+          "macro_f1": 0.5814117366925705
+        },
+        "valid": {
+          "accuracy": 0.27450980392156865,
+          "macro_f1": 0.2434144367102845
+        }
+      },
+      "student_packet": {
+        "source": {
+          "accuracy": 0.33676470588235297,
+          "macro_f1": 0.28758956286927806
+        },
+        "valid": {
+          "accuracy": 0.2196078431372549,
+          "macro_f1": 0.17408688354314217
+        }
+      },
+      "teacher_joint": {
+        "source": {
+          "accuracy": 0.6911764705882353,
+          "macro_f1": 0.6822637412991278
+        },
+        "valid": {
+          "accuracy": 0.3137254901960784,
+          "macro_f1": 0.28142073068543655
+        }
+      }
+    },
+    "reconstruction": {
+      "teacher_packet": {
+        "source_mse": 0.1075892592522059,
+        "valid_mse": 0.09921651433402197,
+        "valid_source_mean_r2": 0.7811502310737263,
+        "recovered_probe_valid": {
+          "accuracy": 0.2019607843137255,
+          "macro_f1": 0.1564878181144139
+        }
+      },
+      "teacher_window": {
+        "source_mse": 0.25603051793049353,
+        "valid_mse": 0.2649747012668524,
+        "valid_source_mean_r2": 0.7182780799456083,
+        "recovered_probe_valid": {
+          "accuracy": 0.1980392156862745,
+          "macro_f1": 0.14734056416047894
+        }
+      }
+    }
+  }
+}

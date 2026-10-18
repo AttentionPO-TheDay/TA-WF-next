@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "new_tasks": 36,
+  "historical_rows": 9,
+  "metrics_recomputed": 45,
+  "paired_stream_cells": 9,
+  "checkpoint_reloads": 36,
+  "gmm_files": 720,
+  "frozen_hashes_verified": true
+}

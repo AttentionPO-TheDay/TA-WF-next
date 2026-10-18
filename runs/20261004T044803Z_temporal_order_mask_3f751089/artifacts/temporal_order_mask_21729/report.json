@@ -1,0 +1,40 @@
+{
+  "task": "temporal_order_mask_21729",
+  "kind": "temporal_order_mask",
+  "seed": 21729,
+  "device": "cuda:2",
+  "best_step": 11840,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 0.9980392156862745,
+      "macro_f1": 0.9980011590034232
+    },
+    "valid": {
+      "accuracy": 0.8980392156862745,
+      "macro_f1": 0.8931521093285797
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.8980392156862745,
+    "masked_accuracy": 0.8862745098039215,
+    "prediction_agreement": 0.9803921568627451
+  },
+  "augmentation": {
+    "name": "temporal_order_mask",
+    "probability": 0.75,
+    "span_bins": 24,
+    "raw_per_bin": 15,
+    "source_only": true,
+    "channel_total_preserved": true
+  },
+  "elapsed_seconds": 702.5259729875252
+}

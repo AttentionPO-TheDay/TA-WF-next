@@ -1,0 +1,212 @@
+{
+  "historical_reuse": true,
+  "roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "optimizer_steps": 0,
+  "baseline_reloaded_predictions": 6,
+  "best_last_metric_checks": 12,
+  "matching_initialization": "passed",
+  "original_freeze_and_data_hashes": "passed",
+  "reports": [
+    {
+      "task": "d2_w16_21729",
+      "kind": "d2_w16",
+      "seed": 21729,
+      "best_step": 7040,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 350006,
+      "parameters_trainable": 322726,
+      "generator_parameter_delta_l2": 4.047007167574474,
+      "generator_parameter_deltas_squared": {
+        "packet_conv.0.weight": 0.0,
+        "packet_conv.0.bias": 0.0,
+        "packet_conv.1.weight": 0.0,
+        "packet_conv.1.bias": 0.0,
+        "time_conv.0.weight": 3.4283738136291504,
+        "time_conv.0.bias": 0.04882795363664627,
+        "time_conv.1.weight": 12.891544342041016,
+        "time_conv.1.bias": 0.00952090509235859
+      },
+      "inactive_parameters_unchanged": true,
+      "elapsed_seconds": 232.85920227970928,
+      "peak_cuda_bytes": 941206528,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "best": {
+        "source": {
+          "accuracy": 0.9772549019607844,
+          "macro_f1": 0.9765764947562975
+        },
+        "valid": {
+          "accuracy": 0.7666666666666667,
+          "macro_f1": 0.7589462280638752
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9997385620915032,
+          "macro_f1": 0.9997385548290647
+        },
+        "valid": {
+          "accuracy": 0.7490196078431373,
+          "macro_f1": 0.7433521271756565
+        }
+      },
+      "historical_reuse": true,
+      "origin_run": "20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9",
+      "origin_task": "multiscale_d139_21729",
+      "reloaded_with_new_d2_w16_code": true
+    },
+    {
+      "task": "d2_w16_23407",
+      "kind": "d2_w16",
+      "seed": 23407,
+      "best_step": 10400,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 350006,
+      "parameters_trainable": 322726,
+      "generator_parameter_delta_l2": 4.0260048328967715,
+      "generator_parameter_deltas_squared": {
+        "packet_conv.0.weight": 0.0,
+        "packet_conv.0.bias": 0.0,
+        "packet_conv.1.weight": 0.0,
+        "packet_conv.1.bias": 0.0,
+        "time_conv.0.weight": 3.0896480083465576,
+        "time_conv.0.bias": 0.05845208838582039,
+        "time_conv.1.weight": 13.054949760437012,
+        "time_conv.1.bias": 0.005665057338774204
+      },
+      "inactive_parameters_unchanged": true,
+      "elapsed_seconds": 233.2829608991742,
+      "peak_cuda_bytes": 941206528,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "best": {
+        "source": {
+          "accuracy": 0.9956209150326797,
+          "macro_f1": 0.9956168458167468
+        },
+        "valid": {
+          "accuracy": 0.7549019607843137,
+          "macro_f1": 0.74978044830986
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9987581699346405,
+          "macro_f1": 0.998757011948326
+        },
+        "valid": {
+          "accuracy": 0.7392156862745098,
+          "macro_f1": 0.733045603633839
+        }
+      },
+      "historical_reuse": true,
+      "origin_run": "20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9",
+      "origin_task": "multiscale_d139_23407",
+      "reloaded_with_new_d2_w16_code": true
+    },
+    {
+      "task": "d2_w16_22026",
+      "kind": "d2_w16",
+      "seed": 22026,
+      "best_step": 10400,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 350006,
+      "parameters_trainable": 322726,
+      "generator_parameter_delta_l2": 3.99434224723904,
+      "generator_parameter_deltas_squared": {
+        "packet_conv.0.weight": 0.0,
+        "packet_conv.0.bias": 0.0,
+        "packet_conv.1.weight": 0.0,
+        "packet_conv.1.bias": 0.0,
+        "time_conv.0.weight": 3.687236785888672,
+        "time_conv.0.bias": 0.0936160460114479,
+        "time_conv.1.weight": 12.167945861816406,
+        "time_conv.1.bias": 0.005971294362097979
+      },
+      "inactive_parameters_unchanged": true,
+      "elapsed_seconds": 208.13077834248543,
+      "peak_cuda_bytes": 941206528,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "best": {
+        "source": {
+          "accuracy": 0.9937254901960785,
+          "macro_f1": 0.9937176351319782
+        },
+        "valid": {
+          "accuracy": 0.7568627450980392,
+          "macro_f1": 0.7501344516050397
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9981045751633987,
+          "macro_f1": 0.998105318947431
+        },
+        "valid": {
+          "accuracy": 0.7470588235294118,
+          "macro_f1": 0.7404270566035271
+        }
+      },
+      "historical_reuse": true,
+      "origin_run": "20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9",
+      "origin_task": "multiscale_d139_22026",
+      "reloaded_with_new_d2_w16_code": true
+    }
+  ],
+  "frozen_inputs": {
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_21729/predictions_best.npz": "1bdfd22c58f116e9c3a328ea9b1a6e9005beffb53e51e8553caa7e0fae4e201d",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_21729/predictions_best.npz": "1bdfd22c58f116e9c3a328ea9b1a6e9005beffb53e51e8553caa7e0fae4e201d",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_21729/predictions_last.npz": "9cb23cdef44db6c4d795b3c4f797bbdf35dde40c9cf24b700fcbe886afd3def8",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_21729/predictions_last.npz": "9cb23cdef44db6c4d795b3c4f797bbdf35dde40c9cf24b700fcbe886afd3def8",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_21729/initial_state.pt": "76c89345db584e21a6bfedc2e551be5ad59288d46fcaa26e329d8110c7a2f9d7",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_21729/initial_state.pt": "76c89345db584e21a6bfedc2e551be5ad59288d46fcaa26e329d8110c7a2f9d7",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_21729/index_stream.pt": "e3c0b855a512c402cfc1e9a69471c2dfe5c1de68a5cb9663dead47c7b3571004",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_21729/index_stream.pt": "e3c0b855a512c402cfc1e9a69471c2dfe5c1de68a5cb9663dead47c7b3571004",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_21729/logits_best.npz": "77a9450467a05426ca9b581cd1a1d8f5f7a4fcf1b9fec8d762572c5b8294458c",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_21729/logits_best.npz": "77a9450467a05426ca9b581cd1a1d8f5f7a4fcf1b9fec8d762572c5b8294458c",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_21729/report.json": "e12940c25bf8800ad8360aa46bba903a26d8d14da27086bf3238576561df46b5",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_21729/report.json": "5878cfb408d5f9cf3d562f91e992456032a16f816f50214f80e52f5dea1baa7f",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/checkpoints/multiscale_d139_21729_best.pt": "01cb27075b8be25991ef23f9fcdf99da9b21ddc1f9d9950a2680778265e4a5f2",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_23407/predictions_best.npz": "4320107fc47e32222ff1d57554789a5b88155b3fdb950c7b9c1c7c681a8c9918",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_23407/predictions_best.npz": "4320107fc47e32222ff1d57554789a5b88155b3fdb950c7b9c1c7c681a8c9918",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_23407/predictions_last.npz": "aa05c897c92c905f6029b55ba0b2b16d1df1281a6c75bd81806b3e23f021042c",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_23407/predictions_last.npz": "aa05c897c92c905f6029b55ba0b2b16d1df1281a6c75bd81806b3e23f021042c",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_23407/initial_state.pt": "bbf890d8823fb5e2515183c61c1c3187a5517f0165b55a56cd3fb7dc8490a31b",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_23407/initial_state.pt": "bbf890d8823fb5e2515183c61c1c3187a5517f0165b55a56cd3fb7dc8490a31b",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_23407/index_stream.pt": "6bfdeae382e280fc5801b5ac647170f09307d5360584247812082e605f76d1e6",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_23407/index_stream.pt": "6bfdeae382e280fc5801b5ac647170f09307d5360584247812082e605f76d1e6",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_23407/logits_best.npz": "74929deaf95dab786b0182f043c811005d741cc7d509b725f278aed46f52fad1",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_23407/logits_best.npz": "74929deaf95dab786b0182f043c811005d741cc7d509b725f278aed46f52fad1",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_23407/report.json": "a17741497986e315e0acb22904835c57590db41a5454994572b187a7fba823b7",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_23407/report.json": "4ed16c8d604274259b398a20c8ab43de98e7abccc1c17927536625a61f572406",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/checkpoints/multiscale_d139_23407_best.pt": "4ff3ed9ae6421e948743e6b6a6ad06001e909010e89e713fd4dda03a67be870e",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_22026/predictions_best.npz": "fb826ff2794b105b038564d28bdf1dd9c162182f3f96385159995b9baea10a50",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_22026/predictions_best.npz": "fb826ff2794b105b038564d28bdf1dd9c162182f3f96385159995b9baea10a50",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_22026/predictions_last.npz": "35c3198d57c1a937489dbce08ddfcf2bb72cc60400a54795a61a676b666ff1a2",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_22026/predictions_last.npz": "35c3198d57c1a937489dbce08ddfcf2bb72cc60400a54795a61a676b666ff1a2",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_22026/initial_state.pt": "d12e38d9104312a1611b8a27d2418a7575c1618847c4a47d038d10f741abfcf6",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_22026/initial_state.pt": "d12e38d9104312a1611b8a27d2418a7575c1618847c4a47d038d10f741abfcf6",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_22026/index_stream.pt": "14cba88b4f41e4d4400983f94cda4a7645ac1f3f9e0aa3bd726294953bc8ace9",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_22026/index_stream.pt": "14cba88b4f41e4d4400983f94cda4a7645ac1f3f9e0aa3bd726294953bc8ace9",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_22026/logits_best.npz": "b478792685e729ce8962621ebba0bf4f89aa37ac9535edc33157840d5fd76c7a",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_22026/logits_best.npz": "b478792685e729ce8962621ebba0bf4f89aa37ac9535edc33157840d5fd76c7a",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/artifacts/multiscale_d139_22026/report.json": "773aa90c5a3fd36c0bb847056fdf728d991084da3f340f97bf56a70bcc2cdaeb",
+    "runs/20261001T132328Z_gpu_tam_generator_depth_width_d4bfafde/artifacts/d2_w16_22026/report.json": "2826e2a7bc99adce242532307007523545fced66944cee176e0b47933303c4c1",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/checkpoints/multiscale_d139_22026_best.pt": "71b19179dfb2c963353e496f0d3aaafe83ba1086076402253191558b4da7c169"
+  }
+}

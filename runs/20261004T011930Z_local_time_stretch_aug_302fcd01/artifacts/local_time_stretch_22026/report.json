@@ -1,0 +1,44 @@
+{
+  "task": "local_time_stretch_22026",
+  "kind": "local_time_stretch",
+  "seed": 22026,
+  "device": "cuda:2",
+  "best_step": 10400,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 0.995686274509804,
+      "macro_f1": 0.9956993797757058
+    },
+    "valid": {
+      "accuracy": 0.903921568627451,
+      "macro_f1": 0.9016636957813429
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.903921568627451,
+    "masked_accuracy": 0.9,
+    "prediction_agreement": 0.9862745098039216
+  },
+  "augmentation": {
+    "name": "local_time_stretch",
+    "probability": 0.75,
+    "span_bins": 24,
+    "factors": [
+      0.8,
+      1.25
+    ],
+    "raw_per_bin": 15,
+    "source_only": true,
+    "channel_total_renorm": true
+  },
+  "elapsed_seconds": 580.0960771599784
+}

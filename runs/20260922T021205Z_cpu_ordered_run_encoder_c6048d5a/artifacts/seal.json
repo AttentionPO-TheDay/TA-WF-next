@@ -1,0 +1,10 @@
+{
+  "runs/20260922T021205Z_cpu_ordered_run_encoder_c6048d5a/PLAN.md": "8343d777d301fa432021d9805f79fc22f0b3eeb5159eaae65e31c99a147c0231",
+  "runs/20260922T021205Z_cpu_ordered_run_encoder_c6048d5a/config.json": "1919f959c150621dadadea071aed2795163b23fc39579e1acac21aec2723b076",
+  "runs/20260922T021205Z_cpu_ordered_run_encoder_c6048d5a/train.py": "04b74b06643c116d07492b197b06f13f467565088754318c28f54707c01fef9e",
+  "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+  "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+  "runs/20260922T021205Z_cpu_ordered_run_encoder_c6048d5a/artifacts/source_statistics.npz": "dae0517e1ba881343506c5f7f1b107875a6d2e73d10deb02761cc261c756faed",
+  "runs/20260922T021205Z_cpu_ordered_run_encoder_c6048d5a/checkpoints/coarse.pt": "308edff84642a0d2823ae90e566b1cb28923b911cb46e0a1db665cee3be1e2ec",
+  "runs/20260922T021205Z_cpu_ordered_run_encoder_c6048d5a/checkpoints/exact.pt": "e1eafa0494f1a014d321155af813910807fa78d0b0c117aa9d6a6d9c4f9a1c14"
+}

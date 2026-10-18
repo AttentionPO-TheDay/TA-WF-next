@@ -1,0 +1,33 @@
+{
+  "exit_codes": {
+    "train_A_20_cls_21729": 0,
+    "verify_A_20_cls_21729": 0,
+    "train_A_20_cls_23407": 0,
+    "verify_A_20_cls_23407": 0,
+    "train_B_20_mean_21729": 0,
+    "verify_B_20_mean_21729": 0,
+    "train_B_20_mean_23407": 0,
+    "verify_B_20_mean_23407": 0,
+    "train_C_80_cls_21729": 0,
+    "train_D_80_mean_21729": 0,
+    "verify_C_80_cls_21729": 0,
+    "verify_D_80_mean_21729": 0,
+    "train_A_20_cls_22026": 0,
+    "verify_A_20_cls_22026": 0,
+    "train_B_20_mean_22026": 0,
+    "verify_B_20_mean_22026": 0,
+    "train_C_80_cls_23407": 0,
+    "verify_C_80_cls_23407": 0,
+    "train_D_80_mean_23407": 0,
+    "verify_D_80_mean_23407": 0,
+    "train_C_80_cls_22026": 0,
+    "verify_C_80_cls_22026": 0,
+    "train_D_80_mean_22026": 0,
+    "verify_D_80_mean_22026": 0
+  },
+  "stop_reasons": {},
+  "cancelled": [],
+  "finalize_exit_code": 0,
+  "finished_unix": 1790442267.9011588,
+  "elapsed_seconds": 3429.03276631888
+}

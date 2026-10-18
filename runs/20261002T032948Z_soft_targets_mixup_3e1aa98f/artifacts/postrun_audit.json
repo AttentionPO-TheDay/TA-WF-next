@@ -1,0 +1,138 @@
+{
+  "passed": true,
+  "freeze_hashes_verified": 80,
+  "metric_groups_verified": 72,
+  "initialization_index_and_selection_verified": true,
+  "teacher_source_identity_verified": true,
+  "shuffled_mapping": [
+    {
+      "seed": 21729,
+      "fixed_row_fraction": 6.535947613883764e-05,
+      "same_true_class_fraction": 0.008823529817163944
+    },
+    {
+      "seed": 23407,
+      "fixed_row_fraction": 0.00013071895227767527,
+      "same_true_class_fraction": 0.00869281031191349
+    },
+    {
+      "seed": 22026,
+      "fixed_row_fraction": 6.535947613883764e-05,
+      "same_true_class_fraction": 0.009411764331161976
+    }
+  ],
+  "last_below_best_count": 16,
+  "conditions_seeds": [
+    {
+      "kind": "ce_only",
+      "seed": 21729,
+      "best": 0.7764705882352941,
+      "last": 0.7549019607843137
+    },
+    {
+      "kind": "shuffled_05",
+      "seed": 21729,
+      "best": 0.7980392156862746,
+      "last": 0.7803921568627451
+    },
+    {
+      "kind": "uniform_05",
+      "seed": 21729,
+      "best": 0.7705882352941177,
+      "last": 0.7490196078431373
+    },
+    {
+      "kind": "marginal_05",
+      "seed": 21729,
+      "best": 0.7843137254901961,
+      "last": 0.7764705882352941
+    },
+    {
+      "kind": "mixup",
+      "seed": 21729,
+      "best": 0.796078431372549,
+      "last": 0.7803921568627451
+    },
+    {
+      "kind": "mixup_uniform_05",
+      "seed": 21729,
+      "best": 0.7843137254901961,
+      "last": 0.7725490196078432
+    },
+    {
+      "kind": "ce_only",
+      "seed": 23407,
+      "best": 0.7823529411764706,
+      "last": 0.7784313725490196
+    },
+    {
+      "kind": "shuffled_05",
+      "seed": 23407,
+      "best": 0.788235294117647,
+      "last": 0.7627450980392156
+    },
+    {
+      "kind": "uniform_05",
+      "seed": 23407,
+      "best": 0.7705882352941177,
+      "last": 0.7490196078431373
+    },
+    {
+      "kind": "marginal_05",
+      "seed": 23407,
+      "best": 0.7666666666666667,
+      "last": 0.7411764705882353
+    },
+    {
+      "kind": "mixup",
+      "seed": 23407,
+      "best": 0.7784313725490196,
+      "last": 0.7725490196078432
+    },
+    {
+      "kind": "mixup_uniform_05",
+      "seed": 23407,
+      "best": 0.7627450980392156,
+      "last": 0.7627450980392156
+    },
+    {
+      "kind": "ce_only",
+      "seed": 22026,
+      "best": 0.7705882352941177,
+      "last": 0.7588235294117647
+    },
+    {
+      "kind": "shuffled_05",
+      "seed": 22026,
+      "best": 0.7784313725490196,
+      "last": 0.7686274509803922
+    },
+    {
+      "kind": "uniform_05",
+      "seed": 22026,
+      "best": 0.792156862745098,
+      "last": 0.7803921568627451
+    },
+    {
+      "kind": "marginal_05",
+      "seed": 22026,
+      "best": 0.7803921568627451,
+      "last": 0.7607843137254902
+    },
+    {
+      "kind": "mixup",
+      "seed": 22026,
+      "best": 0.7901960784313725,
+      "last": 0.7901960784313725
+    },
+    {
+      "kind": "mixup_uniform_05",
+      "seed": 22026,
+      "best": 0.7647058823529411,
+      "last": 0.7529411764705882
+    }
+  ],
+  "new_training_tasks": 12,
+  "historical_tasks": 6,
+  "future_access": false
+}

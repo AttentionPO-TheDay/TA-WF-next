@@ -1,0 +1,55 @@
+{
+  "task": "ce_trajectory_22026",
+  "seed": 22026,
+  "device": "cuda",
+  "steps_completed": 12800,
+  "best_step": 7520,
+  "swa_steps": [
+    9920,
+    10400,
+    10880,
+    11360,
+    11840,
+    12320,
+    12800
+  ],
+  "parameters_total": 1048838,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "ce_final": {
+    "source": {
+      "accuracy": 0.9934640522875817,
+      "macro_f1": 0.9932015106741902
+    },
+    "valid": {
+      "accuracy": 0.8901960784313725,
+      "macro_f1": 0.8876984126984127
+    }
+  },
+  "swa": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8862745098039215,
+      "macro_f1": 0.8825050222109044
+    }
+  },
+  "fixed_view_diagnostic": {
+    "ce_final": {
+      "clean_accuracy": 0.8901960784313725,
+      "masked_accuracy": 0.8764705882352941,
+      "prediction_agreement": 0.9823529411764705
+    },
+    "swa": {
+      "clean_accuracy": 0.8862745098039215,
+      "masked_accuracy": 0.8705882352941177,
+      "prediction_agreement": 0.9784313725490196
+    }
+  },
+  "elapsed_seconds": 235.59053037222475
+}

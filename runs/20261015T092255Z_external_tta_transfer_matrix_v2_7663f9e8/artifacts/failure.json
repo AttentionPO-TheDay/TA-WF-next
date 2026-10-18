@@ -1,0 +1,5 @@
+{
+  "type": "ValueError",
+  "message": "too many values to unpack (expected 2)",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/rbf/TA-WF-next/runs/20261015T092255Z_external_tta_transfer_matrix_v2_7663f9e8/runner.py\", line 165, in <module>\n    try: main()\n         ^^^^^^\n  File \"/home/rbf/TA-WF-next/runs/20261015T092255Z_external_tta_transfer_matrix_v2_7663f9e8/runner.py\", line 153, in main\n    cost=adapt(work,source,target['reference'],condition,seed)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/rbf/TA-WF-next/runs/20261015T092255Z_external_tta_transfer_matrix_v2_7663f9e8/runner.py\", line 118, in adapt\n    try: pb,pi=next(pi)\n         ^^^^^\nValueError: too many values to unpack (expected 2)\n"
+}

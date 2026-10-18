@@ -30,7 +30,9 @@ datasets/
 *.pcapng
 
 # Keep plans, configs, source scripts, reports and compact JSON summaries.
-# Generated tables and per-sample evidence remain on disk, outside Git.
+# Large generated tables and per-sample evidence remain on disk, outside Git.
+# Selected compact evidence is explicitly tracked; see docs/EVIDENCE_ARCHIVE.md
+# and docs/evidence_manifest.json. Keep the broad exclusions for new payloads.
 runs/*/checkpoints/
 runs/*/logs/
 # Runtime output may use ``lgs`` plus a ``logs`` compatibility symlink.

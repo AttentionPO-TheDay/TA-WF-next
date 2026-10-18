@@ -1,0 +1,167 @@
+{
+  "passed": true,
+  "freeze_hashes_verified": 48,
+  "metric_groups_verified": 60,
+  "shared_initialization_indices_selection_checked": true,
+  "logit_prediction_and_checkpoint_metadata_checked": true,
+  "rows": [
+    {
+      "kind": "shallow_transformer",
+      "seed": 21729,
+      "source_best": 0.9713071895424836,
+      "best": 0.7764705882352941,
+      "last": 0.7549019607843137,
+      "best_step": 7520,
+      "elapsed_seconds": 358.3391040433198
+    },
+    {
+      "kind": "shallow_mlp",
+      "seed": 21729,
+      "source_best": 0.927124183006536,
+      "best": 0.7137254901960784,
+      "last": 0.6980392156862745,
+      "best_step": 6560,
+      "elapsed_seconds": 308.29252769518644
+    },
+    {
+      "kind": "progressive_transformer",
+      "seed": 21729,
+      "source_best": 0.9922222222222222,
+      "best": 0.8764705882352941,
+      "last": 0.8666666666666667,
+      "best_step": 7040,
+      "elapsed_seconds": 359.99771173950285
+    },
+    {
+      "kind": "progressive_mlp",
+      "seed": 21729,
+      "source_best": 1.0,
+      "best": 0.8431372549019608,
+      "last": 0.8313725490196079,
+      "best_step": 12320,
+      "elapsed_seconds": 335.46423224173486
+    },
+    {
+      "kind": "rf_matched",
+      "seed": 21729,
+      "source_best": 0.9903921568627451,
+      "best": 0.9137254901960784,
+      "last": 0.9058823529411765,
+      "best_step": 7520,
+      "elapsed_seconds": 353.9012337755412
+    },
+    {
+      "kind": "shallow_transformer",
+      "seed": 23407,
+      "source_best": 0.9615686274509804,
+      "best": 0.7823529411764706,
+      "last": 0.7784313725490196,
+      "best_step": 7520,
+      "elapsed_seconds": 355.57121537066996
+    },
+    {
+      "kind": "shallow_mlp",
+      "seed": 23407,
+      "source_best": 0.9794117647058823,
+      "best": 0.7176470588235294,
+      "last": 0.707843137254902,
+      "best_step": 10400,
+      "elapsed_seconds": 317.95579085033387
+    },
+    {
+      "kind": "progressive_transformer",
+      "seed": 23407,
+      "source_best": 0.9999346405228758,
+      "best": 0.8568627450980392,
+      "last": 0.8568627450980392,
+      "best_step": 12800,
+      "elapsed_seconds": 374.69754557684064
+    },
+    {
+      "kind": "progressive_mlp",
+      "seed": 23407,
+      "source_best": 1.0,
+      "best": 0.8450980392156863,
+      "last": 0.8392156862745098,
+      "best_step": 12320,
+      "elapsed_seconds": 333.42210850771517
+    },
+    {
+      "kind": "rf_matched",
+      "seed": 23407,
+      "source_best": 0.9914379084967321,
+      "best": 0.9176470588235294,
+      "last": 0.9098039215686274,
+      "best_step": 8000,
+      "elapsed_seconds": 336.0337704876438
+    },
+    {
+      "kind": "shallow_transformer",
+      "seed": 22026,
+      "source_best": 0.9903267973856209,
+      "best": 0.7705882352941177,
+      "last": 0.7588235294117647,
+      "best_step": 11840,
+      "elapsed_seconds": 343.75509987026453
+    },
+    {
+      "kind": "shallow_mlp",
+      "seed": 22026,
+      "source_best": 0.9859477124183007,
+      "best": 0.7098039215686275,
+      "last": 0.6941176470588235,
+      "best_step": 10400,
+      "elapsed_seconds": 304.97795100696385
+    },
+    {
+      "kind": "progressive_transformer",
+      "seed": 22026,
+      "source_best": 0.9967320261437909,
+      "best": 0.8627450980392157,
+      "last": 0.8627450980392157,
+      "best_step": 7520,
+      "elapsed_seconds": 382.78328452818096
+    },
+    {
+      "kind": "progressive_mlp",
+      "seed": 22026,
+      "source_best": 1.0,
+      "best": 0.8509803921568627,
+      "last": 0.8470588235294118,
+      "best_step": 10880,
+      "elapsed_seconds": 374.980314636603
+    },
+    {
+      "kind": "rf_matched",
+      "seed": 22026,
+      "source_best": 0.9982352941176471,
+      "best": 0.9196078431372549,
+      "last": 0.9196078431372549,
+      "best_step": 12800,
+      "elapsed_seconds": 348.7540994733572
+    }
+  ],
+  "last_below_best_count": 12,
+  "error_overlap_descriptive": {
+    "shallow_transformer": {
+      "common_wrong": 53,
+      "rf_all3_correct_among_common_wrong": 29
+    },
+    "progressive_transformer": {
+      "common_wrong": 23,
+      "rf_all3_correct_among_common_wrong": 7
+    },
+    "progressive_mlp": {
+      "common_wrong": 48,
+      "rf_all3_correct_among_common_wrong": 21
+    },
+    "rf_matched": {
+      "common_wrong": 26,
+      "rf_all3_correct_among_common_wrong": 0
+    }
+  },
+  "cross_head_architecture_gate": true,
+  "own_model_accuracy_target_met": false,
+  "official_rf_reference_accuracy_target_met": true,
+  "future_access": false
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "condition": "baseline_1729",
+    "accuracy": 0.24509803921568626,
+    "macro_f1": 0.20776495869940312,
+    "best_epoch": 13,
+    "seconds": 2.576899901032448,
+    "initial_hash": "b07fab4fb01bf8f2595ab13d14713968b0e60aa4a54b0ed6c69a1e429e9447d3",
+    "inference_parameters": 108326
+  },
+  {
+    "condition": "window_aux_1729",
+    "accuracy": 0.24509803921568626,
+    "macro_f1": 0.21016435696535768,
+    "best_epoch": 13,
+    "seconds": 3.3480536956340075,
+    "initial_hash": "b07fab4fb01bf8f2595ab13d14713968b0e60aa4a54b0ed6c69a1e429e9447d3",
+    "inference_parameters": 108326
+  },
+  {
+    "condition": "run_aux_1729",
+    "accuracy": 0.24705882352941178,
+    "macro_f1": 0.20944259822167774,
+    "best_epoch": 13,
+    "seconds": 3.17606318090111,
+    "initial_hash": "b07fab4fb01bf8f2595ab13d14713968b0e60aa4a54b0ed6c69a1e429e9447d3",
+    "inference_parameters": 108326
+  },
+  {
+    "condition": "baseline_3407",
+    "accuracy": 0.2372549019607843,
+    "macro_f1": 0.21689406269321618,
+    "best_epoch": 15,
+    "seconds": 2.3623840622603893,
+    "initial_hash": "31fa44958df1daa2ff6ec7c73c699dba4764e0aa802cb9cd54c891b1d31d7e17",
+    "inference_parameters": 108326
+  },
+  {
+    "condition": "window_aux_3407",
+    "accuracy": 0.24509803921568626,
+    "macro_f1": 0.22616025236221923,
+    "best_epoch": 15,
+    "seconds": 3.3834380321204662,
+    "initial_hash": "31fa44958df1daa2ff6ec7c73c699dba4764e0aa802cb9cd54c891b1d31d7e17",
+    "inference_parameters": 108326
+  },
+  {
+    "condition": "run_aux_3407",
+    "accuracy": 0.2372549019607843,
+    "macro_f1": 0.21858322411045047,
+    "best_epoch": 15,
+    "seconds": 2.680951412767172,
+    "initial_hash": "31fa44958df1daa2ff6ec7c73c699dba4764e0aa802cb9cd54c891b1d31d7e17",
+    "inference_parameters": 108326
+  },
+  {
+    "condition": "baseline_2026",
+    "accuracy": 0.23137254901960785,
+    "macro_f1": 0.19914302058720196,
+    "best_epoch": 15,
+    "seconds": 2.495854550972581,
+    "initial_hash": "b0db71f16de083d26b2f7ad38813fb0d0e9fbaaed121418ba643c6a09faf54af",
+    "inference_parameters": 108326
+  },
+  {
+    "condition": "window_aux_2026",
+    "accuracy": 0.22549019607843138,
+    "macro_f1": 0.1923588572741732,
+    "best_epoch": 15,
+    "seconds": 3.3016270883381367,
+    "initial_hash": "b0db71f16de083d26b2f7ad38813fb0d0e9fbaaed121418ba643c6a09faf54af",
+    "inference_parameters": 108326
+  },
+  {
+    "condition": "run_aux_2026",
+    "accuracy": 0.22941176470588234,
+    "macro_f1": 0.19761299864195508,
+    "best_epoch": 15,
+    "seconds": 2.860454473644495,
+    "initial_hash": "b0db71f16de083d26b2f7ad38813fb0d0e9fbaaed121418ba643c6a09faf54af",
+    "inference_parameters": 108326
+  }
+]

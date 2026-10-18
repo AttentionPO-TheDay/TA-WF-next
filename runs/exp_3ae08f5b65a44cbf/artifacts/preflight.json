@@ -1,0 +1,246 @@
+{
+  "errors": [],
+  "frozen_hashes": {
+    "/home/rbf/TA-WF-next/runs/exp_376fca9354214097/SUPPORT_SELECTION_PLAN.md": {
+      "actual": "89c3059fefc78fe47151e8a25e8107f64171542597d87af335539e401e3791dc",
+      "expected": "89c3059fefc78fe47151e8a25e8107f64171542597d87af335539e401e3791dc",
+      "match": true
+    },
+    "/home/rbf/TA-WF-next/runs/exp_376fca9354214097/artifacts/common_query_manifests.json": {
+      "actual": "161ebc6e71885258808a865c97c346abdc77fba3b823e595ba510e8159e531ed",
+      "expected": "161ebc6e71885258808a865c97c346abdc77fba3b823e595ba510e8159e531ed",
+      "match": true
+    },
+    "/home/rbf/TA-WF-next/runs/exp_376fca9354214097/artifacts/integrity_check.json": {
+      "actual": "87276c08c8888844841cb32ad203cd35f3c2c44f4964967d60eab476c111c9ca",
+      "expected": "87276c08c8888844841cb32ad203cd35f3c2c44f4964967d60eab476c111c9ca",
+      "match": true
+    },
+    "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json": {
+      "actual": "0f322e9a418f0e96eff3e3d7ceca7237219f2ea6cb910c061fdd7f8025f3f142",
+      "expected": "0f322e9a418f0e96eff3e3d7ceca7237219f2ea6cb910c061fdd7f8025f3f142",
+      "match": true
+    },
+    "/home/rbf/TA-WF-next/runs/exp_9121b664a1854097/checkpoints/df_best.pt": {
+      "actual": "1bf851278365d0cb716d0ab2d59d6ef43f5b715d50b2a282418151836c9133ae",
+      "expected": "1bf851278365d0cb716d0ab2d59d6ef43f5b715d50b2a282418151836c9133ae",
+      "match": true
+    },
+    "/home/rbf/TA-WF-next/runs/exp_9121b664a1854097/checkpoints/varcnn_direction_best.pt": {
+      "actual": "fc3ade7932cabde922ed8c4e25a97826e067c2fac612b4d689fe1704cea1ff83",
+      "expected": "fc3ade7932cabde922ed8c4e25a97826e067c2fac612b4d689fe1704cea1ff83",
+      "match": true
+    },
+    "/home/rbf/TA-WF-next/runs/exp_b471517a3e6f41e7/artifacts/data_isolation_audit.json": {
+      "actual": "6f1da408573f70cdf5ed64b80c9ce7b83ed56691a88208cb86a607403b3a17d6",
+      "expected": "6f1da408573f70cdf5ed64b80c9ce7b83ed56691a88208cb86a607403b3a17d6",
+      "match": true
+    },
+    "/home/rbf/TA-WF-next/runs/exp_b471517a3e6f41e7/artifacts/support_manifests.json": {
+      "actual": "cbf37c99af375c576e882e049ffb4a37946ea631099d6b15f1ba9458782725ca",
+      "expected": "cbf37c99af375c576e882e049ffb4a37946ea631099d6b15f1ba9458782725ca",
+      "match": true
+    },
+    "/mnt/data2/ren/datasets/TemporalDrift/day14.npz": {
+      "actual": "eaa52ab83aea590ebc336cac1e8c2c6df8ea37ecc5ea26d5686e951b18460333",
+      "expected": "eaa52ab83aea590ebc336cac1e8c2c6df8ea37ecc5ea26d5686e951b18460333",
+      "match": true
+    },
+    "/mnt/data2/ren/datasets/TemporalDrift/day270.npz": {
+      "actual": "35e965b9eed0239ca9b4959228defb85626235c88ef77b9b83c842a32bab9488",
+      "expected": "35e965b9eed0239ca9b4959228defb85626235c88ef77b9b83c842a32bab9488",
+      "match": true
+    },
+    "/mnt/data2/ren/datasets/TemporalDrift/day90.npz": {
+      "actual": "eaa25c23657f22509ab3ac9018a63a12736fab007db45cfa2ea05cbb6c0b25a6",
+      "expected": "eaa25c23657f22509ab3ac9018a63a12736fab007db45cfa2ea05cbb6c0b25a6",
+      "match": true
+    },
+    "/mnt/data2/ren/datasets/TemporalDrift/train.npz": {
+      "actual": "2994271abc43bc3e3513924367da475e0a724b2cdfce9212968f6dc05763c882",
+      "expected": "2994271abc43bc3e3513924367da475e0a724b2cdfce9212968f6dc05763c882",
+      "match": true
+    },
+    "/mnt/data2/ren/datasets/TemporalDrift/valid.npz": {
+      "actual": "e0f3ea5b170ecd9476c70dbc24c712266f014727b43fb8a377a546eed5c7ab62",
+      "expected": "e0f3ea5b170ecd9476c70dbc24c712266f014727b43fb8a377a546eed5c7ab62",
+      "match": true
+    }
+  },
+  "fully_parsed": {
+    "common_query_cells": [
+      {
+        "date": "day14",
+        "query_count": 21583,
+        "query_sha256": "b4591be27efc1a49342e2bc823a53b068e286fa90c803ea64e923317e481920f",
+        "support_seed": 1729
+      },
+      {
+        "date": "day14",
+        "query_count": 21583,
+        "query_sha256": "8801a5894bfa8d0c4a61d8147f4be11556762c811ba1ad6955ed286d8aebf09c",
+        "support_seed": 6238
+      },
+      {
+        "date": "day14",
+        "query_count": 21583,
+        "query_sha256": "0cd32f01daae2e3477120afdfd3df361bbccb8edba190c113e2eec4b07593b76",
+        "support_seed": 20260916
+      },
+      {
+        "date": "day90",
+        "query_count": 27579,
+        "query_sha256": "f0432694e9e28047d29683aef2d11a42b7be06a61a9ef21e50605b048831ea6d",
+        "support_seed": 1729
+      },
+      {
+        "date": "day90",
+        "query_count": 27579,
+        "query_sha256": "8fdf1d24c28750e9e8d7ffe6d82a18e6f22ca254737c6bbcb46521e6b6a2ff69",
+        "support_seed": 6238
+      },
+      {
+        "date": "day90",
+        "query_count": 27579,
+        "query_sha256": "f0e9a656206a9313838fb35a3361024eeb18b35bcb459269789069b789d85f2b",
+        "support_seed": 20260916
+      },
+      {
+        "date": "day270",
+        "query_count": 18915,
+        "query_sha256": "933a6ddb66dbd74d0630dd7f249233912f3d556eb77e53c6088f86f187f6421a",
+        "support_seed": 1729
+      },
+      {
+        "date": "day270",
+        "query_count": 18915,
+        "query_sha256": "be7dcc760327f92a0bf07cbc31d06448e09fd9521d28660488ee9cac5da5990d",
+        "support_seed": 6238
+      },
+      {
+        "date": "day270",
+        "query_count": 18915,
+        "query_sha256": "f7df3a2ff9e66ccf0a0f35ca0caa8d718e8fe7ace1716a47bf0faddfdf58286a",
+        "support_seed": 20260916
+      }
+    ],
+    "old_evaluations": 36,
+    "old_summary_rows": 3,
+    "selection_diagnostics_rows": 108,
+    "split_roles": {
+      "reference": 204,
+      "source_holdout": 2040,
+      "supervised_train": 16309
+    },
+    "support_manifest_bytes": 20719684
+  },
+  "new_training_budget": 4,
+  "new_training_started": false,
+  "passed": true,
+  "training_configs": {
+    "df_seed1013": {
+      "config": {
+        "architecture": "df",
+        "batch_size": 64,
+        "classes": 102,
+        "criterion": "CrossEntropyLoss",
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "epochs": 30,
+        "input": "float32 sign(X[:5000]), shape [B,1,5000]",
+        "learning_rate": 0.001,
+        "model_definition": "/home/rbf/TA-WF-next/src/ta_wf_next/models/df.py",
+        "model_definition_sha256": "869f912d04df8e03bf4ba791ba9ccf95a70fd14a2d1fe51c1d1afce58207bf99",
+        "optimizer": "AdamW",
+        "selection": "maximum official source-validation macro_f1; earliest exact tie",
+        "split_path": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json",
+        "split_sha256": "0f322e9a418f0e96eff3e3d7ceca7237219f2ea6cb910c061fdd7f8025f3f142",
+        "train_npz_sha256": "2994271abc43bc3e3513924367da475e0a724b2cdfce9212968f6dc05763c882",
+        "train_role": "v3 supervised_train",
+        "training_seed": 1013,
+        "valid_npz_sha256": "e0f3ea5b170ecd9476c70dbc24c712266f014727b43fb8a377a546eed5c7ab62",
+        "validation_batch_size": 128,
+        "weight_decay": 0.0001
+      },
+      "sha256": "27420dd8da5609d76751308a4de02917110934829158f944135dda52aa2f93af"
+    },
+    "df_seed2024": {
+      "config": {
+        "architecture": "df",
+        "batch_size": 64,
+        "classes": 102,
+        "criterion": "CrossEntropyLoss",
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "epochs": 30,
+        "input": "float32 sign(X[:5000]), shape [B,1,5000]",
+        "learning_rate": 0.001,
+        "model_definition": "/home/rbf/TA-WF-next/src/ta_wf_next/models/df.py",
+        "model_definition_sha256": "869f912d04df8e03bf4ba791ba9ccf95a70fd14a2d1fe51c1d1afce58207bf99",
+        "optimizer": "AdamW",
+        "selection": "maximum official source-validation macro_f1; earliest exact tie",
+        "split_path": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json",
+        "split_sha256": "0f322e9a418f0e96eff3e3d7ceca7237219f2ea6cb910c061fdd7f8025f3f142",
+        "train_npz_sha256": "2994271abc43bc3e3513924367da475e0a724b2cdfce9212968f6dc05763c882",
+        "train_role": "v3 supervised_train",
+        "training_seed": 2024,
+        "valid_npz_sha256": "e0f3ea5b170ecd9476c70dbc24c712266f014727b43fb8a377a546eed5c7ab62",
+        "validation_batch_size": 128,
+        "weight_decay": 0.0001
+      },
+      "sha256": "4ef515ac3f863e78ddb588e2ab5fa8d422bbe8f10381a53032863c7e54b31137"
+    },
+    "varcnn_direction_seed1013": {
+      "config": {
+        "architecture": "varcnn_direction",
+        "batch_size": 64,
+        "classes": 102,
+        "criterion": "CrossEntropyLoss",
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "epochs": 30,
+        "input": "float32 sign(X[:5000]), shape [B,1,5000]",
+        "learning_rate": 0.001,
+        "model_definition": "/home/rbf/TA-WF-next/src/ta_wf_next/models/varcnn.py",
+        "model_definition_sha256": "3468e4be163eba14e123b349dde66a652a9ef9df6b6b0c52f00a20d1f68d944c",
+        "optimizer": "AdamW",
+        "selection": "maximum official source-validation macro_f1; earliest exact tie",
+        "split_path": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json",
+        "split_sha256": "0f322e9a418f0e96eff3e3d7ceca7237219f2ea6cb910c061fdd7f8025f3f142",
+        "train_npz_sha256": "2994271abc43bc3e3513924367da475e0a724b2cdfce9212968f6dc05763c882",
+        "train_role": "v3 supervised_train",
+        "training_seed": 1013,
+        "valid_npz_sha256": "e0f3ea5b170ecd9476c70dbc24c712266f014727b43fb8a377a546eed5c7ab62",
+        "validation_batch_size": 128,
+        "weight_decay": 0.0001
+      },
+      "sha256": "f1475c3c49f512f924bc4c583fbd5c6038f3bb9db3f5f14caa86262e8f5daccf"
+    },
+    "varcnn_direction_seed2024": {
+      "config": {
+        "architecture": "varcnn_direction",
+        "batch_size": 64,
+        "classes": 102,
+        "criterion": "CrossEntropyLoss",
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "epochs": 30,
+        "input": "float32 sign(X[:5000]), shape [B,1,5000]",
+        "learning_rate": 0.001,
+        "model_definition": "/home/rbf/TA-WF-next/src/ta_wf_next/models/varcnn.py",
+        "model_definition_sha256": "3468e4be163eba14e123b349dde66a652a9ef9df6b6b0c52f00a20d1f68d944c",
+        "optimizer": "AdamW",
+        "selection": "maximum official source-validation macro_f1; earliest exact tie",
+        "split_path": "/home/rbf/TA-WF-next/runs/exp_6238dacf9aa142cc/artifacts/splits_v3.json",
+        "split_sha256": "0f322e9a418f0e96eff3e3d7ceca7237219f2ea6cb910c061fdd7f8025f3f142",
+        "train_npz_sha256": "2994271abc43bc3e3513924367da475e0a724b2cdfce9212968f6dc05763c882",
+        "train_role": "v3 supervised_train",
+        "training_seed": 2024,
+        "valid_npz_sha256": "e0f3ea5b170ecd9476c70dbc24c712266f014727b43fb8a377a546eed5c7ab62",
+        "validation_batch_size": 128,
+        "weight_decay": 0.0001
+      },
+      "sha256": "ce9a38d497b23ac167354ba36812b46810e04b1f040d1ab1b3616a8d819eb8cc"
+    }
+  }
+}

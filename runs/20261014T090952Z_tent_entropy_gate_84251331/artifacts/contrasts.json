@@ -1,0 +1,417 @@
+{
+  "tent_fixedstats_ln": {
+    "cells": [
+      {
+        "seed": 21729,
+        "role": "day14",
+        "macro_f1_delta_pp": 0.5599421618925127,
+        "accuracy_delta_pp": 0.49585244914036597,
+        "negative_adaptation_rate_delta_pp": -0.9457789241764738,
+        "recovery_rate_delta_pp": -2.323232323232323
+      },
+      {
+        "seed": 21729,
+        "role": "day90",
+        "macro_f1_delta_pp": 0.13884355076320132,
+        "accuracy_delta_pp": 0.25385312783319236,
+        "negative_adaptation_rate_delta_pp": -0.8495450661036547,
+        "recovery_rate_delta_pp": -1.2887268940380114
+      },
+      {
+        "seed": 21729,
+        "role": "day270",
+        "macro_f1_delta_pp": 0.5628791431356861,
+        "accuracy_delta_pp": 0.44947385119772365,
+        "negative_adaptation_rate_delta_pp": -0.7834507042253518,
+        "recovery_rate_delta_pp": -0.05297311614355649
+      },
+      {
+        "seed": 23407,
+        "role": "day14",
+        "macro_f1_delta_pp": 0.498279834053339,
+        "accuracy_delta_pp": 0.5051207192177554,
+        "negative_adaptation_rate_delta_pp": -0.4118087495988878,
+        "recovery_rate_delta_pp": 1.1107254425546693
+      },
+      {
+        "seed": 23407,
+        "role": "day90",
+        "macro_f1_delta_pp": 0.06823816978210884,
+        "accuracy_delta_pp": 0.15593834995466516,
+        "negative_adaptation_rate_delta_pp": -1.4642330570949214,
+        "recovery_rate_delta_pp": -3.0989122185681754
+      },
+      {
+        "seed": 23407,
+        "role": "day270",
+        "macro_f1_delta_pp": 0.20610624379611142,
+        "accuracy_delta_pp": 0.44947385119771255,
+        "negative_adaptation_rate_delta_pp": -1.9869304132815255,
+        "recovery_rate_delta_pp": -1.8452616317384998
+      },
+      {
+        "seed": 22026,
+        "role": "day14",
+        "macro_f1_delta_pp": 0.3729641817763918,
+        "accuracy_delta_pp": 0.2085360767412725,
+        "negative_adaptation_rate_delta_pp": -1.0598805616828966,
+        "recovery_rate_delta_pp": -5.080213903743314
+      },
+      {
+        "seed": 22026,
+        "role": "day90",
+        "macro_f1_delta_pp": -0.05956601375248782,
+        "accuracy_delta_pp": 0.1631912964641824,
+        "negative_adaptation_rate_delta_pp": -1.5508240352134304,
+        "recovery_rate_delta_pp": -3.2101530421799183
+      },
+      {
+        "seed": 22026,
+        "role": "day270",
+        "macro_f1_delta_pp": -0.10132451628945827,
+        "accuracy_delta_pp": -0.18507746814023784,
+        "negative_adaptation_rate_delta_pp": -0.2912621359223301,
+        "recovery_rate_delta_pp": -0.8969792903310903
+      }
+    ],
+    "mean_delta_pp": {
+      "macro_f1": 0.24959586168415612,
+      "accuracy": 0.27737358373407023,
+      "negative_adaptation_rate": -1.038190405255497,
+      "recovery_rate": -1.8539696641578023
+    },
+    "positive_macro_f1_cells": 7
+  },
+  "tent_bn": {
+    "cells": [
+      {
+        "seed": 21729,
+        "role": "day14",
+        "macro_f1_delta_pp": 0.2941507740886862,
+        "accuracy_delta_pp": 0.28268223736039877,
+        "negative_adaptation_rate_delta_pp": -0.47288946208823707,
+        "recovery_rate_delta_pp": -0.9090909090909094
+      },
+      {
+        "seed": 21729,
+        "role": "day90",
+        "macro_f1_delta_pp": 0.30083386508430454,
+        "accuracy_delta_pp": 0.36264732547598433,
+        "negative_adaptation_rate_delta_pp": -0.5680390086965269,
+        "recovery_rate_delta_pp": -0.16922676386357804
+      },
+      {
+        "seed": 21729,
+        "role": "day270",
+        "macro_f1_delta_pp": 0.4660109432508719,
+        "accuracy_delta_pp": 0.5129289831315109,
+        "negative_adaptation_rate_delta_pp": -1.153169014084507,
+        "recovery_rate_delta_pp": -0.4502714872202357
+      },
+      {
+        "seed": 23407,
+        "role": "day14",
+        "macro_f1_delta_pp": 0.3606520297607885,
+        "accuracy_delta_pp": 0.31048704759256696,
+        "negative_adaptation_rate_delta_pp": 0.037437159054444155,
+        "recovery_rate_delta_pp": 2.568552585907671
+      },
+      {
+        "seed": 23407,
+        "role": "day90",
+        "macro_f1_delta_pp": 0.4135998718599265,
+        "accuracy_delta_pp": 0.5077062556663625,
+        "negative_adaptation_rate_delta_pp": -0.9253139458030406,
+        "recovery_rate_delta_pp": -0.5312420946116864
+      },
+      {
+        "seed": 23407,
+        "role": "day270",
+        "macro_f1_delta_pp": 1.2671634350266858,
+        "accuracy_delta_pp": 1.6868489239067141,
+        "negative_adaptation_rate_delta_pp": -3.78841398799011,
+        "recovery_rate_delta_pp": -1.449848424937393
+      },
+      {
+        "seed": 22026,
+        "role": "day14",
+        "macro_f1_delta_pp": -0.3244042151048454,
+        "accuracy_delta_pp": -0.28268223736039877,
+        "negative_adaptation_rate_delta_pp": 0.2044439662129447,
+        "recovery_rate_delta_pp": -0.7687165775401072
+      },
+      {
+        "seed": 22026,
+        "role": "day90",
+        "macro_f1_delta_pp": 0.41097207940917757,
+        "accuracy_delta_pp": 0.60199456029012,
+        "negative_adaptation_rate_delta_pp": -0.6756065103900092,
+        "recovery_rate_delta_pp": 0.42304342416324414
+      },
+      {
+        "seed": 22026,
+        "role": "day270",
+        "macro_f1_delta_pp": 0.8254116776896137,
+        "accuracy_delta_pp": 1.1369044471471579,
+        "negative_adaptation_rate_delta_pp": -0.7060900264783759,
+        "recovery_rate_delta_pp": 1.780767708745548
+      }
+    ],
+    "mean_delta_pp": {
+      "macro_f1": 0.44604338456280107,
+      "accuracy": 0.5688352825789352,
+      "negative_adaptation_rate": -0.8941823144737131,
+      "recovery_rate": 0.054885273505839334
+    },
+    "positive_macro_f1_cells": 8
+  },
+  "bn_batchstats_no_update": {
+    "cells": [
+      {
+        "seed": 21729,
+        "role": "day14",
+        "macro_f1_delta_pp": 0.4192227702375595,
+        "accuracy_delta_pp": 0.449511098753419,
+        "negative_adaptation_rate_delta_pp": 0.41915202321457357,
+        "recovery_rate_delta_pp": 5.892255892255893
+      },
+      {
+        "seed": 21729,
+        "role": "day90",
+        "macro_f1_delta_pp": 0.370459664806555,
+        "accuracy_delta_pp": 0.4569356300997307,
+        "negative_adaptation_rate_delta_pp": 0.7037651435178202,
+        "recovery_rate_delta_pp": 3.4626399375162715
+      },
+      {
+        "seed": 21729,
+        "role": "day270",
+        "macro_f1_delta_pp": 3.1967306058543477,
+        "accuracy_delta_pp": 3.7861562053831177,
+        "negative_adaptation_rate_delta_pp": -2.9049295774647885,
+        "recovery_rate_delta_pp": 5.111905707853265
+      },
+      {
+        "seed": 23407,
+        "role": "day14",
+        "macro_f1_delta_pp": -0.06110454931564924,
+        "accuracy_delta_pp": -0.08804856573521036,
+        "negative_adaptation_rate_delta_pp": 1.6204941704995188,
+        "recovery_rate_delta_pp": 9.857688302672681
+      },
+      {
+        "seed": 23407,
+        "role": "day90",
+        "macro_f1_delta_pp": 0.9950939580287588,
+        "accuracy_delta_pp": 1.1169537624659998,
+        "negative_adaptation_rate_delta_pp": 0.13727184910264853,
+        "recovery_rate_delta_pp": 4.237288135593221
+      },
+      {
+        "seed": 23407,
+        "role": "day270",
+        "macro_f1_delta_pp": 2.8725487507949343,
+        "accuracy_delta_pp": 3.35783406482999,
+        "negative_adaptation_rate_delta_pp": -3.285058283292123,
+        "recovery_rate_delta_pp": 3.4664557796230393
+      },
+      {
+        "seed": 22026,
+        "role": "day14",
+        "macro_f1_delta_pp": -0.2297217569792842,
+        "accuracy_delta_pp": -0.12975578108346264,
+        "negative_adaptation_rate_delta_pp": 1.124441814171195,
+        "recovery_rate_delta_pp": 6.0494652406417115
+      },
+      {
+        "seed": 22026,
+        "role": "day90",
+        "macro_f1_delta_pp": 1.1265209670594856,
+        "accuracy_delta_pp": 1.2910244786944691,
+        "negative_adaptation_rate_delta_pp": 0.015354693417955062,
+        "recovery_rate_delta_pp": 4.4668408610177925
+      },
+      {
+        "seed": 22026,
+        "role": "day270",
+        "macro_f1_delta_pp": 2.368607105412779,
+        "accuracy_delta_pp": 3.003542911532975,
+        "negative_adaptation_rate_delta_pp": -1.6769638128861433,
+        "recovery_rate_delta_pp": 4.986149584487536
+      }
+    ],
+    "mean_delta_pp": {
+      "macro_f1": 1.2287063906554987,
+      "accuracy": 1.4715726449934476,
+      "negative_adaptation_rate": -0.42738577552437157,
+      "recovery_rate": 5.281187715740156
+    },
+    "positive_macro_f1_cells": 7
+  },
+  "frozen": {
+    "cells": [
+      {
+        "seed": 21729,
+        "role": "day14",
+        "macro_f1_delta_pp": 0.3023008364040014,
+        "accuracy_delta_pp": 0.33829185782473514,
+        "negative_adaptation_rate_delta_pp": 1.4079208984899778,
+        "recovery_rate_delta_pp": 11.27946127946128
+      },
+      {
+        "seed": 21729,
+        "role": "day90",
+        "macro_f1_delta_pp": 0.26704949757072605,
+        "accuracy_delta_pp": 0.2284678150498709,
+        "negative_adaptation_rate_delta_pp": 3.187050721359272,
+        "recovery_rate_delta_pp": 9.073158031762562
+      },
+      {
+        "seed": 21729,
+        "role": "day270",
+        "macro_f1_delta_pp": 1.8592655817394443,
+        "accuracy_delta_pp": 2.136322775104438,
+        "negative_adaptation_rate_delta_pp": 3.494718309859155,
+        "recovery_rate_delta_pp": 10.607866507747318
+      },
+      {
+        "seed": 23407,
+        "role": "day14",
+        "macro_f1_delta_pp": -0.34377851736625553,
+        "accuracy_delta_pp": -0.36609666805690333,
+        "negative_adaptation_rate_delta_pp": 2.8452240881377686,
+        "recovery_rate_delta_pp": 15.723707046164526
+      },
+      {
+        "seed": 23407,
+        "role": "day90",
+        "macro_f1_delta_pp": 0.0789751520556381,
+        "accuracy_delta_pp": 0.2284678150498598,
+        "negative_adaptation_rate_delta_pp": 3.4216279424475062,
+        "recovery_rate_delta_pp": 9.309385277004807
+      },
+      {
+        "seed": 23407,
+        "role": "day270",
+        "macro_f1_delta_pp": 0.7649544241455031,
+        "accuracy_delta_pp": 1.2267992173866982,
+        "negative_adaptation_rate_delta_pp": 4.450724125750618,
+        "recovery_rate_delta_pp": 9.70080400685383
+      },
+      {
+        "seed": 22026,
+        "role": "day14",
+        "macro_f1_delta_pp": -0.2662592457994051,
+        "accuracy_delta_pp": -0.16219472635432552,
+        "negative_adaptation_rate_delta_pp": 2.2327433152203153,
+        "recovery_rate_delta_pp": 12.70053475935829
+      },
+      {
+        "seed": 22026,
+        "role": "day90",
+        "macro_f1_delta_pp": 0.5921410514240555,
+        "accuracy_delta_pp": 0.7543064369900265,
+        "negative_adaptation_rate_delta_pp": 3.029992834476405,
+        "recovery_rate_delta_pp": 9.953962921488117
+      },
+      {
+        "seed": 22026,
+        "role": "day270",
+        "macro_f1_delta_pp": 0.9156765202343431,
+        "accuracy_delta_pp": 1.327269842948553,
+        "negative_adaptation_rate_delta_pp": 4.97793468667255,
+        "recovery_rate_delta_pp": 10.750560612056457
+      }
+    ],
+    "mean_delta_pp": {
+      "macro_f1": 0.4633694778231167,
+      "accuracy": 0.634626040660328,
+      "negative_adaptation_rate": 3.2275485469348406,
+      "recovery_rate": 11.011048937988576
+    },
+    "positive_macro_f1_cells": 7
+  },
+  "no_pseudo_fixed": {
+    "cells": [
+      {
+        "seed": 21729,
+        "role": "day14",
+        "macro_f1_delta_pp": -0.34362747960547946,
+        "accuracy_delta_pp": -0.33829185782473514,
+        "negative_adaptation_rate_delta_pp": -1.031758826374335,
+        "recovery_rate_delta_pp": -8.922558922558922
+      },
+      {
+        "seed": 21729,
+        "role": "day90",
+        "macro_f1_delta_pp": -2.3663657899072654,
+        "accuracy_delta_pp": -2.0453309156844957,
+        "negative_adaptation_rate_delta_pp": -0.5680390086965269,
+        "recovery_rate_delta_pp": -8.812809164280138
+      },
+      {
+        "seed": 21729,
+        "role": "day270",
+        "macro_f1_delta_pp": -2.6315921621416383,
+        "accuracy_delta_pp": -2.284384749616619,
+        "negative_adaptation_rate_delta_pp": -1.2852112676056335,
+        "recovery_rate_delta_pp": -7.654615282744007
+      },
+      {
+        "seed": 23407,
+        "role": "day14",
+        "macro_f1_delta_pp": -0.29631165242838264,
+        "accuracy_delta_pp": -0.31048704759256696,
+        "negative_adaptation_rate_delta_pp": -0.02139266231682528,
+        "recovery_rate_delta_pp": -2.464422075668171
+      },
+      {
+        "seed": 23407,
+        "role": "day90",
+        "macro_f1_delta_pp": -3.093480847348118,
+        "accuracy_delta_pp": -2.270172257479597,
+        "negative_adaptation_rate_delta_pp": -0.6507702475977428,
+        "recovery_rate_delta_pp": -9.537060460409814
+      },
+      {
+        "seed": 23407,
+        "role": "day270",
+        "macro_f1_delta_pp": -3.6655932727439056,
+        "accuracy_delta_pp": -3.003542911532975,
+        "negative_adaptation_rate_delta_pp": -0.9007417873542922,
+        "recovery_rate_delta_pp": -8.830894951891393
+      },
+      {
+        "seed": 22026,
+        "role": "day14",
+        "macro_f1_delta_pp": -0.7263513441639557,
+        "accuracy_delta_pp": -0.5607303396821028,
+        "negative_adaptation_rate_delta_pp": -0.7316941948673803,
+        "recovery_rate_delta_pp": -8.589572192513367
+      },
+      {
+        "seed": 22026,
+        "role": "day90",
+        "macro_f1_delta_pp": -2.2631047471471932,
+        "accuracy_delta_pp": -1.4759746146872255,
+        "negative_adaptation_rate_delta_pp": -1.468932336984338,
+        "recovery_rate_delta_pp": -8.635062834390943
+      },
+      {
+        "seed": 22026,
+        "role": "day270",
+        "macro_f1_delta_pp": -4.26770259472653,
+        "accuracy_delta_pp": -3.278515149912753,
+        "negative_adaptation_rate_delta_pp": 0.03530450132391838,
+        "recovery_rate_delta_pp": -8.125577100646352
+      }
+    ],
+    "mean_delta_pp": {
+      "macro_f1": -2.183792210023608,
+      "accuracy": -1.7297144271125633,
+      "negative_adaptation_rate": -0.735915092274795,
+      "recovery_rate": -7.952508109455901
+    },
+    "positive_macro_f1_cells": 0
+  }
+}

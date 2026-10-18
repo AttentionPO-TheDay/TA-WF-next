@@ -1,0 +1,14 @@
+{
+  "runs/20260922T062732Z_cpu_token_typed_encoding_df081d9e/artifacts/source_inputs.npz": "c1ec73c9c1dc4f7e1f423f141da950b4d89e19e690063cf6e56fa8f040de9b02",
+  "runs/20260922T062732Z_cpu_token_typed_encoding_df081d9e/artifacts/valid_inputs.npz": "bda65a3203dd9a8e7dd96699903ee92d3b9561431f812b98d73953be3c640c55",
+  "runs/20260922T062732Z_cpu_token_typed_encoding_df081d9e/artifacts/predictions.npz": "58e37195a7fec0c35377173c97a91918f6f7ba4c5d88b874fc24fbb84c4fbad0",
+  "runs/20260922T062732Z_cpu_token_typed_encoding_df081d9e/artifacts/manifest.json": "c89804aa8475f5ea0e308f1c5b19c0a34f3fb71a2a83f998c450ff7ab203446c",
+  "runs/20260922T062732Z_cpu_token_typed_encoding_df081d9e/checkpoints/hybrid_1729.pt": "10d7be6f26ad49eac3c3c55728a5babcc084b021bdfe1e49af47cc12b142164b",
+  "runs/20260922T062732Z_cpu_token_typed_encoding_df081d9e/checkpoints/hybrid_3407.pt": "27fc85f292f9119bf6a616e8ae24da47fa183b8098a189eb04e6f8bde10afc2b",
+  "runs/20260922T062732Z_cpu_token_typed_encoding_df081d9e/checkpoints/hybrid_2026.pt": "83d7355055cd14dba269c0345a5d422c06615356a7313e4f0ae67f76a0abcae2",
+  "runs/20260922T062732Z_cpu_token_typed_encoding_df081d9e/train.py": "8aa02c3647140879bc341aba2098f73a8abedd375d4016d684c83b58d620837b",
+  "runs/20260922T064229Z_cpu_token_branch_diagnostic_aa17da3e/config.json": "a5f26ac3b853610c8eeb286c8451d0865e8f3abb8b927f926a0992195e378266",
+  "runs/20260922T064229Z_cpu_token_branch_diagnostic_aa17da3e/PLAN.md": "79ce5508219faa9dab2d5d3b4299a7a017545d97c54e1ebb09ba5e4271781c2f",
+  "runs/20260922T064229Z_cpu_token_branch_diagnostic_aa17da3e/diagnose.py": "18397a3919d21e3a2b989d458d3238f7f1c9e1e06553d448bfe31ad039e1bd95",
+  "runs/20260922T064229Z_cpu_token_branch_diagnostic_aa17da3e/verify.py": "2881086a3ca774d3547b2a6b33f7b6f7db27b54eada8d31ff5cece485536ab23"
+}

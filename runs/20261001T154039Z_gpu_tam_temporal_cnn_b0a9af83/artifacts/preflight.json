@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "baseline_reload_checks": 6,
+  "parameters": {
+    "total": 282678,
+    "trainable": 255398,
+    "generator_total": 3024,
+    "generator_trainable": 1472
+  },
+  "cnn_models": 3,
+  "source_backward_examples_per_model": 64,
+  "optimizer_updates": 0,
+  "aggregate_memory_estimate_bytes": 10364708256,
+  "gpu_total_bytes": 25250627584,
+  "frozen_historical_checkpoints": {
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/checkpoints/multiscale_d139_21729_best.pt": "01cb27075b8be25991ef23f9fcdf99da9b21ddc1f9d9950a2680778265e4a5f2",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/checkpoints/multiscale_d139_23407_best.pt": "4ff3ed9ae6421e948743e6b6a6ad06001e909010e89e713fd4dda03a67be870e",
+    "runs/20261001T124113Z_gpu_tam_multiscale_generator_101ab9e9/checkpoints/multiscale_d139_22026_best.pt": "71b19179dfb2c963353e496f0d3aaafe83ba1086076402253191558b4da7c169"
+  },
+  "future_access": false
+}

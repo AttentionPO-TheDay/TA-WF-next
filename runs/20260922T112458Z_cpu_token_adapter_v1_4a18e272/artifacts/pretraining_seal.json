@@ -1,0 +1,12 @@
+{
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/PLAN.md": "c7639325234e6de4508af42d747f8256315acc8cd9cb3e9fe7eea4c512cd0aa6",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/config.json": "21597ac8455082d8f7f8a5820011d55aeb97164369c908722b5893546c7a7a5d",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/train.py": "4c27310f8a743604f40dd6d7a4a96e194e5e1d0262110837b10bd0ffdcd8450c",
+  "runs/20260922T112458Z_cpu_token_adapter_v1_4a18e272/verify.py": "2e6e261011b16f74b6096763947d5d7175795de7f12809e0412d5f7dc50621d3",
+  "configs/datasets.json": "c3edbfeaf83553f63e6b5a12fa6e1dc5049346c1f8eb3b54bedf7760408b6b28",
+  "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+  "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/artifacts/source_tokens.npz": "b8dc7100225eaec663ed2566e5af6ef31cc809422a7a93c0c512b732529d5204",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/artifacts/valid_tokens.npz": "56b1722a19385b18c10031768cabb8465efffe1d551e5b13e9439560628e8265",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/artifacts/manifest.json": "c89804aa8475f5ea0e308f1c5b19c0a34f3fb71a2a83f998c450ff7ab203446c"
+}

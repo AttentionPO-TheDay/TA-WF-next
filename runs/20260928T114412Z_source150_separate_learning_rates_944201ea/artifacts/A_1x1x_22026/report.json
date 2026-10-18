@@ -1,0 +1,50 @@
+{
+  "condition": "A_1x1x",
+  "seed": 22026,
+  "status": "completed",
+  "historical_reuse": false,
+  "steps_completed": 12800,
+  "blocks_completed": 400,
+  "last": {
+    "source": {
+      "accuracy": 0.6272549019607843,
+      "macro_f1": 0.6189685448771917
+    },
+    "valid": {
+      "accuracy": 0.5392156862745098,
+      "macro_f1": 0.5266761016761017
+    }
+  },
+  "best_block": 340,
+  "initial_state_sha256": "c021496271a7cedfb2a35882eab7e35b514519b73573ef7d2016d7c048e98e50",
+  "shared_initial_sha256": "c021496271a7cedfb2a35882eab7e35b514519b73573ef7d2016d7c048e98e50",
+  "generator_initial_sha256": "067cfb200d2c2ae7f18264b1de84d27ebcf2d013d9eb6b96dccd1b63af258ba1",
+  "generator_changed": true,
+  "config_sha256": "526408e84bfda5ed0bb5a5f79da1f4ca48b1ad5b756b601da0ae1788b5200445",
+  "source_count": 15300,
+  "sample_visits_min": 53,
+  "sample_visits_max": 54,
+  "samples_presented": 819200,
+  "elapsed_seconds": 5666.5545621411875,
+  "parameters": {
+    "total": 119578,
+    "trainable": 119578,
+    "generator_total": 6064,
+    "generator_trainable": 6064,
+    "classifier_total": 113514,
+    "classifier_trainable": 113514
+  },
+  "condition_multipliers": {
+    "id": "A_1x1x",
+    "classifier_lr_multiplier": 1.0,
+    "generator_lr_multiplier": 1.0
+  },
+  "source": {
+    "accuracy": 0.6169281045751634,
+    "macro_f1": 0.6094647491564464
+  },
+  "valid": {
+    "accuracy": 0.5509803921568628,
+    "macro_f1": 0.5390356375650492
+  }
+}

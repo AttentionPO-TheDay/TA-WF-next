@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "prediction_sets_checked": 6,
+  "resume_verified": true,
+  "lr_verified": true,
+  "selection_verified": true,
+  "artifact_sha256": {
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/checkpoints/C_80_cls_22026_best.pt": "e5a32b6a72cf0a4ee31f61b4872d7e600a8371cbec7aaa88b9a298c70667c7ae",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/predictions.npz": "4351d569155eb4d9603994943a8c7a9698edc5aadf0643d45c0929266843419b",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/checkpoints/C_80_cls_22026_latest.pt": "d011e9d5d1a620994982a74c698c418e3f56680ff475a4b65648754eb6f14fc1",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/predictions_last.npz": "429dd2b18a4e9c1c0b929c6eb2acefa22111b06f2f077e1d1a6f0c5c3f1d967f",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/report.json": "d7d65838dc8046a29d2d41d7a9dcfc2ffb7e7cd959fdd280dd9ea3efe999eefc",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/history.json": "82cef73551fd76c8ef5c6c6973a06a3525b849053847555c409b08541b8be550",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/resume_audit.json": "a15263b95f64df53ffe15067b7316ce9b2e1c7953f9c7e544d997388e4038616",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/index_stream.pt": "af8289cb9ab1c12fdf795f357b7ea20d182272b2ec699416ded88c97bff51d2a",
+    "runs/20260927T011115Z_source80_extended_training_b7d4d924/artifacts/C_80_cls_22026/sample_visits.pt": "c215743c67680ae9790c6db5841ed7b9fa7cb95c1ab077aaaef7d70bdb59a77b"
+  },
+  "errors": []
+}

@@ -1,0 +1,20 @@
+{
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/config.json": "d48170bf29527c727b07b6b2350683a093a46b864d69156af7abda48df850512",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/PLAN.md": "295f9fabdb107cb97ac87217ff16b9fd571e495aef8247045f3db20bb4d18bf4",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/SOURCES.md": "550ecddeed826fe53ca17da47c3110530ae185a703bf8740017c2f8c5a846ded",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/model.py": "caac68b6cbfd499c80e90458d77ba121b8159b9abf043c7521071fcf53f2fd1a",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/worker.py": "26f61c749995a420a297578940029ae01891be107beda57e614a01ab1cc9632c",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/supervisor.py": "86f4698af49be82cf02652a54814976948af2095fc0b578c8a374288985b5182",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/preflight.py": "e3913f7c7e4b0a9a124a7cbeb416481abfaa94cb466cc4ec7b3c5ca143fedefa",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/wide_bn_base.py": "b6f59add5040dbb9d80f2469cac46412b37c87a2dbd66c0df01fc00e24b67212",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/framework_base.py": "e530ca3f369cb729f6f9b802bff03fb18ffcec90ebb5ad58db04a4b077a1a148",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/base_model.py": "2997108ffa67b71556c54a4df2fbba0b5861926820c6de44e08be9b8d55de289",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/candidate_base.py": "7b9687ad96e9fc4e476986aff6b448519f70e77d112b053ace5796b0a0dd4c65",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/common.py": "7e89d2a61dfd54dc8a94edce294cf38bdb0b140a1165cf572203fe966ccaaba3",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/encoder_base.py": "baf3c12794d850b68261ef70131c818ac7be25333d766127725f3f040a114c5a",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/generator_base.py": "5b55eee433f26f7ecade39b0a1f26862819aa94c594885bf09f696bd6ad100d4",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/input_base.py": "1bc1ca5b7aa2b414793171907efba8d5aa5ced701bb2e851d55d511288aaeb62",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/rf_native.py": "8ffd968ba4a750fb66edda53e8146ed367b9a62e1e1330416b3eb600b4060617",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/view_base.py": "aa41abb7d1eec425dc367b3b6a4e85fdfa60d35bcdbad6123754f2a63a0c44dd",
+  "runs/20261003T003017Z_wide_bn_stats_branch_e6967866/artifacts/prepared.pt": "49b01254108433528398d17fd5a4df9618a7632ba03c0a63864236786e9fc4db"
+}

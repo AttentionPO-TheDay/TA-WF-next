@@ -1,0 +1,91 @@
+{
+  "primary_threshold": 0.72,
+  "stretch_threshold": 0.725,
+  "gain_target_pp": 1.5,
+  "primary_pass": false,
+  "stretch_pass": false,
+  "gain_vs_tent_bn_pp": 0.0011120913315898484,
+  "gain_target_pass": false,
+  "retention_fraction": 0.08190972222222222,
+  "agreement_fraction": 0.9186241319444446,
+  "new": {
+    "macro_f1": 0.7087510308760273,
+    "accuracy": 0.7285575072051547,
+    "negative_adaptation_rate": 0.04636588664009253,
+    "recovery_rate": 0.1372360725012292
+  },
+  "contrasts": {
+    "tent_bn": {
+      "mean_delta_pp": {
+        "macro_f1": 0.0011120913315898484,
+        "accuracy": 0.21123944293815664,
+        "negative_adaptation_rate": 0.5148578026006989,
+        "recovery_rate": 2.767443585640185
+      },
+      "positive_macro_f1_cells": 4
+    },
+    "tent_entropy_gate": {
+      "mean_delta_pp": {
+        "macro_f1": -0.44493129323121117,
+        "accuracy": -0.3575958396407785,
+        "negative_adaptation_rate": 1.4090401170744118,
+        "recovery_rate": 2.7125583121343455
+      },
+      "positive_macro_f1_cells": 1
+    },
+    "tent_relative_entropy_gate": {
+      "mean_delta_pp": {
+        "macro_f1": 0.5473522072768559,
+        "accuracy": 0.8139216778428352,
+        "negative_adaptation_rate": -0.036785411553690944,
+        "recovery_rate": 3.234368468438512
+      },
+      "positive_macro_f1_cells": 8
+    },
+    "tent_fixedstats_ln": {
+      "mean_delta_pp": {
+        "macro_f1": -0.19533543154705507,
+        "accuracy": -0.08022225590670834,
+        "negative_adaptation_rate": 0.37084971181891513,
+        "recovery_rate": 0.858588647976543
+      },
+      "positive_macro_f1_cells": 2
+    },
+    "tent_coadapt_gated": {
+      "mean_delta_pp": {
+        "macro_f1": 3.79160810734279,
+        "accuracy": 3.277356009381903,
+        "negative_adaptation_rate": -7.377871316259038,
+        "recovery_rate": -7.196134091721372
+      },
+      "positive_macro_f1_cells": 9
+    },
+    "no_pseudo_fixed": {
+      "mean_delta_pp": {
+        "macro_f1": -2.6287235032548186,
+        "accuracy": -2.0873102667533416,
+        "negative_adaptation_rate": 0.673125024799617,
+        "recovery_rate": -5.239949797321556
+      },
+      "positive_macro_f1_cells": 0
+    },
+    "frozen": {
+      "mean_delta_pp": {
+        "macro_f1": 0.01843818459190559,
+        "accuracy": 0.2770302010195495,
+        "negative_adaptation_rate": 4.6365886640092535,
+        "recovery_rate": 13.723607250122921
+      },
+      "positive_macro_f1_cells": 4
+    },
+    "bn_batchstats_no_update": {
+      "mean_delta_pp": {
+        "macro_f1": 0.7837750974242873,
+        "accuracy": 1.1139768053526689,
+        "negative_adaptation_rate": 0.9816543415500403,
+        "recovery_rate": 7.993746027874503
+      },
+      "positive_macro_f1_cells": 4
+    }
+  }
+}

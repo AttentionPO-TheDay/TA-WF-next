@@ -1,0 +1,41 @@
+{
+  "task": "ensemble_kd_22026",
+  "kind": "ensemble_kd",
+  "seed": 22026,
+  "device": "cuda",
+  "best_step": 9920,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "teacher_target": "ensemble_mean",
+  "temperature": 2.0,
+  "distillation_weight": 0.5,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "bn_eval_buffers_unchanged": true,
+  "best": {
+    "source": {
+      "accuracy": 0.9998039215686274,
+      "macro_f1": 0.9998039208424031
+    },
+    "valid": {
+      "accuracy": 0.8803921568627451,
+      "macro_f1": 0.8793378734555203
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8764705882352941,
+      "macro_f1": 0.8756882551000198
+    }
+  },
+  "elapsed_seconds": 573.9870414147153
+}

@@ -1,0 +1,60 @@
+{
+  "sampling_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json",
+  "sampling_sha256": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "best_epochs": {
+    "packet_only_1729": 42,
+    "window_only_1729": 39,
+    "fusion_1729": 44,
+    "packet_only_3407": 45,
+    "window_only_3407": 43,
+    "fusion_3407": 41,
+    "packet_only_2026": 34,
+    "window_only_2026": 44,
+    "fusion_2026": 38
+  },
+  "initial_hashes": {
+    "1729": "45d3e0ee021a52955064e764eb71ba64d304d4f099f22537fc2dad554406669e",
+    "3407": "3e41b5bfcd238b55915aa53455816c1c7f0eba9739f3f66e8ed3ca347259f7fa",
+    "2026": "d79c4851deaed02a0c225bbb1df50e94b82dff14b060331ece2a75cbce4dbe21"
+  },
+  "models": {
+    "packet_only_1729": {
+      "parameters": 219494,
+      "train_seconds": 2.7671033460646868
+    },
+    "window_only_1729": {
+      "parameters": 219494,
+      "train_seconds": 2.562126563861966
+    },
+    "fusion_1729": {
+      "parameters": 219494,
+      "train_seconds": 2.5489674424752593
+    },
+    "packet_only_3407": {
+      "parameters": 219494,
+      "train_seconds": 2.561254790984094
+    },
+    "window_only_3407": {
+      "parameters": 219494,
+      "train_seconds": 2.2375512309372425
+    },
+    "fusion_3407": {
+      "parameters": 219494,
+      "train_seconds": 2.150783742778003
+    },
+    "packet_only_2026": {
+      "parameters": 219494,
+      "train_seconds": 2.1561160990968347
+    },
+    "window_only_2026": {
+      "parameters": 219494,
+      "train_seconds": 2.5877498192712665
+    },
+    "fusion_2026": {
+      "parameters": 219494,
+      "train_seconds": 2.6195767233148217
+    }
+  },
+  "prediction_sha256": "134636536bb3474082bf15dad7287ce8637e8a6289024ff36fd20446064655ea",
+  "elapsed_seconds": 60.41275584232062
+}

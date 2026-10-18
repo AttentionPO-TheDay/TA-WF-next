@@ -1,0 +1,60 @@
+{
+  "reviewed_utc": "2026-10-01T13:18:38.325883+00:00",
+  "frozen_file_count": 56,
+  "frozen_hash_checks": "passed",
+  "independent_prediction_metric_checks": 36,
+  "new_training": false,
+  "new_future_or_external_access": false,
+  "diagnostics": {
+    "local_d1": {
+      "best_source_accuracy_mean": 0.9710675381263617,
+      "last_source_accuracy_mean": 0.9980174291938999,
+      "best_valid_accuracy_mean": 0.7333333333333334,
+      "last_valid_accuracy_mean": 0.7183006535947712,
+      "best_steps": [
+        6560,
+        8960,
+        7520
+      ],
+      "all_seed_wrong": 57,
+      "mean_elapsed_seconds": 186.20230351792029
+    },
+    "context_d9": {
+      "best_source_accuracy_mean": 0.9962962962962963,
+      "last_source_accuracy_mean": 0.9996949891067538,
+      "best_valid_accuracy_mean": 0.7398692810457517,
+      "last_valid_accuracy_mean": 0.734640522875817,
+      "best_steps": [
+        8480,
+        12800,
+        11360
+      ],
+      "all_seed_wrong": 58,
+      "mean_elapsed_seconds": 201.24710483228168
+    },
+    "multiscale_d139": {
+      "best_source_accuracy_mean": 0.9888671023965142,
+      "last_source_accuracy_mean": 0.9988671023965141,
+      "best_valid_accuracy_mean": 0.7594771241830065,
+      "last_valid_accuracy_mean": 0.7450980392156863,
+      "best_steps": [
+        7040,
+        10400,
+        10400
+      ],
+      "all_seed_wrong": 53,
+      "mean_elapsed_seconds": 224.75764717378965
+    }
+  },
+  "accuracy_gaps_pp": {
+    "to_90": 14.052287581699352,
+    "to_historical_rf": 10.000000000000009,
+    "gain_over_historical_fusion": 1.764705882352935
+  },
+  "next_candidate": {
+    "current_development_baseline": "multiscale_d139, source-valid mean accuracy75.948%; external/future method not frozen",
+    "proposed_scope": "fix dilation1/3/9, Transformer, data and training/selection rules; bounded generator depth/capacity controls rather than further dilation search",
+    "hypothesis_not_diagnosis": true,
+    "new_training_launched": false
+  }
+}

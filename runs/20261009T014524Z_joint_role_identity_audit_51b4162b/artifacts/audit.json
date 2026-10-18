@@ -1,0 +1,497 @@
+{
+  "status": "passed",
+  "scope": "artifact and metadata structural audit; no training or X re-scan",
+  "p0_all_row_three_view_partition_equal": true,
+  "core_duplicate_csv_members_checked_per_view": 490842,
+  "p0_core_candidates_exactly_reproduced": 114307,
+  "p0_hdf5_candidates_exactly_reproduced": 25943,
+  "hdf5_duplicate_members_checked": 19844,
+  "hdf5_same_date_nonzero_pairs": 0,
+  "hdf5_same_date_zero_member_pairs": 2,
+  "total_original_train_rows": 132860,
+  "retained_conservative_train_unique_inputs": 18553,
+  "retained_label_counts": {
+    "0": 183,
+    "1": 184,
+    "2": 176,
+    "3": 157,
+    "4": 184,
+    "5": 186,
+    "6": 183,
+    "7": 187,
+    "8": 188,
+    "9": 166,
+    "10": 184,
+    "11": 188,
+    "12": 185,
+    "13": 177,
+    "14": 185,
+    "15": 183,
+    "16": 180,
+    "17": 185,
+    "18": 182,
+    "19": 184,
+    "20": 178,
+    "21": 178,
+    "22": 179,
+    "23": 186,
+    "24": 184,
+    "25": 188,
+    "26": 156,
+    "27": 181,
+    "28": 189,
+    "29": 185,
+    "30": 177,
+    "31": 185,
+    "32": 180,
+    "33": 176,
+    "34": 186,
+    "35": 187,
+    "36": 180,
+    "37": 169,
+    "38": 186,
+    "39": 187,
+    "40": 186,
+    "41": 185,
+    "42": 180,
+    "43": 185,
+    "44": 190,
+    "45": 174,
+    "46": 188,
+    "47": 180,
+    "48": 188,
+    "49": 181,
+    "50": 170,
+    "51": 185,
+    "52": 183,
+    "53": 178,
+    "54": 178,
+    "55": 180,
+    "56": 182,
+    "57": 188,
+    "58": 178,
+    "59": 186,
+    "60": 185,
+    "61": 180,
+    "62": 158,
+    "63": 181,
+    "64": 187,
+    "65": 184,
+    "66": 180,
+    "67": 183,
+    "68": 185,
+    "69": 182,
+    "70": 190,
+    "71": 183,
+    "72": 183,
+    "73": 184,
+    "74": 159,
+    "75": 184,
+    "76": 183,
+    "77": 185,
+    "78": 179,
+    "79": 187,
+    "80": 186,
+    "81": 183,
+    "82": 188,
+    "83": 188,
+    "84": 184,
+    "85": 182,
+    "86": 188,
+    "87": 184,
+    "88": 187,
+    "89": 185,
+    "90": 189,
+    "91": 184,
+    "92": 185,
+    "93": 184,
+    "94": 187,
+    "95": 175,
+    "96": 178,
+    "97": 173,
+    "98": 176,
+    "99": 184,
+    "100": 186,
+    "101": 186
+  },
+  "retained_protected_overlap": 0,
+  "per_file": [
+    {
+      "file": "TemporalDrift/day14.npz",
+      "role": "day14",
+      "rows": 22603,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "TemporalDrift/day150.npz",
+      "role": "day150",
+      "rows": 24064,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "TemporalDrift/day270.npz",
+      "role": "day270",
+      "rows": 19935,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "TemporalDrift/day30.npz",
+      "role": "day30",
+      "rows": 22867,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "TemporalDrift/day90.npz",
+      "role": "day90",
+      "rows": 28599,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "TemporalDrift/train.npz",
+      "role": "train",
+      "rows": 19439,
+      "retained_train_candidates": 18553,
+      "exclusions": {
+        "matches_original_nontrain_role": 168,
+        "duplicate_train_copy": 718
+      }
+    },
+    {
+      "file": "TemporalDrift/valid.npz",
+      "role": "valid",
+      "rows": 2160,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "VersionDrift/045/drift.npz",
+      "role": "drift",
+      "rows": 75034,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "VersionDrift/045/train.npz",
+      "role": "train",
+      "rows": 22615,
+      "retained_train_candidates": 0,
+      "exclusions": {
+        "matches_original_nontrain_role": 22615
+      }
+    },
+    {
+      "file": "VersionDrift/045/valid.npz",
+      "role": "valid",
+      "rows": 2513,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "VersionDrift/046/drift.npz",
+      "role": "drift",
+      "rows": 80925,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "VersionDrift/046/train.npz",
+      "role": "train",
+      "rows": 17313,
+      "retained_train_candidates": 0,
+      "exclusions": {
+        "matches_original_nontrain_role": 17313
+      }
+    },
+    {
+      "file": "VersionDrift/046/valid.npz",
+      "role": "valid",
+      "rows": 1924,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "VersionDrift/047/drift.npz",
+      "role": "drift",
+      "rows": 80121,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "VersionDrift/047/train.npz",
+      "role": "train",
+      "rows": 18036,
+      "retained_train_candidates": 0,
+      "exclusions": {
+        "matches_original_nontrain_role": 18036
+      }
+    },
+    {
+      "file": "VersionDrift/047/valid.npz",
+      "role": "valid",
+      "rows": 2005,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "VersionDrift/048/drift.npz",
+      "role": "drift",
+      "rows": 74423,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "VersionDrift/048/train.npz",
+      "role": "train",
+      "rows": 23165,
+      "retained_train_candidates": 0,
+      "exclusions": {
+        "matches_original_nontrain_role": 23165
+      }
+    },
+    {
+      "file": "VersionDrift/048/valid.npz",
+      "role": "valid",
+      "rows": 2574,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "NetworkDrift/DE.npz",
+      "role": "DE",
+      "rows": 4217,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "NetworkDrift/JP.npz",
+      "role": "JP",
+      "rows": 3125,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "NetworkDrift/SG.npz",
+      "role": "SG",
+      "rows": 1994,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "NetworkDrift/UK.npz",
+      "role": "UK",
+      "rows": 3618,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "NetworkDrift/USA.npz",
+      "role": "USA",
+      "rows": 3805,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "NetworkDrift/train.npz",
+      "role": "train",
+      "rows": 16146,
+      "retained_train_candidates": 0,
+      "exclusions": {
+        "matches_original_nontrain_role": 16146
+      }
+    },
+    {
+      "file": "NetworkDrift/valid.npz",
+      "role": "valid",
+      "rows": 1795,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "BehaviorDrift/subpage.npz",
+      "role": "subpage",
+      "rows": 20400,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "BehaviorDrift/test.npz",
+      "role": "test",
+      "rows": 1994,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    },
+    {
+      "file": "BehaviorDrift/train.npz",
+      "role": "train",
+      "rows": 16146,
+      "retained_train_candidates": 0,
+      "exclusions": {
+        "matches_original_nontrain_role": 16146
+      }
+    },
+    {
+      "file": "BehaviorDrift/valid.npz",
+      "role": "valid",
+      "rows": 1795,
+      "retained_train_candidates": 0,
+      "exclusions": {}
+    }
+  ],
+  "cross_family_content_label_evidence": [
+    {
+      "a": "TemporalDrift",
+      "b": "VersionDrift",
+      "shared_unique_inputs": 28599,
+      "label_pairs": 102,
+      "unequal_numeric_pairs": 0,
+      "covered_labels_a": 102,
+      "covered_labels_b": 102
+    },
+    {
+      "a": "TemporalDrift",
+      "b": "NetworkDrift",
+      "shared_unique_inputs": 19935,
+      "label_pairs": 102,
+      "unequal_numeric_pairs": 0,
+      "covered_labels_a": 102,
+      "covered_labels_b": 102
+    },
+    {
+      "a": "TemporalDrift",
+      "b": "BehaviorDrift",
+      "shared_unique_inputs": 19935,
+      "label_pairs": 102,
+      "unequal_numeric_pairs": 0,
+      "covered_labels_a": 102,
+      "covered_labels_b": 102
+    },
+    {
+      "a": "VersionDrift",
+      "b": "NetworkDrift",
+      "shared_unique_inputs": 0,
+      "label_pairs": 0,
+      "unequal_numeric_pairs": 0,
+      "covered_labels_a": 0,
+      "covered_labels_b": 0
+    },
+    {
+      "a": "VersionDrift",
+      "b": "BehaviorDrift",
+      "shared_unique_inputs": 0,
+      "label_pairs": 0,
+      "unequal_numeric_pairs": 0,
+      "covered_labels_a": 0,
+      "covered_labels_b": 0
+    },
+    {
+      "a": "NetworkDrift",
+      "b": "BehaviorDrift",
+      "shared_unique_inputs": 19935,
+      "label_pairs": 102,
+      "unequal_numeric_pairs": 0,
+      "covered_labels_a": 102,
+      "covered_labels_b": 102
+    }
+  ],
+  "url_summary": {
+    "rows": 20400,
+    "unique_urls": 17739,
+    "extra_exact_url_copies": 2661,
+    "exact_url_multilabel_count": 0,
+    "invalid_hostname_rows": [],
+    "labels_with_multiple_hostnames": [
+      0,
+      2,
+      3,
+      5,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      31,
+      32,
+      33,
+      35,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      44,
+      45,
+      46,
+      48,
+      50,
+      53,
+      54,
+      55,
+      56,
+      57,
+      59,
+      60,
+      61,
+      62,
+      67,
+      68,
+      69,
+      70,
+      74,
+      75,
+      77,
+      78,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      87,
+      89,
+      90,
+      92,
+      94,
+      95,
+      97,
+      99,
+      100
+    ],
+    "hostnames_with_multiple_labels": {},
+    "limits": [
+      "www stripping is descriptive; no public suffix normalization",
+      "subpage URL semantics cannot certify homepage label mapping or acquisition independence"
+    ]
+  },
+  "model_boundary_historical_reference": {
+    "source_rows": 15300,
+    "valid_rows": 510,
+    "selected_overlap": 0,
+    "source_excluded_for_full_valid_overlap": 168,
+    "not_rerun": true
+  },
+  "all_source_stats_unchanged": true,
+  "limits": [
+    "full byte matches inherited from P0, not independently rerun",
+    "original nontrain protection is conservative; condition-specific train eligibility requires explicit new protocol",
+    "numeric correspondence on shared inputs does not certify unmapped rows or official website mapping",
+    "no acquisition/session/circuit independence established"
+  ],
+  "elapsed_seconds": 14.948147404938936
+}

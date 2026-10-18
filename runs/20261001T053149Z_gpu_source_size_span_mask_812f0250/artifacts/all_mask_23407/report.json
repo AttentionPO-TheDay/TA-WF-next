@@ -1,0 +1,36 @@
+{
+  "task": "all_mask_23407",
+  "kind": "all_mask",
+  "historical_reuse": false,
+  "seed": 23407,
+  "best_step": 8480,
+  "steps_completed": 12800,
+  "elapsed_seconds": 388.7821515602991,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "parameters": 379654,
+  "peak_cuda_bytes": 1312631296,
+  "index_sha256": "5d9a6273e7d13202ea2c766c06179e5059f92003276ed5e1f8f64bacf84e0bc7",
+  "best": {
+    "source": {
+      "accuracy": 0.9983830108338274,
+      "macro_f1": 0.9983988614939683
+    },
+    "valid": {
+      "accuracy": 0.711764705882353,
+      "macro_f1": 0.7068403274285628
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9998383010833828,
+      "macro_f1": 0.9998429884277955
+    },
+    "valid": {
+      "accuracy": 0.7,
+      "macro_f1": 0.6932774741598271
+    }
+  }
+}

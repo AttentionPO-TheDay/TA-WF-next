@@ -1,0 +1,11 @@
+{
+  "window_drift": {
+    "macro_f1": 0.7350173498323773,
+    "negative_adaptation_rate": 0.039613664865821484,
+    "f1_delta_vs_fixed_pp": -0.0020916076198251865,
+    "negative_delta_vs_fixed_pp": -0.0020971526274872476,
+    "positive_paired_cells": 4,
+    "screen_pass": false,
+    "aspirational_goal_pass": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "sampling_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json",
+  "sampling_sha256": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "partial_counts": {
+    "source": 3847,
+    "valid": 964,
+    "day14": 3825,
+    "day30": 3819,
+    "day90": 3859,
+    "day150": 3878,
+    "day270": 3875
+  },
+  "best_epochs": {
+    "full_1729": 37,
+    "tail_neutral_1729": 39,
+    "full_3407": 42,
+    "tail_neutral_3407": 44,
+    "full_2026": 26,
+    "tail_neutral_2026": 41
+  },
+  "prediction_sha256": "8b8a6270b02302d0cc09132c0e0342024b88d017a2538956a8608c2d31bd73a3",
+  "elapsed_seconds": 45.28113795444369
+}

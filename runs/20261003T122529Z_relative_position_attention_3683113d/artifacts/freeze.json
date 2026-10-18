@@ -1,0 +1,19 @@
+{
+  "runs/20261003T122529Z_relative_position_attention_3683113d/PLAN.md": "e192a39428829febec7d54608da5e76d53c12ef5ecf31db2402e63828725c845",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/SOURCES.md": "ebb130e42a98fb6d85f19d65020d1cd817f99a24609fa9e1a731895c984fc589",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/config.json": "8092f1dbf19d4f209e7b2274adeea2a40110049e08c1eaa379f83996dc151a5f",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/common.py": "542226fa0668386bd2aab547a9bc0db919ab9d83e7359a5180967eef5ac1a6e5",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/base_model.py": "2997108ffa67b71556c54a4df2fbba0b5861926820c6de44e08be9b8d55de289",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/candidate_base.py": "7b9687ad96e9fc4e476986aff6b448519f70e77d112b053ace5796b0a0dd4c65",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/encoder_base.py": "baf3c12794d850b68261ef70131c818ac7be25333d766127725f3f040a114c5a",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/framework_base.py": "e530ca3f369cb729f6f9b802bff03fb18ffcec90ebb5ad58db04a4b077a1a148",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/generator_base.py": "5b55eee433f26f7ecade39b0a1f26862819aa94c594885bf09f696bd6ad100d4",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/input_base.py": "1bc1ca5b7aa2b414793171907efba8d5aa5ced701bb2e851d55d511288aaeb62",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/rf_native.py": "8ffd968ba4a750fb66edda53e8146ed367b9a62e1e1330416b3eb600b4060617",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/view_base.py": "aa41abb7d1eec425dc367b3b6a4e85fdfa60d35bcdbad6123754f2a63a0c44dd",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/model.py": "8534586d85d3a899340772e402b58376f7ab48c1cb68da30d059c3b05eee97af",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/worker.py": "4ee020141af64371d651c1ea58ebbb3f447aeb99f9a11d8ac599863be01a9caa",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/supervisor.py": "be6d420279c9b8cf796a07c5224ad77c0a660c0d2a2f0fb849ef7b0271186a62",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/artifacts/prepared.pt": "49b01254108433528398d17fd5a4df9618a7632ba03c0a63864236786e9fc4db",
+  "runs/20261003T122529Z_relative_position_attention_3683113d/postrun_audit.py": "223302cd32c69aaa8d75ea0bf643c08c0fd88af3e9deb6466cc3ceb959367ffe"
+}

@@ -1,0 +1,83 @@
+{
+  "condition": "A_80_l1",
+  "seed": 21729,
+  "status": "completed",
+  "steps_completed": 12800,
+  "new_steps_completed": 9600,
+  "blocks_completed": 400,
+  "last": {
+    "source": {
+      "accuracy": 0.6924019607843137,
+      "macro_f1": 0.6864569136380502
+    },
+    "common_source": {
+      "accuracy": 0.6924019607843137,
+      "macro_f1": 0.6864569136380502
+    },
+    "valid": {
+      "accuracy": 0.46862745098039216,
+      "macro_f1": 0.451967342875192
+    }
+  },
+  "resume_metrics": {
+    "source": {
+      "accuracy": 0.42034313725490197,
+      "macro_f1": 0.39672430421429483
+    },
+    "common_source": {
+      "accuracy": 0.4235294117647059,
+      "macro_f1": 0.3990898540267428
+    },
+    "valid": {
+      "accuracy": 0.37058823529411766,
+      "macro_f1": 0.3403143281170963
+    }
+  },
+  "historical_best": {
+    "source": {
+      "accuracy": 0.4270833333333333,
+      "macro_f1": 0.41197907127626193
+    },
+    "common_source": {
+      "accuracy": 0.42892156862745096,
+      "macro_f1": 0.4111458528586356
+    },
+    "valid": {
+      "accuracy": 0.3784313725490196,
+      "macro_f1": 0.35301132930890705
+    }
+  },
+  "resume_state_sha256": "fdbccf5037d111a8c5f4752e485a5e1641788968f8c1071a77e2c2c75955cc1b",
+  "best_block": 295,
+  "initial_state_sha256": "45793ae144c34300bae438bdf58cdac7fcb9256f5a1e16bda8644ff3704fcb0c",
+  "generator_initial_sha256": "95bf31380681c650b4ac9e43e56af2588b868537af8a196f81e9150f7ded4d5d",
+  "generator_changed": true,
+  "config_sha256": "ef238f2939d5a45fffece2478b84f61d2836c02d51866cfc5a1caea0223e83e5",
+  "source_count": 8160,
+  "sample_visits_min": 100,
+  "sample_visits_max": 101,
+  "samples_presented": 819200,
+  "elapsed_seconds": 4087.5677450709045,
+  "parameters": {
+    "total": 119578,
+    "trainable": 119578,
+    "generator_total": 6064,
+    "generator_trainable": 6064
+  },
+  "source": {
+    "accuracy": 0.6618872549019608,
+    "macro_f1": 0.6547459044110217
+  },
+  "common_source": {
+    "accuracy": 0.6618872549019608,
+    "macro_f1": 0.6547459044110217
+  },
+  "valid": {
+    "accuracy": 0.4803921568627451,
+    "macro_f1": 0.4584230040112393
+  },
+  "historical_reuse": true,
+  "historical_source_run": "runs/20260927T011115Z_source80_extended_training_b7d4d924",
+  "historical_source_report_sha256": "562d351b7cc418eb69cb88484193d2b05c2afebd8e6ca37e1dbdcae0d118ecbc",
+  "shared_initial_sha256": "45793ae144c34300bae438bdf58cdac7fcb9256f5a1e16bda8644ff3704fcb0c"
+}

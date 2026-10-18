@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "source_rows": 15300,
+  "valid_rows": 510,
+  "teacher_files": 3,
+  "teacher_eval_frozen": true,
+  "clean_target_shape": [
+    15300,
+    102
+  ],
+  "clean_target_probability_mean": true,
+  "matched_input_equal": true,
+  "matched_teacher_outputs_finite": true,
+  "gated_condition_runnable": true,
+  "gate_count_probe": 0,
+  "student_forward_backward": true,
+  "generator_gradients_active": true,
+  "future_access": false
+}

@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "anchors": [
+    {
+      "key": "C_80_cls_21729",
+      "start_step": 3200,
+      "index_prefix_exact": true
+    },
+    {
+      "key": "C_80_cls_23407",
+      "start_step": 3200,
+      "index_prefix_exact": true
+    },
+    {
+      "key": "C_80_cls_22026",
+      "start_step": 3200,
+      "index_prefix_exact": true
+    },
+    {
+      "key": "D_80_mean_21729",
+      "start_step": 3200,
+      "index_prefix_exact": true
+    },
+    {
+      "key": "D_80_mean_23407",
+      "start_step": 3200,
+      "index_prefix_exact": true
+    },
+    {
+      "key": "D_80_mean_22026",
+      "start_step": 3200,
+      "index_prefix_exact": true
+    }
+  ],
+  "lr_boundary_checks": true,
+  "synthetic_continuation_parameters_optimizer_rng_exact": true,
+  "no_new_real_training": true,
+  "errors": []
+}

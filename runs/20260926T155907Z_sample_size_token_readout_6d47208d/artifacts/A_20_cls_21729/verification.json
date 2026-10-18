@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "prediction_sets_checked": 3,
+  "sampling_stream_verified": true,
+  "selection_verified": true,
+  "generator_feedback_verified": true,
+  "artifact_sha256": {
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/A_20_cls_21729/report.json": "64ca895f1d382c00a32aa812514fa2f59a30f8a23c28c4fa3044f1cd60dbc55a",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/A_20_cls_21729/predictions.npz": "aa41b836f54a9edd82452ae17c74bb8c5ec7bf3b4a35b232b9f0d47446a50ff1",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/A_20_cls_21729/history.json": "38650cc35c1b9dbb0cfbaaaaef07ccb03375377cc99d6bc53f0f3712ad4fd63a",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/A_20_cls_21729/index_stream.pt": "868b8ea52dd49222ec0d5d8a01a82cc1edf9fa1ba46853bc88f7ba4432654c96",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/artifacts/A_20_cls_21729/sample_visits.pt": "7c56768c364304947e405f9966cd53f6f3faf8b3d50b253b92c305f54aee4a1e",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/A_20_cls_21729_best.pt": "d56af20499385e9371a6e471b6fa63051054bd60cbe396f70cb25fff9f0ce969",
+    "runs/20260926T155907Z_sample_size_token_readout_6d47208d/checkpoints/A_20_cls_21729_latest.pt": "393a33b6ea359f412088a30bdf1cc6fabcda1a713fcd67dd57fd80e2df7d2eef"
+  },
+  "errors": []
+}

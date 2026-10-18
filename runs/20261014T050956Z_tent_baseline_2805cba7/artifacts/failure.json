@@ -1,0 +1,5 @@
+{
+  "type": "AssertionError",
+  "message": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/rbf/TA-WF-next/runs/20261014T050956Z_tent_baseline_2805cba7/runner.py\", line 331, in <module>\n    main()\n  File \"/home/rbf/TA-WF-next/runs/20261014T050956Z_tent_baseline_2805cba7/runner.py\", line 282, in main\n    assert not (R / \"artifacts/events.jsonl\").exists()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

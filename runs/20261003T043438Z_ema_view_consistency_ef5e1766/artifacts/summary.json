@@ -1,0 +1,424 @@
+{
+  "means": {
+    "ce_only": {
+      "accuracy": 0.8915032679738562,
+      "macro_f1": 0.8894366163974006
+    },
+    "ema_same_view": {
+      "accuracy": 0.884313725490196,
+      "macro_f1": 0.8813813455970317
+    },
+    "ema_cross_view": {
+      "accuracy": 0.8856209150326797,
+      "macro_f1": 0.8845645277017825
+    }
+  },
+  "comparisons": {
+    "ema_same_view - ce_only": {
+      "accuracy_mean_delta_pp": -0.7189542483660143,
+      "accuracy_per_seed_pp": [
+        -0.39215686274509665,
+        -1.764705882352946,
+        0.0
+      ],
+      "macro_f1_mean_delta_pp": -0.8055270800368867,
+      "positive_seed_count": 0,
+      "pass": false
+    },
+    "ema_cross_view - ce_only": {
+      "accuracy_mean_delta_pp": -0.5882352941176487,
+      "accuracy_per_seed_pp": [
+        -0.39215686274509665,
+        -1.3725490196078494,
+        0.0
+      ],
+      "macro_f1_mean_delta_pp": -0.487208869561806,
+      "positive_seed_count": 0,
+      "pass": false
+    }
+  },
+  "reports": [
+    {
+      "task": "ce_only_21729",
+      "kind": "ce_only",
+      "seed": 21729,
+      "device": "cuda",
+      "best_step": 10400,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": false,
+      "ema_decay": null,
+      "temperature": null,
+      "max_consistency_weight": 0.0,
+      "ramp_steps": 0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8882169029227852
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8705882352941177,
+          "macro_f1": 0.866926646338411
+        }
+      },
+      "elapsed_seconds": 647.5836376752704
+    },
+    {
+      "task": "ema_same_view_21729",
+      "kind": "ema_same_view",
+      "seed": 21729,
+      "device": "cuda",
+      "best_step": 11360,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": true,
+      "ema_decay": 0.999,
+      "temperature": 2.0,
+      "max_consistency_weight": 0.25,
+      "ramp_steps": 3200,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8862745098039215,
+          "macro_f1": 0.8829060917296211
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.884313725490196,
+          "macro_f1": 0.8830199756670345
+        }
+      },
+      "elapsed_seconds": 660.0853191716596
+    },
+    {
+      "task": "ema_cross_view_21729",
+      "kind": "ema_cross_view",
+      "seed": 21729,
+      "device": "cuda",
+      "best_step": 9440,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": true,
+      "ema_decay": 0.999,
+      "temperature": 2.0,
+      "max_consistency_weight": 0.25,
+      "ramp_steps": 3200,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9986274509803922,
+          "macro_f1": 0.9986322779996906
+        },
+        "valid": {
+          "accuracy": 0.8862745098039215,
+          "macro_f1": 0.884419121183827
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9999346405228758,
+          "macro_f1": 0.9999346397966513
+        },
+        "valid": {
+          "accuracy": 0.884313725490196,
+          "macro_f1": 0.8809170132699544
+        }
+      },
+      "elapsed_seconds": 660.2421753844246
+    },
+    {
+      "task": "ce_only_23407",
+      "kind": "ce_only",
+      "seed": 23407,
+      "device": "cuda",
+      "best_step": 12320,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": false,
+      "ema_decay": null,
+      "temperature": null,
+      "max_consistency_weight": 0.0,
+      "ramp_steps": 0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8941176470588236,
+          "macro_f1": 0.8923945335710041
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8941176470588236,
+          "macro_f1": 0.8936080259609671
+        }
+      },
+      "elapsed_seconds": 616.2782825306058
+    },
+    {
+      "task": "ema_same_view_23407",
+      "kind": "ema_same_view",
+      "seed": 23407,
+      "device": "cuda",
+      "best_step": 11360,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": true,
+      "ema_decay": 0.999,
+      "temperature": 2.0,
+      "max_consistency_weight": 0.25,
+      "ramp_steps": 3200,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8764705882352941,
+          "macro_f1": 0.8740295652060357
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8725490196078431,
+          "macro_f1": 0.8705033528562939
+        }
+      },
+      "elapsed_seconds": 661.2021414497867
+    },
+    {
+      "task": "ema_cross_view_23407",
+      "kind": "ema_cross_view",
+      "seed": 23407,
+      "device": "cuda",
+      "best_step": 11360,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": true,
+      "ema_decay": 0.999,
+      "temperature": 2.0,
+      "max_consistency_weight": 0.25,
+      "ramp_steps": 3200,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8803921568627451,
+          "macro_f1": 0.8813394122217652
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8647058823529412,
+          "macro_f1": 0.8643019834196305
+        }
+      },
+      "elapsed_seconds": 661.3679615119472
+    },
+    {
+      "task": "ce_only_22026",
+      "kind": "ce_only",
+      "seed": 22026,
+      "device": "cuda",
+      "best_step": 7520,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": false,
+      "ema_decay": null,
+      "temperature": null,
+      "max_consistency_weight": 0.0,
+      "ramp_steps": 0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9934640522875817,
+          "macro_f1": 0.9932015106741902
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8876984126984127
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8862745098039215,
+          "macro_f1": 0.8824915824915824
+        }
+      },
+      "elapsed_seconds": 610.2209201250225
+    },
+    {
+      "task": "ema_same_view_22026",
+      "kind": "ema_same_view",
+      "seed": 22026,
+      "device": "cuda",
+      "best_step": 11840,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": true,
+      "ema_decay": 0.999,
+      "temperature": 2.0,
+      "max_consistency_weight": 0.25,
+      "ramp_steps": 3200,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8872083798554385
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.884313725490196,
+          "macro_f1": 0.8828852520028988
+        }
+      },
+      "elapsed_seconds": 635.7128053894266
+    },
+    {
+      "task": "ema_cross_view_22026",
+      "kind": "ema_cross_view",
+      "seed": 22026,
+      "device": "cuda",
+      "best_step": 7040,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": true,
+      "ema_decay": 0.999,
+      "temperature": 2.0,
+      "max_consistency_weight": 0.25,
+      "ramp_steps": 3200,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9971895424836601,
+          "macro_f1": 0.9971814309671425
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8879350496997556
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8784313725490196,
+          "macro_f1": 0.8761045599280894
+        }
+      },
+      "elapsed_seconds": 635.8492997698486
+    }
+  ],
+  "future_access": false,
+  "training_tasks_completed": 9,
+  "fixed_teacher_loaded": false,
+  "valid_selection": "predeclared checkpoint selection only"
+}

@@ -1,0 +1,10 @@
+{
+  "runs/20260923T080156Z_gpu_train_only_token_distill_548c9e47/PLAN.md": "0a2864da073c759f686a3369eda4c493e6d6315c3d39c09713e3d142163334d2",
+  "runs/20260923T080156Z_gpu_train_only_token_distill_548c9e47/config.json": "3de3d97e131a415b172ec614b0e5ffd105cd42115d84ca20cae946a46805ce1e",
+  "runs/20260923T080156Z_gpu_train_only_token_distill_548c9e47/train.py": "680d04f4ddc444dbed8c30e2aa15d8e415f05cec9c643a24fd955208e3ffd624",
+  "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "configs/datasets.json": "c3edbfeaf83553f63e6b5a12fa6e1dc5049346c1f8eb3b54bedf7760408b6b28",
+  "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+  "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+  "runs/20260923T080156Z_gpu_train_only_token_distill_548c9e47/artifacts/window_statistics.npz": "ab00fc303945e63cc200cf7a3e29872e4d7b40ee6451257cc1a6b2002f9d9659"
+}

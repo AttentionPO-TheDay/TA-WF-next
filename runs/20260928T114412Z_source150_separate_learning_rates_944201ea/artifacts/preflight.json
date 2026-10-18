@@ -1,0 +1,214 @@
+{
+  "complete": true,
+  "input_exact_to_prior": true,
+  "source150_balanced": true,
+  "shared_initialization_and_gradients": [
+    {
+      "seed": 21729,
+      "condition": "A_1x1x",
+      "initial_state_sha256": "45793ae144c34300bae438bdf58cdac7fcb9256f5a1e16bda8644ff3704fcb0c",
+      "group_lrs": {
+        "classifier": 0.001,
+        "generator": 0.001
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    },
+    {
+      "seed": 21729,
+      "condition": "B_1x0.3x",
+      "initial_state_sha256": "45793ae144c34300bae438bdf58cdac7fcb9256f5a1e16bda8644ff3704fcb0c",
+      "group_lrs": {
+        "classifier": 0.001,
+        "generator": 0.0003
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    },
+    {
+      "seed": 21729,
+      "condition": "C_1x0.1x",
+      "initial_state_sha256": "45793ae144c34300bae438bdf58cdac7fcb9256f5a1e16bda8644ff3704fcb0c",
+      "group_lrs": {
+        "classifier": 0.001,
+        "generator": 0.0001
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    },
+    {
+      "seed": 21729,
+      "condition": "D_0.3x1x",
+      "initial_state_sha256": "45793ae144c34300bae438bdf58cdac7fcb9256f5a1e16bda8644ff3704fcb0c",
+      "group_lrs": {
+        "classifier": 0.0003,
+        "generator": 0.001
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    },
+    {
+      "seed": 23407,
+      "condition": "A_1x1x",
+      "initial_state_sha256": "acca5885cbbed2cec1a577057788232898659ccde909e37d094a400b76cd7102",
+      "group_lrs": {
+        "classifier": 0.001,
+        "generator": 0.001
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    },
+    {
+      "seed": 23407,
+      "condition": "B_1x0.3x",
+      "initial_state_sha256": "acca5885cbbed2cec1a577057788232898659ccde909e37d094a400b76cd7102",
+      "group_lrs": {
+        "classifier": 0.001,
+        "generator": 0.0003
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    },
+    {
+      "seed": 23407,
+      "condition": "C_1x0.1x",
+      "initial_state_sha256": "acca5885cbbed2cec1a577057788232898659ccde909e37d094a400b76cd7102",
+      "group_lrs": {
+        "classifier": 0.001,
+        "generator": 0.0001
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    },
+    {
+      "seed": 23407,
+      "condition": "D_0.3x1x",
+      "initial_state_sha256": "acca5885cbbed2cec1a577057788232898659ccde909e37d094a400b76cd7102",
+      "group_lrs": {
+        "classifier": 0.0003,
+        "generator": 0.001
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    },
+    {
+      "seed": 22026,
+      "condition": "A_1x1x",
+      "initial_state_sha256": "c021496271a7cedfb2a35882eab7e35b514519b73573ef7d2016d7c048e98e50",
+      "group_lrs": {
+        "classifier": 0.001,
+        "generator": 0.001
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    },
+    {
+      "seed": 22026,
+      "condition": "B_1x0.3x",
+      "initial_state_sha256": "c021496271a7cedfb2a35882eab7e35b514519b73573ef7d2016d7c048e98e50",
+      "group_lrs": {
+        "classifier": 0.001,
+        "generator": 0.0003
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    },
+    {
+      "seed": 22026,
+      "condition": "C_1x0.1x",
+      "initial_state_sha256": "c021496271a7cedfb2a35882eab7e35b514519b73573ef7d2016d7c048e98e50",
+      "group_lrs": {
+        "classifier": 0.001,
+        "generator": 0.0001
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    },
+    {
+      "seed": 22026,
+      "condition": "D_0.3x1x",
+      "initial_state_sha256": "c021496271a7cedfb2a35882eab7e35b514519b73573ef7d2016d7c048e98e50",
+      "group_lrs": {
+        "classifier": 0.0003,
+        "generator": 0.001
+      },
+      "parameters": {
+        "total": 119578,
+        "trainable": 119578,
+        "generator_total": 6064,
+        "generator_trainable": 6064,
+        "classifier_total": 113514,
+        "classifier_trainable": 113514
+      }
+    }
+  ],
+  "separate_optimizer_groups": true,
+  "lr_boundary_checks": true,
+  "future_access": false
+}

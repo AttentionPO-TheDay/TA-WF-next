@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "freeze_hashes_verified": 47,
+  "metric_groups_verified": 48,
+  "initialization_index_selection_verified": true,
+  "rows": [
+    {
+      "kind": "baseline",
+      "seed": 21729,
+      "valid_accuracy": 0.8901960784313725,
+      "macro_f1": 0.8882169029227852,
+      "last": 0.8705882352941177,
+      "best_step": 10400
+    },
+    {
+      "kind": "lr05",
+      "seed": 21729,
+      "valid_accuracy": 0.8960784313725491,
+      "macro_f1": 0.893201624083977,
+      "last": 0.8921568627450981,
+      "best_step": 11840
+    },
+    {
+      "kind": "wd05",
+      "seed": 21729,
+      "valid_accuracy": 0.8960784313725491,
+      "macro_f1": 0.8935581303228363,
+      "last": 0.8823529411764706,
+      "best_step": 6560
+    },
+    {
+      "kind": "lr05_wd05",
+      "seed": 21729,
+      "valid_accuracy": 0.8803921568627451,
+      "macro_f1": 0.8769402166460989,
+      "last": 0.8745098039215686,
+      "best_step": 6560
+    },
+    {
+      "kind": "baseline",
+      "seed": 23407,
+      "valid_accuracy": 0.8941176470588236,
+      "macro_f1": 0.8923945335710041,
+      "last": 0.8941176470588236,
+      "best_step": 12320
+    },
+    {
+      "kind": "lr05",
+      "seed": 23407,
+      "valid_accuracy": 0.8803921568627451,
+      "macro_f1": 0.8800356506238858,
+      "last": 0.8745098039215686,
+      "best_step": 7520
+    },
+    {
+      "kind": "wd05",
+      "seed": 23407,
+      "valid_accuracy": 0.8823529411764706,
+      "macro_f1": 0.8798535886771179,
+      "last": 0.8686274509803922,
+      "best_step": 10400
+    },
+    {
+      "kind": "lr05_wd05",
+      "seed": 23407,
+      "valid_accuracy": 0.8764705882352941,
+      "macro_f1": 0.8745335274747038,
+      "last": 0.8764705882352941,
+      "best_step": 6560
+    },
+    {
+      "kind": "baseline",
+      "seed": 22026,
+      "valid_accuracy": 0.8901960784313725,
+      "macro_f1": 0.8876984126984127,
+      "last": 0.8862745098039215,
+      "best_step": 7520
+    },
+    {
+      "kind": "lr05",
+      "seed": 22026,
+      "valid_accuracy": 0.8725490196078431,
+      "macro_f1": 0.8716280451574567,
+      "last": 0.8549019607843137,
+      "best_step": 7520
+    },
+    {
+      "kind": "wd05",
+      "seed": 22026,
+      "valid_accuracy": 0.8901960784313725,
+      "macro_f1": 0.8890378140378139,
+      "last": 0.8901960784313725,
+      "best_step": 12800
+    },
+    {
+      "kind": "lr05_wd05",
+      "seed": 22026,
+      "valid_accuracy": 0.8705882352941177,
+      "macro_f1": 0.8689631174925291,
+      "last": 0.8627450980392157,
+      "best_step": 11840
+    }
+  ],
+  "means": {
+    "baseline": 0.8915032679738562,
+    "lr05": 0.8830065359477124,
+    "wd05": 0.8895424836601307,
+    "lr05_wd05": 0.8758169934640523
+  },
+  "last_below_best_count": 9,
+  "aggregation_bug": "supervisor finalize referenced previous run comparison keys wide_bn/wide/bn/baseline; training artifacts unaffected",
+  "future_access": false
+}

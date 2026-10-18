@@ -1,0 +1,35 @@
+{
+  "adjudication": {
+    "A_near10_units": 0,
+    "A_oracle_units": 0,
+    "A_pass": false,
+    "B_identifiable": true,
+    "B_linkage_units": 18,
+    "B_pass": true,
+    "B_repeated_dates_both_backbones": 3,
+    "verdict": "B_historical_coverage_dominant"
+  },
+  "errors": [],
+  "frozen_unit_count": 18,
+  "new_backbone_training_runs": 0,
+  "output_row_counts": {
+    "error_attribution.csv": 72104,
+    "per_site_stats.csv": 220320,
+    "probe_results.csv": 18,
+    "resampling_results.csv": 2160,
+    "support_only_metrics.csv": 220320
+  },
+  "output_sha256": {
+    "error_attribution.csv": "4172ef1ba3bf44756b8a7a74466d2c3743aff691b04a99a0e218fd06843551e5",
+    "error_attribution_summary.json": "4d78c37c57f7e9b75541a443cfb07c1c414f21526d05a1b6c6dc53e66e9b9c94",
+    "per_site_stats.csv": "efcd5d13282af1a17821485e108fab4bf1f3a8fa4137e959ae103c07711905f1",
+    "probe_results.csv": "3e662c5daa17f3d3370b39b290c7263e5db4b69567c0f96235c08406deea04f8",
+    "probe_results.json": "dabf5dfeb979b9234bc7b60e383953c85e348286e339f4c3340a87bb92f89d84",
+    "resampling_results.csv": "ca11e504c93658ff26b3fe132a8e8c3b83ef28167332f2fcfddb5ab038fed208",
+    "summary.json": "6ff1cb481f670650499eb5ef612a905830edc2a8e116535f8afaf3217218e30b",
+    "support_only_metrics.csv": "dd6c475aa957b4f6a9e2330f37e50cb4cc16108d5c82a6011ef6673003a361e9"
+  },
+  "passed": true,
+  "schema_version": 1,
+  "sealed_file_count": 34
+}

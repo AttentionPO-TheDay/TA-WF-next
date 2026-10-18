@@ -1,0 +1,19 @@
+{
+  "roles": {
+    "source": {
+      "count": 2040,
+      "directions_sha256": "711eea5aa27f803686df8c908253eebda9fb22d63e348302d96421d9be6b8202",
+      "historical_arrays_and_rows_match": true
+    },
+    "valid": {
+      "count": 510,
+      "directions_sha256": "d01e650415d48e462a69cacf7a75a45cd7fe1cd66004e932b3f9213789387855",
+      "historical_arrays_and_rows_match": true
+    }
+  },
+  "raw_files_opened": false,
+  "future_access": false,
+  "gpu_used": false,
+  "source_valid_direction_overlap": 0,
+  "prepared_input_sha256": "31f9cb3f1c38d8430f20df0a0f855a512dbd25c312f28d3a7d58fb556edb5c53"
+}

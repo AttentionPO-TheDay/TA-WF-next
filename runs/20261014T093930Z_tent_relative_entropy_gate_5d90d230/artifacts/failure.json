@@ -1,0 +1,5 @@
+{
+  "type": "AssertionError",
+  "message": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/rbf/TA-WF-next/runs/20261014T093930Z_tent_relative_entropy_gate_5d90d230/runner.py\", line 282, in <module>\n    main()\n  File \"/home/rbf/TA-WF-next/runs/20261014T093930Z_tent_relative_entropy_gate_5d90d230/runner.py\", line 247, in main\n    scores = historical_rows(); B.save_json(\"scores.json\", scores); B.event(\"preflight_verified\", new_tasks=9, historical_rows=45, splits_match=True)\n             ^^^^^^^^^^^^^^^^^\n  File \"/home/rbf/TA-WF-next/runs/20261014T093930Z_tent_relative_entropy_gate_5d90d230/runner.py\", line 211, in historical_rows\n    assert len(out) == C[\"budget\"][\"historical_rows\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

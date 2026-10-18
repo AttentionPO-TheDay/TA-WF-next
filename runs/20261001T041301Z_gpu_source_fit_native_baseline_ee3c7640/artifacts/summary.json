@@ -1,0 +1,300 @@
+{
+  "reports": [
+    {
+      "task": "tiny_21729",
+      "kind": "transformer",
+      "tiny": true,
+      "seed": 21729,
+      "best_step": 300,
+      "steps_completed": 300,
+      "elapsed_seconds": 6.7119444236159325,
+      "verified_roles": [
+        "source"
+      ],
+      "parameters": 119578,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        }
+      }
+    },
+    {
+      "task": "tiny_23407",
+      "kind": "transformer",
+      "tiny": true,
+      "seed": 23407,
+      "best_step": 300,
+      "steps_completed": 300,
+      "elapsed_seconds": 5.310652590356767,
+      "verified_roles": [
+        "source"
+      ],
+      "parameters": 119578,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        }
+      }
+    },
+    {
+      "task": "tiny_22026",
+      "kind": "transformer",
+      "tiny": true,
+      "seed": 22026,
+      "best_step": 200,
+      "steps_completed": 200,
+      "elapsed_seconds": 3.5537008848041296,
+      "verified_roles": [
+        "source"
+      ],
+      "parameters": 119578,
+      "best": {
+        "source": {
+          "accuracy": 0.9950980392156863,
+          "macro_f1": 0.9947712418300654
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9950980392156863,
+          "macro_f1": 0.9947712418300654
+        }
+      }
+    },
+    {
+      "task": "df_21729",
+      "kind": "df",
+      "tiny": false,
+      "seed": 21729,
+      "best_step": 3600,
+      "steps_completed": 3600,
+      "elapsed_seconds": 93.80855451244861,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "parameters": 3982502,
+      "best": {
+        "source": {
+          "accuracy": 0.9058823529411765,
+          "macro_f1": 0.9042546689991261
+        },
+        "valid": {
+          "accuracy": 0.711764705882353,
+          "macro_f1": 0.701555579496756
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9058823529411765,
+          "macro_f1": 0.9042546689991261
+        },
+        "valid": {
+          "accuracy": 0.711764705882353,
+          "macro_f1": 0.701555579496756
+        }
+      }
+    },
+    {
+      "task": "transformer_21729",
+      "kind": "transformer",
+      "tiny": false,
+      "seed": 21729,
+      "best_step": 9920,
+      "steps_completed": 12800,
+      "elapsed_seconds": 276.9917262746021,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "parameters": 119578,
+      "best": {
+        "source": {
+          "accuracy": 0.6047712418300654,
+          "macro_f1": 0.5973894277012209
+        },
+        "valid": {
+          "accuracy": 0.5294117647058824,
+          "macro_f1": 0.5062153116651387
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.6148366013071895,
+          "macro_f1": 0.6079264101664251
+        },
+        "valid": {
+          "accuracy": 0.5117647058823529,
+          "macro_f1": 0.48954928513752044
+        }
+      }
+    },
+    {
+      "task": "df_23407",
+      "kind": "df",
+      "tiny": false,
+      "seed": 23407,
+      "best_step": 3600,
+      "steps_completed": 3600,
+      "elapsed_seconds": 94.03151180967689,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "parameters": 3982502,
+      "best": {
+        "source": {
+          "accuracy": 0.9024836601307189,
+          "macro_f1": 0.899502213120937
+        },
+        "valid": {
+          "accuracy": 0.7156862745098039,
+          "macro_f1": 0.701898658819074
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9024836601307189,
+          "macro_f1": 0.899502213120937
+        },
+        "valid": {
+          "accuracy": 0.7156862745098039,
+          "macro_f1": 0.701898658819074
+        }
+      }
+    },
+    {
+      "task": "transformer_23407",
+      "kind": "transformer",
+      "tiny": false,
+      "seed": 23407,
+      "best_step": 12320,
+      "steps_completed": 12800,
+      "elapsed_seconds": 272.441686226055,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "parameters": 119578,
+      "best": {
+        "source": {
+          "accuracy": 0.5990849673202614,
+          "macro_f1": 0.5912555436910343
+        },
+        "valid": {
+          "accuracy": 0.5137254901960784,
+          "macro_f1": 0.49692390942390935
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.5996732026143791,
+          "macro_f1": 0.5926087730818398
+        },
+        "valid": {
+          "accuracy": 0.503921568627451,
+          "macro_f1": 0.49077376871494516
+        }
+      }
+    },
+    {
+      "task": "df_22026",
+      "kind": "df",
+      "tiny": false,
+      "seed": 22026,
+      "best_step": 2880,
+      "steps_completed": 3600,
+      "elapsed_seconds": 94.29706878215075,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "parameters": 3982502,
+      "best": {
+        "source": {
+          "accuracy": 0.850392156862745,
+          "macro_f1": 0.8475310282225519
+        },
+        "valid": {
+          "accuracy": 0.696078431372549,
+          "macro_f1": 0.685823979941627
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.8844444444444445,
+          "macro_f1": 0.8811798224155729
+        },
+        "valid": {
+          "accuracy": 0.6843137254901961,
+          "macro_f1": 0.6748829873829875
+        }
+      }
+    },
+    {
+      "task": "transformer_22026",
+      "kind": "transformer",
+      "tiny": false,
+      "seed": 22026,
+      "best_step": 12320,
+      "steps_completed": 12800,
+      "elapsed_seconds": 259.6866427725181,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "parameters": 119578,
+      "best": {
+        "source": {
+          "accuracy": 0.6218300653594772,
+          "macro_f1": 0.6159057729267429
+        },
+        "valid": {
+          "accuracy": 0.5392156862745098,
+          "macro_f1": 0.523293264469735
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.6194117647058823,
+          "macro_f1": 0.6136454279785403
+        },
+        "valid": {
+          "accuracy": 0.5254901960784314,
+          "macro_f1": 0.5049063681416621
+        }
+      }
+    }
+  ],
+  "means": {
+    "df": {
+      "accuracy": 0.707843137254902,
+      "macro_f1": 0.6964260727524856
+    },
+    "transformer": {
+      "accuracy": 0.5274509803921568,
+      "macro_f1": 0.5088108285195944
+    }
+  },
+  "tiny_pass": true,
+  "df_gap_gate": true,
+  "delta_f1": [
+    0.1953402678316173,
+    0.20497474939516463,
+    0.16253071547189202
+  ]
+}

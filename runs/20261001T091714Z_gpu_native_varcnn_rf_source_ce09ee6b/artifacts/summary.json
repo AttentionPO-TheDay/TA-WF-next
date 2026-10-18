@@ -1,0 +1,240 @@
+{
+  "reports": [
+    {
+      "task": "varcnn_21729",
+      "kind": "varcnn",
+      "seed": 21729,
+      "best_epoch": 15,
+      "epochs_completed": 26,
+      "steps_completed": 7956,
+      "validation_opportunities": 26,
+      "stop_reason": "early_stopping",
+      "elapsed_seconds": 326.42349305562675,
+      "parameters": 3900454,
+      "peak_cuda_bytes": 1483308544,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "best": {
+        "source": {
+          "accuracy": 0.9590849673202614,
+          "macro_f1": 0.9574828078888598
+        },
+        "valid": {
+          "accuracy": 0.6843137254901961,
+          "macro_f1": 0.6764901476839194
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9996732026143791,
+          "macro_f1": 0.9996731989832566
+        },
+        "valid": {
+          "accuracy": 0.6745098039215687,
+          "macro_f1": 0.666076951371069
+        }
+      }
+    },
+    {
+      "task": "rf_21729",
+      "kind": "rf",
+      "seed": 21729,
+      "best_epoch": 30,
+      "epochs_completed": 30,
+      "steps_completed": 2310,
+      "validation_opportunities": 20,
+      "stop_reason": "max_epochs",
+      "elapsed_seconds": 214.56013616081327,
+      "parameters": 1040562,
+      "peak_cuda_bytes": 1647201792,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "best": {
+        "source": {
+          "accuracy": 0.9070588235294118,
+          "macro_f1": 0.9021182723770854
+        },
+        "valid": {
+          "accuracy": 0.8686274509803922,
+          "macro_f1": 0.8638726741667918
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9070588235294118,
+          "macro_f1": 0.9021182723770854
+        },
+        "valid": {
+          "accuracy": 0.8686274509803922,
+          "macro_f1": 0.8638726741667918
+        }
+      }
+    },
+    {
+      "task": "varcnn_23407",
+      "kind": "varcnn",
+      "seed": 23407,
+      "best_epoch": 49,
+      "epochs_completed": 60,
+      "steps_completed": 18360,
+      "validation_opportunities": 60,
+      "stop_reason": "early_stopping",
+      "elapsed_seconds": 520.1061391495168,
+      "parameters": 3900454,
+      "peak_cuda_bytes": 1483308544,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "best": {
+        "source": {
+          "accuracy": 0.9998039215686274,
+          "macro_f1": 0.9998039193899539
+        },
+        "valid": {
+          "accuracy": 0.7156862745098039,
+          "macro_f1": 0.706401691349788
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9999346405228758,
+          "macro_f1": 0.9999346397966513
+        },
+        "valid": {
+          "accuracy": 0.7098039215686275,
+          "macro_f1": 0.6976100696688932
+        }
+      }
+    },
+    {
+      "task": "rf_23407",
+      "kind": "rf",
+      "seed": 23407,
+      "best_epoch": 26,
+      "epochs_completed": 30,
+      "steps_completed": 2310,
+      "validation_opportunities": 20,
+      "stop_reason": "max_epochs",
+      "elapsed_seconds": 203.1968042831868,
+      "parameters": 1040562,
+      "peak_cuda_bytes": 1647201792,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "best": {
+        "source": {
+          "accuracy": 0.8990196078431373,
+          "macro_f1": 0.8948072585395449
+        },
+        "valid": {
+          "accuracy": 0.8529411764705882,
+          "macro_f1": 0.8467895394365981
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9041176470588236,
+          "macro_f1": 0.9024555211542221
+        },
+        "valid": {
+          "accuracy": 0.8392156862745098,
+          "macro_f1": 0.83399832738068
+        }
+      }
+    },
+    {
+      "task": "varcnn_22026",
+      "kind": "varcnn",
+      "seed": 22026,
+      "best_epoch": 29,
+      "epochs_completed": 40,
+      "steps_completed": 12240,
+      "validation_opportunities": 40,
+      "stop_reason": "early_stopping",
+      "elapsed_seconds": 245.49704333860427,
+      "parameters": 3900454,
+      "peak_cuda_bytes": 1483308544,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "best": {
+        "source": {
+          "accuracy": 0.9995424836601308,
+          "macro_f1": 0.9995426942796586
+        },
+        "valid": {
+          "accuracy": 0.6549019607843137,
+          "macro_f1": 0.645594492653316
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9998039215686274,
+          "macro_f1": 0.9998039193899539
+        },
+        "valid": {
+          "accuracy": 0.6509803921568628,
+          "macro_f1": 0.6424099641227667
+        }
+      }
+    },
+    {
+      "task": "rf_22026",
+      "kind": "rf",
+      "seed": 22026,
+      "best_epoch": 30,
+      "epochs_completed": 30,
+      "steps_completed": 2310,
+      "validation_opportunities": 20,
+      "stop_reason": "max_epochs",
+      "elapsed_seconds": 216.58019337709993,
+      "parameters": 1040562,
+      "peak_cuda_bytes": 1647201792,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "best": {
+        "source": {
+          "accuracy": 0.9097385620915033,
+          "macro_f1": 0.9085724357238241
+        },
+        "valid": {
+          "accuracy": 0.8568627450980392,
+          "macro_f1": 0.8550787991964462
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9097385620915033,
+          "macro_f1": 0.9085724357238241
+        },
+        "valid": {
+          "accuracy": 0.8568627450980392,
+          "macro_f1": 0.8550787991964462
+        }
+      }
+    }
+  ],
+  "means": {
+    "varcnn": {
+      "accuracy": 0.6849673202614378,
+      "macro_f1": 0.6761621105623411
+    },
+    "rf": {
+      "accuracy": 0.8594771241830066,
+      "macro_f1": 0.8552470042666119
+    }
+  },
+  "target_90_percent": {
+    "varcnn": false,
+    "rf": false
+  }
+}

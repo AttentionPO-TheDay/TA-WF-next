@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "frozen_files": 15,
+  "prepared_hash_matches_ancestor": true,
+  "checks": {
+    "metrics": 12,
+    "logits_and_checkpoints": 12,
+    "fixed_mask": 6,
+    "initialization": 3,
+    "index_streams": 3,
+    "selection": 3
+  },
+  "means": {
+    "ce_final": {
+      "accuracy": 0.8915032679738562,
+      "macro_f1": 0.8894366163974006
+    },
+    "swa": {
+      "accuracy": 0.8823529411764706,
+      "macro_f1": 0.8797963293061332
+    }
+  },
+  "comparison": {
+    "accuracy_mean_delta_pp": -0.9150326797385625,
+    "accuracy_per_seed_pp": [
+      -1.17647058823529,
+      -1.176470588235301,
+      -0.39215686274509665
+    ],
+    "macro_f1_mean_delta_pp": -0.9640287091267444,
+    "positive_seed_count": 0,
+    "pass": false
+  },
+  "future_access": false,
+  "full_training_replayed": false,
+  "swa_average_reconstructed": false,
+  "limitation": "Seven individual snapshots were not persisted, so the exact SWA average cannot be independently reconstructed; no BN recalibration and no SWA LR exploration in this run.",
+  "audit_script_sha256": "0ff92c42e9f9f412cf991ef4c4eeafec8c229e8e532635f3ab6cf8872632a44d"
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "total_rows": 36,
+  "historical_rows": 18,
+  "new_tasks": 18,
+  "metrics_recomputed": 36,
+  "checkpoints": 18,
+  "checkpoint_reloads": 18,
+  "gmm_calls": 0,
+  "pseudo_label_calls": 0,
+  "batchstats_control": 9,
+  "cost_fields_verified": true,
+  "paired_stream_cells": 9
+}

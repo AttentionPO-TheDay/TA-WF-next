@@ -1,0 +1,17 @@
+{
+  "exit_codes": {
+    "C_local_attention_frozen_1729": 1,
+    "B_local_attention_joint_1729": 1,
+    "D_local_attention_slow_1729": 1,
+    "C_local_attention_frozen_3407": 1,
+    "B_local_attention_joint_3407": 1,
+    "D_local_attention_slow_3407": 1,
+    "C_local_attention_frozen_2026": 1,
+    "B_local_attention_joint_2026": 1,
+    "D_local_attention_slow_2026": 1
+  },
+  "stop_reasons": {},
+  "cancelled": [],
+  "summary_exit_code": 1,
+  "elapsed_seconds": 14.184461425989866
+}

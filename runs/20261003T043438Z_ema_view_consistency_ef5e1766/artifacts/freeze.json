@@ -1,0 +1,19 @@
+{
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/PLAN.md": "03110d1631f86b1db0bc087a3004fdc2679ebf6b71493282305f553a76cd6992",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/SOURCES.md": "9f274080c6d9af03d25ca6e42122f8b7e4a9789a17363d5d282b7de01953fea0",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/config.json": "7b13da1a5f62057baa4db07bc111f1152cc6235bb37e391be84957630c0f01b6",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/base_model.py": "2997108ffa67b71556c54a4df2fbba0b5861926820c6de44e08be9b8d55de289",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/candidate_base.py": "7b9687ad96e9fc4e476986aff6b448519f70e77d112b053ace5796b0a0dd4c65",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/common.py": "542226fa0668386bd2aab547a9bc0db919ab9d83e7359a5180967eef5ac1a6e5",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/encoder_base.py": "baf3c12794d850b68261ef70131c818ac7be25333d766127725f3f040a114c5a",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/framework_base.py": "e530ca3f369cb729f6f9b802bff03fb18ffcec90ebb5ad58db04a4b077a1a148",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/generator_base.py": "5b55eee433f26f7ecade39b0a1f26862819aa94c594885bf09f696bd6ad100d4",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/input_base.py": "1bc1ca5b7aa2b414793171907efba8d5aa5ced701bb2e851d55d511288aaeb62",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/model.py": "a3c134aad81bb7cc16479086d1bd54525c8484d9889b16193d38b2142f27ee78",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/rf_native.py": "8ffd968ba4a750fb66edda53e8146ed367b9a62e1e1330416b3eb600b4060617",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/view_base.py": "aa41abb7d1eec425dc367b3b6a4e85fdfa60d35bcdbad6123754f2a63a0c44dd",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/worker.py": "c9bab63864cd861ab5870a3c841b3f583b23f2e26c012888c4a3fa5187f59d2c",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/preflight.py": "ba294a9e4b3517bddd2f54676476f81ccdfcc51545cd5b268c89fe5a7a872794",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/supervisor.py": "c765a686e8254cc322954d411e484e4aca16bbcd0b2622ca929ef58809aa25e2",
+  "runs/20261003T043438Z_ema_view_consistency_ef5e1766/artifacts/prepared.pt": "49b01254108433528398d17fd5a4df9618a7632ba03c0a63864236786e9fc4db"
+}

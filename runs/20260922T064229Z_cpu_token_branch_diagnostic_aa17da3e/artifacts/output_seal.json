@@ -1,0 +1,8 @@
+{
+  "runs/20260922T064229Z_cpu_token_branch_diagnostic_aa17da3e/artifacts/input_seal.json": "5e7f1ae4193e0c537db42b59e3d6363bd922cea2eff692db6c904336a4ecaa6a",
+  "runs/20260922T064229Z_cpu_token_branch_diagnostic_aa17da3e/artifacts/labels.npz": "4b91cc8cfe9e035f9f6b80051736ec1da9fd4c06725b3bf7839f17212f126ca4",
+  "runs/20260922T064229Z_cpu_token_branch_diagnostic_aa17da3e/artifacts/predictions.npz": "2f070a24649905b4617e18f878621d35a7aca140e30562c71df90a829163f7bd",
+  "runs/20260922T064229Z_cpu_token_branch_diagnostic_aa17da3e/artifacts/execution.json": "7e007c9b759df4f2b0502c1c7d73160d374a9e906a6e79bc579012d1c7ab686b",
+  "runs/20260922T064229Z_cpu_token_branch_diagnostic_aa17da3e/artifacts/metrics.json": "3d9e3abfeb2ba0a753ae8fd704cdfdc999073a59bce7537fbc4909a8054f546e",
+  "runs/20260922T064229Z_cpu_token_branch_diagnostic_aa17da3e/artifacts/scales.json": "cdbdf1c440448782907c63dcd6a0c4f5a7e95240d3fc6f945d49da33db88dbfa"
+}

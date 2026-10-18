@@ -1,0 +1,102 @@
+{
+  "task": "progressive_transformer_23407",
+  "kind": "progressive_transformer",
+  "seed": 23407,
+  "device": "cuda",
+  "best_step": 12800,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 528870,
+  "parameters_trainable": 501590,
+  "generator_parameter_delta_l2": 35.71856327708942,
+  "parameter_deltas_squared": {
+    "packet_positions": 0.0,
+    "time_positions": 313.84820556640625,
+    "view_types": 0.27795690298080444,
+    "generator.packet_conv.0.weight": 0.0,
+    "generator.packet_conv.0.bias": 0.0,
+    "generator.packet_conv.1.weight": 0.0,
+    "generator.packet_conv.1.bias": 0.0,
+    "generator.stages.0.conv1.weight": 4.373772621154785,
+    "generator.stages.0.conv1.bias": 0.17908355593681335,
+    "generator.stages.0.conv2.weight": 42.62339782714844,
+    "generator.stages.0.conv2.bias": 0.07607748359441757,
+    "generator.stages.0.skip.weight": 1.5330504179000854,
+    "generator.stages.0.skip.bias": 0.07683156430721283,
+    "generator.stages.1.conv1.weight": 62.26567077636719,
+    "generator.stages.1.conv1.bias": 0.031370241194963455,
+    "generator.stages.1.conv2.weight": 125.80265808105469,
+    "generator.stages.1.conv2.bias": 0.19838429987430573,
+    "generator.stages.1.skip.weight": 16.786115646362305,
+    "generator.stages.1.skip.bias": 0.1985844224691391,
+    "generator.stages.2.conv1.weight": 326.1470947265625,
+    "generator.stages.2.conv1.bias": 0.30280742049217224,
+    "generator.stages.2.conv2.weight": 618.7051391601562,
+    "generator.stages.2.conv2.bias": 0.6069493889808655,
+    "generator.stages.2.skip.weight": 43.02732849121094,
+    "generator.stages.2.skip.bias": 0.607008159160614,
+    "generator.to_features.weight": 32.22791290283203,
+    "generator.to_features.bias": 0.046525392681360245,
+    "packet_projection.weight": 0.0,
+    "packet_projection.bias": 0.0,
+    "time_projection.weight": 33.59418869018555,
+    "time_projection.bias": 0.27773913741111755,
+    "final_norm.weight": 112.80416870117188,
+    "final_norm.bias": 0.6164799928665161,
+    "classifier.weight": 187.2261505126953,
+    "classifier.bias": 0.3444420099258423,
+    "head.0.self_attn.in_proj_weight": 116.19622802734375,
+    "head.0.self_attn.in_proj_bias": 0.9818456172943115,
+    "head.0.self_attn.out_proj.weight": 56.847415924072266,
+    "head.0.self_attn.out_proj.bias": 0.42173343896865845,
+    "head.0.linear1.weight": 176.9993438720703,
+    "head.0.linear1.bias": 1.467857837677002,
+    "head.0.linear2.weight": 176.34280395507812,
+    "head.0.linear2.bias": 0.4065954089164734,
+    "head.0.norm1.weight": 2.9249653816223145,
+    "head.0.norm1.bias": 0.20720739662647247,
+    "head.0.norm2.weight": 1.213565468788147,
+    "head.0.norm2.bias": 0.4622701406478882,
+    "head.1.self_attn.in_proj_weight": 176.59902954101562,
+    "head.1.self_attn.in_proj_bias": 1.6461296081542969,
+    "head.1.self_attn.out_proj.weight": 72.22183227539062,
+    "head.1.self_attn.out_proj.bias": 0.12738001346588135,
+    "head.1.linear1.weight": 242.91470336914062,
+    "head.1.linear1.bias": 3.5983495712280273,
+    "head.1.linear2.weight": 233.675537109375,
+    "head.1.linear2.bias": 0.3955913782119751,
+    "head.1.norm1.weight": 3.2840218544006348,
+    "head.1.norm1.bias": 0.9027725458145142,
+    "head.1.norm2.weight": 0.5567750334739685,
+    "head.1.norm2.bias": 2.134340763092041
+  },
+  "inactive_parameters_unchanged": true,
+  "elapsed_seconds": 374.69754557684064,
+  "peak_cuda_bytes": 967370240,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "generator_family": "progressive",
+  "head_family": "transformer",
+  "best": {
+    "source": {
+      "accuracy": 0.9999346405228758,
+      "macro_f1": 0.9999346397966513
+    },
+    "valid": {
+      "accuracy": 0.8568627450980392,
+      "macro_f1": 0.8537097434156258
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9999346405228758,
+      "macro_f1": 0.9999346397966513
+    },
+    "valid": {
+      "accuracy": 0.8568627450980392,
+      "macro_f1": 0.8537097434156258
+    }
+  }
+}

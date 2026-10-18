@@ -1,0 +1,13 @@
+{
+  "runs/20260922T114658Z_cpu_run_window_adapters_v2_148f23cd/PLAN.md": "b38981ca8fb8e803316847f0e86e8169f55466fde2b5a5097997c0264ca55972",
+  "runs/20260922T114658Z_cpu_run_window_adapters_v2_148f23cd/config.json": "f1936dadb8247449f349693f29e792ea33ef5d9fe013f5856e009b176715af54",
+  "runs/20260922T114658Z_cpu_run_window_adapters_v2_148f23cd/train.py": "00d807ef0b2a5a665e34c6279380c70dd2fc4798cc8d7dec2a7b49aff75c9c43",
+  "runs/20260922T114658Z_cpu_run_window_adapters_v2_148f23cd/verify.py": "136617e5de4196ca821d185220af6533bb1906651987557dc9a921196bf66d04",
+  "runs/20260922T114658Z_cpu_run_window_adapters_v2_148f23cd/artifacts/source_inputs.npz": "7e91afa4540b22951f2cc699b4c2fcc120c0157d7c13791fb939159d8166ab7b",
+  "runs/20260922T114658Z_cpu_run_window_adapters_v2_148f23cd/artifacts/valid_inputs.npz": "95f2119d62b04efafbc3b9652808f4af641d0fe599c5d04b27be745cce78e56f",
+  "runs/20260922T114658Z_cpu_run_window_adapters_v2_148f23cd/artifacts/window_statistics.npz": "ab00fc303945e63cc200cf7a3e29872e4d7b40ee6451257cc1a6b2002f9d9659",
+  "configs/datasets.json": "c3edbfeaf83553f63e6b5a12fa6e1dc5049346c1f8eb3b54bedf7760408b6b28",
+  "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+  "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/artifacts/manifest.json": "c89804aa8475f5ea0e308f1c5b19c0a34f3fb71a2a83f998c450ff7ab203446c"
+}

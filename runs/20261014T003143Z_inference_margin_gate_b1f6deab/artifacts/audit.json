@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "cells": 9,
+  "threshold_rows": 201,
+  "gpu_training": false,
+  "query_labels_used_for": "metrics_and_pre_registered_threshold_selection",
+  "query_adaptation": false
+}

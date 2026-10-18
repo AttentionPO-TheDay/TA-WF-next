@@ -1,0 +1,95 @@
+{
+  "metrics": [
+    {
+      "role": "valid",
+      "view": "packet",
+      "best_epoch": 15,
+      "accuracy": 0.26666666666666666,
+      "macro_f1": 0.23669231140430091
+    },
+    {
+      "role": "valid",
+      "view": "windows",
+      "best_epoch": 15,
+      "accuracy": 0.2980392156862745,
+      "macro_f1": 0.2765429831606302
+    },
+    {
+      "role": "valid",
+      "view": "exact",
+      "best_epoch": 15,
+      "accuracy": 0.058823529411764705,
+      "macro_f1": 0.022400209037887364
+    },
+    {
+      "role": "valid",
+      "view": "coarse",
+      "best_epoch": 14,
+      "accuracy": 0.049019607843137254,
+      "macro_f1": 0.022050023217843284
+    },
+    {
+      "role": "jp",
+      "view": "packet",
+      "best_epoch": 15,
+      "accuracy": 0.21463654223968565,
+      "macro_f1": 0.19374927218941282
+    },
+    {
+      "role": "jp",
+      "view": "windows",
+      "best_epoch": 15,
+      "accuracy": 0.23231827111984282,
+      "macro_f1": 0.22129536859112306
+    },
+    {
+      "role": "jp",
+      "view": "exact",
+      "best_epoch": 15,
+      "accuracy": 0.047151277013752456,
+      "macro_f1": 0.017271177422147767
+    },
+    {
+      "role": "jp",
+      "view": "coarse",
+      "best_epoch": 14,
+      "accuracy": 0.05353634577603143,
+      "macro_f1": 0.01899241645423996
+    },
+    {
+      "role": "subpage",
+      "view": "packet",
+      "best_epoch": 15,
+      "accuracy": 0.11715686274509804,
+      "macro_f1": 0.09862109323966817
+    },
+    {
+      "role": "subpage",
+      "view": "windows",
+      "best_epoch": 15,
+      "accuracy": 0.11029411764705882,
+      "macro_f1": 0.10102941985549661
+    },
+    {
+      "role": "subpage",
+      "view": "exact",
+      "best_epoch": 15,
+      "accuracy": 0.029901960784313727,
+      "macro_f1": 0.009067587344629374
+    },
+    {
+      "role": "subpage",
+      "view": "coarse",
+      "best_epoch": 14,
+      "accuracy": 0.033823529411764704,
+      "macro_f1": 0.009937691170355945
+    }
+  ],
+  "best_epochs": {
+    "packet": 15,
+    "windows": 15,
+    "exact": 15,
+    "coarse": 14
+  },
+  "config": "CPU tiny models; source valid selection; target labels scoring only"
+}

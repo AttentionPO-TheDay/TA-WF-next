@@ -1,0 +1,37 @@
+{
+  "task": "learned_transformer_23407",
+  "kind": "learned_transformer",
+  "seed": 23407,
+  "best_step": 7520,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 350006,
+  "parameters_trainable": 350006,
+  "generator_parameter_delta_l2": 5.211361511711267,
+  "elapsed_seconds": 210.86149882152677,
+  "peak_cuda_bytes": 966549504,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "best": {
+    "source": {
+      "accuracy": 0.9933333333333333,
+      "macro_f1": 0.9933244696645641
+    },
+    "valid": {
+      "accuracy": 0.7372549019607844,
+      "macro_f1": 0.7269580093109504
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.7294117647058823,
+      "macro_f1": 0.7227002844649902
+    }
+  }
+}

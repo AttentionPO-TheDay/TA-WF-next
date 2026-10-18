@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "source_rows": 15300,
+  "valid_rows": 510,
+  "single_network_count": 1,
+  "fixed_teacher_loaded": false,
+  "ema_loaded": false,
+  "joint_two_view_forward": true,
+  "view_logits_shape": [
+    64,
+    102
+  ],
+  "peer_target_detached": true,
+  "student_generator_gradients_active": true,
+  "future_access": false
+}

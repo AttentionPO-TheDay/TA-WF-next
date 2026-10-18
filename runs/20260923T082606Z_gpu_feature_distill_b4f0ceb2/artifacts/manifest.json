@@ -1,0 +1,104 @@
+{
+  "sampling_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json",
+  "sampling_sha256": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "teacher_info": {
+    "1729": {
+      "best_epoch": 45,
+      "valid_macro_f1": 0.3270761917820741,
+      "initial_hash": "45d3e0ee021a52955064e764eb71ba64d304d4f099f22537fc2dad554406669e",
+      "parameters": 219494,
+      "train_seconds": 2.707005879841745
+    },
+    "3407": {
+      "best_epoch": 41,
+      "valid_macro_f1": 0.33814313649953787,
+      "initial_hash": "3e41b5bfcd238b55915aa53455816c1c7f0eba9739f3f66e8ed3ca347259f7fa",
+      "parameters": 219494,
+      "train_seconds": 2.7523678140714765
+    },
+    "2026": {
+      "best_epoch": 43,
+      "valid_macro_f1": 0.32813702861280714,
+      "initial_hash": "d79c4851deaed02a0c225bbb1df50e94b82dff14b060331ece2a75cbce4dbe21",
+      "parameters": 219494,
+      "train_seconds": 2.539920308627188
+    }
+  },
+  "student_info": {
+    "ce_1729": {
+      "best_epoch": 27,
+      "valid_macro_f1": 0.24545004527703487,
+      "initial_hash": "f08e808eb62e15a819fa5cc5d4c2b8fe468fd041c71c06aa4d514c9b2dda0944",
+      "inference_parameters": 159078,
+      "training_parameters": 175590,
+      "train_seconds": 2.104238571599126
+    },
+    "align_packet_1729": {
+      "best_epoch": 42,
+      "valid_macro_f1": 0.25781859112308936,
+      "initial_hash": "f08e808eb62e15a819fa5cc5d4c2b8fe468fd041c71c06aa4d514c9b2dda0944",
+      "inference_parameters": 159078,
+      "training_parameters": 175590,
+      "train_seconds": 2.2883928576484323
+    },
+    "align_window_1729": {
+      "best_epoch": 41,
+      "valid_macro_f1": 0.24361096868017285,
+      "initial_hash": "f08e808eb62e15a819fa5cc5d4c2b8fe468fd041c71c06aa4d514c9b2dda0944",
+      "inference_parameters": 159078,
+      "training_parameters": 175590,
+      "train_seconds": 2.4476970275864005
+    },
+    "ce_3407": {
+      "best_epoch": 27,
+      "valid_macro_f1": 0.2556443596031103,
+      "initial_hash": "3b35c18d867b47ab6aa7a0573cca54c9fd99c9fcc45316d00dcdff1744fe1f10",
+      "inference_parameters": 159078,
+      "training_parameters": 175590,
+      "train_seconds": 2.3879557261243463
+    },
+    "align_packet_3407": {
+      "best_epoch": 39,
+      "valid_macro_f1": 0.24616734904478482,
+      "initial_hash": "3b35c18d867b47ab6aa7a0573cca54c9fd99c9fcc45316d00dcdff1744fe1f10",
+      "inference_parameters": 159078,
+      "training_parameters": 175590,
+      "train_seconds": 2.126117496751249
+    },
+    "align_window_3407": {
+      "best_epoch": 43,
+      "valid_macro_f1": 0.27202178444392977,
+      "initial_hash": "3b35c18d867b47ab6aa7a0573cca54c9fd99c9fcc45316d00dcdff1744fe1f10",
+      "inference_parameters": 159078,
+      "training_parameters": 175590,
+      "train_seconds": 2.1595140788704157
+    },
+    "ce_2026": {
+      "best_epoch": 41,
+      "valid_macro_f1": 0.24510783275352574,
+      "initial_hash": "074ebb5d4e3190dfba4a151672d35c43fd23b767b5fa35d245240a6c141765ae",
+      "inference_parameters": 159078,
+      "training_parameters": 175590,
+      "train_seconds": 2.063694564625621
+    },
+    "align_packet_2026": {
+      "best_epoch": 43,
+      "valid_macro_f1": 0.24738260577588567,
+      "initial_hash": "074ebb5d4e3190dfba4a151672d35c43fd23b767b5fa35d245240a6c141765ae",
+      "inference_parameters": 159078,
+      "training_parameters": 175590,
+      "train_seconds": 2.125805570743978
+    },
+    "align_window_2026": {
+      "best_epoch": 43,
+      "valid_macro_f1": 0.24324795574795574,
+      "initial_hash": "074ebb5d4e3190dfba4a151672d35c43fd23b767b5fa35d245240a6c141765ae",
+      "inference_parameters": 159078,
+      "training_parameters": 175590,
+      "train_seconds": 2.169033938087523
+    }
+  },
+  "prediction_sha256": "02ca33253e094075f5e7a88a5a274561f78ce6382c8f8a90a45efb5e1ff8df02",
+  "teacher_target_sha256": "5a5ac8f4b44fe93e291e950e0cd3a15a757d8bccd49f07039a6e7ed7cfc55ba2",
+  "elapsed_seconds": 43.89021403249353
+}

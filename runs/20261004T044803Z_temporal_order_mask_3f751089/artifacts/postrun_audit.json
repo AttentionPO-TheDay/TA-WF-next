@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "frozen_files": 17,
+  "checks": {
+    "metrics": 12,
+    "logits": 12,
+    "fixed_mask": 6,
+    "initialization": 6,
+    "index": 6,
+    "selection": 6
+  },
+  "means": {
+    "ce_control": {
+      "accuracy": 0.8915032679738562,
+      "macro_f1": 0.8894366163974006
+    },
+    "temporal_order_mask": {
+      "accuracy": 0.8993464052287582,
+      "macro_f1": 0.8964035419917771
+    }
+  },
+  "comparison": {
+    "accuracy_mean_delta_pp": 0.7843137254902007,
+    "accuracy_per_seed_pp": [
+      0.7843137254902044,
+      1.17647058823529,
+      0.39215686274510775
+    ],
+    "macro_f1_mean_delta_pp": 0.6966925594376505,
+    "positive_seed_count": 3,
+    "pass": false
+  },
+  "future_access": false,
+  "audit_script_sha256": "cf5e6c04984c1915835c7fc3116737bf4e00ad5c7e78844eb6a32901dfcaaf90"
+}

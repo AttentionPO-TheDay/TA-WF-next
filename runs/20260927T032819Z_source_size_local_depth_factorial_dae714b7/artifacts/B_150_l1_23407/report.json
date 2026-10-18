@@ -1,0 +1,51 @@
+{
+  "condition": "B_150_l1",
+  "seed": 23407,
+  "status": "completed",
+  "historical_reuse": false,
+  "steps_completed": 12800,
+  "blocks_completed": 400,
+  "last": {
+    "source": {
+      "accuracy": 0.5987581699346405,
+      "macro_f1": 0.5922237192364714
+    },
+    "common_source": {
+      "accuracy": 0.6037990196078431,
+      "macro_f1": 0.5959385109516104
+    },
+    "valid": {
+      "accuracy": 0.5313725490196078,
+      "macro_f1": 0.5161610992493345
+    }
+  },
+  "best_block": 355,
+  "initial_state_sha256": "acca5885cbbed2cec1a577057788232898659ccde909e37d094a400b76cd7102",
+  "shared_initial_sha256": "acca5885cbbed2cec1a577057788232898659ccde909e37d094a400b76cd7102",
+  "generator_initial_sha256": "36230b89dcefea7f2a59adeed3f437546aa1d3c5619feab1e9e6a372a03c2dbd",
+  "generator_changed": true,
+  "config_sha256": "ef238f2939d5a45fffece2478b84f61d2836c02d51866cfc5a1caea0223e83e5",
+  "source_count": 15300,
+  "sample_visits_min": 53,
+  "sample_visits_max": 54,
+  "samples_presented": 819200,
+  "elapsed_seconds": 5941.7168510220945,
+  "parameters": {
+    "total": 119578,
+    "trainable": 119578,
+    "generator_total": 6064,
+    "generator_trainable": 6064
+  },
+  "source": {
+    "accuracy": 0.5972549019607843,
+    "macro_f1": 0.5895387700593695
+  },
+  "common_source": {
+    "accuracy": 0.5995098039215686,
+    "macro_f1": 0.5901344898086025
+  },
+  "valid": {
+    "accuracy": 0.5411764705882353,
+    "macro_f1": 0.5202248155535353
+  }
+}

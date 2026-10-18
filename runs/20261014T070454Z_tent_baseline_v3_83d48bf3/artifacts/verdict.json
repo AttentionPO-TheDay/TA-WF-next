@@ -1,0 +1,22 @@
+{
+  "tent_bn": {
+    "macro_f1": 0.7087399099627114,
+    "negative_adaptation_rate": 0.04121730861408554,
+    "recovery_rate": 0.10956163664482738,
+    "f1_delta_vs_no_pseudo_fixed_pp": -2.629835594586416,
+    "nar_delta_vs_no_pseudo_fixed_pp": 0.15826722219891842,
+    "recovery_delta_vs_no_pseudo_fixed_pp": -8.007393382961736,
+    "positive_paired_cells": 0,
+    "screen_pass": false
+  },
+  "bn_batchstats_no_update": {
+    "macro_f1": 0.7009132799017845,
+    "negative_adaptation_rate": 0.03654934322459212,
+    "recovery_rate": 0.05729861222248419,
+    "f1_delta_vs_no_pseudo_fixed_pp": -3.4124986006791036,
+    "nar_delta_vs_no_pseudo_fixed_pp": -0.30852931675042355,
+    "recovery_delta_vs_no_pseudo_fixed_pp": -13.233695825196055,
+    "positive_paired_cells": 0,
+    "screen_pass": false
+  }
+}

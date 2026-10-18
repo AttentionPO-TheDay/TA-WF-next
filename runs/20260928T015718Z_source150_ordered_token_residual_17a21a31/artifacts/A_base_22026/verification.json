@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "historical_reuse": true,
+  "prediction_sets_checked": 6,
+  "new_checkpoint_replays": 0,
+  "previous_replay_evidence": "runs/20260927T032819Z_source_size_local_depth_factorial_dae714b7/artifacts/B_150_l1_22026/verification.json",
+  "artifact_sha256": {
+    "runs/20260928T015718Z_source150_ordered_token_residual_17a21a31/checkpoints/A_base_22026_best.pt": "061bdf10c929baf3bb635be93d1e2781050702696be42b930e30463e6601d452",
+    "runs/20260928T015718Z_source150_ordered_token_residual_17a21a31/artifacts/A_base_22026/predictions.npz": "2b99317681e3831ada89105f5ed81a3ec741183198679bb1c967200770a96533",
+    "runs/20260928T015718Z_source150_ordered_token_residual_17a21a31/checkpoints/A_base_22026_latest.pt": "c5acb56ed913a2b936b8ea75cf5f71ad480fcc3b645e21572e4a4c36d7710f6e",
+    "runs/20260928T015718Z_source150_ordered_token_residual_17a21a31/artifacts/A_base_22026/predictions_last.npz": "4fe549bf1360aa0ab2311ff19911f9c2053e8fd32dab51f04f4fdd7c501ac837",
+    "runs/20260928T015718Z_source150_ordered_token_residual_17a21a31/artifacts/A_base_22026/report.json": "78a1865fe2ecae95004f44c18dda482bda5bced40d52f6293b1e1b669d4410cc",
+    "runs/20260928T015718Z_source150_ordered_token_residual_17a21a31/artifacts/A_base_22026/history.json": "f52b22cf189693c668468d97d6dcf148d2335ccc2aa8fbb7719d8c284b74c65d",
+    "runs/20260928T015718Z_source150_ordered_token_residual_17a21a31/artifacts/A_base_22026/index_stream.pt": "ee2c894f80415b44a1d21560924cb34f4a691f923c8e308f38e2636d7ee7a8d6",
+    "runs/20260928T015718Z_source150_ordered_token_residual_17a21a31/artifacts/A_base_22026/sample_visits.pt": "8eb190876ed4b46056ce4f75a650138de978ca2f735ba1eeb9cbeed8df71742c"
+  },
+  "errors": []
+}

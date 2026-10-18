@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "freeze_hashes_verified": 49,
+  "metric_groups_verified": 60,
+  "initialization_index_selection_verified": true,
+  "bn_eval_statistics_verified": true,
+  "rows": [
+    {
+      "kind": "baseline",
+      "seed": 21729,
+      "valid_best": 0.8764705882352941,
+      "macro_f1": 0.8730243612596553,
+      "valid_last": 0.8666666666666667
+    },
+    {
+      "kind": "wide",
+      "seed": 21729,
+      "valid_best": 0.8568627450980392,
+      "macro_f1": 0.8530147956618542,
+      "valid_last": 0.8568627450980392
+    },
+    {
+      "kind": "bn",
+      "seed": 21729,
+      "valid_best": 0.8823529411764706,
+      "macro_f1": 0.8773502097031508,
+      "valid_last": 0.8764705882352941
+    },
+    {
+      "kind": "wide_bn",
+      "seed": 21729,
+      "valid_best": 0.8901960784313725,
+      "macro_f1": 0.8882169029227852,
+      "valid_last": 0.8705882352941177
+    },
+    {
+      "kind": "mixup",
+      "seed": 21729,
+      "valid_best": 0.8666666666666667,
+      "macro_f1": 0.8631947573124044,
+      "valid_last": 0.8627450980392157
+    },
+    {
+      "kind": "baseline",
+      "seed": 23407,
+      "valid_best": 0.8568627450980392,
+      "macro_f1": 0.8537097434156258,
+      "valid_last": 0.8568627450980392
+    },
+    {
+      "kind": "wide",
+      "seed": 23407,
+      "valid_best": 0.8607843137254902,
+      "macro_f1": 0.8574387486152191,
+      "valid_last": 0.8392156862745098
+    },
+    {
+      "kind": "bn",
+      "seed": 23407,
+      "valid_best": 0.8803921568627451,
+      "macro_f1": 0.8800530079941844,
+      "valid_last": 0.8686274509803922
+    },
+    {
+      "kind": "wide_bn",
+      "seed": 23407,
+      "valid_best": 0.8941176470588236,
+      "macro_f1": 0.8923945335710041,
+      "valid_last": 0.8941176470588236
+    },
+    {
+      "kind": "mixup",
+      "seed": 23407,
+      "valid_best": 0.8764705882352941,
+      "macro_f1": 0.8753653753653753,
+      "valid_last": 0.8607843137254902
+    },
+    {
+      "kind": "baseline",
+      "seed": 22026,
+      "valid_best": 0.8627450980392157,
+      "macro_f1": 0.8583444877562524,
+      "valid_last": 0.8627450980392157
+    },
+    {
+      "kind": "wide",
+      "seed": 22026,
+      "valid_best": 0.8588235294117647,
+      "macro_f1": 0.8600297850297849,
+      "valid_last": 0.8509803921568627
+    },
+    {
+      "kind": "bn",
+      "seed": 22026,
+      "valid_best": 0.888235294117647,
+      "macro_f1": 0.8850695600695598,
+      "valid_last": 0.8823529411764706
+    },
+    {
+      "kind": "wide_bn",
+      "seed": 22026,
+      "valid_best": 0.8901960784313725,
+      "macro_f1": 0.8876984126984127,
+      "valid_last": 0.8862745098039215
+    },
+    {
+      "kind": "mixup",
+      "seed": 22026,
+      "valid_best": 0.884313725490196,
+      "macro_f1": 0.8821347497818086,
+      "valid_last": 0.8686274509803922
+    }
+  ],
+  "last_below_best_count": 11,
+  "future_access": false
+}

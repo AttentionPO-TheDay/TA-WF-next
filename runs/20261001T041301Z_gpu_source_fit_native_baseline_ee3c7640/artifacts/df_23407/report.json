@@ -1,0 +1,34 @@
+{
+  "task": "df_23407",
+  "kind": "df",
+  "tiny": false,
+  "seed": 23407,
+  "best_step": 3600,
+  "steps_completed": 3600,
+  "elapsed_seconds": 94.03151180967689,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "parameters": 3982502,
+  "best": {
+    "source": {
+      "accuracy": 0.9024836601307189,
+      "macro_f1": 0.899502213120937
+    },
+    "valid": {
+      "accuracy": 0.7156862745098039,
+      "macro_f1": 0.701898658819074
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9024836601307189,
+      "macro_f1": 0.899502213120937
+    },
+    "valid": {
+      "accuracy": 0.7156862745098039,
+      "macro_f1": 0.701898658819074
+    }
+  }
+}

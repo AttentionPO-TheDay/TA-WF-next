@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "frozen_files": 17,
+  "prepared_hash_matches_ancestor": true,
+  "checks": {
+    "metrics": 12,
+    "logits_and_checkpoints": 12,
+    "fixed_mask": 6,
+    "initialization": 6,
+    "index_streams": 6,
+    "selection": 6,
+    "feature_reference": 6
+  },
+  "means": {
+    "ce_control": {
+      "accuracy": 0.8745098039215686,
+      "macro_f1": 0.8713448305720508
+    },
+    "relative_time": {
+      "accuracy": 0.8718954248366013,
+      "macro_f1": 0.8691912043699818
+    }
+  },
+  "comparison": {
+    "accuracy_mean_delta_pp": -0.2614379084967311,
+    "accuracy_per_seed_pp": [
+      0.39215686274509665,
+      -1.9607843137254832,
+      0.7843137254901933
+    ],
+    "macro_f1_mean_delta_pp": -0.21536262020690847,
+    "positive_seed_count": 2,
+    "pass": false
+  },
+  "future_access": false,
+  "full_training_replayed": false,
+  "audit_script_sha256": "14f7d1f467ff643ffab279bf6c5452d57bfaf72e4eac5b7bee042aa7f949ffe4"
+}

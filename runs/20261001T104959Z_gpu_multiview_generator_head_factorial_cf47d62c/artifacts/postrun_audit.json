@@ -1,0 +1,58 @@
+{
+  "reviewed_utc": "2026-10-01T11:24:37.033355+00:00",
+  "freeze_hash_verification": "passed",
+  "independent_best_last_metric_checks": 48,
+  "additional_training": false,
+  "additional_future_or_external_access": false,
+  "diagnostics": {
+    "fixed_mlp": {
+      "source_accuracy_mean": 0.9705882352941176,
+      "best_valid_accuracy_mean": 0.6320261437908496,
+      "last_valid_accuracy_mean": 0.6228758169934641,
+      "best_steps": [
+        9920,
+        7040,
+        6080
+      ],
+      "all_three_seeds_wrong_valid_count": 113
+    },
+    "fixed_transformer": {
+      "source_accuracy_mean": 0.9933986928104576,
+      "best_valid_accuracy_mean": 0.6758169934640522,
+      "last_valid_accuracy_mean": 0.6549019607843137,
+      "best_steps": [
+        8000,
+        8000,
+        8480
+      ],
+      "all_three_seeds_wrong_valid_count": 87
+    },
+    "learned_mlp": {
+      "source_accuracy_mean": 0.9972113289760348,
+      "best_valid_accuracy_mean": 0.6679738562091503,
+      "last_valid_accuracy_mean": 0.6555555555555556,
+      "best_steps": [
+        10880,
+        7040,
+        8960
+      ],
+      "all_three_seeds_wrong_valid_count": 106
+    },
+    "learned_transformer": {
+      "source_accuracy_mean": 0.997755991285403,
+      "best_valid_accuracy_mean": 0.7418300653594772,
+      "last_valid_accuracy_mean": 0.7346405228758169,
+      "best_steps": [
+        11840,
+        7520,
+        12800
+      ],
+      "all_three_seeds_wrong_valid_count": 60
+    }
+  },
+  "performance_gaps_pp": {
+    "to_90": 15.816993464052286,
+    "to_historical_rf": 11.764705882352944
+  },
+  "next_candidate": "Keep generator/classifier modular framework; first isolate packet-only/TAM-only/fusion in this version at fixed training/selection budget. Representation-preserving time encoding is a later candidate, not a diagnosed cause. No new training launched."
+}

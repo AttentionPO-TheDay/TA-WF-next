@@ -1,0 +1,523 @@
+{
+  "metrics": [
+    {
+      "role": "valid",
+      "view": "packet_1729",
+      "best_epoch": 11,
+      "accuracy": 0.24313725490196078,
+      "macro_f1": 0.21174193875777247
+    },
+    {
+      "role": "valid",
+      "view": "windows_1729",
+      "best_epoch": 15,
+      "accuracy": 0.26862745098039215,
+      "macro_f1": 0.24595216874628642
+    },
+    {
+      "role": "valid",
+      "view": "exact_1729",
+      "best_epoch": 13,
+      "accuracy": 0.1,
+      "macro_f1": 0.06696955300761528
+    },
+    {
+      "role": "valid",
+      "view": "coarse_1729",
+      "best_epoch": 15,
+      "accuracy": 0.10392156862745099,
+      "macro_f1": 0.0702434650445031
+    },
+    {
+      "role": "valid",
+      "view": "packet_3407",
+      "best_epoch": 14,
+      "accuracy": 0.2372549019607843,
+      "macro_f1": 0.2139054388416982
+    },
+    {
+      "role": "valid",
+      "view": "windows_3407",
+      "best_epoch": 15,
+      "accuracy": 0.28431372549019607,
+      "macro_f1": 0.2573561010207341
+    },
+    {
+      "role": "valid",
+      "view": "exact_3407",
+      "best_epoch": 12,
+      "accuracy": 0.10784313725490197,
+      "macro_f1": 0.07144377847059857
+    },
+    {
+      "role": "valid",
+      "view": "coarse_3407",
+      "best_epoch": 15,
+      "accuracy": 0.09411764705882353,
+      "macro_f1": 0.057886034031490466
+    },
+    {
+      "role": "valid",
+      "view": "packet_2026",
+      "best_epoch": 15,
+      "accuracy": 0.22549019607843138,
+      "macro_f1": 0.19294374002532808
+    },
+    {
+      "role": "valid",
+      "view": "windows_2026",
+      "best_epoch": 15,
+      "accuracy": 0.2823529411764706,
+      "macro_f1": 0.2575765865558253
+    },
+    {
+      "role": "valid",
+      "view": "exact_2026",
+      "best_epoch": 15,
+      "accuracy": 0.10980392156862745,
+      "macro_f1": 0.07047471437554953
+    },
+    {
+      "role": "valid",
+      "view": "coarse_2026",
+      "best_epoch": 15,
+      "accuracy": 0.10784313725490197,
+      "macro_f1": 0.0676519007972226
+    },
+    {
+      "role": "day14",
+      "view": "packet_1729",
+      "best_epoch": 11,
+      "accuracy": 0.20980392156862746,
+      "macro_f1": 0.18033246499089778
+    },
+    {
+      "role": "day14",
+      "view": "windows_1729",
+      "best_epoch": 15,
+      "accuracy": 0.25833333333333336,
+      "macro_f1": 0.23844821498394966
+    },
+    {
+      "role": "day14",
+      "view": "exact_1729",
+      "best_epoch": 13,
+      "accuracy": 0.09264705882352942,
+      "macro_f1": 0.06015241591085804
+    },
+    {
+      "role": "day14",
+      "view": "coarse_1729",
+      "best_epoch": 15,
+      "accuracy": 0.09166666666666666,
+      "macro_f1": 0.05653138489565207
+    },
+    {
+      "role": "day14",
+      "view": "packet_3407",
+      "best_epoch": 14,
+      "accuracy": 0.23088235294117648,
+      "macro_f1": 0.20340940164910395
+    },
+    {
+      "role": "day14",
+      "view": "windows_3407",
+      "best_epoch": 15,
+      "accuracy": 0.2549019607843137,
+      "macro_f1": 0.2345091669027441
+    },
+    {
+      "role": "day14",
+      "view": "exact_3407",
+      "best_epoch": 12,
+      "accuracy": 0.09411764705882353,
+      "macro_f1": 0.05760111438474678
+    },
+    {
+      "role": "day14",
+      "view": "coarse_3407",
+      "best_epoch": 15,
+      "accuracy": 0.09313725490196079,
+      "macro_f1": 0.056662322628585775
+    },
+    {
+      "role": "day14",
+      "view": "packet_2026",
+      "best_epoch": 15,
+      "accuracy": 0.2269607843137255,
+      "macro_f1": 0.19736646461932034
+    },
+    {
+      "role": "day14",
+      "view": "windows_2026",
+      "best_epoch": 15,
+      "accuracy": 0.257843137254902,
+      "macro_f1": 0.2417089098558176
+    },
+    {
+      "role": "day14",
+      "view": "exact_2026",
+      "best_epoch": 15,
+      "accuracy": 0.1142156862745098,
+      "macro_f1": 0.07543027987979864
+    },
+    {
+      "role": "day14",
+      "view": "coarse_2026",
+      "best_epoch": 15,
+      "accuracy": 0.1053921568627451,
+      "macro_f1": 0.06395924064278244
+    },
+    {
+      "role": "day30",
+      "view": "packet_1729",
+      "best_epoch": 11,
+      "accuracy": 0.2073529411764706,
+      "macro_f1": 0.1774887489788305
+    },
+    {
+      "role": "day30",
+      "view": "windows_1729",
+      "best_epoch": 15,
+      "accuracy": 0.23431372549019608,
+      "macro_f1": 0.22003331354729214
+    },
+    {
+      "role": "day30",
+      "view": "exact_1729",
+      "best_epoch": 13,
+      "accuracy": 0.09215686274509804,
+      "macro_f1": 0.06092377176619017
+    },
+    {
+      "role": "day30",
+      "view": "coarse_1729",
+      "best_epoch": 15,
+      "accuracy": 0.07990196078431372,
+      "macro_f1": 0.04415031666517241
+    },
+    {
+      "role": "day30",
+      "view": "packet_3407",
+      "best_epoch": 14,
+      "accuracy": 0.22156862745098038,
+      "macro_f1": 0.19323811412208514
+    },
+    {
+      "role": "day30",
+      "view": "windows_3407",
+      "best_epoch": 15,
+      "accuracy": 0.24215686274509804,
+      "macro_f1": 0.2267444575176713
+    },
+    {
+      "role": "day30",
+      "view": "exact_3407",
+      "best_epoch": 12,
+      "accuracy": 0.0857843137254902,
+      "macro_f1": 0.05378178777175719
+    },
+    {
+      "role": "day30",
+      "view": "coarse_3407",
+      "best_epoch": 15,
+      "accuracy": 0.07941176470588235,
+      "macro_f1": 0.044940886915163854
+    },
+    {
+      "role": "day30",
+      "view": "packet_2026",
+      "best_epoch": 15,
+      "accuracy": 0.21911764705882353,
+      "macro_f1": 0.18799538214070333
+    },
+    {
+      "role": "day30",
+      "view": "windows_2026",
+      "best_epoch": 15,
+      "accuracy": 0.25441176470588234,
+      "macro_f1": 0.23829994696793425
+    },
+    {
+      "role": "day30",
+      "view": "exact_2026",
+      "best_epoch": 15,
+      "accuracy": 0.10441176470588236,
+      "macro_f1": 0.06820933528292505
+    },
+    {
+      "role": "day30",
+      "view": "coarse_2026",
+      "best_epoch": 15,
+      "accuracy": 0.10980392156862745,
+      "macro_f1": 0.07261697534451951
+    },
+    {
+      "role": "day90",
+      "view": "packet_1729",
+      "best_epoch": 11,
+      "accuracy": 0.17401960784313725,
+      "macro_f1": 0.14113053335664083
+    },
+    {
+      "role": "day90",
+      "view": "windows_1729",
+      "best_epoch": 15,
+      "accuracy": 0.19950980392156864,
+      "macro_f1": 0.18024614294401212
+    },
+    {
+      "role": "day90",
+      "view": "exact_1729",
+      "best_epoch": 13,
+      "accuracy": 0.0857843137254902,
+      "macro_f1": 0.054928447054953915
+    },
+    {
+      "role": "day90",
+      "view": "coarse_1729",
+      "best_epoch": 15,
+      "accuracy": 0.09264705882352942,
+      "macro_f1": 0.054944841753648006
+    },
+    {
+      "role": "day90",
+      "view": "packet_3407",
+      "best_epoch": 14,
+      "accuracy": 0.1906862745098039,
+      "macro_f1": 0.16513903507026637
+    },
+    {
+      "role": "day90",
+      "view": "windows_3407",
+      "best_epoch": 15,
+      "accuracy": 0.21519607843137256,
+      "macro_f1": 0.1905357798398686
+    },
+    {
+      "role": "day90",
+      "view": "exact_3407",
+      "best_epoch": 12,
+      "accuracy": 0.0946078431372549,
+      "macro_f1": 0.059504394612636555
+    },
+    {
+      "role": "day90",
+      "view": "coarse_3407",
+      "best_epoch": 15,
+      "accuracy": 0.09362745098039216,
+      "macro_f1": 0.057378251664170855
+    },
+    {
+      "role": "day90",
+      "view": "packet_2026",
+      "best_epoch": 15,
+      "accuracy": 0.18235294117647058,
+      "macro_f1": 0.14919423666287734
+    },
+    {
+      "role": "day90",
+      "view": "windows_2026",
+      "best_epoch": 15,
+      "accuracy": 0.2142156862745098,
+      "macro_f1": 0.1945607273223693
+    },
+    {
+      "role": "day90",
+      "view": "exact_2026",
+      "best_epoch": 15,
+      "accuracy": 0.09803921568627451,
+      "macro_f1": 0.06676107748001267
+    },
+    {
+      "role": "day90",
+      "view": "coarse_2026",
+      "best_epoch": 15,
+      "accuracy": 0.09705882352941177,
+      "macro_f1": 0.06482236262848894
+    },
+    {
+      "role": "day150",
+      "view": "packet_1729",
+      "best_epoch": 11,
+      "accuracy": 0.1426470588235294,
+      "macro_f1": 0.11361075920235432
+    },
+    {
+      "role": "day150",
+      "view": "windows_1729",
+      "best_epoch": 15,
+      "accuracy": 0.17647058823529413,
+      "macro_f1": 0.16090076091550262
+    },
+    {
+      "role": "day150",
+      "view": "exact_1729",
+      "best_epoch": 13,
+      "accuracy": 0.07598039215686274,
+      "macro_f1": 0.048191128449902025
+    },
+    {
+      "role": "day150",
+      "view": "coarse_1729",
+      "best_epoch": 15,
+      "accuracy": 0.07450980392156863,
+      "macro_f1": 0.04337585383628362
+    },
+    {
+      "role": "day150",
+      "view": "packet_3407",
+      "best_epoch": 14,
+      "accuracy": 0.1588235294117647,
+      "macro_f1": 0.13646445225675893
+    },
+    {
+      "role": "day150",
+      "view": "windows_3407",
+      "best_epoch": 15,
+      "accuracy": 0.17647058823529413,
+      "macro_f1": 0.16236955230298392
+    },
+    {
+      "role": "day150",
+      "view": "exact_3407",
+      "best_epoch": 12,
+      "accuracy": 0.08529411764705883,
+      "macro_f1": 0.05001066074636475
+    },
+    {
+      "role": "day150",
+      "view": "coarse_3407",
+      "best_epoch": 15,
+      "accuracy": 0.07009803921568628,
+      "macro_f1": 0.040890259170022945
+    },
+    {
+      "role": "day150",
+      "view": "packet_2026",
+      "best_epoch": 15,
+      "accuracy": 0.15196078431372548,
+      "macro_f1": 0.12706185703322645
+    },
+    {
+      "role": "day150",
+      "view": "windows_2026",
+      "best_epoch": 15,
+      "accuracy": 0.1843137254901961,
+      "macro_f1": 0.16866932814572158
+    },
+    {
+      "role": "day150",
+      "view": "exact_2026",
+      "best_epoch": 15,
+      "accuracy": 0.08235294117647059,
+      "macro_f1": 0.05820523004683412
+    },
+    {
+      "role": "day150",
+      "view": "coarse_2026",
+      "best_epoch": 15,
+      "accuracy": 0.0769607843137255,
+      "macro_f1": 0.047481751610613396
+    },
+    {
+      "role": "day270",
+      "view": "packet_1729",
+      "best_epoch": 11,
+      "accuracy": 0.12794117647058822,
+      "macro_f1": 0.10600587334517987
+    },
+    {
+      "role": "day270",
+      "view": "windows_1729",
+      "best_epoch": 15,
+      "accuracy": 0.14754901960784314,
+      "macro_f1": 0.1335982674947522
+    },
+    {
+      "role": "day270",
+      "view": "exact_1729",
+      "best_epoch": 13,
+      "accuracy": 0.07303921568627451,
+      "macro_f1": 0.0484802795027869
+    },
+    {
+      "role": "day270",
+      "view": "coarse_1729",
+      "best_epoch": 15,
+      "accuracy": 0.07205882352941176,
+      "macro_f1": 0.038982603444164356
+    },
+    {
+      "role": "day270",
+      "view": "packet_3407",
+      "best_epoch": 14,
+      "accuracy": 0.14558823529411766,
+      "macro_f1": 0.12401200203746594
+    },
+    {
+      "role": "day270",
+      "view": "windows_3407",
+      "best_epoch": 15,
+      "accuracy": 0.15343137254901962,
+      "macro_f1": 0.137093768159794
+    },
+    {
+      "role": "day270",
+      "view": "exact_3407",
+      "best_epoch": 12,
+      "accuracy": 0.07058823529411765,
+      "macro_f1": 0.04323479955972099
+    },
+    {
+      "role": "day270",
+      "view": "coarse_3407",
+      "best_epoch": 15,
+      "accuracy": 0.07745098039215687,
+      "macro_f1": 0.049336723106412454
+    },
+    {
+      "role": "day270",
+      "view": "packet_2026",
+      "best_epoch": 15,
+      "accuracy": 0.14460784313725492,
+      "macro_f1": 0.11937024188279417
+    },
+    {
+      "role": "day270",
+      "view": "windows_2026",
+      "best_epoch": 15,
+      "accuracy": 0.1607843137254902,
+      "macro_f1": 0.14732805624179107
+    },
+    {
+      "role": "day270",
+      "view": "exact_2026",
+      "best_epoch": 15,
+      "accuracy": 0.08529411764705883,
+      "macro_f1": 0.05983159223131021
+    },
+    {
+      "role": "day270",
+      "view": "coarse_2026",
+      "best_epoch": 15,
+      "accuracy": 0.07009803921568628,
+      "macro_f1": 0.04319794313359138
+    }
+  ],
+  "best_epochs": {
+    "packet_1729": 11,
+    "windows_1729": 15,
+    "exact_1729": 13,
+    "coarse_1729": 15,
+    "packet_3407": 14,
+    "windows_3407": 15,
+    "exact_3407": 12,
+    "coarse_3407": 15,
+    "packet_2026": 15,
+    "windows_2026": 15,
+    "exact_2026": 15,
+    "coarse_2026": 15
+  },
+  "config": "CPU TemporalDrift multiview; source valid selection; future development scoring only"
+}

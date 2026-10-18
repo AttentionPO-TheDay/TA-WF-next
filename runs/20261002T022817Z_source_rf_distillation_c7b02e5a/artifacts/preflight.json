@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "teacher_replay": [
+    {
+      "seed": 21729,
+      "rows": 15300,
+      "max_logit_error": 2.8312206268310547e-06,
+      "prediction_replay": true
+    },
+    {
+      "seed": 23407,
+      "rows": 15300,
+      "max_logit_error": 1.9073486328125e-06,
+      "prediction_replay": true
+    },
+    {
+      "seed": 22026,
+      "rows": 15300,
+      "max_logit_error": 1.9073486328125e-06,
+      "prediction_replay": true
+    }
+  ],
+  "kl_semantics_passed": true,
+  "baseline_reload_checks": 6,
+  "candidate_count": 3,
+  "source_examples_per_candidate": 64,
+  "optimizer_updates": 0,
+  "parameter_counts": {
+    "kd_01": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "kd_05": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "shuffled_05": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "ce_only": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    }
+  },
+  "aggregate_gpu_bytes_with_reserve": 17184505248,
+  "gpu_total_bytes": 25250627584,
+  "historical_reference_hashes": {
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/checkpoints/rf_21729_best.pt": "6df06455b2a84053b2327b65cdc7bfffaedaeb52b7f3489e6128126bd607a076",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/artifacts/rf_21729/logits_best.npz": "01ab99b829de4eb5453413de8c6ebc898f9690bc6a5db82e6157c3d0edad690d",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/artifacts/native_prepared.pt": "73d5962676b4b3af170f1e68967f7a1975362db7934caef13fd51359cd5fcbb8",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/checkpoints/rf_23407_best.pt": "1b445bea0f6bcfc0248ddf4f8b45ac3b3f8a61e378be0bdefa95670aac337163",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/artifacts/rf_23407/logits_best.npz": "68aaea37b9588e9b778e1ac2e3c0a71cad821efb5631b7c85b68d33d357d4384",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/checkpoints/rf_22026_best.pt": "6967ed2615edd06067dd860c143810479daa393f90cb48c78067b37f6f65d53f",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/artifacts/rf_22026/logits_best.npz": "31435696f9fdab4e2e864d56c3a41355de08f5e88af1d6fd95ba41e3bb82d2fd",
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_21729_best.pt": "f7428f4e1bb56a7fa407115aa2fe4993dc04606ba17945481eb2f060019b17b0",
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_23407_best.pt": "524cb7e4760ea4d63b15e1e935b8d4abe2f1409b87cb134bd274b1f96996fbc4",
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_22026_best.pt": "d099aa6289c04ab1d3e6eeec34f6c271420b55a4419827b665bb03ada1fd59e5",
+    "runs/20261002T013714Z_tam_generator_norm_hierarchy_f3920b88/artifacts/prepared.pt": "49b01254108433528398d17fd5a4df9618a7632ba03c0a63864236786e9fc4db"
+  },
+  "future_access": false
+}

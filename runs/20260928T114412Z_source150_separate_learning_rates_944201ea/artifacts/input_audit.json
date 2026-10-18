@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "raw_train_count": 19439,
+  "raw_valid_count": 2160,
+  "small_count": 8160,
+  "large_count": 15300,
+  "valid_count": 510,
+  "min_eligible_per_class": 156,
+  "full_valid_overlap_exclusions": 168,
+  "label_conflict_exclusions": 0,
+  "duplicate_exclusions": 718,
+  "structural_exclusions": 0,
+  "nested_small_preserved": true,
+  "fixed_valid_preserved": true,
+  "selected_source_valid_overlap": 0,
+  "prepared_sha256": "da8ccb9b5adf475f76ec97b17d959a21419b1920de4c0bd4a7bb7fc9d3eeb2a3",
+  "manifest_sha256": "44b3357c8236cdde77e5718cb013eddccc7c76e575fbd19445ee5249369eb72a",
+  "elapsed_seconds": 24.264778886921704,
+  "future_access": false
+}

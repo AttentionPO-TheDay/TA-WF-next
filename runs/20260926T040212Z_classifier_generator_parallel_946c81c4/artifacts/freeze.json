@@ -1,0 +1,30 @@
+{
+  "config_sha256": "7277e085c22668a82df8d7eb75d75f96be576a3b3183a1a4d2ed78b7df0c85fd",
+  "code_sha256": {
+    "src/ta_wf_next/learnable_generator.py": "9ba80e7dbda5ab2b7d1f8b386f65678a9a89f216fafdf0b18df85599a0c6267f",
+    "src/ta_wf_next/batch_views.py": "e67b54acde0e36b7b1487d4972d73c7109a89e6de41c2217e11356d38f96f44f",
+    "src/ta_wf_next/packet_patches.py": "e31785c8731cd8b1a3f702619efaef64b87de1e190be735965bc9498b10e8f6b",
+    "src/ta_wf_next/hierarchical_transformer.py": "1812342811ef5a79d8773c8608824750313a9be2a4fb24e488487487caaff366",
+    "src/ta_wf_next/transformer_proto.py": "ba921e57111694effd9df4b00e3da7adf3b538a931c047a15f64d1626fc868b6",
+    "src/ta_wf_next/__init__.py": "4ec6fe32603e569463dbe921a0b4f703c316a93dc046c9f71049b457c0a3ff64",
+    "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+    "src/ta_wf_next/screening.py": "d86b1f6a5f5b2b5f498a5acfb5eb47ba44c937459f151f7e4bc4ffec89e45d51",
+    "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+    "src/ta_wf_next/models/df.py": "869f912d04df8e03bf4ba791ba9ccf95a70fd14a2d1fe51c1d1afce58207bf99",
+    "src/ta_wf_next/models/__init__.py": "8475e22fda1367672f479cdb252f47aff47a9adaafbd80c5fddf62e5e4b0697e",
+    "src/ta_wf_next/models/varcnn.py": "3468e4be163eba14e123b349dde66a652a9ef9df6b6b0c52f00a20d1f68d944c",
+    "runs/20260926T040212Z_classifier_generator_parallel_946c81c4/common.py": "28162a631f507dcbfb089837edc8d31de045f124c4f9580e4b125f0b3baf29f6",
+    "runs/20260926T040212Z_classifier_generator_parallel_946c81c4/finalize.py": "d6d03171d0d52f3c335df9cc930b95fd997e0ccb7dd7054ebe1cc8222344d785",
+    "runs/20260926T040212Z_classifier_generator_parallel_946c81c4/preflight.py": "48746ab2309694edb3285fd13affd04d4041bb4f5a4343b176ec82a588693719",
+    "runs/20260926T040212Z_classifier_generator_parallel_946c81c4/verify_one.py": "1a0f27d978696f768bfd93d9be4ae849d23f53e5a99276f748337654a570bfed",
+    "runs/20260926T040212Z_classifier_generator_parallel_946c81c4/pipeline.py": "e89d1a91534dab03e171b583b2eac7e4cc4d44988a667e56ff72dedd92e2c2cf",
+    "runs/20260926T040212Z_classifier_generator_parallel_946c81c4/train.py": "dddb2d75a8783c491077232b87dbf086cd406b5d6a37270d5257a6eb9db700eb",
+    "runs/20260926T040212Z_classifier_generator_parallel_946c81c4/PLAN.md": "926d4e41c7c57badfd865b2276b137215915f813c7e0eae707b3f8bd7c57665f",
+    "configs/datasets.json": "31c98344c1aa683030f313fc3f3e31252e49a6a49c8cb2db011afb7a353eb8c0",
+    "tests/test_learnable_generator.py": "fa925ba9f3e732506e835bfb6cf2f1c66d914be419e99073e4b0616dbcf002da",
+    "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/artifacts/metrics_summary_1729.json": "78b4c2cee7fc80ea6748d9b233fbb824a3158857d4dc3f89ded492166744f1dc",
+    "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/artifacts/metrics_summary_3407.json": "6e81965206cf36bbf1e7316c7bd6f3dd52a16a774572b2930c89739b744b29ed",
+    "runs/20260926T024929Z_cpu_packet_ordered_representation_67b648d4/artifacts/metrics_summary_2026.json": "d7eb6b935b352e32d044b1bf94a9b6beeea351f51d444ae8676b0961f50af5e3"
+  },
+  "frozen_utc": "2026-09-26T04:23:24.464577+00:00"
+}

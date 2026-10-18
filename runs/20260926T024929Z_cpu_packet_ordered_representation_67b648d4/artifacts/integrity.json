@@ -1,0 +1,17 @@
+{
+  "prediction_sets_checked": 12,
+  "expected_prediction_sets": 12,
+  "errors": [],
+  "complete": true,
+  "parameters": [
+    118870,
+    118870,
+    118870,
+    118870,
+    118870,
+    118870
+  ],
+  "source_valid_overlap": 0,
+  "future_access": false,
+  "device": "cpu"
+}

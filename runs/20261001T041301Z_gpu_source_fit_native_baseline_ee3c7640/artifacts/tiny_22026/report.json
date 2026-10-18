@@ -1,0 +1,25 @@
+{
+  "task": "tiny_22026",
+  "kind": "transformer",
+  "tiny": true,
+  "seed": 22026,
+  "best_step": 200,
+  "steps_completed": 200,
+  "elapsed_seconds": 3.5537008848041296,
+  "verified_roles": [
+    "source"
+  ],
+  "parameters": 119578,
+  "best": {
+    "source": {
+      "accuracy": 0.9950980392156863,
+      "macro_f1": 0.9947712418300654
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9950980392156863,
+      "macro_f1": 0.9947712418300654
+    }
+  }
+}

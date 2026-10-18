@@ -1,0 +1,64 @@
+{
+  "complete": true,
+  "errors": [],
+  "conditions": {
+    "C_local_attention_frozen": {
+      "source": {
+        "accuracy": 0.6124183006535947,
+        "macro_f1": 0.6010775138692148
+      },
+      "valid": {
+        "accuracy": 0.2607843137254902,
+        "macro_f1": 0.24674351568389633
+      },
+      "original_valid_f1": 0.24979192440265105
+    },
+    "B_local_attention_joint": {
+      "source": {
+        "accuracy": 0.7754901960784314,
+        "macro_f1": 0.7712573954132008
+      },
+      "valid": {
+        "accuracy": 0.2627450980392157,
+        "macro_f1": 0.2510731611077632
+      },
+      "original_valid_f1": 0.2322862655846933
+    }
+  },
+  "decision": "INCONCLUSIVE",
+  "main_B_minus_C_f1_pp": [
+    2.5043958769600803,
+    2.0500076190316294,
+    -3.2555098688316657
+  ],
+  "main_accuracy_pp": [
+    2.5490196078431366,
+    1.3725490196078438,
+    -3.3333333333333326
+  ],
+  "source_f1_pp": [
+    7.05900167700535,
+    24.44354031319136,
+    19.551422472999068
+  ],
+  "B_recovery_f1_pp": [
+    3.8476784636409467,
+    4.932227965145467,
+    -3.1438377718654515
+  ],
+  "C_recovery_f1_pp": [
+    -0.6356518758631358,
+    0.15397528131804727,
+    -0.43284602108131787
+  ],
+  "difference_in_differences_pp": [
+    4.483330339504082,
+    4.77825268382742,
+    -2.7109917507841335
+  ],
+  "fixed_B_advantage": false,
+  "fixed_B_disadvantage": false,
+  "B_recovery": false,
+  "joint_optimization_support": false,
+  "representation_train_bias_support": false
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "key": "run_pair_1729",
+    "arm": "run_pair",
+    "seed": 1729,
+    "accuracy": 0.22156862745098038,
+    "macro_f1": 0.20748923469739344,
+    "best_epoch": 12,
+    "parameters": 158470,
+    "seconds": 22.265285976231098
+  },
+  {
+    "key": "window_pair_1729",
+    "arm": "window_pair",
+    "seed": 1729,
+    "accuracy": 0.29215686274509806,
+    "macro_f1": 0.27024639413548535,
+    "best_epoch": 15,
+    "parameters": 153766,
+    "seconds": 0.5291540883481503
+  },
+  {
+    "key": "fusion_1729",
+    "arm": "fusion",
+    "seed": 1729,
+    "accuracy": 0.2784313725490196,
+    "macro_f1": 0.2542841305817084,
+    "best_epoch": 15,
+    "parameters": 156118,
+    "seconds": 11.302475190721452
+  },
+  {
+    "key": "fusion_shared_1729",
+    "arm": "fusion_shared",
+    "seed": 1729,
+    "accuracy": 0.2803921568627451,
+    "macro_f1": 0.2587673220026161,
+    "best_epoch": 15,
+    "parameters": 157190,
+    "seconds": 13.729743111878633
+  },
+  {
+    "key": "fusion_specific_1729",
+    "arm": "fusion_specific",
+    "seed": 1729,
+    "accuracy": 0.2784313725490196,
+    "macro_f1": 0.2587547336682285,
+    "best_epoch": 15,
+    "parameters": 157222,
+    "seconds": 13.678034233860672
+  },
+  {
+    "key": "run_pair_3407",
+    "arm": "run_pair",
+    "seed": 3407,
+    "accuracy": 0.23333333333333334,
+    "macro_f1": 0.2115214188470426,
+    "best_epoch": 10,
+    "parameters": 158470,
+    "seconds": 24.79346288740635
+  },
+  {
+    "key": "window_pair_3407",
+    "arm": "window_pair",
+    "seed": 3407,
+    "accuracy": 0.28431372549019607,
+    "macro_f1": 0.26738066167359564,
+    "best_epoch": 15,
+    "parameters": 153766,
+    "seconds": 0.5257115829735994
+  },
+  {
+    "key": "fusion_3407",
+    "arm": "fusion",
+    "seed": 3407,
+    "accuracy": 0.2607843137254902,
+    "macro_f1": 0.24905506514503056,
+    "best_epoch": 15,
+    "parameters": 156118,
+    "seconds": 11.927786219865084
+  },
+  {
+    "key": "fusion_shared_3407",
+    "arm": "fusion_shared",
+    "seed": 3407,
+    "accuracy": 0.2647058823529412,
+    "macro_f1": 0.2517336597786425,
+    "best_epoch": 14,
+    "parameters": 157190,
+    "seconds": 13.371948546729982
+  },
+  {
+    "key": "fusion_specific_3407",
+    "arm": "fusion_specific",
+    "seed": 3407,
+    "accuracy": 0.26666666666666666,
+    "macro_f1": 0.2519574803539474,
+    "best_epoch": 15,
+    "parameters": 157222,
+    "seconds": 13.484189954586327
+  },
+  {
+    "key": "run_pair_2026",
+    "arm": "run_pair",
+    "seed": 2026,
+    "accuracy": 0.23137254901960785,
+    "macro_f1": 0.2114628430918724,
+    "best_epoch": 14,
+    "parameters": 158470,
+    "seconds": 24.144421455450356
+  },
+  {
+    "key": "window_pair_2026",
+    "arm": "window_pair",
+    "seed": 2026,
+    "accuracy": 0.2803921568627451,
+    "macro_f1": 0.2527756404714154,
+    "best_epoch": 14,
+    "parameters": 153766,
+    "seconds": 0.5292545845732093
+  },
+  {
+    "key": "fusion_2026",
+    "arm": "fusion",
+    "seed": 2026,
+    "accuracy": 0.28431372549019607,
+    "macro_f1": 0.2673485811603672,
+    "best_epoch": 13,
+    "parameters": 156118,
+    "seconds": 11.953156540170312
+  },
+  {
+    "key": "fusion_shared_2026",
+    "arm": "fusion_shared",
+    "seed": 2026,
+    "accuracy": 0.2823529411764706,
+    "macro_f1": 0.2701278373683218,
+    "best_epoch": 13,
+    "parameters": 157190,
+    "seconds": 13.795352678745985
+  },
+  {
+    "key": "fusion_specific_2026",
+    "arm": "fusion_specific",
+    "seed": 2026,
+    "accuracy": 0.28627450980392155,
+    "macro_f1": 0.27229555255074284,
+    "best_epoch": 13,
+    "parameters": 157222,
+    "seconds": 14.314868554472923
+  }
+]

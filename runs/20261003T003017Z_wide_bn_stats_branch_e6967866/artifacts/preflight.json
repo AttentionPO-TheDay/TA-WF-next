@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "source_rows": 15300,
+  "valid_rows": 510,
+  "stats_dim": 180,
+  "conditions": [
+    "zero_add",
+    "stats_add",
+    "zero_gate",
+    "stats_gate"
+  ],
+  "parameter_counts": {
+    "zero_add": 1121426,
+    "stats_add": 1121426,
+    "zero_gate": 1121426,
+    "stats_gate": 1121426
+  },
+  "shared_wide_bn_initialization": true,
+  "future_access": false
+}

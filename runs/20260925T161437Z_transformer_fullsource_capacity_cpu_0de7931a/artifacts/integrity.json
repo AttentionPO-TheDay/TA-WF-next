@@ -1,0 +1,17 @@
+{
+  "prediction_sets_checked": 8,
+  "expected_prediction_sets": 12,
+  "errors": [
+    "flat_multiview_3407:missing",
+    "flat_multiview_2026:missing"
+  ],
+  "source_artifact_sha256": "4dc489bf088246c59b73cdb071bb22459c975051ed84b27962bbbf0067d70b24",
+  "parameters": {
+    "flat_multiview": [
+      110400
+    ],
+    "hierarchical_multiview": [
+      113670
+    ]
+  }
+}

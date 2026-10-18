@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "baseline_replays": 6,
+  "source_backward_examples_per_condition": 64,
+  "bn_eval_buffers_frozen": true,
+  "parameter_counts": {
+    "lr05": {
+      "total": 1048838,
+      "trainable": 1021558
+    },
+    "wd05": {
+      "total": 1048838,
+      "trainable": 1021558
+    },
+    "lr05_wd05": {
+      "total": 1048838,
+      "trainable": 1021558
+    }
+  },
+  "aggregate_gpu_bytes_with_reserve": 11043904000,
+  "gpu_total_bytes": 25250627584,
+  "future_access": false
+}

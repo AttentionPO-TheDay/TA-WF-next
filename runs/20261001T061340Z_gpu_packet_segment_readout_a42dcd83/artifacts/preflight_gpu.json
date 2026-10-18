@@ -1,0 +1,11 @@
+{
+  "pool_reference": "passed",
+  "shared_initialization": "passed",
+  "global_initial_function_parity": "passed",
+  "padding_and_batch": "passed",
+  "parameters": 418822,
+  "optimizer_steps": 0,
+  "valid_scored": false,
+  "cuda": "passed",
+  "peak_bytes": 574795264
+}

@@ -1,0 +1,36 @@
+{
+  "task": "mlp_21729",
+  "kind": "mlp",
+  "historical_reuse": false,
+  "seed": 21729,
+  "best_step": 3680,
+  "steps_completed": 12800,
+  "elapsed_seconds": 391.04409399535507,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "parameters": 379654,
+  "peak_cuda_bytes": 941286912,
+  "index_sha256": "b247f91a21b8f513f8e924d308dc7908a11405d94353161f777433cedf9c7bd4",
+  "best": {
+    "source": {
+      "accuracy": 0.9156209150326797,
+      "macro_f1": 0.9151405893385873
+    },
+    "valid": {
+      "accuracy": 0.7196078431372549,
+      "macro_f1": 0.7123063211298506
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.703921568627451,
+      "macro_f1": 0.6982963659434247
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "task": "fixed_mlp_23407",
+  "kind": "fixed_mlp",
+  "seed": 23407,
+  "best_step": 7040,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 348982,
+  "parameters_trainable": 345958,
+  "generator_parameter_delta_l2": 0.0,
+  "elapsed_seconds": 97.83062287606299,
+  "peak_cuda_bytes": 850806272,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "best": {
+    "source": {
+      "accuracy": 0.9869934640522876,
+      "macro_f1": 0.9869829541999495
+    },
+    "valid": {
+      "accuracy": 0.6176470588235294,
+      "macro_f1": 0.6121904239551298
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9998039215686274,
+      "macro_f1": 0.9998036993293142
+    },
+    "valid": {
+      "accuracy": 0.6137254901960785,
+      "macro_f1": 0.6017480341009752
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "total_rows": 72,
+  "historical_rows": 63,
+  "new_tasks": 9,
+  "metrics_recomputed": 72,
+  "checkpoints": 9,
+  "checkpoint_reloads": 9,
+  "all_model_parameters_trainable": true,
+  "source_adaptation_exposures": 0,
+  "bn_momentum": 0.1,
+  "bn_batches_checked": 9,
+  "gate_masks_checked": 9,
+  "query_statistics": false
+}

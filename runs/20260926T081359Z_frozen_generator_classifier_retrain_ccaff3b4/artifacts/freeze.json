@@ -1,0 +1,20 @@
+{
+  "config_sha256": "b7c289398e0a37ce776b6ff44d7e815ef2b2f1f18851175118e72a7da61015d2",
+  "code_sha256": {
+    "runs/20260926T081359Z_frozen_generator_classifier_retrain_ccaff3b4/common.py": "ea34dbde228096f8a11041aee7abbb37a711b51a01a2c103f31c0fb8be3d35db",
+    "runs/20260926T081359Z_frozen_generator_classifier_retrain_ccaff3b4/finalize.py": "1609b69bebdfae767ede8f63536ccc80ed8a4c3389c1a3f1146c1e8da0515825",
+    "runs/20260926T081359Z_frozen_generator_classifier_retrain_ccaff3b4/preflight.py": "85f5bdf37aec0f0cdeeca4996c48ed94a38c2fd43585ae26874b48a28bdb845f",
+    "runs/20260926T081359Z_frozen_generator_classifier_retrain_ccaff3b4/verify_one.py": "c0b35d3943f466d8da118c5094b142a8557b74135f856e3c08bf30d36ef07381",
+    "runs/20260926T081359Z_frozen_generator_classifier_retrain_ccaff3b4/pipeline.py": "43256ccc72007481b1e2e9039126bf5ad614dca5550ab4e6d477bf6498238295",
+    "runs/20260926T081359Z_frozen_generator_classifier_retrain_ccaff3b4/train.py": "60c1dc3810e1d3985bbc29fc7cc6d00683a879b535511f78246f2b8ad1c7e675",
+    "src/ta_wf_next/learnable_generator.py": "9ba80e7dbda5ab2b7d1f8b386f65678a9a89f216fafdf0b18df85599a0c6267f",
+    "src/ta_wf_next/hierarchical_transformer.py": "1812342811ef5a79d8773c8608824750313a9be2a4fb24e488487487caaff366",
+    "src/ta_wf_next/transformer_proto.py": "ba921e57111694effd9df4b00e3da7adf3b538a931c047a15f64d1626fc868b6",
+    "src/ta_wf_next/batch_views.py": "e67b54acde0e36b7b1487d4972d73c7109a89e6de41c2217e11356d38f96f44f",
+    "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+    "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+    "src/ta_wf_next/packet_patches.py": "e31785c8731cd8b1a3f702619efaef64b87de1e190be735965bc9498b10e8f6b"
+  },
+  "plan_sha256": "1bbfec41e12208e1acc70dccef712dd0c5045bcea9af2c1b981f9daa390539ee",
+  "preflight_sha256": "20f213af31dcdd90cd6257ef9181ee9beb3218dc5d5170641ad977d04ce78d1f"
+}

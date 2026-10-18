@@ -1,0 +1,41 @@
+{
+  "task": "matched_kd_23407",
+  "kind": "matched_kd",
+  "seed": 23407,
+  "device": "cuda",
+  "best_step": 9920,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "teacher_target": "matched_probability_mean",
+  "temperature": 2.0,
+  "distillation_weight": 0.25,
+  "gate_coverage": null,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 0.9999346405228758,
+      "macro_f1": 0.9999346397966513
+    },
+    "valid": {
+      "accuracy": 0.8862745098039215,
+      "macro_f1": 0.8843685726038666
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.884313725490196,
+      "macro_f1": 0.8809145647380939
+    }
+  },
+  "elapsed_seconds": 860.7517809560522
+}

@@ -1,0 +1,35 @@
+{
+  "condition": "A_20_cls",
+  "seed": 22026,
+  "status": "completed",
+  "steps_completed": 3200,
+  "blocks_completed": 100,
+  "best_block": 55,
+  "initial_state_sha256": "c021496271a7cedfb2a35882eab7e35b514519b73573ef7d2016d7c048e98e50",
+  "generator_initial_sha256": "067cfb200d2c2ae7f18264b1de84d27ebcf2d013d9eb6b96dccd1b63af258ba1",
+  "generator_changed": true,
+  "config_sha256": "299f53e19f950ccfe2e719868634d846bbe40ac2ebf17238f0063f06bc866ee0",
+  "source_count": 2040,
+  "sample_visits_min": 100,
+  "sample_visits_max": 101,
+  "samples_presented": 204800,
+  "elapsed_seconds": 1434.3301314841956,
+  "parameters": {
+    "total": 119578,
+    "trainable": 119578,
+    "generator_total": 6064,
+    "generator_trainable": 6064
+  },
+  "source": {
+    "accuracy": 0.6416666666666667,
+    "macro_f1": 0.6329824904732083
+  },
+  "common_source": {
+    "accuracy": 0.6416666666666667,
+    "macro_f1": 0.6329824904732083
+  },
+  "valid": {
+    "accuracy": 0.2411764705882353,
+    "macro_f1": 0.22446097439327467
+  }
+}

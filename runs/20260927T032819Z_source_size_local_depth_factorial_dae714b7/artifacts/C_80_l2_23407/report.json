@@ -1,0 +1,51 @@
+{
+  "condition": "C_80_l2",
+  "seed": 23407,
+  "status": "completed",
+  "historical_reuse": false,
+  "steps_completed": 12800,
+  "blocks_completed": 400,
+  "last": {
+    "source": {
+      "accuracy": 0.7919117647058823,
+      "macro_f1": 0.7886020250634079
+    },
+    "common_source": {
+      "accuracy": 0.7919117647058823,
+      "macro_f1": 0.7886020250634079
+    },
+    "valid": {
+      "accuracy": 0.42549019607843136,
+      "macro_f1": 0.41334243098948975
+    }
+  },
+  "best_block": 370,
+  "initial_state_sha256": "93aa72a42b330658a33aa5a13b34ef649dcd07134df65fe36f0ec6ac16cec88d",
+  "shared_initial_sha256": "acca5885cbbed2cec1a577057788232898659ccde909e37d094a400b76cd7102",
+  "generator_initial_sha256": "36230b89dcefea7f2a59adeed3f437546aa1d3c5619feab1e9e6a372a03c2dbd",
+  "generator_changed": true,
+  "config_sha256": "ef238f2939d5a45fffece2478b84f61d2836c02d51866cfc5a1caea0223e83e5",
+  "source_count": 8160,
+  "sample_visits_min": 100,
+  "sample_visits_max": 101,
+  "samples_presented": 819200,
+  "elapsed_seconds": 9253.038478808478,
+  "parameters": {
+    "total": 186190,
+    "trainable": 186190,
+    "generator_total": 6064,
+    "generator_trainable": 6064
+  },
+  "source": {
+    "accuracy": 0.7887254901960784,
+    "macro_f1": 0.7846335648706662
+  },
+  "common_source": {
+    "accuracy": 0.7887254901960784,
+    "macro_f1": 0.7846335648706662
+  },
+  "valid": {
+    "accuracy": 0.4411764705882353,
+    "macro_f1": 0.43102727882139646
+  }
+}

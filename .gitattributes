@@ -2,5 +2,5 @@
 * -text
 # csv.DictWriter emits standard CRLF; this is not stray trailing whitespace.
 EXPERIMENTS.csv whitespace=cr-at-eol
-# Some frozen reports/scripts contain a final blank line. Preserve evidence bytes.
-runs/** whitespace=-blank-at-eof
+# Accept archived CRLF and final blank lines without changing evidence bytes.
+runs/** whitespace=cr-at-eol,-blank-at-eof

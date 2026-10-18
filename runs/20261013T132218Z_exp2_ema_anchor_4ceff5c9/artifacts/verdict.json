@@ -1,0 +1,11 @@
+{
+  "ema_anchor": {
+    "macro_f1": 0.7272000851665429,
+    "negative_adaptation_rate": 0.03946654425242741,
+    "f1_delta_vs_fixed_pp": -0.7838180742032685,
+    "negative_delta_vs_fixed_pp": -0.01680921396689447,
+    "positive_paired_cells": 1,
+    "screen_pass": false,
+    "aspirational_goal_pass": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "checks": "passed",
+  "real_source_rows": 64,
+  "optimizer_steps": 0,
+  "valid_scored": false,
+  "future_access": false,
+  "historical_initialization_equal": true,
+  "fusion_exact_forward_parity": true,
+  "removed_input_invariance": true,
+  "records": {
+    "packet_direction": {
+      "total": 350006,
+      "trainable": 318966,
+      "generator_total": 3024,
+      "generator_trainable": 1552,
+      "step_seconds": 0.07700458925683051,
+      "peak_cuda_bytes": 388311552,
+      "generator_gradient_norms": {
+        "packet_conv.0.weight": 0.48281896114349365,
+        "packet_conv.0.bias": 0.18862253427505493,
+        "packet_conv.1.weight": 0.8964571356773376,
+        "packet_conv.1.bias": 0.3688565790653229,
+        "time_conv.0.weight": null,
+        "time_conv.0.bias": null,
+        "time_conv.1.weight": null,
+        "time_conv.1.bias": null
+      }
+    },
+    "packet_native": {
+      "total": 350006,
+      "trainable": 318966,
+      "generator_total": 3024,
+      "generator_trainable": 1552,
+      "step_seconds": 0.009743595030158758,
+      "peak_cuda_bytes": 388338176,
+      "generator_gradient_norms": {
+        "packet_conv.0.weight": 0.4596058428287506,
+        "packet_conv.0.bias": 0.17258191108703613,
+        "packet_conv.1.weight": 0.9385326504707336,
+        "packet_conv.1.bias": 0.3357214331626892,
+        "time_conv.0.weight": null,
+        "time_conv.0.bias": null,
+        "time_conv.1.weight": null,
+        "time_conv.1.bias": null
+      }
+    },
+    "tam_only": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472,
+      "step_seconds": 0.010123961954377592,
+      "peak_cuda_bytes": 345222656,
+      "generator_gradient_norms": {
+        "packet_conv.0.weight": null,
+        "packet_conv.0.bias": null,
+        "packet_conv.1.weight": null,
+        "packet_conv.1.bias": null,
+        "time_conv.0.weight": 0.06279732286930084,
+        "time_conv.0.bias": 0.1694847047328949,
+        "time_conv.1.weight": 0.6811989545822144,
+        "time_conv.1.bias": 0.9946154952049255
+      }
+    },
+    "fusion": {
+      "total": 350006,
+      "trainable": 350006,
+      "generator_total": 3024,
+      "generator_trainable": 3024,
+      "step_seconds": 0.010864061419852078,
+      "peak_cuda_bytes": 416265216,
+      "generator_gradient_norms": {
+        "packet_conv.0.weight": 0.2899593412876129,
+        "packet_conv.0.bias": 0.10630246996879578,
+        "packet_conv.1.weight": 0.9288126826286316,
+        "packet_conv.1.bias": 0.3204365372657776,
+        "time_conv.0.weight": 0.04808970168232918,
+        "time_conv.0.bias": 0.1687082201242447,
+        "time_conv.1.weight": 0.6119345426559448,
+        "time_conv.1.bias": 0.892076313495636
+      }
+    }
+  },
+  "two_worker_memory_estimate_bytes": 6215478688,
+  "free_cuda_bytes": 24587075584,
+  "total_cuda_bytes": 25250627584
+}

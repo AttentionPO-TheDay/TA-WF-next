@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "SAME pool numeric reference across odd/even lengths",
+    "DF pool lengths 1250/313/79/20",
+    "DF gradients finite",
+    "DF eval repeat exact",
+    "current Transformer source-only CUDA forward and gradient"
+  ],
+  "torch": "2.12.1+cu130",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "training_steps": 0,
+  "valid_scored": false
+}

@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "baseline_reload_checks": 6,
+  "source_samples_per_candidate": 64,
+  "candidate_count": 3,
+  "optimizer_updates": 0,
+  "source_valid_cache_parity": "TAM, labels, rows exactly equal native RF cache",
+  "parameter_counts": {
+    "raw_current": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "log_rfstyle": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "raw_rfstyle": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    },
+    "log_current": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472
+    }
+  },
+  "aggregate_gpu_bytes_with_reserve": 10914657696,
+  "gpu_total_bytes": 25250627584,
+  "historical_reference_hashes": {
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_21729_best.pt": "f7428f4e1bb56a7fa407115aa2fe4993dc04606ba17945481eb2f060019b17b0",
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_23407_best.pt": "524cb7e4760ea4d63b15e1e935b8d4abe2f1409b87cb134bd274b1f96996fbc4",
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/checkpoints/span_mask_22026_best.pt": "d099aa6289c04ab1d3e6eeec34f6c271420b55a4419827b665bb03ada1fd59e5",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/artifacts/native_prepared.pt": "73d5962676b4b3af170f1e68967f7a1975362db7934caef13fd51359cd5fcbb8",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/rf_native.py": "8ffd968ba4a750fb66edda53e8146ed367b9a62e1e1330416b3eb600b4060617",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/worker.py": "9e57c7a411bb9283b201a57b20cccd0e9bc91def305243e858f7b6c8ca24eb8f",
+    "runs/20261001T091714Z_gpu_native_varcnn_rf_source_ce09ee6b/config.json": "9f360e4663d69e72b8ddb6ba780005f3393dd78e7d5520221fede7393584a473",
+    "runs/20261001T143214Z_parallel_tam_accuracy_directions_b989a1ab/artifacts/prepared.pt": "49b01254108433528398d17fd5a4df9618a7632ba03c0a63864236786e9fc4db"
+  },
+  "future_access": false
+}

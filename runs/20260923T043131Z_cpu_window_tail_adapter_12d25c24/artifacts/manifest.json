@@ -1,0 +1,45 @@
+{
+  "sampling_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json",
+  "partial_stats": {
+    "source": {
+      "partial_windows": 3847,
+      "total_windows": 244800
+    },
+    "valid": {
+      "partial_windows": 964,
+      "total_windows": 61200
+    },
+    "day14": {
+      "partial_windows": 3825,
+      "total_windows": 244800
+    },
+    "day30": {
+      "partial_windows": 3819,
+      "total_windows": 244800
+    },
+    "day90": {
+      "partial_windows": 3859,
+      "total_windows": 244800
+    },
+    "day150": {
+      "partial_windows": 3878,
+      "total_windows": 244800
+    },
+    "day270": {
+      "partial_windows": 3875,
+      "total_windows": 244800
+    }
+  },
+  "best_epochs": {
+    "full_1729": 15,
+    "adapter_1729": 11,
+    "neutral_1729": 13,
+    "full_3407": 15,
+    "adapter_3407": 14,
+    "neutral_3407": 15,
+    "full_2026": 15,
+    "adapter_2026": 14,
+    "neutral_2026": 15
+  },
+  "prediction_sha256": "ead73e4e240cb68049404644848f1c7fd0cddba4684dec1292a911226a9bd63b"
+}

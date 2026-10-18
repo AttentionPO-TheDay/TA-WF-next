@@ -1,0 +1,36 @@
+{
+  "task": "global_repeat_21729",
+  "kind": "global_repeat",
+  "historical_reuse": false,
+  "seed": 21729,
+  "best_step": 7520,
+  "steps_completed": 12800,
+  "elapsed_seconds": 383.4395159780979,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "parameters": 418822,
+  "peak_cuda_bytes": 941913600,
+  "index_sha256": "b247f91a21b8f513f8e924d308dc7908a11405d94353161f777433cedf9c7bd4",
+  "best": {
+    "source": {
+      "accuracy": 0.9990849673202614,
+      "macro_f1": 0.9990882773804668
+    },
+    "valid": {
+      "accuracy": 0.7235294117647059,
+      "macro_f1": 0.7193189707895591
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.711764705882353,
+      "macro_f1": 0.705215536097889
+    }
+  }
+}

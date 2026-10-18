@@ -1,0 +1,74 @@
+{
+  "task": "shallow_mlp_23407",
+  "kind": "shallow_mlp",
+  "seed": 23407,
+  "device": "cuda",
+  "best_step": 10400,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 348982,
+  "parameters_trainable": 321702,
+  "generator_parameter_delta_l2": 5.013692502855012,
+  "parameter_deltas_squared": {
+    "packet_positions": 0.0,
+    "time_positions": 216.27955627441406,
+    "view_types": 0.06039135903120041,
+    "generator.packet_conv.0.weight": 0.0,
+    "generator.packet_conv.0.bias": 0.0,
+    "generator.packet_conv.1.weight": 0.0,
+    "generator.packet_conv.1.bias": 0.0,
+    "generator.time_conv.0.weight": 6.5213942527771,
+    "generator.time_conv.0.bias": 0.14624246954917908,
+    "generator.time_conv.1.weight": 18.459867477416992,
+    "generator.time_conv.1.bias": 0.00960831344127655,
+    "packet_projection.weight": 0.0,
+    "packet_projection.bias": 0.0,
+    "time_projection.weight": 118.95381164550781,
+    "time_projection.bias": 0.06048143282532692,
+    "final_norm.weight": 1116.6668701171875,
+    "final_norm.bias": 3.6543221473693848,
+    "classifier.weight": 1264.625244140625,
+    "classifier.bias": 0.605780303478241,
+    "head.layers.0.0.weight": 1.2567622661590576,
+    "head.layers.0.0.bias": 0.4222868084907532,
+    "head.layers.0.1.weight": 612.4315185546875,
+    "head.layers.0.1.bias": 3.283940553665161,
+    "head.layers.0.4.weight": 582.492431640625,
+    "head.layers.0.4.bias": 0.5603600740432739,
+    "head.layers.1.0.weight": 2.6850838661193848,
+    "head.layers.1.0.bias": 4.093763828277588,
+    "head.layers.1.1.weight": 522.1136474609375,
+    "head.layers.1.1.bias": 7.665311813354492,
+    "head.layers.1.4.weight": 674.240234375,
+    "head.layers.1.4.bias": 0.5100953578948975
+  },
+  "inactive_parameters_unchanged": true,
+  "elapsed_seconds": 317.95579085033387,
+  "peak_cuda_bytes": 909379072,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "generator_family": "shallow",
+  "head_family": "mlp",
+  "best": {
+    "source": {
+      "accuracy": 0.9794117647058823,
+      "macro_f1": 0.9791525315778545
+    },
+    "valid": {
+      "accuracy": 0.7176470588235294,
+      "macro_f1": 0.7091477150300678
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9840522875816994,
+      "macro_f1": 0.9839866251130462
+    },
+    "valid": {
+      "accuracy": 0.707843137254902,
+      "macro_f1": 0.699762873292285
+    }
+  }
+}

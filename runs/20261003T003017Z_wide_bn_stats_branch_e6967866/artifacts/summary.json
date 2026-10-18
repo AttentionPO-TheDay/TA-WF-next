@@ -1,0 +1,147 @@
+{
+  "means": {
+    "baseline": {
+      "accuracy": 0.8915032679738562,
+      "macro_f1": 0.8894366163974006
+    },
+    "zero_add": {
+      "accuracy": 0.8771241830065359,
+      "macro_f1": 0.8753082429553016
+    },
+    "stats_add": {
+      "accuracy": 0.8614379084967321,
+      "macro_f1": 0.8598430436665732
+    },
+    "zero_gate": {
+      "accuracy": 0.8816993464052287,
+      "macro_f1": 0.8795017255801568
+    },
+    "stats_gate": {
+      "accuracy": 0.8679738562091504,
+      "macro_f1": 0.8663576982204432
+    }
+  },
+  "comparisons": {
+    "stats_add - zero_add": {
+      "accuracy_mean_delta_pp": -1.5686274509803904,
+      "accuracy_per_seed_pp": [
+        -0.588235294117645,
+        -1.764705882352935,
+        -2.352941176470591
+      ],
+      "macro_f1_mean_delta_pp": -1.5465199288728582,
+      "pass": false
+    },
+    "stats_gate - zero_gate": {
+      "accuracy_mean_delta_pp": -1.3725490196078418,
+      "accuracy_per_seed_pp": [
+        -0.588235294117645,
+        -3.3333333333333326,
+        -0.19607843137254832
+      ],
+      "macro_f1_mean_delta_pp": -1.3144027359713575,
+      "pass": false
+    },
+    "stats_gate - stats_add": {
+      "accuracy_mean_delta_pp": 0.6535947712418315,
+      "accuracy_per_seed_pp": [
+        0.39215686274509665,
+        0.19607843137254832,
+        1.3725490196078494
+      ],
+      "macro_f1_mean_delta_pp": 0.6514654553870198,
+      "pass": false
+    },
+    "zero_add - baseline": {
+      "accuracy_mean_delta_pp": -1.4379084967320246,
+      "accuracy_per_seed_pp": [
+        -1.5686274509803866,
+        -1.176470588235301,
+        -1.5686274509803866
+      ],
+      "macro_f1_mean_delta_pp": -1.4128373442098976,
+      "pass": false
+    },
+    "stats_add - baseline": {
+      "accuracy_mean_delta_pp": -3.0065359477124147,
+      "accuracy_per_seed_pp": [
+        -2.1568627450980316,
+        -2.941176470588236,
+        -3.9215686274509776
+      ],
+      "macro_f1_mean_delta_pp": -2.959357273082756,
+      "pass": false
+    },
+    "zero_gate - baseline": {
+      "accuracy_mean_delta_pp": -0.9803921568627416,
+      "accuracy_per_seed_pp": [
+        -1.17647058823529,
+        0.588235294117645,
+        -2.35294117647058
+      ],
+      "macro_f1_mean_delta_pp": -0.9934890817243783,
+      "pass": false
+    },
+    "stats_gate - baseline": {
+      "accuracy_mean_delta_pp": -2.352941176470584,
+      "accuracy_per_seed_pp": [
+        -1.764705882352935,
+        -2.7450980392156876,
+        -2.549019607843128
+      ],
+      "macro_f1_mean_delta_pp": -2.3078918176957357,
+      "pass": false
+    }
+  },
+  "ensemble_valid": {
+    "baseline": {
+      "accuracy": 0.9156862745098039,
+      "macro_f1": 0.9143539467068876,
+      "correct": 467,
+      "count": 510
+    },
+    "zero_add": {
+      "accuracy": 0.9058823529411765,
+      "macro_f1": 0.9043940808646691,
+      "correct": 462,
+      "count": 510
+    },
+    "stats_add": {
+      "accuracy": 0.8921568627450981,
+      "macro_f1": 0.8911741308800131,
+      "correct": 455,
+      "count": 510
+    },
+    "zero_gate": {
+      "accuracy": 0.9019607843137255,
+      "macro_f1": 0.9004648945825414,
+      "correct": 460,
+      "count": 510
+    },
+    "stats_gate": {
+      "accuracy": 0.903921568627451,
+      "macro_f1": 0.9036694242576594,
+      "correct": 461,
+      "count": 510
+    }
+  },
+  "target_reached": {
+    "baseline": false,
+    "zero_add": false,
+    "stats_add": false,
+    "zero_gate": false,
+    "stats_gate": false
+  },
+  "passed_candidates": [],
+  "freeze_hashes_verified": 18,
+  "metric_groups_verified": 60,
+  "history_groups_verified": 15,
+  "initialization_tensors_verified": 1335,
+  "index_streams_verified": 15,
+  "logit_groups_verified": 30,
+  "checkpoint_replay_groups_verified": 30,
+  "training_tasks_completed": 12,
+  "historical_baselines_reused": 3,
+  "future_access": false,
+  "aggregation_bug": "supervisor passed candidates only looked for missing condition-baseline comparison keys after all 12 tasks completed; recovery used saved reports, predictions, and pre-registered comparisons; no training rerun"
+}

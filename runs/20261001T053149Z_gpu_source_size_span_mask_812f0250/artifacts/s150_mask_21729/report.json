@@ -1,0 +1,36 @@
+{
+  "task": "s150_mask_21729",
+  "kind": "s150_mask",
+  "historical_reuse": false,
+  "seed": 21729,
+  "best_step": 7040,
+  "steps_completed": 12800,
+  "elapsed_seconds": 380.4298439724371,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "parameters": 379654,
+  "peak_cuda_bytes": 1312631296,
+  "index_sha256": "b247f91a21b8f513f8e924d308dc7908a11405d94353161f777433cedf9c7bd4",
+  "best": {
+    "source": {
+      "accuracy": 0.9981699346405228,
+      "macro_f1": 0.9981816973742648
+    },
+    "valid": {
+      "accuracy": 0.7411764705882353,
+      "macro_f1": 0.73470015822957
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9999346405228758,
+      "macro_f1": 0.9999346397966513
+    },
+    "valid": {
+      "accuracy": 0.7294117647058823,
+      "macro_f1": 0.7237113648878356
+    }
+  }
+}

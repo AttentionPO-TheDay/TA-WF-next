@@ -1,0 +1,35 @@
+{
+  "task": "relative_time_23407",
+  "kind": "relative_time",
+  "seed": 23407,
+  "device": "cuda",
+  "best_step": 8480,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1049734,
+  "parameters_trainable": 1022454,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 0.998562091503268,
+      "macro_f1": 0.9985537777427355
+    },
+    "valid": {
+      "accuracy": 0.8666666666666667,
+      "macro_f1": 0.8653217153217153
+    }
+  },
+  "last": null,
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.8666666666666667,
+    "masked_accuracy": 0.8509803921568627,
+    "prediction_agreement": 0.9705882352941176,
+    "relative_feature_mean": 0.13138197362422943,
+    "relative_feature_std": 0.3301771581172943
+  },
+  "elapsed_seconds": 411.2378321439028
+}

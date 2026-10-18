@@ -1,0 +1,10 @@
+{
+  "errors": 0,
+  "metrics": 15,
+  "predictions": 7650,
+  "independent_input_reconstruction": 2550,
+  "source_only_normalization": true,
+  "seals": true,
+  "selection": true,
+  "audit_sha256": "8b3dbf729cc1f71ae1814df0507e03c3a058663b481baa6516b1767d9d5960e2"
+}

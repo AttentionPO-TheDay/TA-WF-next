@@ -1,0 +1,8 @@
+{
+  "synthetic_primal_dual_equivalence": true,
+  "constant_feature_handling": true,
+  "source_valid_overlap": 0,
+  "rows_labels_paths_and_anchors_verified": true,
+  "prior_experiment_integrity_complete": true,
+  "performance_scored": false
+}

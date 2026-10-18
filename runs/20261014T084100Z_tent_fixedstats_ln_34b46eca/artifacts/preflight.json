@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "splits": {
+    "day14": {
+      "support_rows": 1024,
+      "query_rows": 21579,
+      "same_historical_split": true
+    },
+    "day90": {
+      "support_rows": 1024,
+      "query_rows": 27575,
+      "same_historical_split": true
+    },
+    "day270": {
+      "support_rows": 1024,
+      "query_rows": 18911,
+      "same_historical_split": true
+    }
+  },
+  "candidate_smoke_updates": 2,
+  "trainable_parameter_count": 3072,
+  "trainable_parameter_names": [
+    "model.generator.stages.0.norm1.weight",
+    "model.generator.stages.0.norm1.bias",
+    "model.generator.stages.0.norm2.weight",
+    "model.generator.stages.0.norm2.bias",
+    "model.generator.stages.1.norm1.weight",
+    "model.generator.stages.1.norm1.bias",
+    "model.generator.stages.1.norm2.weight",
+    "model.generator.stages.1.norm2.bias",
+    "model.generator.stages.2.norm1.weight",
+    "model.generator.stages.2.norm1.bias",
+    "model.generator.stages.2.norm2.weight",
+    "model.generator.stages.2.norm2.bias",
+    "model.final_norm.weight",
+    "model.final_norm.bias",
+    "model.head.0.norm1.weight",
+    "model.head.0.norm1.bias",
+    "model.head.0.norm2.weight",
+    "model.head.0.norm2.bias",
+    "model.head.1.norm1.weight",
+    "model.head.1.norm1.bias",
+    "model.head.1.norm2.weight",
+    "model.head.1.norm2.bias"
+  ],
+  "bn_buffers_frozen": true,
+  "query_statistics": false,
+  "config_sha": "336fbb71559e38c12d7f81159a9a1d268472f3048c651a7a29fb866b4880bbe8",
+  "code_sha": {
+    "runner.py": "25e1475185c55800de118e2c15a776dd1d5ebf0210882921b453d3160a9c0253",
+    "enhanced_tent.py": "bf1399d86a9e8db66f3f44bcb8e28cc2d92c56afb0fb3adb108ac49324985edd",
+    "port_base.py": "6f8280f0974ef2838c71183217c91833f4a2b2310fdf73f64565f7a6515ef3e1",
+    "model.py": "b6f59add5040dbb9d80f2469cac46412b37c87a2dbd66c0df01fc00e24b67212",
+    "reporting.py": "33b20f52ad551d995a376a4f29813265c826f351e15aaf0d6c7a4790b9359a07",
+    "postrun_audit.py": "0836083923547855f034a33ce1ee1217449117acdf8980006519fb94cb93f847"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "training_tasks_completed": 9,
+  "freeze_hashes_verified": 17,
+  "metric_groups_verified": 36,
+  "logit_groups_verified": 18,
+  "checkpoint_replay_groups_verified": 18,
+  "initialization_groups_verified": 9,
+  "index_streams_verified": 9,
+  "history_selection_groups_verified": 9,
+  "cuda_rng_preserved_by_ema_construction_and_eval": true,
+  "ema_update_formula_verified": true,
+  "historical_ce_predictions_reproduced": true,
+  "means": {
+    "ce_only": {
+      "accuracy": 0.8915032679738562,
+      "macro_f1": 0.8894366163974006
+    },
+    "ema_same_view": {
+      "accuracy": 0.884313725490196,
+      "macro_f1": 0.8813813455970317
+    },
+    "ema_cross_view": {
+      "accuracy": 0.8856209150326797,
+      "macro_f1": 0.8845645277017825
+    }
+  },
+  "comparisons": {
+    "ema_same_view - ce_only": {
+      "accuracy_mean_delta_pp": -0.7189542483660143,
+      "accuracy_per_seed_pp": [
+        -0.39215686274509665,
+        -1.764705882352946,
+        0.0
+      ],
+      "macro_f1_mean_delta_pp": -0.8055270800368867,
+      "positive_seed_count": 0,
+      "pass": false
+    },
+    "ema_cross_view - ce_only": {
+      "accuracy_mean_delta_pp": -0.5882352941176487,
+      "accuracy_per_seed_pp": [
+        -0.39215686274509665,
+        -1.3725490196078494,
+        0.0
+      ],
+      "macro_f1_mean_delta_pp": -0.487208869561806,
+      "positive_seed_count": 0,
+      "pass": false
+    }
+  },
+  "confidence_gate_used": false,
+  "inference_model": "online student, not EMA",
+  "full_ema_trajectory_saved": false,
+  "future_access": false,
+  "audit_script_sha256": "a57c236a150b21a2680f665bdc0efe0e1b9d134886bb5f2c76f94c5e4fb63efe"
+}

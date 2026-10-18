@@ -1,0 +1,20 @@
+{
+  "rollback_10": {
+    "macro_f1_delta_pp": 1.5466583458903393,
+    "negative_delta_pp": -2.375947120806087,
+    "positive_cells": 9,
+    "candidate_signal": true
+  },
+  "rollback_25": {
+    "macro_f1_delta_pp": 1.2638639473276703,
+    "negative_delta_pp": -1.9326479649488304,
+    "positive_cells": 9,
+    "candidate_signal": true
+  },
+  "rollback_50": {
+    "macro_f1_delta_pp": 0.6797474102762768,
+    "negative_delta_pp": -1.393190946709634,
+    "positive_cells": 7,
+    "candidate_signal": true
+  }
+}

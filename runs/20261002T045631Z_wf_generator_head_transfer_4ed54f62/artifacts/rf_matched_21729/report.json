@@ -1,0 +1,83 @@
+{
+  "task": "rf_matched_21729",
+  "kind": "rf_matched",
+  "seed": 21729,
+  "device": "cuda",
+  "best_step": 7520,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1040562,
+  "parameters_trainable": 1040562,
+  "generator_parameter_delta_l2": 0.0,
+  "parameter_deltas_squared": {
+    "rf.first_layer.0.weight": 2.713512659072876,
+    "rf.first_layer.0.bias": 0.12079226970672607,
+    "rf.first_layer.1.weight": 0.3486466407775879,
+    "rf.first_layer.1.bias": 1.7550119161605835,
+    "rf.first_layer.3.weight": 127.30598449707031,
+    "rf.first_layer.3.bias": 0.010800857096910477,
+    "rf.first_layer.4.weight": 0.60854172706604,
+    "rf.first_layer.4.bias": 3.289482355117798,
+    "rf.first_layer.8.weight": 254.49517822265625,
+    "rf.first_layer.8.bias": 0.0024242547806352377,
+    "rf.first_layer.9.weight": 0.807587742805481,
+    "rf.first_layer.9.bias": 2.1060657501220703,
+    "rf.first_layer.11.weight": 499.7001953125,
+    "rf.first_layer.11.bias": 0.0012078715953975916,
+    "rf.first_layer.12.weight": 0.25457319617271423,
+    "rf.first_layer.12.bias": 2.9919567108154297,
+    "rf.features.0.weight": 77.02668762207031,
+    "rf.features.0.bias": 0.005972101353108883,
+    "rf.features.1.weight": 2.3225910663604736,
+    "rf.features.1.bias": 2.7246363162994385,
+    "rf.features.3.weight": 306.45556640625,
+    "rf.features.3.bias": 0.0025602197274565697,
+    "rf.features.4.weight": 0.4785013794898987,
+    "rf.features.4.bias": 14.34449577331543,
+    "rf.features.8.weight": 759.9158935546875,
+    "rf.features.8.bias": 0.0016642058035358787,
+    "rf.features.9.weight": 3.5359785556793213,
+    "rf.features.9.bias": 19.46928596496582,
+    "rf.features.11.weight": 1402.532958984375,
+    "rf.features.11.bias": 0.004576480947434902,
+    "rf.features.12.weight": 8.07099723815918,
+    "rf.features.12.bias": 104.40349578857422,
+    "rf.features.16.weight": 3456.2880859375,
+    "rf.features.16.bias": 0.004509116057306528,
+    "rf.features.17.weight": 15.786149978637695,
+    "rf.features.17.bias": 123.41029357910156,
+    "rf.features.19.weight": 823.6796875,
+    "rf.features.19.bias": 0.028005149215459824,
+    "rf.features.20.weight": 530.8794555664062,
+    "rf.features.20.bias": 74.3597412109375
+  },
+  "inactive_parameters_unchanged": true,
+  "elapsed_seconds": 353.9012337755412,
+  "peak_cuda_bytes": 7797188608,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "generator_family": "rf_official",
+  "head_family": "rf_official",
+  "best": {
+    "source": {
+      "accuracy": 0.9903921568627451,
+      "macro_f1": 0.9904031054528083
+    },
+    "valid": {
+      "accuracy": 0.9137254901960784,
+      "macro_f1": 0.9123242226183402
+    }
+  },
+  "last": {
+    "source": {
+      "accuracy": 0.9970588235294118,
+      "macro_f1": 0.9970345570816531
+    },
+    "valid": {
+      "accuracy": 0.9058823529411765,
+      "macro_f1": 0.9033327239209592
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/checkpoints/exact_2026.pt": "b6383f48790eaba816680b8f9a60544688659ece6bba70162739dfad676facb4",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/checkpoints/exact_3407.pt": "657f77c1ee46d830aedb10526c2db48af6da7931db1c7bb6479988fa07cfb9b4",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/checkpoints/exact_1729.pt": "1fb5d4e638f16004f21dffe1cd4689fa43322a396db0decce4b582263eb65d7b",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/checkpoints/coarse_2026.pt": "da915aab6436f2f5493a84edc4e7981b890b233518b8a59a6db92038131f215a",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/checkpoints/coarse_3407.pt": "7fbac8ecb4ed34ab160241c42dee59a3f0b1766ca3dc3e47908ad84a1b46ccfb",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/checkpoints/coarse_1729.pt": "4b30293aa286066d8ba81a117acc064dbb5cfe8c4233072e7d787b5ca4bf316b",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/artifacts/predictions.npz": "83367d36a6754a609ade5b4718046dd901f8063d1d6e4b13749a0495fbcc122b",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/artifacts/source_tokens.npz": "b8dc7100225eaec663ed2566e5af6ef31cc809422a7a93c0c512b732529d5204",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/artifacts/valid_tokens.npz": "56b1722a19385b18c10031768cabb8465efffe1d551e5b13e9439560628e8265",
+  "runs/20260922T060351Z_cpu_token_native_classifier_6463ceb7/artifacts/manifest.json": "c89804aa8475f5ea0e308f1c5b19c0a34f3fb71a2a83f998c450ff7ab203446c"
+}

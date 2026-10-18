@@ -1,0 +1,27 @@
+{
+  "exit_codes": {
+    "train_B_150_l1_21729": 0,
+    "train_B_150_l1_23407": 0,
+    "verify_B_150_l1_21729": 0,
+    "verify_B_150_l1_23407": 0,
+    "train_C_80_l2_21729": 0,
+    "train_C_80_l2_23407": 0,
+    "verify_C_80_l2_21729": 0,
+    "train_D_150_l2_21729": 0,
+    "verify_C_80_l2_23407": 0,
+    "verify_D_150_l2_21729": 0,
+    "train_D_150_l2_23407": 0,
+    "verify_D_150_l2_23407": 0,
+    "train_B_150_l1_22026": 0,
+    "verify_B_150_l1_22026": 0,
+    "train_C_80_l2_22026": 0,
+    "verify_C_80_l2_22026": 0,
+    "train_D_150_l2_22026": 0,
+    "verify_D_150_l2_22026": 0
+  },
+  "stop_reasons": {},
+  "cancelled": [],
+  "finalize_exit_code": 0,
+  "finished_unix": 1790498653.5309572,
+  "elapsed_seconds": 18322.511764505878
+}

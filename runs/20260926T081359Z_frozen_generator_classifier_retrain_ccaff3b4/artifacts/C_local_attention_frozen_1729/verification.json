@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "prediction_sets_checked": 2,
+  "selection_verified": true,
+  "initialization_verified": true,
+  "frozen_generator_anchor_verified": true,
+  "cache_verified": true,
+  "errors": []
+}

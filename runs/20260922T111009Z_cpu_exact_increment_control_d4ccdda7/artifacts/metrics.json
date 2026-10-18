@@ -1,0 +1,122 @@
+[
+  {
+    "key": "bucket_mlp_1729",
+    "arm": "bucket_mlp",
+    "seed": 1729,
+    "accuracy": 0.22941176470588234,
+    "macro_f1": 0.2070358290946526,
+    "best_epoch": 15,
+    "parameters": 79558,
+    "seconds": 13.062375640496612
+  },
+  {
+    "key": "fixed_bias_1729",
+    "arm": "fixed_bias",
+    "seed": 1729,
+    "accuracy": 0.22549019607843138,
+    "macro_f1": 0.2028579007817762,
+    "best_epoch": 15,
+    "parameters": 79862,
+    "seconds": 14.629293968901038
+  },
+  {
+    "key": "fixed_bucket_1729",
+    "arm": "fixed_bucket",
+    "seed": 1729,
+    "accuracy": 0.22745098039215686,
+    "macro_f1": 0.20739100270317357,
+    "best_epoch": 15,
+    "parameters": 79862,
+    "seconds": 15.520109507255256
+  },
+  {
+    "key": "fixed_exact_1729",
+    "arm": "fixed_exact",
+    "seed": 1729,
+    "accuracy": 0.23137254901960785,
+    "macro_f1": 0.21011583807977904,
+    "best_epoch": 15,
+    "parameters": 79862,
+    "seconds": 15.090055619366467
+  },
+  {
+    "key": "bucket_mlp_3407",
+    "arm": "bucket_mlp",
+    "seed": 3407,
+    "accuracy": 0.23921568627450981,
+    "macro_f1": 0.21747801957918517,
+    "best_epoch": 14,
+    "parameters": 79558,
+    "seconds": 11.68420130200684
+  },
+  {
+    "key": "fixed_bias_3407",
+    "arm": "fixed_bias",
+    "seed": 3407,
+    "accuracy": 0.24705882352941178,
+    "macro_f1": 0.2269043179851776,
+    "best_epoch": 12,
+    "parameters": 79862,
+    "seconds": 14.440589758567512
+  },
+  {
+    "key": "fixed_bucket_3407",
+    "arm": "fixed_bucket",
+    "seed": 3407,
+    "accuracy": 0.24509803921568626,
+    "macro_f1": 0.2259384102377182,
+    "best_epoch": 14,
+    "parameters": 79862,
+    "seconds": 14.742900333367288
+  },
+  {
+    "key": "fixed_exact_3407",
+    "arm": "fixed_exact",
+    "seed": 3407,
+    "accuracy": 0.24705882352941178,
+    "macro_f1": 0.22713824526108264,
+    "best_epoch": 14,
+    "parameters": 79862,
+    "seconds": 14.243132950738072
+  },
+  {
+    "key": "bucket_mlp_2026",
+    "arm": "bucket_mlp",
+    "seed": 2026,
+    "accuracy": 0.2196078431372549,
+    "macro_f1": 0.20155748786917974,
+    "best_epoch": 14,
+    "parameters": 79558,
+    "seconds": 11.149776238948107
+  },
+  {
+    "key": "fixed_bias_2026",
+    "arm": "fixed_bias",
+    "seed": 2026,
+    "accuracy": 0.2196078431372549,
+    "macro_f1": 0.201379533172467,
+    "best_epoch": 14,
+    "parameters": 79862,
+    "seconds": 14.176733269356191
+  },
+  {
+    "key": "fixed_bucket_2026",
+    "arm": "fixed_bucket",
+    "seed": 2026,
+    "accuracy": 0.22156862745098038,
+    "macro_f1": 0.20227594953054795,
+    "best_epoch": 14,
+    "parameters": 79862,
+    "seconds": 14.892499841749668
+  },
+  {
+    "key": "fixed_exact_2026",
+    "arm": "fixed_exact",
+    "seed": 2026,
+    "accuracy": 0.2196078431372549,
+    "macro_f1": 0.2004891181179653,
+    "best_epoch": 14,
+    "parameters": 79862,
+    "seconds": 14.8355798907578
+  }
+]

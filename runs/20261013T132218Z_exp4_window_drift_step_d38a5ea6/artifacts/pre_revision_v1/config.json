@@ -1,0 +1,54 @@
+{
+  "id": "20261013T132218Z_exp4_window_drift_step_d38a5ea6",
+  "status": "frozen",
+  "method_version": "exp4_window_drift_step_v1",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    21729,
+    23407,
+    22026
+  ],
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "base_checkpoint_run": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85",
+  "prepared": {
+    "source_valid": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/source_valid_prepared.pt",
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "adaptation": {
+    "candidate_updates": 800,
+    "target_support_rows": 1024,
+    "batch_size": 128,
+    "base_learning_rate": 0.00025,
+    "loss": "source_ce + target_entropy_diversity + feature_mmd",
+    "pseudo_labels": false,
+    "query_adaptation": false
+  },
+  "permissions": {
+    "source_labels": "source CE only",
+    "support_labels": false,
+    "query_adaptation": false,
+    "query_labels": "final metrics only",
+    "external_datasets": false
+  },
+  "physical_gpu": 1,
+  "threads": 2,
+  "python": "/home/rbf/TA-WF/.venv/bin/python",
+  "budget": {
+    "new_tasks": 9,
+    "max_task_seconds": 2400,
+    "max_wall_seconds": 21600
+  },
+  "mechanism": {
+    "window_length": 16,
+    "slope_span": 4,
+    "rule": "scale=clip(1-4*(mean(last4 entropy)-mean(first4 entropy))/16,0.25,1.0)",
+    "update": "one scale per target window; first 4 windows use scale=1"
+  },
+  "mechanism_kind": "window"
+}

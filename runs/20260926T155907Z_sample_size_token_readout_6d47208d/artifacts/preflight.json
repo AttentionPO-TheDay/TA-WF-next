@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "paired_initial_states": {
+    "21729": "45793ae144c34300bae438bdf58cdac7fcb9256f5a1e16bda8644ff3704fcb0c",
+    "23407": "acca5885cbbed2cec1a577057788232898659ccde909e37d094a400b76cd7102",
+    "22026": "c021496271a7cedfb2a35882eab7e35b514519b73573ef7d2016d7c048e98e50"
+  },
+  "old_cls_forward_exact": true,
+  "contextual_mean_mask_and_gradient_verified": true,
+  "checkpoint_reconstruction_exact": true,
+  "generator_feedback_both_readouts": true,
+  "data_nesting_verified": true,
+  "fixed_validation_exact": true,
+  "sampler": {
+    "2040": {
+      "min": 100,
+      "max": 101,
+      "mean": 100.39215850830078
+    },
+    "8160": {
+      "min": 25,
+      "max": 26,
+      "mean": 25.098039627075195
+    }
+  },
+  "no_real_training": true,
+  "errors": []
+}

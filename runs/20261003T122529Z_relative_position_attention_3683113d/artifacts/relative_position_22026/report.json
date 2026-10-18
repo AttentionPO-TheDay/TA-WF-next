@@ -1,0 +1,32 @@
+{
+  "task": "relative_position_22026",
+  "kind": "relative_position",
+  "seed": 22026,
+  "device": "cuda",
+  "best_step": 5120,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1048838,
+  "parameters_trainable": 1021558,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 0.05568627450980392,
+      "macro_f1": 0.03858773607927686
+    },
+    "valid": {
+      "accuracy": 0.06470588235294118,
+      "macro_f1": 0.043095332337406415
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.06470588235294118,
+    "masked_accuracy": 0.06470588235294118,
+    "prediction_agreement": 0.9529411764705882
+  },
+  "elapsed_seconds": 384.5289775393903
+}

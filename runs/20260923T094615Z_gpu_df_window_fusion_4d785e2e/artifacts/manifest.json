@@ -1,0 +1,80 @@
+{
+  "sampling_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json",
+  "sampling_sha256": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "prediction_sha256": "39d52603c99849248140619973c8efb5d27235632af17259d91d4f1a86f71b60",
+  "models": {
+    "df_only_1729": {
+      "best_epoch": 42,
+      "valid_macro_f1": 0.4346575344868005,
+      "parameters": 3718374,
+      "backbone_initial_hash": "f74394cc224ca8f2e0b959fd03b9e57c2adecf3b8934c0cdbe315a25db895922",
+      "fusion_initial_hash": null,
+      "train_seconds": 12.270593802444637
+    },
+    "df_constant_1729": {
+      "best_epoch": 37,
+      "valid_macro_f1": 0.4741856311060463,
+      "parameters": 3778790,
+      "backbone_initial_hash": "f74394cc224ca8f2e0b959fd03b9e57c2adecf3b8934c0cdbe315a25db895922",
+      "fusion_initial_hash": "b20afc33cd2e5f50b95288259f7fc10712d9d09f032c2607b478d7672de58264",
+      "train_seconds": 12.22456077951938
+    },
+    "df_window_1729": {
+      "best_epoch": 40,
+      "valid_macro_f1": 0.35373107284871985,
+      "parameters": 3778790,
+      "backbone_initial_hash": "f74394cc224ca8f2e0b959fd03b9e57c2adecf3b8934c0cdbe315a25db895922",
+      "fusion_initial_hash": "b20afc33cd2e5f50b95288259f7fc10712d9d09f032c2607b478d7672de58264",
+      "train_seconds": 12.039577011950314
+    },
+    "df_only_3407": {
+      "best_epoch": 44,
+      "valid_macro_f1": 0.4687642054856587,
+      "parameters": 3718374,
+      "backbone_initial_hash": "7de1c507e534bf435a2f6164f213e3707d862ef2f37fb7928d5ef3796593433b",
+      "fusion_initial_hash": null,
+      "train_seconds": 11.714901231229305
+    },
+    "df_constant_3407": {
+      "best_epoch": 37,
+      "valid_macro_f1": 0.45743722508428386,
+      "parameters": 3778790,
+      "backbone_initial_hash": "7de1c507e534bf435a2f6164f213e3707d862ef2f37fb7928d5ef3796593433b",
+      "fusion_initial_hash": "4e6070fc806bff1aa083cfa48e5285d955e2cba38e71837b09e6b59c3765a5ad",
+      "train_seconds": 12.704901822842658
+    },
+    "df_window_3407": {
+      "best_epoch": 18,
+      "valid_macro_f1": 0.36706409059350237,
+      "parameters": 3778790,
+      "backbone_initial_hash": "7de1c507e534bf435a2f6164f213e3707d862ef2f37fb7928d5ef3796593433b",
+      "fusion_initial_hash": "4e6070fc806bff1aa083cfa48e5285d955e2cba38e71837b09e6b59c3765a5ad",
+      "train_seconds": 12.51806797273457
+    },
+    "df_only_2026": {
+      "best_epoch": 44,
+      "valid_macro_f1": 0.4670177861354331,
+      "parameters": 3718374,
+      "backbone_initial_hash": "1a575096c28edd53a072bc9185e8e1769fbc3e5e16812b34e0ad114fee929ed0",
+      "fusion_initial_hash": null,
+      "train_seconds": 12.48004450276494
+    },
+    "df_constant_2026": {
+      "best_epoch": 41,
+      "valid_macro_f1": 0.4593004529650861,
+      "parameters": 3778790,
+      "backbone_initial_hash": "1a575096c28edd53a072bc9185e8e1769fbc3e5e16812b34e0ad114fee929ed0",
+      "fusion_initial_hash": "2b8bdda37a0a8ba88cf8299f3ca2d5b9b2488c1b35473beb9df241d6acd67750",
+      "train_seconds": 12.55551674310118
+    },
+    "df_window_2026": {
+      "best_epoch": 21,
+      "valid_macro_f1": 0.33993688960967433,
+      "parameters": 3778790,
+      "backbone_initial_hash": "1a575096c28edd53a072bc9185e8e1769fbc3e5e16812b34e0ad114fee929ed0",
+      "fusion_initial_hash": "2b8bdda37a0a8ba88cf8299f3ca2d5b9b2488c1b35473beb9df241d6acd67750",
+      "train_seconds": 12.218474136665463
+    }
+  },
+  "elapsed_seconds": 145.0750221023336
+}

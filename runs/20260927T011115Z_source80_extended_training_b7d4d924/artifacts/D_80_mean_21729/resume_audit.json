@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "step": 3200,
+  "anchor_sha256": "144b8f791e415078739ef0f5d55a4bdd15c249ac29ca0279f08aa169b83aad1b",
+  "state_sha256": "ce0fc2bd127c70401e06632f835afe2fc5db601c5d6cb3a14ad92222233d9824",
+  "optimizer_step": 3200,
+  "metrics": {
+    "source": {
+      "accuracy": 0.513235294117647,
+      "macro_f1": 0.4937453233152784
+    },
+    "common_source": {
+      "accuracy": 0.5034313725490196,
+      "macro_f1": 0.4861723362129314
+    },
+    "valid": {
+      "accuracy": 0.3980392156862745,
+      "macro_f1": 0.3767502585841686
+    }
+  },
+  "index_prefix_exact": true
+}

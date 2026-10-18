@@ -1,0 +1,11 @@
+{
+  "runs/20260923T102339Z_gpu_df_local_token_fusion_112b50b9/PLAN.md": "df20016b092235dbfbf31036547f2d8faaf2b5096847e6fa24c5e3a49efad9ae",
+  "runs/20260923T102339Z_gpu_df_local_token_fusion_112b50b9/config.json": "8192ff25a6d4be8b90de99747567be90c92ea7389192425439414b206d5f790f",
+  "runs/20260923T102339Z_gpu_df_local_token_fusion_112b50b9/train.py": "bb2224664cb0657d65797bbe114ab3c1eb795d7491c5d60e57e7a4c9f86e302a",
+  "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "configs/datasets.json": "c3edbfeaf83553f63e6b5a12fa6e1dc5049346c1f8eb3b54bedf7760408b6b28",
+  "src/ta_wf_next/models/df.py": "869f912d04df8e03bf4ba791ba9ccf95a70fd14a2d1fe51c1d1afce58207bf99",
+  "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+  "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+  "runs/20260923T102339Z_gpu_df_local_token_fusion_112b50b9/artifacts/window_statistics.npz": "ab00fc303945e63cc200cf7a3e29872e4d7b40ee6451257cc1a6b2002f9d9659"
+}

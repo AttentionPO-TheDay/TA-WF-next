@@ -1,0 +1,8 @@
+{
+  "proteus_minus_frozen_macro_f1_mean_pp": -0.06416422524259113,
+  "proteus_minus_global_macro_f1_mean_pp": -0.18077242959161355,
+  "proteus_minus_stepwise_macro_f1_mean_pp": -0.19281236929734602,
+  "proteus_minus_frozen_negative_rate_pp": 8.51212938243226,
+  "proteus_minus_global_negative_rate_pp": 7.4801443150710965,
+  "proteus_mean_pseudo_coverage": 0.8845486111111112
+}

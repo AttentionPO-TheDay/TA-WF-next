@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "pseudo_label_calls": 0,
+  "gmm_files": 0,
+  "mechanism_kind": "multiscale",
+  "smoke_rows": 4
+}

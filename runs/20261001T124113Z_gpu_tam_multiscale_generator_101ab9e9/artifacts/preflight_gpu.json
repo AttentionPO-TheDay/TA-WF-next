@@ -1,0 +1,71 @@
+{
+  "checks": "passed",
+  "source_rows": 64,
+  "optimizer_steps": 0,
+  "new_valid_scoring": false,
+  "future_access": false,
+  "historical_initialization_equal": true,
+  "local_forward_exact_parity": true,
+  "fixed_stats_identical": true,
+  "parameter_counts_equal": true,
+  "packet_invariance": true,
+  "records": {
+    "local_d1": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472,
+      "step_seconds": 0.06147722639143467,
+      "peak_cuda_bytes": 344837632,
+      "generator_gradient_norms": {
+        "packet_conv.0.weight": null,
+        "packet_conv.0.bias": null,
+        "packet_conv.1.weight": null,
+        "packet_conv.1.bias": null,
+        "time_conv.0.weight": 0.06299348175525665,
+        "time_conv.0.bias": 0.1696169078350067,
+        "time_conv.1.weight": 0.6830878853797913,
+        "time_conv.1.bias": 0.9975354671478271
+      }
+    },
+    "context_d9": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472,
+      "step_seconds": 0.010470224265009164,
+      "peak_cuda_bytes": 345786368,
+      "generator_gradient_norms": {
+        "packet_conv.0.weight": null,
+        "packet_conv.0.bias": null,
+        "packet_conv.1.weight": null,
+        "packet_conv.1.bias": null,
+        "time_conv.0.weight": 0.06756416708230972,
+        "time_conv.0.bias": 0.1683197170495987,
+        "time_conv.1.weight": 0.6931034922599792,
+        "time_conv.1.bias": 0.9964288473129272
+      }
+    },
+    "multiscale_d139": {
+      "total": 350006,
+      "trainable": 322726,
+      "generator_total": 3024,
+      "generator_trainable": 1472,
+      "step_seconds": 0.010576590895652771,
+      "peak_cuda_bytes": 391821312,
+      "generator_gradient_norms": {
+        "packet_conv.0.weight": null,
+        "packet_conv.0.bias": null,
+        "packet_conv.1.weight": null,
+        "packet_conv.1.bias": null,
+        "time_conv.0.weight": 0.06476866453886032,
+        "time_conv.0.bias": 0.1689811646938324,
+        "time_conv.1.weight": 0.687443733215332,
+        "time_conv.1.bias": 0.9969365000724792
+      }
+    }
+  },
+  "two_worker_memory_estimate_bytes": 6166590880,
+  "free_cuda_bytes": 24584978432,
+  "total_cuda_bytes": 25250627584
+}

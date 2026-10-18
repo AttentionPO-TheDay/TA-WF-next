@@ -1,0 +1,414 @@
+{
+  "means": {
+    "ce_only": {
+      "accuracy": 0.8915032679738562,
+      "macro_f1": 0.8894366163974006
+    },
+    "ensemble_kd": {
+      "accuracy": 0.8941176470588236,
+      "macro_f1": 0.8921358960574647
+    },
+    "shuffled_kd": {
+      "accuracy": 0.6535947712418301,
+      "macro_f1": 0.6404460463283992
+    }
+  },
+  "comparisons": {
+    "ensemble_kd - ce_only": {
+      "accuracy_mean_delta_pp": 0.26143790849673476,
+      "accuracy_per_seed_pp": [
+        1.764705882352946,
+        0.0,
+        -0.9803921568627416
+      ],
+      "macro_f1_mean_delta_pp": 0.26992796600639657,
+      "pass": false
+    },
+    "shuffled_kd - ce_only": {
+      "accuracy_mean_delta_pp": -23.79084967320261,
+      "accuracy_per_seed_pp": [
+        -22.941176470588232,
+        -21.372549019607845,
+        -27.058823529411757
+      ],
+      "macro_f1_mean_delta_pp": -24.899057006900147,
+      "pass": false
+    }
+  },
+  "reports": [
+    {
+      "task": "ce_only_21729",
+      "kind": "ce_only",
+      "seed": 21729,
+      "device": "cuda",
+      "best_step": 10400,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "teacher_target": "none",
+      "temperature": 2.0,
+      "distillation_weight": 0.0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "bn_eval_buffers_unchanged": true,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8882169029227852
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8705882352941177,
+          "macro_f1": 0.866926646338411
+        }
+      },
+      "elapsed_seconds": 569.5416620420292
+    },
+    {
+      "task": "ensemble_kd_21729",
+      "kind": "ensemble_kd",
+      "seed": 21729,
+      "device": "cuda",
+      "best_step": 12320,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "teacher_target": "ensemble_mean",
+      "temperature": 2.0,
+      "distillation_weight": 0.5,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "bn_eval_buffers_unchanged": true,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.907843137254902,
+          "macro_f1": 0.905392537745479
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9999346405228758,
+          "macro_f1": 0.9999346397966513
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8884012501659561
+        }
+      },
+      "elapsed_seconds": 569.430742919445
+    },
+    {
+      "task": "shuffled_kd_21729",
+      "kind": "shuffled_kd",
+      "seed": 21729,
+      "device": "cuda",
+      "best_step": 7040,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "teacher_target": "shuffled_ensemble",
+      "temperature": 2.0,
+      "distillation_weight": 0.5,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "bn_eval_buffers_unchanged": true,
+      "best": {
+        "source": {
+          "accuracy": 0.7620915032679738,
+          "macro_f1": 0.7592207848473785
+        },
+        "valid": {
+          "accuracy": 0.6607843137254902,
+          "macro_f1": 0.6480008553537965
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.5349019607843137,
+          "macro_f1": 0.5298361190061862
+        },
+        "valid": {
+          "accuracy": 0.4647058823529412,
+          "macro_f1": 0.45106881136292887
+        }
+      },
+      "elapsed_seconds": 569.5282838875428
+    },
+    {
+      "task": "ce_only_23407",
+      "kind": "ce_only",
+      "seed": 23407,
+      "device": "cuda",
+      "best_step": 12320,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "teacher_target": "none",
+      "temperature": 2.0,
+      "distillation_weight": 0.0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "bn_eval_buffers_unchanged": true,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8941176470588236,
+          "macro_f1": 0.8923945335710041
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8941176470588236,
+          "macro_f1": 0.8936080259609671
+        }
+      },
+      "elapsed_seconds": 572.5263811219484
+    },
+    {
+      "task": "ensemble_kd_23407",
+      "kind": "ensemble_kd",
+      "seed": 23407,
+      "device": "cuda",
+      "best_step": 11360,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "teacher_target": "ensemble_mean",
+      "temperature": 2.0,
+      "distillation_weight": 0.5,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "bn_eval_buffers_unchanged": true,
+      "best": {
+        "source": {
+          "accuracy": 0.9999346405228758,
+          "macro_f1": 0.9999346397966513
+        },
+        "valid": {
+          "accuracy": 0.8941176470588236,
+          "macro_f1": 0.8916772769713945
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.884313725490196,
+          "macro_f1": 0.8815163594575358
+        }
+      },
+      "elapsed_seconds": 573.0425613541156
+    },
+    {
+      "task": "shuffled_kd_23407",
+      "kind": "shuffled_kd",
+      "seed": 23407,
+      "device": "cuda",
+      "best_step": 6560,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "teacher_target": "shuffled_ensemble",
+      "temperature": 2.0,
+      "distillation_weight": 0.5,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "bn_eval_buffers_unchanged": true,
+      "best": {
+        "source": {
+          "accuracy": 0.7326797385620915,
+          "macro_f1": 0.7288981772859026
+        },
+        "valid": {
+          "accuracy": 0.6803921568627451,
+          "macro_f1": 0.6654480595657065
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.6416339869281046,
+          "macro_f1": 0.6381113112078871
+        },
+        "valid": {
+          "accuracy": 0.5568627450980392,
+          "macro_f1": 0.5456122309063485
+        }
+      },
+      "elapsed_seconds": 573.2665497204289
+    },
+    {
+      "task": "ce_only_22026",
+      "kind": "ce_only",
+      "seed": 22026,
+      "device": "cuda",
+      "best_step": 7520,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "teacher_target": "none",
+      "temperature": 2.0,
+      "distillation_weight": 0.0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "bn_eval_buffers_unchanged": true,
+      "best": {
+        "source": {
+          "accuracy": 0.9934640522875817,
+          "macro_f1": 0.9932015106741902
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8876984126984127
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8862745098039215,
+          "macro_f1": 0.8824915824915824
+        }
+      },
+      "elapsed_seconds": 574.0738757252693
+    },
+    {
+      "task": "ensemble_kd_22026",
+      "kind": "ensemble_kd",
+      "seed": 22026,
+      "device": "cuda",
+      "best_step": 9920,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "teacher_target": "ensemble_mean",
+      "temperature": 2.0,
+      "distillation_weight": 0.5,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "bn_eval_buffers_unchanged": true,
+      "best": {
+        "source": {
+          "accuracy": 0.9998039215686274,
+          "macro_f1": 0.9998039208424031
+        },
+        "valid": {
+          "accuracy": 0.8803921568627451,
+          "macro_f1": 0.8793378734555203
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8764705882352941,
+          "macro_f1": 0.8756882551000198
+        }
+      },
+      "elapsed_seconds": 573.9870414147153
+    },
+    {
+      "task": "shuffled_kd_22026",
+      "kind": "shuffled_kd",
+      "seed": 22026,
+      "device": "cuda",
+      "best_step": 7520,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "teacher_target": "shuffled_ensemble",
+      "temperature": 2.0,
+      "distillation_weight": 0.5,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "bn_eval_buffers_unchanged": true,
+      "best": {
+        "source": {
+          "accuracy": 0.6850980392156862,
+          "macro_f1": 0.678599381052265
+        },
+        "valid": {
+          "accuracy": 0.6196078431372549,
+          "macro_f1": 0.6078892240656946
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.6660130718954248,
+          "macro_f1": 0.6608888393891342
+        },
+        "valid": {
+          "accuracy": 0.5450980392156862,
+          "macro_f1": 0.5365608247961188
+        }
+      },
+      "elapsed_seconds": 574.2385165272281
+    }
+  ],
+  "future_access": false,
+  "training_tasks_completed": 9,
+  "teacher": "fixed mean of three wide_bn raw source logits",
+  "teacher_files_verified": 3,
+  "valid_selection": "predeclared checkpoint selection only"
+}

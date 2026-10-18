@@ -1,0 +1,463 @@
+{
+  "means": {
+    "ce_only": {
+      "accuracy": 0.8915032679738562,
+      "macro_f1": 0.8894366163974006
+    },
+    "two_pass_control": {
+      "accuracy": 0.8875816993464052,
+      "macro_f1": 0.8859190011150795
+    },
+    "sam_ce": {
+      "accuracy": 0.8751633986928105,
+      "macro_f1": 0.8715474249787974
+    }
+  },
+  "comparisons": {
+    "sam_ce - two_pass_control": {
+      "accuracy_mean_delta_pp": -1.2418300653594727,
+      "accuracy_per_seed_pp": [
+        0.5882352941176561,
+        -2.5490196078431393,
+        -1.764705882352935
+      ],
+      "macro_f1_mean_delta_pp": -1.4371576136282038,
+      "positive_seed_count": 1,
+      "pass": false
+    },
+    "two_pass_control - ce_only": {
+      "accuracy_mean_delta_pp": -0.39215686274509665,
+      "accuracy_per_seed_pp": [
+        -0.19607843137254832,
+        0.19607843137254832,
+        -1.17647058823529
+      ],
+      "macro_f1_mean_delta_pp": -0.3517615282321159,
+      "positive_seed_count": 1,
+      "pass": false
+    },
+    "sam_ce - ce_only": {
+      "accuracy_mean_delta_pp": -1.6339869281045694,
+      "accuracy_per_seed_pp": [
+        0.39215686274510775,
+        -2.352941176470591,
+        -2.941176470588225
+      ],
+      "macro_f1_mean_delta_pp": -1.7889191418603196,
+      "positive_seed_count": 1,
+      "pass": false
+    }
+  },
+  "reports": [
+    {
+      "task": "ce_only_21729",
+      "kind": "ce_only",
+      "seed": 21729,
+      "device": "cuda",
+      "best_step": 10400,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": false,
+      "ema_decay": null,
+      "temperature": null,
+      "max_consistency_weight": 0.0,
+      "ramp_steps": 0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8882169029227852
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8705882352941177,
+          "macro_f1": 0.866926646338411
+        }
+      },
+      "elapsed_seconds": 647.5836376752704
+    },
+    {
+      "task": "ce_only_23407",
+      "kind": "ce_only",
+      "seed": 23407,
+      "device": "cuda",
+      "best_step": 12320,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": false,
+      "ema_decay": null,
+      "temperature": null,
+      "max_consistency_weight": 0.0,
+      "ramp_steps": 0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8941176470588236,
+          "macro_f1": 0.8923945335710041
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8941176470588236,
+          "macro_f1": 0.8936080259609671
+        }
+      },
+      "elapsed_seconds": 616.2782825306058
+    },
+    {
+      "task": "ce_only_22026",
+      "kind": "ce_only",
+      "seed": 22026,
+      "device": "cuda",
+      "best_step": 7520,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "ema_used": false,
+      "ema_decay": null,
+      "temperature": null,
+      "max_consistency_weight": 0.0,
+      "ramp_steps": 0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9934640522875817,
+          "macro_f1": 0.9932015106741902
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8876984126984127
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valid": {
+          "accuracy": 0.8862745098039215,
+          "macro_f1": 0.8824915824915824
+        }
+      },
+      "elapsed_seconds": 610.2209201250225
+    },
+    {
+      "task": "two_pass_control_21729",
+      "kind": "two_pass_control",
+      "seed": 21729,
+      "device": "cuda",
+      "best_step": 12800,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "sam_used": false,
+      "rho": 0.05,
+      "bn_buffer_restore_checks": 12800,
+      "parameter_restore_checks": 0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9996732026143791,
+          "macro_f1": 0.9996731554020399
+        },
+        "valid": {
+          "accuracy": 0.888235294117647,
+          "macro_f1": 0.8866946778711484
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9996732026143791,
+          "macro_f1": 0.9996731554020399
+        },
+        "valid": {
+          "accuracy": 0.888235294117647,
+          "macro_f1": 0.8866946778711484
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.888235294117647,
+        "masked_accuracy": 0.8745098039215686,
+        "prediction_agreement": 0.9823529411764705
+      },
+      "elapsed_seconds": 735.3512497441843
+    },
+    {
+      "task": "sam_ce_21729",
+      "kind": "sam_ce",
+      "seed": 21729,
+      "device": "cuda",
+      "best_step": 11840,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "sam_used": true,
+      "rho": 0.05,
+      "bn_buffer_restore_checks": 12800,
+      "parameter_restore_checks": 12800,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9962091503267974,
+          "macro_f1": 0.9962000501326953
+        },
+        "valid": {
+          "accuracy": 0.8941176470588236,
+          "macro_f1": 0.8924667380549733
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9971241830065359,
+          "macro_f1": 0.9971291147578162
+        },
+        "valid": {
+          "accuracy": 0.884313725490196,
+          "macro_f1": 0.8832742965095904
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.8941176470588236,
+        "masked_accuracy": 0.8823529411764706,
+        "prediction_agreement": 0.9784313725490196
+      },
+      "elapsed_seconds": 937.4195410069078
+    },
+    {
+      "task": "two_pass_control_23407",
+      "kind": "two_pass_control",
+      "seed": 23407,
+      "device": "cuda",
+      "best_step": 10400,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "sam_used": false,
+      "rho": 0.05,
+      "bn_buffer_restore_checks": 12800,
+      "parameter_restore_checks": 0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9998039215686274,
+          "macro_f1": 0.9998041350930533
+        },
+        "valid": {
+          "accuracy": 0.8960784313725491,
+          "macro_f1": 0.8941346235463882
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9999346405228758,
+          "macro_f1": 0.9999346397966513
+        },
+        "valid": {
+          "accuracy": 0.8901960784313725,
+          "macro_f1": 0.8879530600118833
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.8960784313725491,
+        "masked_accuracy": 0.8784313725490196,
+        "prediction_agreement": 0.9745098039215686
+      },
+      "elapsed_seconds": 727.5358842005953
+    },
+    {
+      "task": "sam_ce_23407",
+      "kind": "sam_ce",
+      "seed": 23407,
+      "device": "cuda",
+      "best_step": 7040,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "sam_used": true,
+      "rho": 0.05,
+      "bn_buffer_restore_checks": 12800,
+      "parameter_restore_checks": 12800,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9771241830065359,
+          "macro_f1": 0.9761528489830974
+        },
+        "valid": {
+          "accuracy": 0.8705882352941177,
+          "macro_f1": 0.8671278612455083
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9930718954248366,
+          "macro_f1": 0.9929552047966246
+        },
+        "valid": {
+          "accuracy": 0.8686274509803922,
+          "macro_f1": 0.8638842638842639
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.8705882352941177,
+        "masked_accuracy": 0.8588235294117647,
+        "prediction_agreement": 0.9764705882352941
+      },
+      "elapsed_seconds": 920.8680419800803
+    },
+    {
+      "task": "two_pass_control_22026",
+      "kind": "two_pass_control",
+      "seed": 22026,
+      "device": "cuda",
+      "best_step": 9920,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "sam_used": false,
+      "rho": 0.05,
+      "bn_buffer_restore_checks": 12800,
+      "parameter_restore_checks": 0,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9993464052287582,
+          "macro_f1": 0.9993468148330195
+        },
+        "valid": {
+          "accuracy": 0.8784313725490196,
+          "macro_f1": 0.8769277019277019
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9998692810457517,
+          "macro_f1": 0.9998692795933026
+        },
+        "valid": {
+          "accuracy": 0.8666666666666667,
+          "macro_f1": 0.8636673239614415
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.8784313725490196,
+        "masked_accuracy": 0.8666666666666667,
+        "prediction_agreement": 0.9803921568627451
+      },
+      "elapsed_seconds": 738.3859996590763
+    },
+    {
+      "task": "sam_ce_22026",
+      "kind": "sam_ce",
+      "seed": 22026,
+      "device": "cuda",
+      "best_step": 11840,
+      "steps_completed": 12800,
+      "validation_opportunities": 20,
+      "parameters_total": 1048838,
+      "parameters_trainable": 1021558,
+      "sam_used": true,
+      "rho": 0.05,
+      "bn_buffer_restore_checks": 12800,
+      "parameter_restore_checks": 12800,
+      "verified_roles": [
+        "source",
+        "valid"
+      ],
+      "future_access": false,
+      "best": {
+        "source": {
+          "accuracy": 0.9888888888888889,
+          "macro_f1": 0.988828381476148
+        },
+        "valid": {
+          "accuracy": 0.8607843137254902,
+          "macro_f1": 0.8550476756359107
+        }
+      },
+      "last": {
+        "source": {
+          "accuracy": 0.9903267973856209,
+          "macro_f1": 0.9903206346540774
+        },
+        "valid": {
+          "accuracy": 0.8509803921568627,
+          "macro_f1": 0.8446557799498976
+        }
+      },
+      "fixed_view_diagnostic": {
+        "clean_accuracy": 0.8607843137254902,
+        "masked_accuracy": 0.8411764705882353,
+        "prediction_agreement": 0.9745098039215686
+      },
+      "elapsed_seconds": 695.7899003988132
+    }
+  ],
+  "future_access": false,
+  "training_tasks_completed": 6,
+  "historical_reference_tasks": 3,
+  "sam_rho": 0.05,
+  "bn_rule": "first pass updates BN; second pass BN eval; restore first-pass buffers",
+  "fixed_teacher_loaded": false,
+  "ema_loaded": false,
+  "valid_selection": "predeclared checkpoint selection only"
+}

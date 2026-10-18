@@ -1,0 +1,116 @@
+{
+  "sampling_manifest": "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json",
+  "sampling_sha256": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "teacher_info": {
+    "packet_teacher_1729": {
+      "best_epoch": 42,
+      "valid_macro_f1": 0.2526484448424896,
+      "parameters": 219494,
+      "initial_hash": "45d3e0ee021a52955064e764eb71ba64d304d4f099f22537fc2dad554406669e",
+      "train_seconds": 2.8408209597691894
+    },
+    "fusion_teacher_1729": {
+      "best_epoch": 45,
+      "valid_macro_f1": 0.34129873394579274,
+      "parameters": 219494,
+      "initial_hash": "45d3e0ee021a52955064e764eb71ba64d304d4f099f22537fc2dad554406669e",
+      "train_seconds": 2.598197693005204
+    },
+    "packet_teacher_3407": {
+      "best_epoch": 45,
+      "valid_macro_f1": 0.2486147809608928,
+      "parameters": 219494,
+      "initial_hash": "3e41b5bfcd238b55915aa53455816c1c7f0eba9739f3f66e8ed3ca347259f7fa",
+      "train_seconds": 2.2105424627661705
+    },
+    "fusion_teacher_3407": {
+      "best_epoch": 41,
+      "valid_macro_f1": 0.323681699243983,
+      "parameters": 219494,
+      "initial_hash": "3e41b5bfcd238b55915aa53455816c1c7f0eba9739f3f66e8ed3ca347259f7fa",
+      "train_seconds": 2.185922034084797
+    },
+    "packet_teacher_2026": {
+      "best_epoch": 34,
+      "valid_macro_f1": 0.24560652322444346,
+      "parameters": 219494,
+      "initial_hash": "d79c4851deaed02a0c225bbb1df50e94b82dff14b060331ece2a75cbce4dbe21",
+      "train_seconds": 2.2023615147918463
+    },
+    "fusion_teacher_2026": {
+      "best_epoch": 43,
+      "valid_macro_f1": 0.32885039796804505,
+      "parameters": 219494,
+      "initial_hash": "d79c4851deaed02a0c225bbb1df50e94b82dff14b060331ece2a75cbce4dbe21",
+      "train_seconds": 2.2021904215216637
+    }
+  },
+  "student_info": {
+    "ce_1729": {
+      "best_epoch": 27,
+      "valid_macro_f1": 0.24752550249955094,
+      "parameters": 159078,
+      "initial_hash": "5af328b659e5c602b60ad7ba31c6906272658005d366afcc3ba63d4497163683",
+      "train_seconds": 2.3195724235847592
+    },
+    "kd_packet_1729": {
+      "best_epoch": 42,
+      "valid_macro_f1": 0.25709808337517315,
+      "parameters": 159078,
+      "initial_hash": "5af328b659e5c602b60ad7ba31c6906272658005d366afcc3ba63d4497163683",
+      "train_seconds": 2.328142434358597
+    },
+    "kd_fusion_1729": {
+      "best_epoch": 42,
+      "valid_macro_f1": 0.23945640480804087,
+      "parameters": 159078,
+      "initial_hash": "5af328b659e5c602b60ad7ba31c6906272658005d366afcc3ba63d4497163683",
+      "train_seconds": 2.2881129272282124
+    },
+    "ce_3407": {
+      "best_epoch": 27,
+      "valid_macro_f1": 0.2518345857013677,
+      "parameters": 159078,
+      "initial_hash": "90213e1b8e7abafd5cc918738f4a3eae421e6f73adc86ec5b292189e4e5a7ecc",
+      "train_seconds": 1.9841948365792632
+    },
+    "kd_packet_3407": {
+      "best_epoch": 38,
+      "valid_macro_f1": 0.2328271913912052,
+      "parameters": 159078,
+      "initial_hash": "90213e1b8e7abafd5cc918738f4a3eae421e6f73adc86ec5b292189e4e5a7ecc",
+      "train_seconds": 2.582631795667112
+    },
+    "kd_fusion_3407": {
+      "best_epoch": 45,
+      "valid_macro_f1": 0.2433292753066019,
+      "parameters": 159078,
+      "initial_hash": "90213e1b8e7abafd5cc918738f4a3eae421e6f73adc86ec5b292189e4e5a7ecc",
+      "train_seconds": 2.233010996133089
+    },
+    "ce_2026": {
+      "best_epoch": 41,
+      "valid_macro_f1": 0.24062520431806533,
+      "parameters": 159078,
+      "initial_hash": "bad36de762e7d37ca1c6328e91d690c00fe94aece37d27e8f05a091e2dcb2f0b",
+      "train_seconds": 1.95629639364779
+    },
+    "kd_packet_2026": {
+      "best_epoch": 44,
+      "valid_macro_f1": 0.2320811684588774,
+      "parameters": 159078,
+      "initial_hash": "bad36de762e7d37ca1c6328e91d690c00fe94aece37d27e8f05a091e2dcb2f0b",
+      "train_seconds": 2.19496819190681
+    },
+    "kd_fusion_2026": {
+      "best_epoch": 40,
+      "valid_macro_f1": 0.2434489621867819,
+      "parameters": 159078,
+      "initial_hash": "bad36de762e7d37ca1c6328e91d690c00fe94aece37d27e8f05a091e2dcb2f0b",
+      "train_seconds": 2.2243378134444356
+    }
+  },
+  "prediction_sha256": "24a7a7360468ef3f0a49689aaddbe169f990a6382bad1e8ae024c7ad1bab3067",
+  "teacher_logit_sha256": "0308984df6ae8cc1c27854f9e9b7d3e061bc40a42b4618515fe5d4b5c114dac5",
+  "elapsed_seconds": 49.91096920147538
+}

@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "paired_initial_sha256": {
+    "1729": "f61da8dc45e2a4e0776badafbed938b45c3a9e6dbc20fb635d8d83ec1d128bf6",
+    "3407": "90720a806e85e18fc62f1ff8b722783d05eceb39028d5e3c90dfb10e8760bdd6",
+    "2026": "6689a35b26bfdbec36b2c74e347fc99bed1dce34c10835bf87f9e3e9388aeb15"
+  },
+  "classifier_parameters": 113514,
+  "source_valid_overlap": 0,
+  "synthetic_cache_online_parity": true,
+  "generator_gradient_isolation": true,
+  "data_counts_verified": true,
+  "no_real_training": true,
+  "errors": []
+}

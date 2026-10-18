@@ -1,0 +1,52 @@
+{
+  "condition": "C_ordered",
+  "seed": 21729,
+  "status": "completed",
+  "historical_reuse": false,
+  "residual_mode": "ordered",
+  "steps_completed": 12800,
+  "blocks_completed": 400,
+  "last": {
+    "source": {
+      "accuracy": 0.5722222222222222,
+      "macro_f1": 0.5630481732871474
+    },
+    "common_source": {
+      "accuracy": 0.5743872549019607,
+      "macro_f1": 0.5647348420525443
+    },
+    "valid": {
+      "accuracy": 0.44509803921568625,
+      "macro_f1": 0.41971156966831696
+    }
+  },
+  "best_block": 355,
+  "initial_state_sha256": "d33493ec24f48897369e495cf245cb8a8abdeb6bc3d5a5b4d086fcdc086e7e60",
+  "shared_initial_sha256": "45793ae144c34300bae438bdf58cdac7fcb9256f5a1e16bda8644ff3704fcb0c",
+  "generator_initial_sha256": "c0670c965281808bc67190d723cf14bc7c826fe836d6f42b4d5379f89681b010",
+  "generator_changed": true,
+  "config_sha256": "93ad5d357e7f4a5b28f8e164a15c0774bcad8ed475344898b7d572731a7fae60",
+  "source_count": 15300,
+  "sample_visits_min": 53,
+  "sample_visits_max": 54,
+  "samples_presented": 819200,
+  "elapsed_seconds": 6076.33566490002,
+  "parameters": {
+    "total": 124778,
+    "trainable": 124778,
+    "generator_total": 11264,
+    "generator_trainable": 11264
+  },
+  "source": {
+    "accuracy": 0.5643790849673203,
+    "macro_f1": 0.5531866248285668
+  },
+  "common_source": {
+    "accuracy": 0.564093137254902,
+    "macro_f1": 0.5527380049480974
+  },
+  "valid": {
+    "accuracy": 0.44901960784313727,
+    "macro_f1": 0.4283391173097055
+  }
+}

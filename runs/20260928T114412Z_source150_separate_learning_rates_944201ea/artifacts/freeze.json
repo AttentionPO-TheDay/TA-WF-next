@@ -1,0 +1,25 @@
+{
+  "config_sha256": "526408e84bfda5ed0bb5a5f79da1f4ca48b1ad5b756b601da0ae1788b5200445",
+  "plan_sha256": "7851c2fbe58727cb3e154e7a611c6b1ec2b558c7fd148d484fca05df82e9ea5e",
+  "datasets_sha256": "31c98344c1aa683030f313fc3f3e31252e49a6a49c8cb2db011afb7a353eb8c0",
+  "prepared_sha256": "da8ccb9b5adf475f76ec97b17d959a21419b1920de4c0bd4a7bb7fc9d3eeb2a3",
+  "manifest_sha256": "44b3357c8236cdde77e5718cb013eddccc7c76e575fbd19445ee5249369eb72a",
+  "code_sha256": {
+    "runs/20260928T114412Z_source150_separate_learning_rates_944201ea/common.py": "cf8d1dc89970ac3aa4b76eb281bbbf443dc716768e8181e83a30e7cbf0307ac2",
+    "runs/20260928T114412Z_source150_separate_learning_rates_944201ea/finalize.py": "edfc543037c167a33118c1a08a6e3baadcb50baab4204da2d0030a43249189e2",
+    "runs/20260928T114412Z_source150_separate_learning_rates_944201ea/preflight.py": "b20e34a16d8fa96ee1ca3105e37489aced5349541d752febac73a62851fc47de",
+    "runs/20260928T114412Z_source150_separate_learning_rates_944201ea/verify_one.py": "3180f3983e96973d2da49b221d1986e8e442dabafe168dd4d3b25b33bf6638d5",
+    "runs/20260928T114412Z_source150_separate_learning_rates_944201ea/pipeline.py": "a81005d7a5b252d3f5d61a79bf18c9f6a1e6e2345a09bd11001a12283ea44e02",
+    "runs/20260928T114412Z_source150_separate_learning_rates_944201ea/train.py": "6aa688237fddcc021521a2cdb6797ec0b7148decae88c8e13cac3f506848465b",
+    "src/ta_wf_next/learnable_generator.py": "9ba80e7dbda5ab2b7d1f8b386f65678a9a89f216fafdf0b18df85599a0c6267f",
+    "src/ta_wf_next/batch_views.py": "e67b54acde0e36b7b1487d4972d73c7109a89e6de41c2217e11356d38f96f44f",
+    "src/ta_wf_next/packet_patches.py": "e31785c8731cd8b1a3f702619efaef64b87de1e190be735965bc9498b10e8f6b",
+    "src/ta_wf_next/hierarchical_transformer.py": "1812342811ef5a79d8773c8608824750313a9be2a4fb24e488487487caaff366",
+    "src/ta_wf_next/transformer_proto.py": "ba921e57111694effd9df4b00e3da7adf3b538a931c047a15f64d1626fc868b6",
+    "src/ta_wf_next/__init__.py": "4ec6fe32603e569463dbe921a0b4f703c316a93dc046c9f71049b457c0a3ff64",
+    "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+    "src/ta_wf_next/screening.py": "d86b1f6a5f5b2b5f498a5acfb5eb47ba44c937459f151f7e4bc4ffec89e45d51",
+    "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+    "scripts/experiment.py": "4645793ce51bae7c10d065f01551b70732b859178f0b424a36907b3f8439841a"
+  }
+}

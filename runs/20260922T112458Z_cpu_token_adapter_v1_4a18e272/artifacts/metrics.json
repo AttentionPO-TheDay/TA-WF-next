@@ -1,0 +1,92 @@
+[
+  {
+    "key": "baseline_1729",
+    "arm": "baseline",
+    "seed": 1729,
+    "accuracy": 0.22941176470588234,
+    "macro_f1": 0.2070358290946526,
+    "best_epoch": 15,
+    "parameters": 79558,
+    "seconds": 11.313210713677108
+  },
+  {
+    "key": "adapter_zero_1729",
+    "arm": "adapter_zero",
+    "seed": 1729,
+    "accuracy": 0.22549019607843138,
+    "macro_f1": 0.20402729677224302,
+    "best_epoch": 15,
+    "parameters": 80110,
+    "seconds": 13.788782783783972
+  },
+  {
+    "key": "adapter_random_1729",
+    "arm": "adapter_random",
+    "seed": 1729,
+    "accuracy": 0.22549019607843138,
+    "macro_f1": 0.20117741533239622,
+    "best_epoch": 15,
+    "parameters": 80110,
+    "seconds": 13.701776698231697
+  },
+  {
+    "key": "baseline_3407",
+    "arm": "baseline",
+    "seed": 3407,
+    "accuracy": 0.23921568627450981,
+    "macro_f1": 0.21747801957918517,
+    "best_epoch": 14,
+    "parameters": 79558,
+    "seconds": 12.293573040515184
+  },
+  {
+    "key": "adapter_zero_3407",
+    "arm": "adapter_zero",
+    "seed": 3407,
+    "accuracy": 0.24705882352941178,
+    "macro_f1": 0.22377079601232958,
+    "best_epoch": 12,
+    "parameters": 80110,
+    "seconds": 13.627817947417498
+  },
+  {
+    "key": "adapter_random_3407",
+    "arm": "adapter_random",
+    "seed": 3407,
+    "accuracy": 0.23333333333333334,
+    "macro_f1": 0.2171157693557985,
+    "best_epoch": 14,
+    "parameters": 80110,
+    "seconds": 13.966530404984951
+  },
+  {
+    "key": "baseline_2026",
+    "arm": "baseline",
+    "seed": 2026,
+    "accuracy": 0.2196078431372549,
+    "macro_f1": 0.20155748786917974,
+    "best_epoch": 14,
+    "parameters": 79558,
+    "seconds": 11.722170929424465
+  },
+  {
+    "key": "adapter_zero_2026",
+    "arm": "adapter_zero",
+    "seed": 2026,
+    "accuracy": 0.2196078431372549,
+    "macro_f1": 0.1993460606486467,
+    "best_epoch": 14,
+    "parameters": 80110,
+    "seconds": 13.784845813177526
+  },
+  {
+    "key": "adapter_random_2026",
+    "arm": "adapter_random",
+    "seed": 2026,
+    "accuracy": 0.21568627450980393,
+    "macro_f1": 0.1996802265400881,
+    "best_epoch": 13,
+    "parameters": 80110,
+    "seconds": 14.287457055412233
+  }
+]

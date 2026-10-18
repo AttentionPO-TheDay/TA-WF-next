@@ -1,0 +1,32 @@
+{
+  "task": "supcon_21729",
+  "kind": "supcon",
+  "seed": 21729,
+  "device": "cuda",
+  "best_step": 9920,
+  "steps_completed": 12800,
+  "validation_opportunities": 20,
+  "parameters_total": 1082246,
+  "parameters_trainable": 1054966,
+  "verified_roles": [
+    "source",
+    "valid"
+  ],
+  "future_access": false,
+  "best": {
+    "source": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "valid": {
+      "accuracy": 0.8941176470588236,
+      "macro_f1": 0.8905696699814346
+    }
+  },
+  "fixed_view_diagnostic": {
+    "clean_accuracy": 0.8941176470588236,
+    "masked_accuracy": 0.8745098039215686,
+    "prediction_agreement": 0.9666666666666667
+  },
+  "elapsed_seconds": 424.82221128884703
+}

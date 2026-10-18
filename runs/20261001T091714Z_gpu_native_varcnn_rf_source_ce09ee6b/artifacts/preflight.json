@@ -1,0 +1,22 @@
+{
+  "models": {
+    "varcnn": {
+      "peak_bytes": 1136926208,
+      "parameters": 3900454,
+      "batch_size": 50,
+      "forward_backward": "passed"
+    },
+    "rf": {
+      "peak_bytes": 1478123520,
+      "parameters": 1040562,
+      "batch_size": 200,
+      "forward_backward": "passed"
+    }
+  },
+  "free_bytes": 24612241408,
+  "estimated_parallel_with_reserve": 6910017024,
+  "torch": "2.12.1+cu130",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "training_steps": 0,
+  "valid_scored": false
+}

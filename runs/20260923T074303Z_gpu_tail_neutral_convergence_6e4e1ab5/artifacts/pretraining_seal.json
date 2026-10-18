@@ -1,0 +1,9 @@
+{
+  "runs/20260923T074303Z_gpu_tail_neutral_convergence_6e4e1ab5/PLAN.md": "6a3bb822b36473cef1d733f9c16f0d3e86c5197de315ca4c7be2fc5e2b0af13a",
+  "runs/20260923T074303Z_gpu_tail_neutral_convergence_6e4e1ab5/config.json": "bf85a796c9fa5c573919c4aec33288249e1c71e2e1e4da74a28c9fad504d781c",
+  "runs/20260923T074303Z_gpu_tail_neutral_convergence_6e4e1ab5/train.py": "39c2afedaea9f976f08b66bf7f6784c7255a41d0aa4604060f8adf5f53ee886c",
+  "runs/20260922T023810Z_cpu_temporal_multiview_screen_v2_34c00b37/artifacts/manifest.json": "f03b6fa0047d1daff655851ea5bfcc76f3973552a934e272ca9f1899a1c2f40b",
+  "src/ta_wf_next/traffic_views.py": "31fe156bf80af39feed14005b75c9a000adceaa1b4dcbc81b90a8cca09194bd0",
+  "src/ta_wf_next/burst_tokens.py": "1f65daa531dd0ae6eba71c81c35dcd58cbbd85a2b4e16d7f8bd0304b44f519e9",
+  "runs/20260923T074303Z_gpu_tail_neutral_convergence_6e4e1ab5/artifacts/source_statistics.npz": "ab00fc303945e63cc200cf7a3e29872e4d7b40ee6451257cc1a6b2002f9d9659"
+}
