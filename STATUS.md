@@ -1,4 +1,5 @@
 # 当前进度
+当前实验 external_tta_transfer_matrix：`20261015T130951Z_external_tta_transfer_matrix_v3_cc4291fa`。方向前端已冻结，WTT-Time/AWF五条件矩阵启动。
 当前实验 external_tta_transfer_matrix：`20261015T092255Z_external_tta_transfer_matrix_v2_7663f9e8`。执行失败：ValueError，产物已保留。
 当前实验 tent_shot_span：`20261014T162930Z_tent_shot_span_f2b7665d`。9项Scale-Lock+Span-Invariance目标任务完成，Macro-F1 70.875%，NAR 4.637%；审计通过，结果见RESULTS.md。
 当前实验 tent_coadapt_gated：`20261014T141140Z_tent_coadapt_gated_9b4b4444`。9项全参目标BN+窄熵门控完成，Macro-F1 67.083%，NAR 12.014%；审计通过，结果见RESULTS.md。

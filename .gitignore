@@ -11,6 +11,7 @@ htmlcov/
 build/
 dist/
 .experiment.lock
+.status.lock
 .env
 .env.*
 !.env.example
