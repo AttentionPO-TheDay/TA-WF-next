@@ -1,0 +1,108 @@
+"""Assemble the retrospective from audited saved-artifact statistics."""
+import json,hashlib
+from pathlib import Path
+RUN=Path(__file__).resolve().parent;ROOT=RUN.parents[1]
+def load(name):return json.loads((RUN/'artifacts'/name).read_text())
+def main():
+    e=load('evidence_summary.json');mem=load('memory_summary.json');overlap=load('overlap_summary.json');trajectory=load('trajectory_summary.json');scores=load('score_dissection.json')
+    text='''# v2–v6详细复盘：先定位瓶颈，暂停新训练
+
+本次按用户要求暂停新增训练、自适应和GPU任务，只读复核已有过程。结论收敛为三个问题：**纠错目标与原模型错误高度相关；输出评分的有效性随因素/候选方法变化；早期生成器失真与后端适应的作用尚未分离。** 优化发散、增加原型数量、继续收紧门控，目前均缺少作为首要突破口的证据。
+
+这次补充发现修订了上一轮的研究优先级：之前主要强调“新增独立纠错证据”，仍有依据；但现有分数融合也丢失了部分可用排序信息，应该先把“候选质量”和“验收质量”分开定位，再决定是否增加模块。旧结果和旧裁决不改写，本run记录修订依据。
+
+## 1. 每轮实际改变了什么
+
+| 轮次 | 新适应数/范围 | 实际改变 | 过程和结果暴露的问题 |
+|---|---|---|---|
+| v2 | 240/10切片×3seed | 单原型/GMM4、Residual/LoRA、训练路由与输出硬旁路 | 路由120单元预测全部等于frozen；源train拟合H95仅.060–.097 nat。零NAR伴随零纠错。GMM是在冻结预测类内部选分量，不能把该测试说成完整的跨类多原型纠错。 |
+| v3 | 210/10切片×3seed | 匹配KL目标：硬标签、软教师、软邻居；Top5限制；源valid校准验收 | 软邻居LoRAΔF1+.948pp；strict ref-TENT+1.983pp但NAR8.513%。源邻居验收所有seed不可行，全部回退。两源库分区不等于独立语义证据。 |
+| v4 | 90/10切片×3seed | 硬带通、软带通、软权重×几何；共同评分前沿 | NAR下降同时纠错下降；同NAR1%收益只有+.005/.032/.031pp。source_nar1在目标实测1.735%，源域风险阈值未能直接迁移。 |
+| v5 | 30/仅045和USA×3seed | 全102类目标、批次动量、动态原型、批内对比 | 动态原型有局部增益；对比无额外收益。完整102类本身相对v3 Top5同类LoRA仅+.044/.008pp，不能把本轮总体增益都归给扩展候选。 |
+| v6 | 36/仅045和USA×3seed | 分离几何目标/锚点、温度.05、恢复源类半径 | 主候选额外+.185/.127pp，USA低风险端下降；半径恢复约−.010/−.002pp。锐化带来小收益，未改变整个纠错格局。 |
+
+合计606次新适应，派生评分/历史复用不能算新增训练。v2–v4三因素等权平均与v5–v6两片均值不可直接串成进步曲线。42/100/2026是源模型训练seed；后几轮适应初始化与reference批流相同，未检验适应随机性。v4/v5早期预检失败来自批形/梯度模式数值路径不一致，均在目标训练前修正，不能用来解释现有阴性结果。
+
+## 2. 已排查的过程问题
+
+v5/v6共66个单元、26,400步日志中，记录的梯度范数均未触发阈值1的裁剪；所检查最终query平均logit模长相对frozen为0.9905–1.0049倍。损失有限且总体下降。以动态原型为例，Version loss前20步均值.504→后20步.406，USA .486→.400；v6主候选分别.781→.632、.742→.629。
+
+所以最近这两片的主要问题不能直接归因为logit爆炸或“没有在学习”。这也不证明400步已经最优或梯度方向正确。不同目标的损失不能跨臂直接比大小；现有日志没有各loss的独立梯度范数/夹角，也没有中途query checkpoint，不能判定source identity压制纠错或后期过拟合。
+
+动量权重平均约.715，batch64的有效样本数约58，当前已经不是少数样本被硬锁死。权重采用batch mean损失，改变了target相对source identity的优化强度；缺少匹配常数权重/打乱权重对照，因此还不能把收益全部归给“识别可救样本”。Adam下也不能把它精确等同于学习率按.715缩放。
+
+## 3. 痛点一：几种“证据”会共同犯错
+
+下表只在原frozen预测错误的query样本内统计，三源seed平均；不是全体样本占比。全部由已有logits/几何/源邻居缓存重建，无新模型前向。
+
+| 错误样本中的现象 | Version045 | USA |
+|---|---:|---:|
+'''
+    metrics=[('冻结分类器与最近源原型指向同一错误类','frozen_wrong_head_geo_agree_pct_mean'),('两个不相交源邻居库共同指向同一错误类','frozen_wrong_both_banks_same_wrong_pct_mean'),('至少一个源邻居库给出正确类','frozen_wrong_either_bank_correct_pct_mean'),('正确类仍在冻结模型Top5内','frozen_wrong_top5_contains_true_pct_mean'),('固定邻居软目标能给出正确Top1','qfixed_rescue_of_frozen_wrong_pct_mean'),('固定软目标错误且在75/25混合下无法换Top1','frozen_wrong_qfixed_wrong_and_locked_pct_mean')]
+    ev={r['slice']:r for r in e}
+    for label,key in metrics:text+=f"| {label} | {ev['version_045'][key]:.2f}% | {ev['network_USA'][key]:.2f}% |\n"
+    text+='''
+两bank只是源样本行不同，仍共用相同编码器和度量，不能把一致投票当成独立确认。批内对比的软pair标签又来自同一q，可能进一步强化已有错误邻域；本批无增益与此解释相容，但未建立因果证明。
+
+75/25混合的限制可以精确说明：q=.75q_fixed+.25q_geo。若q_fixed第一、第二类概率差>1/3，即使q_geo把全部概率给第二类，混合目标Top1也无法翻转。上表是**query代理诊断**：用已存源邻居和冻结输出重建q_fixed；不是当时reference训练目标正确率的实测，更不是网络无法通过其他损失纠错的上界。
+
+训练日志与此一致：Version最后20步target与初始teacher的Top1不一致率，full_static约12.47%、v5 proto12.84%、v6主候选13.52%；USA约10.99%、11.61%、12.19%。几何锐化明显改变软分布，却只小幅扩展了目标类别决策。
+
+优先追问：谁能在“分类器、原型、邻居共同错”时提供不同的有效信息？继续把同源证据做更多投票、GMM或soft pair，不会自动回答这个问题。
+
+## 4. 痛点二：纠错候选与验收评分没有一起变好
+
+v6主候选中，当前combined评分在“真实纠错 vs 原本正确被改错”之间的AUROC：Version .4945、USA .5132，接近随机。单独normalized_margin_gain分别.6853/.6635；negative_frozen_maha为.4406/.4544，说明在这两个候选分布内，“更靠近旧源流形”没有成为可靠的改对证据。不能据此推断所有漂移中越远越好。
+
+为排除几何筛选集合不同的影响，固定同一组距离可接受候选，仅改变排序。下表的阈值由query标签事后定位，**不是部署结果或源域校准的安全保证**：
+
+| v6主候选/同一距离可接受集合 | Version Rec@NAR≤1% | USA Rec@NAR≤1% |
+|---|---:|---:|
+| 原combined | 4.402% | 2.810% |
+| 单独归一化裕度增量 | 6.411% | 4.422% |
+
+但扩大回看十个已观察切片，使用每seed跨因素的同一阈值并按因素等权：v4 soft_geometry原combined为1.840%，margin_gain仅1.345%（同距离集合）；v3无门控LoRA分别1.809%/1.576%。这是不同候选/范围的历史复核，不能把它称为v6全十片测试，但足以否定“直接全局换一个分数就解决”的结论。
+
+因素异质性也可见：v4候选的平均AUROC在Version为combined .545 vs margin_gain .693，Behavior为.581 vs .556；既有信号跨因素的判别能力和分数尺度并不一致。逐片/候选可用排序与跨因素共同阈值可用性是两个问题。按目标标签挑最优信号或阈值再部署会偷换协议。
+
+这里真正需要解决的是**输出评分的融合与校准能否跨漂移迁移**。熵、几何、裕度不应未经验证就全部相乘；只靠source valid的NAR阈值也没有目标保证。现有记录允许定位这个问题，尚未给出已经验证的无标签解法。
+
+## 5. 痛点三：同一reference被反复使用，后端约束能看到的信息有限
+
+每片1024无标签reference，400×64步相当于25次曝光。最后memory argmax覆盖约98类，约18个（USA）/22个（Version）伪类少于5行、约6/8个少于2行；这里是预测类支持，不是真实类缺失。重复看到同一错误分配不会自动产生新的语义证据，动态原型的低支持类也不一定有足够数据估计多模态结构。
+
+batch64在102类中，每步有至少两行的伪类中心约14个；关系/对比项并不是用完整102类目标关系来做可靠校正。v5/v6未独立改变reference抽样，因此目前不知道对参考池组成是否稳健。应先量化这一限制，再扩大多原型数量或步数。
+
+最近LoRA优化的是Transformer内部Q/V，所有几何监督落在Transformer后池化128D；生成器及其BN被冻结，进入Transformer前的原始Token不会被LoRA改变。论文中的“Token被投影回源域”必须按实际干预层表述，不能用后层聚集图代替早期Token修复。
+
+## 6. 仍存在可利用的互补性，但尚未定位到哪一层
+
+保存预测显示，v6和strict reference-TENT纠错集合不同。USA每seed平均v6纠错90行，TENT另外纠正95行；Version分别1028.3行和另外638行。用真标签挑选两者正确结果的union，错误样本纠错覆盖可达USA14.23%、Version14.90%，高于v6自身6.90%/9.18%。该union是oracle覆盖诊断，不能作为集成部署成绩，也不控制NAR。
+
+TENT改变生成器BN的affine并使用reference统计，LoRA主要改变后端attention；损失也不同。因此互补性支持进一步定位早期统计/特征与后端的差异，但不能直接证明BN就是因果瓶颈。高熵、远原型、共同错都不足以宣称样本物理上不可恢复。
+
+v5→v6纠错集合Jaccard约.87。USA每seed平均新纠正8.67行、丢失原纠正4行，净增加4.67行；新误改和避免误改均为3.67行。Version净增加82.67条纠错，同时净增加20.67条误改。应据此把当前+.185/.127pp判断为同一体系内的小步优化，而非机制突破。
+
+## 7. 收敛后的解决顺序（仅建议，保持暂停）
+
+1. **先解决验收评分的可迁移性。** 固定既有候选，用已存源valid和开发预测拆解几何项、裕度项及融合；分别检查排序能力、低误改端和共同阈值的跨因素偏移。任何可部署阈值必须按预先冻结的源侧规则产生。只有目标事后曲线好看、源侧规则不可用时，判为未解决。优先排查旧几何先验是否惩罚了真正纠正漂移的样本，不立即再加新门控。
+2. **再定位应改哪一层。** 如恢复实验，优先做小范围、现有checkpoint出发的BN affine/统计分解，与frozen/LoRA对照；先推理诊断、无需新优化。reference统计只能来自原1024无标签池。TENT与LoRA的不同损失/参数范围须分开控制。若早期校准无互补收益，就停止这一路；如有，再设计针对性机制，不能直接拼接两方法宣称创新。
+3. **确认优化方向，而非盲加更新。** 若需要下一次适应，在源/reference上记录各loss梯度范数与夹角、原型软质量/支持度、q的类别变化与源保持，加入匹配强度的常数权重/打乱对照。现有标量日志不足以判定对比项/source identity/原型pull究竟在帮助还是相互抵消。
+
+暂缓：GMM分量数扫描、叠加批内对比、继续硬/软门控网格、增加LoRA rank/适应步数、全量240单元扩展和WTT/AWF新评分。不能把+3pp作为必须调出的结果；先要求具体痛点的对照证据。
+
+## 8. 复核范围与交付
+
+本次零训练、零适应、零模型前向、零GPU占用，不读取reference真标签，不改变任何旧checkpoint/预测/配置。84个两片预测单元独立用混淆矩阵复算；66条400步训练轨迹、18份reference状态和十片历史分数纳入诊断。440个引用文件重核SHA；一份v3 summary不在既有交付清单内，另由已锁定逐单元分数独立复算210个标量通过，未默认为已封存。
+
+输入、误差集合、训练轨迹、评分分解、十片反查及独立审计均在artifacts。补充分析是在看到初步结果后开展的探索性复核；全部数据已观察，所有阈值前沿均为事后诊断，不产生未见确认。未更改v6原预注册FAIL结论。补充读取脚本首次清单路径错误及修复保存在REPAIR_HISTORY.md；无训练或数据修改。
+
+当前保持暂停新实验。下一轮只围绕上述最小可判别问题立项，不继续按模块名称堆组合。
+'''
+    (RUN/'RESULTS.md').write_text(text)
+    # Manual source reading also belongs to the report's provenance.
+    c=json.loads((RUN/'config.json').read_text())
+    extra=[ROOT/'PROTOCOL.md',ROOT/'HANDOFF.md',ROOT/'AGENTS.md',ROOT/c['runs']['v3']/'tent.py',ROOT/c['runs']['v6']/'model.py',ROOT/c['runs']['v6']/'generator_base.py']
+    (RUN/'artifacts/manual_review_inputs_sha256.json').write_text(json.dumps({str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in extra},indent=2)+'\n')
+    print(RUN/'RESULTS.md')
+if __name__=='__main__':main()

@@ -41,3 +41,9 @@ runs/*/logs
 runs/**/*.log
 runs/*/artifacts/
 runs/**/*.csv
+
+# Generated figures and runtime locks stay local.
+/*.lock
+runs/**/*.pdf
+runs/**/*.png
+runs/**/*.svg

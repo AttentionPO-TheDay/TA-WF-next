@@ -1,0 +1,119 @@
+{
+  "id": "20261018T164924Z_multifactor_diagnostic_v1_4fc8f13d",
+  "status": "frozen",
+  "version": "prototype_anchor_v1_post_external_feedback",
+  "evaluation_role": "observed_diagnostic_not_confirmation",
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "prototype_run": "runs/20261018T130529Z_p2_token_alignment_a4be1af8",
+  "identity_run": "runs/20261018T161630Z_multifactor_manifest_gate_v1_cea5ea02",
+  "p0_run": "runs/20261008T031805Z_p0_duplicate_split_audit_47a886d5",
+  "label_evidence_run": "runs/20261009T014524Z_joint_role_identity_audit_51b4162b",
+  "external_run": "runs/20261018T130529Z_p2_external_transfer_v3_pure_fa94a001",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "slices": [
+    "version_045",
+    "version_046",
+    "version_047",
+    "version_048",
+    "network_DE",
+    "network_JP",
+    "network_SG",
+    "network_UK",
+    "network_USA",
+    "behavior_subpage"
+  ],
+  "conditions": [
+    "frozen",
+    "tent_bn",
+    "tent_entropy_gate",
+    "token_adain",
+    "token_projector",
+    "prototype_no_topology",
+    "prototype_anchor"
+  ],
+  "split": {
+    "reference_rows": 1024,
+    "order": "sha256(diagnostic-v1|raw_group_id) except Behavior exact URL",
+    "behavior": "one representative per exact URL, then URL-disjoint split",
+    "exclude_pure_source_and_selection_valid_effective_tam": true,
+    "global_target_tam_dedup": true
+  },
+  "permissions": {
+    "source_labels": "source anchor only",
+    "target_reference_labels": false,
+    "query_labels": "terminal metrics and posthoc visualization only",
+    "url_hostname": "split grouping and posthoc clustering metrics only",
+    "cross_family_map": "content_supported_102_identity_assumption_not_official",
+    "query_for_selection": false,
+    "target_checkpoint_selection": "fixed final step",
+    "external_new_scoring": false
+  },
+  "adaptation": {
+    "steps": 800,
+    "batch_size": 128,
+    "lr": 0.00025,
+    "gate": [
+      0.2,
+      0.4
+    ],
+    "prototype_teacher_entropy_max": 1.0,
+    "prototype_teacher_probability_min": 0.8,
+    "prototype_class_min_count": 2,
+    "entropy_weight": 1.0,
+    "centroid_weight": 0.1,
+    "topology_weight": 1.0,
+    "source_identity_weight": 1.0,
+    "residual_weight": 0.001,
+    "bottleneck": 16,
+    "scale": 0.1,
+    "source_anchor_rows": 1024,
+    "dropout": false,
+    "grad_clip": 1.0
+  },
+  "visualization": {
+    "seed": 42,
+    "slices": [
+      "version_048",
+      "behavior_subpage"
+    ],
+    "classes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "max_per_class": 40,
+    "tsne_seed": 20261019,
+    "tsne_perplexity": 30,
+    "space": "pooled native 110D WideGenerator.time before time_projection; source standardized",
+    "joint_embedding": true,
+    "topology_evidence": "high-dimensional paired centroid distance, neighbor agreement and collapse diagnostics"
+  },
+  "budget": {
+    "physical_gpus": [
+      0,
+      2
+    ],
+    "seed_gpu_map": {
+      "42": 0,
+      "100": 2,
+      "2026": 0
+    },
+    "max_wall_seconds": 10800,
+    "max_gpu_hours": 6,
+    "max_cell_seconds": 900,
+    "max_output_gib": 8,
+    "threads": 2
+  }
+}

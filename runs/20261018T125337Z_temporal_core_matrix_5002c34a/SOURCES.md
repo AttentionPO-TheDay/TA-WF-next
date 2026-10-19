@@ -1,0 +1,3 @@
+# 实现来源
+
+架构依赖显式复制自纯净源run，逐文件hash见artifacts/code_sources.json；无sys.path修改或旧项目训练代码导入。methods.py为项目内Proteus机制移植最小helper，原始依据runs/20261009T085657Z_proteus_mechanism_baseline_b5571868/runner.py和已登记的当前草稿实现。runner/runtime为本次作用域严格化的新实现，不使用旧模型或旧source replay。TENT BN行为为BN-affine entropy经典定义；精确query批统计权限在PLAN/config声明。

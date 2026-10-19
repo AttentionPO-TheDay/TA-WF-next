@@ -1,5 +1,33 @@
 # 当前进度
-当前实验 external_tta_transfer_matrix：`20261015T130951Z_external_tta_transfer_matrix_v3_cc4291fa`。方向前端已冻结，WTT-Time/AWF五条件矩阵启动。
+梯度未见元监督 v16：`20261019T130328Z_gradient_unseen_meta_v16_aa2914fb`。30微重排器/15新源缓存完成；96源诊断+query状态、24描述量状态及58有限缓存核验通过。GU相对IM同风险纠错−.003/0pp；机理与v12升级均False。仅gradient-unseen，保留v12不部署。
+低风险目标/稳健/reference v15：`20261019T124904Z_tail_robust_reference_v15_6e2dab9e`。八组A/B/C及组合、168重排/36域模型完成；66目标+120留出状态重载、30域fold权重核验通过。8组主判据均False；合成排序收益未稳定迁移，保留v12不部署。
+源域候选确认 v14：`20261019T115616Z_source_confirmation_rerank_v14_04dd0e83`。30源缓存探针/12线性模型/24目标评分及源阈值核验通过；主判据False。合成源验证pAUC提升未稳定迁移；源阈值主策略目标最大NAR0.2773%，两片Recovery2.671%/2.207%。保留v12，不部署。
+候选清洗审查 v13：`20261019T114139Z_candidate_cleanup_audit_v13_1b0f9d01`。12缓存状态/24原操作点及独立条件AUC核验通过；候选确认信号有一致诊断线索，极低风险清洗收益未确立。同纠错USA的W102.667→90.333，Version914.333→922。零训练/新前向/新评分选择。
+低NAR软重排序 v12：`20261019T111322Z_low_nar_soft_rerank_v12_8860fe6c`。96状态完成并审计；固定v9候选，NAR≤1%纠错率Version/USA为7.515→7.866% / 5.195→6.254%；Version无效改写/纠错比上升，完整主判据False。零训练/新前向，未部署。
+跨视图稳定性 v11：`20261019T105659Z_cross_view_stability_v11_c00a5945`。180扰动/45原始状态全重载通过；主判据=False，实际可利用性=False。零训练、未整合TTA，GPU空闲。
+独立表征互补性 v10：`20261019T100749Z_independent_view_probe_v10_9b462cd2`。9源模型/36目标状态完整重载审计通过，主候选门槛=False；只做两片诊断，未接入TTA，无新GPU任务。
+渐进平滑与辅助视图 v9：`20261019T094400Z_progressive_view_v9_9ee04ba2`。24适应、42状态三分区完整重载通过；稳定性=True，相对v8效果=False，辅助视图=False。仅两片诊断开发。
+Teacher解耦 v8：`20261019T092024Z_teacher_decouple_v8_4e542026`。18新适应、30状态三分区重载和120部署策略审计通过；去KL主判据=False，固定v6一致性包络=False；仅两片诊断开发。
+机制定位 v7：`20261019T074232Z_mechanism_isolation_v7_50f41beb`。24适应+30推理状态及54完整query/valid重载通过；写入筛选=False，早期统计=False，主评分=False。仅两片诊断开发。
+当前研究动作：v16已完成。30微重排器/15新源缓存完成；96源诊断+query状态、24描述量状态及58有限缓存核验通过。GU相对IM同风险纠错−.003/0pp；机理与v12升级均False。仅gradient-unseen，保留v12不部署。 未启动严格骨干交叉拟合；WTT/AWF关闭，旧封存不变。
+原型细化 v6：`20261019T052905Z_prototype_refinement_v6_da9bb898`。36任务及全query/valid重载审计通过；主候选Version/USA ΔF1+2.903/+1.680pp（较v5+.185/+.127pp）；USA同NAR1纠错−.277pp，预注册改进和扩展均FAIL。仅诊断开发。
+动量原型与批内对比 v5：`20261019T041139Z_momentum_cluster_v5_561c5c2e`。30任务及全query/valid重载审计完成；version_045 jointΔF1+2.678pp；network_USA jointΔF1+1.558pp；扩展资格False。仅两切片诊断开发证据。
+轻量超参数敏感性：`20261019T040840Z_pure_tta_hparam_sensitivity_v1_aee7bcc9`。双协议超参数敏感性完成：63新适应+18历史控制，63checkpoint全query重载、81指标复算通过；详见RESULTS.md。
+安全—纠错前沿 v4：`20261019T031622Z_bandpass_frontier_v4_44ce7a10`。90新适应、630评分状态及全query重载审计完成；主诊断判据False，ΔRecovery@NAR1=+0.031pp。仅诊断开发证据。
+候选纠错与验收 v3：`20261019T024601Z_candidate_accept_v3_51e6680d`。GPU0/1/2完成210次适应与630评分状态，完整重载/交付审计通过；最佳新候选ΔF1+0.948pp/NAR3.559%，同预算ref-TENT+1.983pp；0/16判据通过，事后直接重排+0.799pp，仅诊断证据。
+多原型×门控×LoRA v2：`20261018T183916Z_gmm_routing_lora_v2_28dc7c4b`。GPU0/1/2并行240单元完成；全量重载及交付审计通过。单原型LoRA ΔF1+0.712pp/NAR2.285%；GMM未增益，四门控组合预测未变；仅诊断证据。
+多因素诊断 v1：`20261018T164924Z_multifactor_diagnostic_v1_4fc8f13d`。210单元及全量checkpoint/指标重算、三表三图/特征重提取交付核验通过；原型ΔF1+0.310pp、NAR8.043%，Network仍−0.505pp；仅诊断开发证据。
+论文二多因素逐行身份门槛：`20261018T161630Z_multifactor_manifest_gate_v1_cea5ea02`。10个目标文件347,662行只读清单及源精确隔离核验通过；该结构审计保留原裁决；2026-10-19已由诊断v1规范另行授权内容对应假设下的诊断评分，独立确认仍不解锁。
+论文一五条件机理图：`20261018T155259Z_pure_temporal_mechanism_figures_v2_8fb2abac`。基于已审计45单元矩阵生成主表与三张实测图（各PDF/SVG/PNG），输入/输出散列核验通过；与旧含coadapt图表明确区分。
+论文一纯净时序核心矩阵：`20261018T144952Z_pure_temporal_core_matrix_v2_4aa89f43`。纯净源域 TemporalDrift 五条件 45 单元完成（9个冻结引用+36个新适应）；独立重载审计通过，详见 RESULTS.md。
+论文一纯净时序核心矩阵：`20261018T125337Z_temporal_core_matrix_5002c34a`。45项五条件主表（9 frozen复用+36新适应）及9 coadapt诊断完成，45 checkpoint重载/54指标复算通过；三张机理图已导出。
+论文一三张机理图：`20261018T144246Z_pure_temporal_mechanism_figures_e95fa886`，三图PDF/SVG/PNG及数值已导出，render_audit通过；Day270 coadapt低熵占比66.307%，不支持98%预设。
+Temporal纯净冻结基线：`20261018T143543Z_pure_temporal_frozen_gpu_24b5ecc4`。9/9单元完成且独立审计通过：Day14/90/270 Macro-F1 87.531/71.174/59.230%；前次CPU批次2/9中断并保留，未合并。五条件核心矩阵现已修正参数作用域并冻结启动；旧readiness_audit保留为历史，当前以preflight.json为准。
+论文二四模块发布（2026-10-18）：实验一 `20261018T130529Z_p2_zero_shot_drift_baseline_3103acb3` 与实验三 `20261018T130529Z_p2_multifactor_tta_matrix_d377e584` 已登记并写入PLAN/config/gates；原计划目标评分未执行；现由2026-10-19诊断v1以明确版本子集、内容支持标签假设与冻结reference/query协议承接，不视作盲测。
+论文二Token对齐：`20261018T130529Z_p2_token_alignment_a4be1af8` 已完成三seed×18,553源行统计量/102类原型与逐行向量，每seed 2,226,360 Tokens，模型/BN状态未变；目标AdaIN/projector及新原型关系消融已由诊断v1承接，10切片清单已解锁并在GPU运行；旧source-only run作为冻结参考来源保留。
+论文二外部方法迁移：`20261018T130529Z_p2_external_transfer_v3_pure_fa94a001`。144单元及重载/独立复算审计完成；WTT gate/AdaIN/projector ΔF1 +0.800/+0.223/+0.350pp，AWF +0.264/−0.073/−0.096pp。Token配方尚无跨数据集稳健收益，全部适应法NAR>0；逐切片/等权汇总见RESULTS.md。
+当前实验序列（2026-10-18）：纯净源域基石模型 `20261018T125337Z_pure_source_backbone_c1d249f6` 三seed训练及valid重载已完成，18,553行/102类，Accuracy 88.241±0.350%、Macro-F1 88.068±0.370%；尚无独立Day0 test。Temporal核心矩阵已完成预检并启动；早前external_transfer_matrix占位计划已停止，由本次明确预算的论文二外部支线替代。
+当前实验 external_tta_transfer_matrix：`20261015T130951Z_external_tta_transfer_matrix_v3_cc4291fa`。服务器断电中断（2026-10-18用户确认），已完成3/255个WTT开发单元；旧产物保留。
 当前实验 external_tta_transfer_matrix：`20261015T092255Z_external_tta_transfer_matrix_v2_7663f9e8`。执行失败：ValueError，产物已保留。
 当前实验 tent_shot_span：`20261014T162930Z_tent_shot_span_f2b7665d`。9项Scale-Lock+Span-Invariance目标任务完成，Macro-F1 70.875%，NAR 4.637%；审计通过，结果见RESULTS.md。
 当前实验 tent_coadapt_gated：`20261014T141140Z_tent_coadapt_gated_9b4b4444`。9项全参目标BN+窄熵门控完成，Macro-F1 67.083%，NAR 12.014%；审计通过，结果见RESULTS.md。

@@ -1,0 +1,3 @@
+# Implementation repair before target scoring or optimization
+
+2026-10-19 first source-only preflight failed because the zero-init assertion compared 16-row adapter inference to a slice of the earlier 128-row inference. GPU numerical kernels can vary with batch size. Corrected assertion compares separately loaded pure model and zero-initialized LoRA using the same 16-row batch. Source full 128-row inference still must equal v3 cached logits/features exactly. No target scoring, optimizer steps, threshold changes or hyperparameter changes occurred. Initial freeze and failure retained in artifacts/freeze_initial_preflight.json and controller_failure_initial_preflight.json; repaired code is re-frozen before restarting.

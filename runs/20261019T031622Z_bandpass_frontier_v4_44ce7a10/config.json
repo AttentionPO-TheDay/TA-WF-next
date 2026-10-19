@@ -1,0 +1,189 @@
+{
+  "id": "20261019T031622Z_bandpass_frontier_v4_44ce7a10",
+  "status": "frozen",
+  "version": "bandpass_frontier_v4_after_observed_v3",
+  "evaluation_role": "observed_diagnostic_not_confirmation",
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "prototype_run": "runs/20261018T130529Z_p2_token_alignment_a4be1af8",
+  "identity_run": "runs/20261018T161630Z_multifactor_manifest_gate_v1_cea5ea02",
+  "p0_run": "runs/20261008T031805Z_p0_duplicate_split_audit_47a886d5",
+  "label_evidence_run": "runs/20261009T014524Z_joint_role_identity_audit_51b4162b",
+  "external_run": "runs/20261018T130529Z_p2_external_transfer_v3_pure_fa94a001",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "slices": [
+    "version_045",
+    "version_046",
+    "version_047",
+    "version_048",
+    "network_DE",
+    "network_JP",
+    "network_SG",
+    "network_UK",
+    "network_USA",
+    "behavior_subpage"
+  ],
+  "conditions": [
+    "hard_band",
+    "soft_band",
+    "soft_geometry"
+  ],
+  "split": {
+    "reference_rows": 1024,
+    "order": "sha256(diagnostic-v1|raw_group_id) except Behavior exact URL",
+    "behavior": "one representative per exact URL, then URL-disjoint split",
+    "exclude_pure_source_and_selection_valid_effective_tam": true,
+    "global_target_tam_dedup": true
+  },
+  "permissions": {
+    "source_labels": "fixed source targets/anchors only",
+    "target_reference_labels": false,
+    "query_labels": "terminal metrics, candidate oracle and retrospective frontier analysis only; never adaptation or deployed threshold selection",
+    "url_hostname": "split grouping and posthoc clustering metrics only",
+    "cross_family_map": "content_supported_102_identity_assumption_not_official",
+    "query_for_selection": false,
+    "target_checkpoint_selection": "fixed final step",
+    "external_new_scoring": false,
+    "source_valid_labels": "per-candidate output threshold calibration only; not gradient/selection; observed model-selection valid",
+    "query_input": "fixed per-sample model+source-neighbor inference; no optimizer or fitted query statistics except explicitly transductive standard tent_bn"
+  },
+  "adaptation": {
+    "steps": 400,
+    "batch_size": 64,
+    "source_batch_size": 32,
+    "lr": 0.00025,
+    "bottleneck": 16,
+    "scale": 0.1,
+    "lora_rank": 4,
+    "lora_scale": 1.0,
+    "gmm_k": [
+      1,
+      4
+    ],
+    "gmm_covariance": "diag",
+    "gmm_reg_covar": 0.001,
+    "gmm_n_init": 3,
+    "gmm_max_iter": 200,
+    "gmm_random_seed": 20261019,
+    "feature_space": "128D post-attention final-norm time-pooled, source standardized",
+    "sample_distribution": "degenerate Gaussian N(embedding,0); diagonal Gaussian W2 squared / dimension",
+    "soft_assignment": "frozen teacher predicted class; mixture prior times exp(-W2/source median nearest W2)",
+    "routing": "actual v4 rules are exclusively routing_v4; not the legacy GMM route",
+    "distance": "minimum over all classes and components of mean squared standardized Mahalanobis",
+    "routing_fit": "frozen source geometry plus unlabeled reference entropy quantiles",
+    "pull_weight": 0.1,
+    "topology_weight": 1.0,
+    "source_identity_weight": 1.0,
+    "grad_clip": 1.0,
+    "source_anchor_rows": 1024,
+    "teacher_fixed": true,
+    "entropy_loss": false,
+    "dropout": false,
+    "selection": "fixed final400; no target selection",
+    "kl_weight": 1.0,
+    "kl_temperature": 2.0,
+    "neighbor_count_per_bank": 10,
+    "neighbor_smoothing": 0.01,
+    "candidate_topk": 5,
+    "neighbor_exponent": 1.0,
+    "target_update": "fixed q within frozen top5; q detached; hard teacher onehot or soft teacher T2 or teacher T2 times source kNN votes",
+    "acceptance_calibration": "source validation: minimum bank log-vote gain threshold over frozen classifier; smallest feasible grid value with >=10 changes, correction:damage>=2 and damage<=1% of baseline correct; fallback reject all",
+    "acceptance_grid": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "acceptance_min_changes": 10,
+    "acceptance_min_ratio": 2.0,
+    "acceptance_max_nar": 0.01,
+    "acceptance_distance_quantile": 0.99,
+    "validation_entropy_quantile": 0.95,
+    "validation_distance_quantile": 0.99,
+    "neighbor_banks": "source rows hash parity; two deterministic disjoint banks",
+    "tent_protocol": "400x64 reference entropy updates; two query policies: standard batch-stat transductive, and sequential reference-population BN calibration without query statistics"
+  },
+  "visualization": {
+    "conditions": [],
+    "slices": []
+  },
+  "budget": {
+    "physical_gpus": [
+      0,
+      1,
+      2
+    ],
+    "seed_gpu_map": {
+      "42": 0,
+      "100": 1,
+      "2026": 2
+    },
+    "max_wall_seconds": 7200,
+    "max_gpu_hours": 6,
+    "max_cell_seconds": 600,
+    "max_output_gib": 4,
+    "threads": 2
+  },
+  "diagnostic_run": "runs/20261018T164924Z_multifactor_diagnostic_v1_4fc8f13d",
+  "previous_run": "runs/20261018T183916Z_gmm_routing_lora_v2_28dc7c4b",
+  "policies": [
+    "raw",
+    "source_nar1",
+    "source_nar2"
+  ],
+  "baseline_run": "runs/20261019T024601Z_candidate_accept_v3_51e6680d",
+  "routing_v4": {
+    "entropy_quantiles": [
+      0.2,
+      0.9
+    ],
+    "soft_temperature": "max(0.1*(H90-H20),0.02) nat; reference entropy only",
+    "geometry": "frozen standardized feature cosine distances to 102 source means; PMR=(d2-d1)/(d2+1e-8)",
+    "geometry_weight": "sigmoid((PMR-source_valid_PMR25)/0.05)*exp(-maha/source_valid_maha_median); zero if maha>source_valid_maha99",
+    "geometry_calibration": "source valid without labels",
+    "detached": true,
+    "normalization": "batch mean w*per_sample_KL and w*pull; weighted relational loss multiplied by mean(w); source identity unchanged",
+    "weight_shuffle": "conditional extra 30 tasks only if C or D raw recovery at diagnostic NAR<=1% improves >=0.5pp over ungated, positive all3seeds; matched best eligible soft arm, geometry preferred on tie; retain hist by deterministic batch permutation",
+    "shuffle_max_tasks": 30
+  },
+  "acceptance_v4": {
+    "primary_score": "sigmoid(frozen candidate-class geometric margin/0.05)*sigmoid(same-class normalized logit margin gain/0.05)*exp(-frozen_maha/source_valid_maha_median); maha>source_valid99 => score=-1",
+    "normalized_logit_margin": "logit/sqrt(mean(logit**2)+1e-12); candidate vs max other class; gain before to after for same candidate",
+    "other_diagnostic_scores": [
+      "negative_frozen_entropy",
+      "candidate_geometric_margin",
+      "negative_frozen_maha",
+      "normalized_margin_gain"
+    ],
+    "source_grid": [
+      -0.5,
+      0,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      0.95,
+      1.01
+    ],
+    "source_max_nar": [
+      0.01,
+      0.02
+    ],
+    "selection": "source-valid maximize recovery count subject NAR budget, >=10 changes and positive net corrections; tie fewer damages then higher threshold; fallback reject all",
+    "retrospective_frontier": "all unique-score prefixes, ties indivisible; maximum recovery under NAR<=1%/2%; posthoc only, never deployment",
+    "random": "analytic expected random acceptance line; all changed predictions uniformly eligible",
+    "primary": "D minus ungated recovery@NAR1 >=0.5pp, positive in all3 seeds, at least2/3 factors positive and remaining factor >=-0.5pp; diagnostic signal only",
+    "secondary": "C/B matched comparisons, 2% budget, same-recovery minimum NAR, against matched TENT/direct; source calibrated output separately"
+  }
+}

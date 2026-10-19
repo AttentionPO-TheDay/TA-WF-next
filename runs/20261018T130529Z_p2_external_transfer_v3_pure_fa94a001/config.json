@@ -1,0 +1,148 @@
+{
+  "base_run": null,
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "base_checkpoint_policy": "one checkpoint per seed; no best-seed selection; report verified hash from reports.json",
+  "base_checkpoints": null,
+  "source_rows": null,
+  "conditions": [
+    "frozen",
+    "tent_entropy_gate",
+    "token_adain",
+    "token_projector"
+  ],
+  "batch_size": 128,
+  "permissions": {
+    "source_labels": "own dataset source training only",
+    "reference_labels": false,
+    "query_adaptation": false,
+    "query_batch_statistics": false,
+    "query_labels": "metrics after terminal prediction only",
+    "external_training_authorized": "2026-10-18 user explicitly selected independent external direction models; this config freezes bounded budget"
+  },
+  "metrics": {
+    "primary": "macro_f1_fixed_source_label_set",
+    "secondary": [
+      "top1_accuracy",
+      "delta_f1_vs_own_frozen_pp",
+      "NAR",
+      "recovery_rate",
+      "time",
+      "memory"
+    ],
+    "NAR": "count(frozen correct AND adapted wrong) / count(frozen correct); null when denominator=0",
+    "retention_caveat": "official source valid is observed development, not an independent Day0 test; no shared denominator across independently trained datasets"
+  },
+  "scientific_claims": {
+    "zero_shot": "frozen model with no target reference or updates only",
+    "tta": "zero target labels, but target reference inputs observed; report separately from strict zero-shot",
+    "mapping": "no numeric label equality as semantic mapping",
+    "causality": "geographic condition labels do not identify packet loss, jitter or retransmission causes",
+    "safety": "NAR is measured; no prior guarantee of zero extra errors",
+    "topology": "joint embedding is descriptive, not proof of recovery or isometry"
+  },
+  "factor_gates": {
+    "VersionDrift": "mixed released drift files; require attributed per-row version manifest and semantic site mapping",
+    "NetworkDrift": "require semantic site mapping and independent reference/query list; geography available, quantitative physical conditions unverified",
+    "BehaviorDrift": "20400 traces, 17739 exact URLs; require homepage/subpage semantic mapping and split audit"
+  },
+  "role_evidence": "runs/20261018T125337Z_multifactor_role_audit_1c1f33e3/artifacts/role_audit.json",
+  "id": "20261018T130529Z_p2_external_transfer_v3_pure_fa94a001",
+  "status": "frozen",
+  "method_version": "paper2_external_direction_v4",
+  "execution_stage": "independent_direction_method_transfer",
+  "budget": {
+    "physical_gpu": 1,
+    "gpu_processes": 3,
+    "max_wall_seconds": 21600,
+    "max_task_seconds": 2400,
+    "max_output_gib": 4,
+    "source_models": 6,
+    "source_training_epochs_total": 270,
+    "total_cells": 144,
+    "adaptation_tasks": 108,
+    "max_candidate_updates": 86400,
+    "physical_gpus": [
+      0,
+      1,
+      2
+    ],
+    "seed_gpu_map": {
+      "42": 0,
+      "100": 1,
+      "2026": 2
+    },
+    "max_gpu_hours": 18,
+    "preflight_gpu": 1
+  },
+  "model": {
+    "architecture": "wide_bn Transformer; explicit code copied from pure-source run; random initialization per dataset/seed",
+    "source_epochs": 45,
+    "source_rows_per_class": 100,
+    "source_learning_rate": 0.001,
+    "optimizer": "AdamW weight_decay1e-4 betas(0.9,0.999)",
+    "selection": "terminal epoch45; no target selection; no search",
+    "source_candidates": "WTT deterministic hash120/class from historical only; AWF all2500/class from historical training archive; exclude effective-input conflicts/duplicates then choose hash100/class; no change to actual training rows per class",
+    "direction_input": "sign; preserve order and zeros; truncate/pad5000; positional2x1800 direction counts; no invented timestamps"
+  },
+  "adaptation": {
+    "support_rows": 1024,
+    "candidate_updates": 800,
+    "learning_rate": 0.00025,
+    "gate_low_nats": 0.2,
+    "gate_high_nats": 0.4,
+    "selection": "terminal update800; no query-based stopping",
+    "gate_scope": "BN affine and Transformer head LN only; final_norm/classifier locked; source BN buffers fixed"
+  },
+  "token_alignment": {
+    "projector": {
+      "channels": 110,
+      "bottleneck": 16,
+      "scale": 0.1
+    },
+    "adain": "reference-fitted channel moments eps1e-5; ratio clip[0.25,4]",
+    "objective": "normalized source moment matching +1e-3 residual penalty; update projector only"
+  },
+  "wtt_future_dates": [
+    "2022-01-16",
+    "2022-01-23",
+    "2022-01-30",
+    "2022-02-06",
+    "2022-02-16",
+    "2022-02-21",
+    "2022-04-03"
+  ],
+  "awf_source_file": "tor_200w_2500tr.npz",
+  "awf_query_files": [
+    "tor_time_test3d_200w_100tr.npz",
+    "tor_time_test10d_200w_100tr.npz",
+    "tor_time_test2w_200w_100tr.npz",
+    "tor_time_test4w_200w_100tr.npz",
+    "tor_time_test6w_200w_100tr.npz"
+  ],
+  "exposure": {
+    "wtt_future": "old v3 saved only development12-12 scores; no future scores there. Current batch frozen benchmark; strict independent confirmation status not asserted without complete archive exposure audit",
+    "awf": "heldout-reference diagnostic; no chronological date claim; source defined200-class mapping, unknown labels excluded and counted"
+  },
+  "splits": {
+    "wtt": "existing frozen future_query untouched except zero/conflict/duplicate/source-input exclusion; unlabeled reference from original future_reference_candidate, exclude query/source effective inputs, first1024 valid within hash2048 candidate budget",
+    "awf": "source from released training file; dedup future input; first1024 deterministic content-hash groups as unlabeled reference, remainder independent query; observed data not called new confirmation"
+  },
+  "repair_history": {
+    "old_v2": "3-field (x,label,uid) unpack error; fixed in historical v3",
+    "old_v3": "server power outage; user confirmed2026-10-18, not code failure",
+    "new": "new two-field supervised and one-field unlabeled TensorDataset contracts; source-only class map; explicit label range validation; effective-input isolation; no old checkpoints",
+    "preflight_v1": "AWF class16 avito.ru first120 candidates had98 unique effective inputs, insufficient for100 source rows. Expand source-only inspection to full historical training pool; no target model inference or scoring occurred before revision. Actual100/class budget unchanged. Prior config/code/failure archived under artifacts/revisions/preflight_v1."
+  },
+  "resume": {
+    "source": "reuse only completed terminal checkpoint matching config hash",
+    "cells": "reuse only exact dataset/seed/slice/condition plus prediction file hash; interrupted cell rerun from source",
+    "no_cross_run_reuse": true,
+    "atomic_checkpoints": true
+  },
+  "execution_parallelism": "one worker per seed, sequential WTT/AWF within worker; immutable preflight feature caches and manifest shared read-only; score/progress files seed-specific; source checkpoints never shared across seeds"
+}

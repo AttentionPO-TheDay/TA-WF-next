@@ -1,0 +1,12 @@
+{
+  "id": "20261018T155259Z_pure_temporal_mechanism_figures_v2_8fb2abac",
+  "status": "frozen",
+  "core_run": "runs/20261018T144952Z_pure_temporal_core_matrix_v2_4aa89f43",
+  "seeds": [42, 100, 2026],
+  "roles": ["day14", "day90", "day270"],
+  "conditions": ["frozen", "tent_bn", "tent_entropy_gate", "proteus_default", "no_pseudo_fixed"],
+  "figures": ["fig1_logit_norm_dynamics", "fig2_day270_entropy_distribution", "fig3_nar_recovery"],
+  "formats": ["pdf", "svg", "png"],
+  "query_labels": "audited_terminal_metrics_only",
+  "budget": {"max_seconds": 300, "max_output_gib": 0.1, "new_training": false}
+}

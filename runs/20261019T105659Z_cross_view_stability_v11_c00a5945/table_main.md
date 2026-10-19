@@ -1,0 +1,22 @@
+|候选池|切片|评分|Rec@NAR1 %|较同池baseline pp|纠错vs损伤AUROC|完整改写AUROC|
+|---|---|---|---:|---:|---:|---:|
+|v10_view|version_045|baseline|1.383|0.000|0.627|0.627|
+|v10_view|version_045|perturb_support|1.628|0.245|0.679|0.645|
+|v10_view|version_045|seed_support|1.508|0.125|0.685|0.647|
+|v10_view|version_045|joint_support|1.813|0.430|0.710|0.653|
+|v10_view|version_045|shuffled_joint|0.300|-1.083|0.501|0.500|
+|v10_view|network_USA|baseline|3.168|0.000|0.641|0.638|
+|v10_view|network_USA|perturb_support|3.245|0.077|0.706|0.662|
+|v10_view|network_USA|seed_support|2.961|-0.207|0.731|0.680|
+|v10_view|network_USA|joint_support|3.223|0.056|0.755|0.680|
+|v10_view|network_USA|shuffled_joint|0.358|-2.809|0.488|0.493|
+|v9_smooth|version_045|baseline|7.515|0.000|0.679|0.622|
+|v9_smooth|version_045|perturb_support|7.373|-0.142|0.665|0.577|
+|v9_smooth|version_045|seed_support|7.328|-0.187|0.674|0.572|
+|v9_smooth|version_045|joint_support|7.298|-0.217|0.675|0.551|
+|v9_smooth|version_045|shuffled_joint|4.407|-3.108|0.476|0.490|
+|v9_smooth|network_USA|baseline|5.195|0.000|0.651|0.597|
+|v9_smooth|network_USA|perturb_support|5.654|0.459|0.730|0.643|
+|v9_smooth|network_USA|seed_support|5.211|0.016|0.716|0.620|
+|v9_smooth|network_USA|joint_support|5.188|-0.007|0.708|0.604|
+|v9_smooth|network_USA|shuffled_joint|3.660|-1.535|0.519|0.525|

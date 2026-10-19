@@ -1,0 +1,24 @@
+{
+  "id": "20261018T125337Z_multifactor_role_audit_1c1f33e3",
+  "status": "frozen",
+  "datasets": [
+    "VersionDrift",
+    "NetworkDrift",
+    "BehaviorDrift"
+  ],
+  "training": false,
+  "adaptation": false,
+  "performance_scoring": false,
+  "purpose": "role_label_identity_and_slice_feasibility_audit",
+  "budget": {
+    "device": "cpu",
+    "threads": 2,
+    "max_seconds": 3600
+  },
+  "evidence_sources": [
+    "runs/20260921T185436Z_proteus_identity_isolation_e596ccf3/artifacts/summary.json",
+    "runs/20261015T023855Z_external_transfer_audit_e405d268/artifacts/audit.json",
+    "runs/20261009T014524Z_joint_role_identity_audit_51b4162b/artifacts/audit.json"
+  ],
+  "execution": "read_existing_audit_artifacts_only"
+}

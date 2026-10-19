@@ -1,0 +1,28 @@
+{
+  "id": "20261018T144246Z_pure_temporal_mechanism_figures_e95fa886",
+  "status": "frozen",
+  "core_run": "runs/20261018T125337Z_temporal_core_matrix_5002c34a",
+  "artifacts": [
+    "fig1_logit_norm_dynamics",
+    "fig2_day270_entropy_distribution",
+    "fig3_nar_recovery"
+  ],
+  "formats": [
+    "pdf",
+    "svg",
+    "png"
+  ],
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "query_labels": "only audited final metrics; no training or selection",
+  "render_rule": "all three days and all seeds; no curve/example selection; empirical values only",
+  "budget": {
+    "max_seconds": 300,
+    "max_output_gib": 0.1,
+    "new_training": false
+  },
+  "source_dependencies": "core config + renderer hashed in core freeze"
+}

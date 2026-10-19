@@ -1,0 +1,120 @@
+{
+  "base_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "base_checkpoint_policy": "one checkpoint per seed; no best-seed selection; report verified hash from reports.json",
+  "base_checkpoints": [
+    {
+      "seed": 42,
+      "best_step": 12800,
+      "steps": 12800,
+      "valid": {
+        "accuracy": 0.8856481481481482,
+        "macro_f1": 0.8840453471944599
+      },
+      "elapsed_seconds": 192.56102142100008,
+      "peak_cuda_bytes": 1354342400,
+      "checkpoint_sha256": "0760288b233dfa376a4baa14979d3d8e03e9c8ceff55f1a39164b2579fd568f6"
+    },
+    {
+      "seed": 100,
+      "best_step": 12800,
+      "steps": 12800,
+      "valid": {
+        "accuracy": 0.8787037037037037,
+        "macro_f1": 0.8767138403409629
+      },
+      "elapsed_seconds": 192.68510797999988,
+      "peak_cuda_bytes": 1354635264,
+      "checkpoint_sha256": "bc357177c9d202a26dfc714599fc6be2ff40aef4d74949b83792f6efc360d6e0"
+    },
+    {
+      "seed": 2026,
+      "best_step": 10400,
+      "steps": 12800,
+      "valid": {
+        "accuracy": 0.8828703703703704,
+        "macro_f1": 0.8812690657198934
+      },
+      "elapsed_seconds": 194.67930921399966,
+      "peak_cuda_bytes": 1354635264,
+      "checkpoint_sha256": "7751aa79b23c6442220aee46d2b59cd1d2b54bfae27856d50a65460540455be5"
+    }
+  ],
+  "source_rows": 18553,
+  "conditions": [
+    "frozen",
+    "token_adain",
+    "token_projector"
+  ],
+  "batch_size": 128,
+  "permissions": {
+    "source_labels": "source-reference class prototypes only; no new Temporal source training",
+    "reference_labels": false,
+    "query_adaptation": false,
+    "query_batch_statistics": false,
+    "query_labels": "metrics only after terminal prediction"
+  },
+  "metrics": {
+    "primary": "macro_f1_fixed_source_label_set",
+    "secondary": [
+      "top1_accuracy",
+      "delta_f1_pp",
+      "accuracy_retention_vs_own_source_valid",
+      "NAR",
+      "recovery_rate",
+      "time",
+      "memory"
+    ],
+    "NAR": "count(frozen correct AND adapted wrong) / count(frozen correct); null when denominator=0",
+    "retention_caveat": "official source valid is observed development, not an independent Day0 test; no shared denominator across independently trained datasets"
+  },
+  "scientific_claims": {
+    "zero_shot": "frozen model with no target reference or updates only",
+    "tta": "zero target labels, but target reference inputs observed; report separately from strict zero-shot",
+    "mapping": "no numeric label equality as semantic mapping",
+    "causality": "geographic condition labels do not identify packet loss, jitter or retransmission causes",
+    "safety": "NAR is measured; no prior guarantee of zero extra errors",
+    "topology": "joint embedding is descriptive, not proof of recovery or isometry"
+  },
+  "factor_gates": {
+    "VersionDrift": "mixed released drift files; require attributed per-row version manifest and semantic site mapping",
+    "NetworkDrift": "require semantic site mapping and independent reference/query list; geography available, quantitative physical conditions unverified",
+    "BehaviorDrift": "20400 traces, 17739 exact URLs; require homepage/subpage semantic mapping and split audit"
+  },
+  "role_evidence": "runs/20261018T125337Z_multifactor_role_audit_1c1f33e3/artifacts/role_audit.json",
+  "id": "20261018T130529Z_p2_token_alignment_a4be1af8",
+  "status": "frozen",
+  "method_version": "paper2_release_v1",
+  "execution_stage": "source_reference_only",
+  "budget": {
+    "physical_gpu": 1,
+    "gpu_processes": 1,
+    "max_wall_seconds": 600,
+    "max_output_gib": 1
+  },
+  "token_alignment": {
+    "position": "generator.time 110 channels before time_projection and positional encoding",
+    "source_statistics": "all 18553 locked source rows; per seed",
+    "adain": "reference-fitted channel moments; eps1e-5; std ratio clipped[0.25,4]; no query fitting",
+    "projector": {
+      "channels": 110,
+      "bottleneck": 16,
+      "scale": 0.1
+    },
+    "objective": "normalized source moment matching + 1e-3 residual penalty; no query labels",
+    "adaptation_steps": 800,
+    "learning_rate": 0.00025,
+    "target_scoring_enabled": false
+  },
+  "visualization": {
+    "sample_selection": "source/target stable hash subset fixed before scoring; all A/B/C same rows",
+    "representation": "mean over all 120 raw pre-projection Tokens; preserve vectors and rows",
+    "embedding": "one shared PCA then one joint t-SNE; random_state42; no separate fits; show source prototypes, report original-space distances",
+    "status": "target figures pending legal target manifests"
+  }
+}
