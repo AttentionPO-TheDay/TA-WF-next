@@ -1,0 +1,3 @@
+# Source-only preflight repair
+
+Before any target adaptation or scoring, zero-init equality used encode() with autograd enabled for LoRA but not for the fully frozen pure model. This compared numerical paths with different gradient requirements, rather than the actual evaluate() inference path. Replaced both with the same no_grad evaluate() used for all scored predictions. Gradient correctness remains a separate actual-backprop loss/gradient comparison, plus nonzero contrast gradient test. No hyperparameters, algorithm, targets or budgets changed. Initial freeze and failure preserved in artifacts/freeze_initial_preflight.json and controller_failure_initial_preflight.json; repaired code re-frozen before restarting.

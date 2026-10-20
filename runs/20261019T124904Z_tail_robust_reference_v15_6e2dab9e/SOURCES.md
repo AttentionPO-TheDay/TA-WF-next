@@ -1,0 +1,1 @@
+复用 v14 metrics.py 的完整负例pAUC、确定性同分前沿及合成检查；来源 /home/rbf/TA-WF-next/runs/20261019T115616Z_source_confirmation_rerank_v14_04dd0e83/metrics.py。本轮其余代码独立实现；明确读取v9/v11/v12/v13/v14已审计缓存，无旧项目运行时依赖。八组共用现有源样本及特征，不复训神经网络。

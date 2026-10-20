@@ -1,0 +1,239 @@
+{
+  "id": "20261019T154828Z_nshot_low_nar_v18_1e42d406",
+  "status": "frozen",
+  "version": "nshot_low_nar_v18",
+  "parent_run": "runs/20261019T151701Z_nshot_frozen_feature_v17_58c8933b",
+  "dataset_config": "configs/datasets.json",
+  "roles": [
+    "day90",
+    "day270"
+  ],
+  "model_seeds": [
+    42,
+    100,
+    2026
+  ],
+  "support_seeds": [
+    1701,
+    1702,
+    1703
+  ],
+  "caps": [
+    1,
+    3,
+    5
+  ],
+  "source_classes": 102,
+  "label_budget": "exact v17 support manifests; no extra labels; cap3/5 not full n-shot",
+  "folds": 3,
+  "fold_rule": "within selected class in fixed v17 order, fold=(class_id+within_class_position)%3; class with one support has zero target examples in its held-out fold; fallback uses source prototype",
+  "base_models": [
+    "head1",
+    "shrink",
+    "head8",
+    "protect"
+  ],
+  "linear": {
+    "steps": 200,
+    "lr": 0.01,
+    "lambda_head1": 1.0,
+    "lambda_head8": 8.0,
+    "protect_lambda": 1.0,
+    "protect_beta": 4.0,
+    "protect_retained_margin_fraction": 0.75,
+    "protection": "mean squared hinge on normalized true-class margin for support originally correct; normalization fixed original logit L2; no target pseudo labels"
+  },
+  "prototype_pseudocount": 3.0,
+  "prototype_logit_scale": 20.0,
+  "policies": [
+    {
+      "name": "raw_head1",
+      "kind": "raw",
+      "model": "head1"
+    },
+    {
+      "name": "raw_shrink",
+      "kind": "raw",
+      "model": "shrink"
+    },
+    {
+      "name": "raw_head8",
+      "kind": "raw",
+      "model": "head8"
+    },
+    {
+      "name": "raw_protect",
+      "kind": "raw",
+      "model": "protect"
+    },
+    {
+      "name": "prob_head1_25",
+      "kind": "prob",
+      "model": "head1",
+      "alpha": 0.25
+    },
+    {
+      "name": "prob_head1_50",
+      "kind": "prob",
+      "model": "head1",
+      "alpha": 0.5
+    },
+    {
+      "name": "prob_head1_75",
+      "kind": "prob",
+      "model": "head1",
+      "alpha": 0.75
+    },
+    {
+      "name": "prob_shrink_25",
+      "kind": "prob",
+      "model": "shrink",
+      "alpha": 0.25
+    },
+    {
+      "name": "prob_shrink_50",
+      "kind": "prob",
+      "model": "shrink",
+      "alpha": 0.5
+    },
+    {
+      "name": "prob_shrink_75",
+      "kind": "prob",
+      "model": "shrink",
+      "alpha": 0.75
+    },
+    {
+      "name": "prob_head8_25",
+      "kind": "prob",
+      "model": "head8",
+      "alpha": 0.25
+    },
+    {
+      "name": "prob_head8_50",
+      "kind": "prob",
+      "model": "head8",
+      "alpha": 0.5
+    },
+    {
+      "name": "prob_head8_75",
+      "kind": "prob",
+      "model": "head8",
+      "alpha": 0.75
+    },
+    {
+      "name": "prob_protect_25",
+      "kind": "prob",
+      "model": "protect",
+      "alpha": 0.25
+    },
+    {
+      "name": "prob_protect_50",
+      "kind": "prob",
+      "model": "protect",
+      "alpha": 0.5
+    },
+    {
+      "name": "prob_protect_75",
+      "kind": "prob",
+      "model": "protect",
+      "alpha": 0.75
+    },
+    {
+      "name": "logit_head1_25",
+      "kind": "logit",
+      "model": "head1",
+      "alpha": 0.25
+    },
+    {
+      "name": "logit_head1_50",
+      "kind": "logit",
+      "model": "head1",
+      "alpha": 0.5
+    },
+    {
+      "name": "logit_head1_75",
+      "kind": "logit",
+      "model": "head1",
+      "alpha": 0.75
+    },
+    {
+      "name": "agree_head1_shrink",
+      "kind": "agree",
+      "model": "head1",
+      "other": "shrink"
+    },
+    {
+      "name": "agree_protect_shrink",
+      "kind": "agree",
+      "model": "protect",
+      "other": "shrink"
+    },
+    {
+      "name": "local_head1",
+      "kind": "local",
+      "model": "head1"
+    },
+    {
+      "name": "local_protect",
+      "kind": "local",
+      "model": "protect"
+    },
+    {
+      "name": "local_shrink",
+      "kind": "local",
+      "model": "shrink"
+    }
+  ],
+  "selectors": {
+    "cv_halfpct": {
+      "max_empirical_oof_NAR": 0.005,
+      "minimum_R": 3
+    },
+    "cv_zero": {
+      "max_empirical_oof_NAR": 0.0,
+      "minimum_R": 3
+    }
+  },
+  "selector_objective": "maximize R-4D-0.1W on pooled OOF subject empirical damage constraint and R>=3; threshold may reject low normalized-margin-gain changed predictions; tie smallerD/W then earlier fixed policy then fewer rewrites; fallback frozen; deploy the selected policy/threshold on full-support refitted models",
+  "selector_qualification": "heuristic cross-validation selection, not independent risk calibration; OOF overlap, small support and full-support refit prohibit NAR guarantee",
+  "primary": {
+    "policy": "cv_halfpct",
+    "cap": 5,
+    "reference": "raw_head1",
+    "gate": "each date all9 states actual NAR<=1%, mean deltaF1>=1pp, mean Recovery retention>=50% vs rawhead1; same actualD at rawhead1 diagnosticNAR1 meanRecovery gain>=0 and >=2/3 modelseed means nonnegative; no deployment by query choice"
+  },
+  "permissions": {
+    "source_features_labels": "v17 fixed2448 normalization/prototypes only",
+    "support_labels": "same selected v17 support, cross-fit train labels exclude own holdout; all budget counts include selection",
+    "reference_unselected_labels": "not accessed for fitting; v17 class-index sampling exposure retained",
+    "query_features": "only terminal independent fixed-model inference",
+    "query_labels": "terminal metrics and explicitly diagnostic frontiers after all new fits/selectors frozen",
+    "query_normalization": false,
+    "external_access": false,
+    "backbone_training": false
+  },
+  "budget": {
+    "device": "cpu",
+    "threads": 2,
+    "max_wall_seconds": 1800,
+    "max_output_gib": 1,
+    "support_states": 54,
+    "new_supervised_heads": 594,
+    "policy_states": 1404,
+    "frozen_states": 6
+  },
+  "metrics": [
+    "F1",
+    "Accuracy",
+    "NAR",
+    "Recovery",
+    "R",
+    "D",
+    "W",
+    "sameD_Recovery",
+    "sameR_D_W",
+    "actual_NAR_mean_max",
+    "OOF_vs_query_risk",
+    "Recovery_retention"
+  ]
+}

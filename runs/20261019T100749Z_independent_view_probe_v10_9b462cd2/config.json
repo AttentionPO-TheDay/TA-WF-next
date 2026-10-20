@@ -1,0 +1,148 @@
+{
+  "id": "20261019T100749Z_independent_view_probe_v10_9b462cd2",
+  "status": "frozen",
+  "version": "independent_source_view_probe_v10",
+  "evaluation_role": "observed_diagnostic_development_not_confirmation",
+  "dataset_config": "configs/datasets.json",
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "diagnostic_run": "runs/20261018T164924Z_multifactor_diagnostic_v1_4fc8f13d",
+  "v9_run": "runs/20261019T094400Z_progressive_view_v9_9ee04ba2",
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "slices": [
+    "version_045",
+    "network_USA"
+  ],
+  "arms": [
+    "direction_order",
+    "direction_iat",
+    "tam_cnn"
+  ],
+  "primary": "direction_order",
+  "secondary": "direction_iat",
+  "matched_architecture_control": "tam_cnn",
+  "classes": 102,
+  "permissions": {
+    "source_labels": "immutable18553 pure rows, newly authorized independent source classifiers only",
+    "source_valid": "fixed30epoch checkpoint maximum Macro-F1 earliest strict improvement, then temperature from fixed grid minimum NLL",
+    "reference": "forward only; no input fitting or labels",
+    "query": "terminal metrics and error-overlap diagnostics only; no fitting, checkpoint, score or threshold selection",
+    "external": "closed",
+    "old_main_models": "read-only historical predictions; no new main backbone/adapter updates",
+    "map": "content_supported_identity_assumption_not_official"
+  },
+  "input": {
+    "source_cache": "existing reconstructed first5000 signed timestamp and2x1800 TAM",
+    "direction_order": "2x5000: sign(timestamp), identically zero second channel; zero timestamps padding convention inherited",
+    "direction_iat": "same sign first channel; second log1p(1000*max(abs(t_i)-abs(t_i-1),0))/10 clipped[0,1], zero for first/padded/nonadjacent-valid packets",
+    "tam_cnn": "log1p existing2x1800 counts; no learned input normalization",
+    "transform_fit": "none; no query statistics"
+  },
+  "training": {
+    "epochs": 30,
+    "batch_size": 128,
+    "eval_batch_size": 256,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "final_lr": 5e-05,
+    "weight_decay": 0.0001,
+    "schedule": "epoch cosine",
+    "loss": "source supervised CE only",
+    "augmentation": "none",
+    "clip": 5.0,
+    "evaluation_epochs": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30
+    ],
+    "selection": "max sourcevalid MacroF1 earliest strict improvement; each arm separate; no target scoring until ALL9 source trainings and their reload checks complete",
+    "temperature_grid": [
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "initialization": "from scratch per seed, same architecture same initial state across arms",
+    "shuffle": "same epoch source permutations across arms per seed"
+  },
+  "architecture": {
+    "kind": "Conv1D GroupNorm ELU independent encoder",
+    "channels": [
+      32,
+      64,
+      96,
+      128
+    ],
+    "blocks": "Conv7 stride2 + GN8 + ELU + Conv3 + GN8 + ELU + MaxPool2 ceil",
+    "pool": 8,
+    "hidden": 256,
+    "dropout": 0.2,
+    "head": "102class linear",
+    "sharing": "none with main encoder; independence of errors must be measured"
+  },
+  "metrics": {
+    "raw": [
+      "MacroF1",
+      "accuracy",
+      "NAR",
+      "recovery",
+      "common_wrong_corrected",
+      "common_wrong_same",
+      "common_wrong_other",
+      "disagreement_precision",
+      "Q_statistic",
+      "correctness_phi",
+      "sourceview_error_overlap"
+    ],
+    "ranking": [
+      "view_probability_margin",
+      "class_log_odds_gain"
+    ],
+    "primary_ranking": "view_probability_margin",
+    "frontier": "diagnostic label-based exhaustive unique score prefixes NAR<=1%; reporting only; never deployed",
+    "fusion": "fixed .5 calibrated frozen-source-head softmax + .5 calibrated view softmax, no tuning",
+    "historical": "v9 PCA and smooth_balance, SHA checked, historical only; extra source training budget disclosed"
+  },
+  "gates": {
+    "semantic_source_valid_f1_min": 0.6,
+    "semantic_commonwrong_corrected_min": 0.1,
+    "ranking_auc_min": 0.65,
+    "ranking_recovery_at_nar1_gain_over_v9_min_pp": 0.5,
+    "rule": "each arm separately: source F1>=.60 all3 seeds; both slices 3seed mean commonwrong corrected>=.10, disagreement correction-vs-damage AUROC>=.65 and recovery@NAR1 gain vs historical v9 smooth>=.5pp. Main decision direction_order; secondary and control reported separately. No automatic adaptation or expansion even if passes."
+  },
+  "budget": {
+    "physical_gpus": [
+      0,
+      1,
+      2
+    ],
+    "seed_gpu_map": {
+      "42": 0,
+      "100": 1,
+      "2026": 2
+    },
+    "threads": 2,
+    "max_wall_seconds": 2700,
+    "max_gpu_hours": 2.25,
+    "max_cell_seconds": 750,
+    "max_output_gib": 3,
+    "max_new_models": 9,
+    "stop": "no feedback-driven arms/retraining; errors fixed only with documented identical-config repair"
+  }
+}

@@ -1,0 +1,5 @@
+# Explicit provenance
+
+Run-local architecture model/framework_base/generator_base/base_model/rf_native/input_base/view_base/candidate_base/encoder_base/token_alignment, methods/runtime/candidate/routing copied explicitly from bandpass_frontier_v4_44ce7a10. runtime changes STATUS prefix only. routing is reused ONLY for immutable geometric evidence/calibration and score, not training gates. No sys.path mutation, archive runtime imports, default old checkpoint or shared-data writes.
+
+Pure backbone: pure_source_backbone_c1d249f6, seeds42/100/2026,18,553source rows. Fixed source Gaussian banks: gmm_routing_lora_v2_28dc7c4b. Fixed source anchors and neighbor bandwidth: candidate_accept_v3_51e6680d. Diagnostic data manifest: multifactor_diagnostic_v1_4fc8f13d. v4 source feature/valid calibration and historical controls reused only after frozen-file SHA verification. New momentum.py, worker.py, audit.py, frontier.py, controller.py implement the bounded v5 experiment. Query labels only terminal evaluation; prototypes/classes come from authorized source labels.

@@ -1,0 +1,69 @@
+{
+  "id": "20261020T141118Z_coverage_consensus_v20_c8a7b2e2",
+  "status": "frozen",
+  "version": "coverage_consensus_v20",
+  "feature_run": "runs/20261019T151701Z_nshot_frozen_feature_v17_58c8933b",
+  "fold_run": "runs/20261019T154828Z_nshot_low_nar_v18_1e42d406",
+  "parent_run": "runs/20261019T155827Z_honest_fold_risk_v19_56fe906c",
+  "dataset_config": "configs/datasets.json",
+  "roles": [
+    "day90",
+    "day270"
+  ],
+  "model_seeds": [
+    42,
+    100,
+    2026
+  ],
+  "support_seeds": [
+    1701,
+    1702,
+    1703
+  ],
+  "cap": 5,
+  "linear": {
+    "steps": 200,
+    "lr": 0.01,
+    "lambda": 1.0
+  },
+  "bags": 5,
+  "policies": [
+    "old_local_vote2",
+    "old_local_vote3",
+    "old_heads_vote2_full_local",
+    "bag_local_vote3",
+    "bag_local_vote4",
+    "bag_local_vote5",
+    "bag_heads_vote3_full_local",
+    "bag_heads_vote4_full_local",
+    "full_head",
+    "full_local"
+  ],
+  "primary": "bag_local_vote4",
+  "primary_gate": {
+    "all18_NAR_le": 0.01,
+    "each_date_min_Recovery_gain_pp_vs_v19": 0.5,
+    "each_date_mean_F1_nondecrease": true,
+    "each_date_min_Recovery_gain_pp_vs_full_local_at_actual_D": 0.0,
+    "each_date_at_least_modelseed_nonnegative": 2
+  },
+  "permissions": {
+    "support": "same v17 cap5 selected labels only; 496/504 per trial; no extra labels; singleton always retained",
+    "query": "independent terminal inference and metrics/diagnostic frontiers only; no normalization, fitting, selection or threshold",
+    "source": "v17 pure normalization/classifier only",
+    "external_access": false,
+    "new_backbone_training": false
+  },
+  "bag_rule": "For each class n>=2, bag b omits within-class position (b+class_id)%n; singleton retained in every bag. Bags are perturbation models, NOT held-out calibrators. 5 bags overlap and may repeat omitted rows for n<5.",
+  "score": "mean normalized linear margin gain among heads supporting changed class; label-chosen control frontier diagnostic only",
+  "budget": {
+    "device": "cpu",
+    "threads": 2,
+    "max_wall_seconds": 1200,
+    "max_output_gib": 1,
+    "new_heads": 90,
+    "support_states": 18,
+    "prediction_states": 186
+  },
+  "qualification": "v19-feedback-informed TemporalDrift development; same observed dates, no risk guarantee or independent confirmation; primary frozen before new fits/scoring"
+}

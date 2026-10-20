@@ -1,0 +1,127 @@
+{
+  "id": "20261018T125337Z_temporal_core_matrix_5002c34a",
+  "status": "frozen",
+  "method_version": "pure_temporal_paper1_scopelock_v2",
+  "dataset_config": "configs/datasets.json",
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "target_prepared": {
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "split_source_run": "runs/20261009T070330Z_tta_rollback_acceptance_91f808d9",
+  "depends_on": "20261018T125337Z_pure_source_backbone_c1d249f6",
+  "frozen_baseline_run": "20261018T143543Z_pure_temporal_frozen_gpu_24b5ecc4",
+  "dataset": "TemporalDrift",
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "conditions": [
+    "frozen",
+    "tent_bn",
+    "tent_entropy_gate",
+    "proteus_default",
+    "no_pseudo_fixed"
+  ],
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "reference_rows": 1024,
+  "candidate_updates": 800,
+  "adaptation": {
+    "batch_size": 128,
+    "source_batch_size": 128,
+    "tent_lr": 0.00025,
+    "proteus_lr": 0.001,
+    "no_pseudo_lr": 0.00025,
+    "optimizer": "Adam; betas=(0.9,0.999); weight_decay=0",
+    "gmm_refresh_every_steps": 40,
+    "gmm_low_entropy_posterior_threshold": 0.6,
+    "entropy_gate_low_nats": 0.2,
+    "entropy_gate_high_nats": 0.4,
+    "source_loader_seed": 2025,
+    "support_loader_seed": 2026,
+    "dropout_seed_base": 102024,
+    "terminal_step": 800
+  },
+  "condition_scopes": {
+    "frozen": "all parameters and BN buffers unchanged",
+    "tent_bn": "BN affine only; target support entropy; query uses its own batch statistics without gradients, declared transductive-forward control",
+    "tent_entropy_gate": "Only four Transformer head LayerNorm affine modules (8 tensors/1024 parameters); BN parameters and buffers, final_norm, classifier frozen; [0.2,0.4] nat entropy gate",
+    "proteus_default": "Full wide_bn mechanism port: sourceCE+hard pseudoCE+MMD+entropy/diversity; normal source/target/pseudo BN forwards; Adam lr0.001; GMM2 refresh40steps posterior0.6; stop if selected<128 or degenerate; not official RF reproduction",
+    "no_pseudo_fixed": "All parameters except classifier and final_norm affine; normal source/target BN updates; sourceCE+MMD+entropy/diversity; no pseudo or GMM; Adam lr0.00025",
+    "tent_coadapt": "All parameters, target support entropy only, no gate; source BN buffers fixed; dropout train during update; Adam lr0.00025; diagnostic control only"
+  },
+  "permissions": {
+    "source_labels": "source CE for Proteus and no_pseudo only",
+    "support_labels": false,
+    "query_gradient_updates": false,
+    "query_batch_statistics": "tent_bn inference only; report separately",
+    "query_labels": "Terminal metrics and after-the-fact figure diagnostics only; never updates, threshold selection, checkpoint choice or early stopping",
+    "future_external": false
+  },
+  "primary_metric": "macro_f1_fixed_102_all_seed_date_cells",
+  "secondary_metrics": [
+    "accuracy",
+    "NAR",
+    "recovery_rate",
+    "logit_l2_trajectory",
+    "entropy_trajectory",
+    "time",
+    "peak_memory"
+  ],
+  "query_labels": "terminal_scoring_only",
+  "query_adaptation": false,
+  "budget": {
+    "physical_gpu": 0,
+    "gpu_processes": 3,
+    "max_seconds_per_cell": 2400,
+    "max_cells": 54,
+    "new_adaptation_cells": 45,
+    "max_wall_seconds": 7200,
+    "max_output_gib": 4,
+    "threads": 2,
+    "physical_gpus": [
+      0,
+      1,
+      2
+    ],
+    "seed_gpu_map": {
+      "42": 0,
+      "100": 1,
+      "2026": 2
+    },
+    "main_table_cells": 45,
+    "reused_frozen_cells": 9,
+    "diagnostic_extra_cells": 9,
+    "max_gpu_hours": 6.0,
+    "preflight_timeout_seconds": 600,
+    "audit_timeout_seconds": 1800
+  },
+  "adaptation_conditions": [
+    "tent_bn",
+    "tent_entropy_gate",
+    "proteus_default",
+    "no_pseudo_fixed"
+  ],
+  "figure_run": "runs/20261018T144246Z_pure_temporal_mechanism_figures_e95fa886",
+  "diagnostics": {
+    "condition": "tent_coadapt",
+    "probe_interval": 10,
+    "probe_rows": 1024,
+    "probe_role": "fixed reference only; all1024; no labels; model.eval; no query statistics or RNG effects",
+    "step_range": [
+      0,
+      800
+    ],
+    "low_entropy_threshold_nats": 0.2,
+    "terminal_query_distribution_only": true,
+    "claims": "measure actual norms/entropy/NAR; no forced explosion,98% trap or lowest-NAR claim"
+  },
+  "selection": "terminal step800; no query-based selection or hyperparameter sweep",
+  "exposure": "Temporal dates already observed; external WTT/AWF results also observed before this version; this Temporal experiment is development evidence and creates no new external confirmation"
+}

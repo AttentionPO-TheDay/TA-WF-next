@@ -1,0 +1,45 @@
+{
+  "id": "20261019T054638Z_adaptation_retrospective_v1_102e5b35",
+  "status": "frozen",
+  "role": "read_only_retrospective_diagnostic_not_training",
+  "runs": {
+    "v2": "runs/20261018T183916Z_gmm_routing_lora_v2_28dc7c4b",
+    "v3": "runs/20261019T024601Z_candidate_accept_v3_51e6680d",
+    "v4": "runs/20261019T031622Z_bandpass_frontier_v4_44ce7a10",
+    "v5": "runs/20261019T041139Z_momentum_cluster_v5_561c5c2e",
+    "v6": "runs/20261019T052905Z_prototype_refinement_v6_da9bb898"
+  },
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "slices": [
+    "version_045",
+    "network_USA"
+  ],
+  "permissions": {
+    "new_training": false,
+    "new_adaptation": false,
+    "new_model_inference": false,
+    "external_scoring": false,
+    "reference_labels": false,
+    "query_labels": "existing predictions and evidence posthoc error decomposition only; no fitting or operational threshold selection",
+    "source_labels": "existing source artifact provenance only"
+  },
+  "budget": {
+    "cpu_threads": 2,
+    "max_wall_seconds": 600,
+    "max_output_mib": 50
+  },
+  "analysis": [
+    "method evolution and comparison scope",
+    "fixed-neighbor target query proxy, Top5 coverage and 75/25 mixture class-switch bound",
+    "error correlation of disjoint source banks and shared encoder",
+    "raw correction/damage sets, TENT exclusive corrections and union-only oracle",
+    "candidate success/failure score ordering under fixed common score",
+    "loss trajectory, clipping, entropy/logit scale, class support and reference replay count",
+    "training record gaps and falsifiable next-step diagnostics"
+  ],
+  "selection": "no deployable method, model, hyperparameter or threshold selected; all findings retrospective"
+}

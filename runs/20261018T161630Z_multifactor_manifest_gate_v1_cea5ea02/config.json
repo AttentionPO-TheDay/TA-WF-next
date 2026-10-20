@@ -1,0 +1,18 @@
+{
+  "id": "20261018T161630Z_multifactor_manifest_gate_v1_cea5ea02",
+  "status": "frozen",
+  "dataset_config": "configs/datasets.json",
+  "source_manifest": "runs/20261009T014524Z_joint_role_identity_audit_51b4162b/artifacts/conservative_train_candidates.csv",
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "p0_run": "runs/20261008T031805Z_p0_duplicate_split_audit_47a886d5",
+  "version_identity_run": "runs/20260921T185436Z_proteus_identity_isolation_e596ccf3",
+  "behavior_file": "BehaviorDrift/subpage.npz",
+  "version_views": ["045", "046", "047", "048"],
+  "network_views": ["DE", "JP", "SG", "UK", "USA"],
+  "label_permission": "identity_consistency_and_coverage_only",
+  "performance_scoring": false,
+  "adaptation": false,
+  "new_training": false,
+  "query_selection": false,
+  "budget": {"threads": 2, "max_wall_seconds": 3600, "max_output_gib": 0.25}
+}

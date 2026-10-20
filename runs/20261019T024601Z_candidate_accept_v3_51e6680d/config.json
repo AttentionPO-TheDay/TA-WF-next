@@ -1,0 +1,156 @@
+{
+  "id": "20261019T024601Z_candidate_accept_v3_51e6680d",
+  "status": "frozen",
+  "version": "candidate_distillation_acceptance_v3_after_v2_feedback",
+  "evaluation_role": "observed_diagnostic_not_confirmation",
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "prototype_run": "runs/20261018T130529Z_p2_token_alignment_a4be1af8",
+  "identity_run": "runs/20261018T161630Z_multifactor_manifest_gate_v1_cea5ea02",
+  "p0_run": "runs/20261008T031805Z_p0_duplicate_split_audit_47a886d5",
+  "label_evidence_run": "runs/20261009T014524Z_joint_role_identity_audit_51b4162b",
+  "external_run": "runs/20261018T130529Z_p2_external_transfer_v3_pure_fa94a001",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "slices": [
+    "version_045",
+    "version_046",
+    "version_047",
+    "version_048",
+    "network_DE",
+    "network_JP",
+    "network_SG",
+    "network_UK",
+    "network_USA",
+    "behavior_subpage"
+  ],
+  "conditions": [
+    "frozen",
+    "tent_bn",
+    "tent_bn_reference",
+    "hard_residual",
+    "hard_lora",
+    "soft_teacher_residual",
+    "soft_teacher_lora",
+    "soft_neighbor_residual",
+    "soft_neighbor_lora"
+  ],
+  "split": {
+    "reference_rows": 1024,
+    "order": "sha256(diagnostic-v1|raw_group_id) except Behavior exact URL",
+    "behavior": "one representative per exact URL, then URL-disjoint split",
+    "exclude_pure_source_and_selection_valid_effective_tam": true,
+    "global_target_tam_dedup": true
+  },
+  "permissions": {
+    "source_labels": "source anchor only",
+    "target_reference_labels": false,
+    "query_labels": "terminal metrics and posthoc visualization only",
+    "url_hostname": "split grouping and posthoc clustering metrics only",
+    "cross_family_map": "content_supported_102_identity_assumption_not_official",
+    "query_for_selection": false,
+    "target_checkpoint_selection": "fixed final step",
+    "external_new_scoring": false,
+    "source_valid_labels": "source-only calibration of acceptance threshold; never gradient training; observed model-selection validation, not confirmation",
+    "query_input": "fixed per-sample model+source-neighbor inference; no optimizer or fitted query statistics except explicitly transductive standard tent_bn"
+  },
+  "adaptation": {
+    "steps": 400,
+    "batch_size": 64,
+    "source_batch_size": 32,
+    "lr": 0.00025,
+    "bottleneck": 16,
+    "scale": 0.1,
+    "lora_rank": 4,
+    "lora_scale": 1.0,
+    "gmm_k": [
+      1,
+      4
+    ],
+    "gmm_covariance": "diag",
+    "gmm_reg_covar": 0.001,
+    "gmm_n_init": 3,
+    "gmm_max_iter": 200,
+    "gmm_random_seed": 20261019,
+    "feature_space": "128D post-attention final-norm time-pooled, source standardized",
+    "sample_distribution": "degenerate Gaussian N(embedding,0); diagonal Gaussian W2 squared / dimension",
+    "soft_assignment": "frozen teacher predicted class; mixture prior times exp(-W2/source median nearest W2)",
+    "routing": "frozen teacher; entropy <= source95 percentile AND min Mahalanobis <= source99 percentile; exp(-D/source median D); otherwise exact frozen logits",
+    "distance": "minimum over all classes and components of mean squared standardized Mahalanobis",
+    "routing_fit": "all 18553 source rows, no target quantiles",
+    "pull_weight": 0.1,
+    "topology_weight": 1.0,
+    "source_identity_weight": 1.0,
+    "grad_clip": 1.0,
+    "source_anchor_rows": 1024,
+    "teacher_fixed": true,
+    "entropy_loss": false,
+    "dropout": false,
+    "selection": "fixed final400; no target selection",
+    "kl_weight": 1.0,
+    "kl_temperature": 2.0,
+    "neighbor_count_per_bank": 10,
+    "neighbor_smoothing": 0.01,
+    "candidate_topk": 5,
+    "neighbor_exponent": 1.0,
+    "target_update": "fixed q within frozen top5; q detached; hard teacher onehot or soft teacher T2 or teacher T2 times source kNN votes",
+    "acceptance_calibration": "source validation: minimum bank log-vote gain threshold over frozen classifier; smallest feasible grid value with >=10 changes, correction:damage>=2 and damage<=1% of baseline correct; fallback reject all",
+    "acceptance_grid": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "acceptance_min_changes": 10,
+    "acceptance_min_ratio": 2.0,
+    "acceptance_max_nar": 0.01,
+    "acceptance_distance_quantile": 0.99,
+    "validation_entropy_quantile": 0.95,
+    "validation_distance_quantile": 0.99,
+    "neighbor_banks": "source rows hash parity; two deterministic disjoint banks",
+    "tent_protocol": "400x64 reference entropy updates; two query policies: standard batch-stat transductive, and sequential reference-population BN calibration without query statistics"
+  },
+  "visualization": {
+    "seed": 42,
+    "slices": [
+      "version_048",
+      "behavior_subpage"
+    ],
+    "rows_per_slice": 400,
+    "selection": "row SHA256 without labels",
+    "conditions": [
+      "hard_lora",
+      "soft_neighbor_lora"
+    ],
+    "space": "Transformer post-finalnorm 128D; raw/evidence accept paired features"
+  },
+  "budget": {
+    "physical_gpus": [
+      0,
+      1,
+      2
+    ],
+    "seed_gpu_map": {
+      "42": 0,
+      "100": 1,
+      "2026": 2
+    },
+    "max_wall_seconds": 7200,
+    "max_gpu_hours": 6,
+    "max_cell_seconds": 600,
+    "max_output_gib": 5,
+    "threads": 2
+  },
+  "diagnostic_run": "runs/20261018T164924Z_multifactor_diagnostic_v1_4fc8f13d",
+  "previous_run": "runs/20261018T183916Z_gmm_routing_lora_v2_28dc7c4b",
+  "policies": [
+    "raw",
+    "valid_entropy",
+    "evidence_accept"
+  ]
+}

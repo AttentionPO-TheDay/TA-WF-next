@@ -12,6 +12,17 @@ ROOT = Path(__file__).resolve().parents[1]
 FIELDS = ['id', 'name', 'status', 'question', 'summary']
 
 
+def payload_root(root):
+    path = root / 'configs/storage.json'
+    if not path.exists():
+        return None
+    config = json.loads(path.read_text())
+    destination = Path(config['run_payload_root'])
+    if config.get('schema_version') != 1 or not destination.is_absolute() or not destination.is_dir():
+        raise SystemExit('Storage config requires schema_version=1 and an existing absolute run_payload_root directory.')
+    return destination
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', type=Path, default=ROOT)
@@ -38,6 +49,9 @@ def main():
             rows = list(csv.DictReader(handle))
         assert len({r['id'] for r in rows}) == len(rows)
         assert all((root / 'runs' / r['id'] / 'PLAN.md').is_file() for r in rows)
+        destination = payload_root(root)
+        if destination is not None:
+            print(f'New experiment payloads: {destination}')
         print(f'{len(rows)} experiments; no arrays, labels, or checkpoints loaded.')
         return
     with (root / '.experiment.lock').open('a') as lock:
@@ -62,6 +76,7 @@ def main():
                 if json.loads((run / 'config.json').read_text()).get('id') != run_id:
                     raise SystemExit('Config ID must match resume-id')
             else:
+                destination = payload_root(root)
                 run.mkdir(parents=True, exist_ok=False)
                 # Keep logs in a physical directory named ``lgs`` and expose
                 # the stable ``logs`` path as a relative symlink.  Some
@@ -71,7 +86,12 @@ def main():
                 (run / 'lgs').mkdir()
                 (run / 'logs').symlink_to('lgs', target_is_directory=True)
                 for folder in ['checkpoints', 'artifacts']:
-                    (run / folder).mkdir()
+                    if destination is None:
+                        (run / folder).mkdir()
+                    else:
+                        target = destination / run_id / folder
+                        target.mkdir(parents=True, exist_ok=False)
+                        (run / folder).symlink_to(target, target_is_directory=True)
                 (run / 'PLAN.md').write_text('# ' + run_id + '\n\n问题：' + args.question + '\n\n状态：planned；配置尚未冻结。\n\n待填写：数据及代码版本、标签权限、对照、指标、seeds、选模规则、预算、停止条件。\n')
                 (run / 'config.json').write_text(json.dumps({'id': run_id, 'status': 'draft'}, indent=2) + '\n')
                 (run / 'RESULTS.md').write_text('# 实验结果\n\n尚未执行。\n')

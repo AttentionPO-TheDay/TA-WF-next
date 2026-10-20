@@ -31,10 +31,22 @@ datasets/
 # Keep plans, configs, source scripts, reports and compact JSON summaries.
 # Generated tables and per-sample evidence remain on disk, outside Git.
 runs/*/checkpoints/
+runs/*/checkpoints
 runs/*/logs/
 # Runtime output may use ``lgs`` plus a ``logs`` compatibility symlink.
 runs/*/lgs/
+runs/*/lgs
 runs/*/logs
 runs/**/*.log
 runs/*/artifacts/
+runs/*/artifacts
 runs/**/*.csv
+
+# Generated figures and runtime locks stay local.
+/*.lock
+runs/**/*.pdf
+runs/**/*.png
+runs/**/*.svg
+
+# Machine-specific output storage; commit the portable example instead.
+/configs/storage.json

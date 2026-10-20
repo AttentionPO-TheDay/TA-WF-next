@@ -1,0 +1,95 @@
+{
+  "id": "20261019T111322Z_low_nar_soft_rerank_v12_8860fe6c",
+  "status": "frozen",
+  "version": "fixed_v9_low_nar_soft_rerank_v12",
+  "evaluation_role": "observed_two_slice_diagnostic_development_not_confirmation",
+  "dataset_config": "configs/datasets.json",
+  "v9_run": "runs/20261019T094400Z_progressive_view_v9_9ee04ba2",
+  "v10_run": "runs/20261019T100749Z_independent_view_probe_v10_9b462cd2",
+  "v11_run": "runs/20261019T105659Z_cross_view_stability_v11_c00a5945",
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "slices": [
+    "version_045",
+    "network_USA"
+  ],
+  "view_arm": "direction_iat",
+  "views": [
+    "original",
+    "time095",
+    "time105",
+    "thin01",
+    "tail98"
+  ],
+  "candidate": "v9_smooth_top1_immutable",
+  "scores": [
+    "v9_margin",
+    "v11_min",
+    "equal_logodds",
+    "weighted_logodds",
+    "weighted_soft",
+    "margin_plus_logodds",
+    "margin_plus_soft",
+    "shuffled_margin_soft"
+  ],
+  "primary": "margin_plus_soft",
+  "permissions": {
+    "source_valid_labels": "existing sourcevalid only: calculate15 view NLL reliability weights, immutable v10 temperatures; terminal metrics; no new model/threshold selection",
+    "source_valid_inputs": "per seed/slice frozen v9 margin mean/SD and evidence mean/SD over all2160 valid rows; no query fit",
+    "reference": "not needed and not loaded this run",
+    "query": "cached logits only, per-sample fixed score; labels terminal pAUC/frontier/error taxonomy; no fitting/selecting scores or parameters",
+    "external": "closed",
+    "model": "all existing cached logits/checkpoint predictions read-only, no new training or inference",
+    "label_identity": "inherited content_supported102class assumption, not official mapping"
+  },
+  "fusion": {
+    "logodds": "(view_logit(candidate)-view_logit(frozen_class))/immutable_sourcevalid_temperature; algebraically equal log probability ratio without probability clipping",
+    "equal": "mean over15 correlated seed/views, not sum",
+    "weights": "exp(-NLL_sourcevalid) normalized across all15, fixed using sourcevalid labels only",
+    "variance": "weighted variance of logodds across15; soft=weighted_mean-.25*weighted_sd",
+    "penalty": 0.25,
+    "blend_weight": 0.25,
+    "scale": "sourcevalid full-row mean and population SD; denominator max(SD,.001); fit separately perseed/slice margin and each evidence scalar",
+    "primary": "source_z(v9 margin)+.25*source_z(weighted_mean-.25*weighted_sd)",
+    "blend_ablation": "source_z(v9 margin)+.25*source_z(weighted_mean)",
+    "shuffled": "preserve v9 margin, shuffle auxiliary soft z only within changed candidates by deterministic row hash; preserve evidence multiset, no labels",
+    "interpretation": "source-reliability-weighted log support, not an independent-evidence likelihood or calibrated Bayesian damage posterior; no sigmoid saturation, GMM risk or quantile envelope"
+  },
+  "metrics": {
+    "alpha": 0.01,
+    "primary": "partial ROC area FPR<=.01 with all frozen-correct samples as negatives; positives successful fixed-v9 correction candidates only; other-wrong excluded from ROC but explicitly tracked",
+    "fpr_denominator": "all frozen correct, so FP/N_frozen_correct=NAR, unchanged negatives score sentinel below changed scores for ROC audit",
+    "pauc": "raw trapezoid area and raw/alpha (mean correction-candidate TPR over low-NAR interval); no McClish .5 standardization",
+    "operational": "mean Recovery under NAR budget0..1% with deterministic unique-score thresholds, left-step area/alpha; no fractional tie acceptance",
+    "secondary": [
+      "Recovery@NAR1",
+      "other-wrong accepted count/retention",
+      "other-wrong per correction",
+      "diagnosticF1",
+      "NAR",
+      "corrections",
+      "damages",
+      "accepted change precision"
+    ],
+    "note": "partial ROC TPR uses fixed correctable candidate count, Recovery uses all frozen errors; factor=oracle Recovery. Previously conditional damage-only ROC FPR is not NAR. Query-label-selected thresholds diagnostic only, not deployable. No globalAUROC selection."
+  },
+  "gates": {
+    "primary": "BOTH slices: primary normalized_pAUC improves>=.01 over v9_margin; Recovery@NAR1 improves>=.2pp; step meanRecovery not worse; invalid_other_per_correction not worse. Allseed outcomes report. No candidate changes or automatic integration.",
+    "control": "report primary vs v11_min, soft-only vs mean, blend/no-variance, shuffled evidence; no relabeling best secondary as primary",
+    "stop": "one frozen batch, no target-feedback changes or score search; if fail retain v9 original scorer"
+  },
+  "budget": {
+    "cpu_threads": 2,
+    "max_wall_seconds": 600,
+    "max_output_gib": 0.5,
+    "new_optimizer_steps": 0,
+    "new_forward_passes": 0,
+    "gpu_hours": 0,
+    "score_states": 96,
+    "calibration": "one fixed sourcevalid pass only",
+    "stop": "no hyperparameter grid, no extra slices, documented same-config implementation repairs only"
+  }
+}

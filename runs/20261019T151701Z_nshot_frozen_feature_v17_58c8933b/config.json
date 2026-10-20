@@ -1,0 +1,98 @@
+{
+  "id": "20261019T151701Z_nshot_frozen_feature_v17_58c8933b",
+  "status": "frozen",
+  "version": "nshot_frozen_features_v17.1_batch_parity",
+  "classes": 102,
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "source_features_per_class": 24,
+  "dataset_config": "configs/datasets.json",
+  "split_run": "runs/20261009T070330Z_tta_rollback_acceptance_91f808d9",
+  "targets": {
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "baseline_run": "runs/20261018T143543Z_pure_temporal_frozen_gpu_24b5ecc4",
+  "model_seeds": [
+    42,
+    100,
+    2026
+  ],
+  "support_seeds": [
+    1701,
+    1702,
+    1703
+  ],
+  "nominal_shots": [
+    1,
+    3,
+    5
+  ],
+  "sampling": "per-class SHA256(v17|support_seed|role|raw_timestamp_content_sha); nested prefixes; no model-seed dependency",
+  "coverage_policy": "strict_1shot primary; caps3/5 supplementary, min(n,available) per class; full strict3/5 marked infeasible, never fill from query",
+  "arms": [
+    "target_proto",
+    "shrink_proto",
+    "head_l2"
+  ],
+  "zero_label_controls": [
+    "frozen",
+    "source_proto"
+  ],
+  "primary_arm": "shrink_proto",
+  "primary_budget": "strict_1shot",
+  "features": "actual classifier input, backbone eval and all BN buffers frozen",
+  "prototype": {
+    "transform": "source2448 mean/std floor1e-3 then sample L2; class mean then L2",
+    "shrink_source_pseudocount": 3.0
+  },
+  "linear": {
+    "optimizer": "Adam",
+    "steps": 200,
+    "lr": 0.01,
+    "lambda": 1.0,
+    "penalty": "lambda/(2*C) * (sum((W-W0)^2)+sum((b-b0)^2))",
+    "initialization": "source classifier, algebraically transformed into source-standardized feature coordinates",
+    "batch": "full selected support",
+    "checkpoint": "final step only; no dropout or early stopping"
+  },
+  "selection": "all hyperparameters fixed; no target validation, threshold fitting or search",
+  "permissions": {
+    "source_labels": "locked18553 only; select24/class for feature normalization and prototypes",
+    "reference_class_index": "all1024 labels permitted for coverage and class-balanced benchmark sampling; not claimed active annotation cost",
+    "support_fit_labels": "selected min(n,available) rows only",
+    "query_input": "per-sample frozen feature extraction and fixed-model inference only",
+    "query_labels": "terminal evaluation and explicitly labeled oracle frontier only, after all fits finalized",
+    "query_fit": false,
+    "external_access": false
+  },
+  "metrics": [
+    "macro_f1_fixed102",
+    "accuracy",
+    "delta_f1_pp",
+    "NAR",
+    "Recovery",
+    "R",
+    "D",
+    "W",
+    "diagnostic_Recovery_at_NAR1",
+    "matched_actual_damage_Recovery",
+    "matched_corrections_D_W"
+  ],
+  "success_rule": "primary shrink vs target_proto strict1: each date mean F1>=+0.5pp, same actualD at target_proto diagnosticNAR1 mean Recovery>=+0.5pp and nonnegative in >=2/3 modelseed means; diagnostic only, not risk guarantee; all arms retained",
+  "budget": {
+    "feature_gpu": 2,
+    "cuda_memory_fraction": 0.08,
+    "batch_size": 128,
+    "threads": 2,
+    "max_wall_seconds": 3600,
+    "max_fit_cells": 162,
+    "max_output_gib": 2,
+    "backbone_training": false
+  },
+  "audit": {
+    "baseline_logit_atol": 0.001,
+    "baseline_logit_rtol": 1e-05,
+    "require_identical_baseline_argmax": true,
+    "reextract_rows": 32
+  }
+}

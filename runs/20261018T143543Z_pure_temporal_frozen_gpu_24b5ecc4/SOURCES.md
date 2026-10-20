@@ -1,0 +1,1 @@
+模型实现文件 `model.py` 及其八个本地依赖，从 `runs/20261018T125337Z_pure_source_backbone_c1d249f6/` 显式复制；`runner.py` 从中断的 CPU run 复制后仅修订设备、预算和审计入口。运行时不导入旧项目。输入的目标张量来自当前项目既有 prepared artifacts，索引来自已观察 TemporalDrift 开发 run，具体路径和散列写入 config/freeze.json。本次不复用中断 run 的预测或旧权重。

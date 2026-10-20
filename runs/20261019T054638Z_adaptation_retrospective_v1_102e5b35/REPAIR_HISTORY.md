@@ -1,0 +1,3 @@
+# 只读分析脚本修正
+
+补充十切片score复盘首次读取即因假定v3 delivery清单包含全部base原始数组而KeyError退出，未生成统计。v3数组的散列实际保存在v4冻结输入清单及逐单元score记录。修正为优先父run delivery，缺项查v4冻结输入SHA；初始脚本保留在artifacts/wider_scores_initial_reader.py。仅修清单查找，不改任何方法、数据或诊断口径。

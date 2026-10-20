@@ -1,0 +1,91 @@
+{
+  "id": "20261018T125337Z_pure_source_backbone_c1d249f6",
+  "status": "frozen",
+  "method_version": "pure_source_wide_bn_v1",
+  "dataset_config": "configs/datasets.json",
+  "candidate_manifest": "runs/20261009T014524Z_joint_role_identity_audit_51b4162b/artifacts/conservative_train_candidates.csv",
+  "source_file": "TemporalDrift/train.npz",
+  "valid_file": "TemporalDrift/valid.npz",
+  "roles": {
+    "candidate_rows": "source_training_labels",
+    "official_valid": "checkpoint_selection_and_development_metrics_only",
+    "future_dates": "closed",
+    "external": "closed"
+  },
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "classes": 102,
+  "model": "wide_bn",
+  "input": {
+    "timestamps": "first_5000_signed_relative_timestamps",
+    "tam": "reconstructed_2x1800_from_nonzero_times_clipped_at_80",
+    "fixed_features": 30,
+    "learned_features": 80,
+    "direction_only": false
+  },
+  "training": {
+    "steps": 12800,
+    "batch_size": 64,
+    "eval_batch_size": 64,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001,
+    "lr_schedule": [
+      [
+        1,
+        6400,
+        0.001
+      ],
+      [
+        6401,
+        9600,
+        0.0003
+      ],
+      [
+        9601,
+        12800,
+        0.0001
+      ]
+    ],
+    "source_augmentation": "span_mask_p0.5_width90",
+    "eval_steps": [
+      3680,
+      4160,
+      4640,
+      5120,
+      5600,
+      6080,
+      6560,
+      7040,
+      7520,
+      8000,
+      8480,
+      8960,
+      9440,
+      9920,
+      10400,
+      10880,
+      11360,
+      11840,
+      12320,
+      12800
+    ],
+    "selection": "highest_official_valid_accuracy_earliest_strict_improvement",
+    "early_stop": false
+  },
+  "output": {
+    "checkpoint": "checkpoints/pure_source_wide_bn_{seed}.pth",
+    "source_metric_name": "official_valid_development",
+    "independent_day0_test": false
+  },
+  "budget": {
+    "physical_gpu": 1,
+    "gpu_processes": 1,
+    "max_seconds_per_seed": 18000,
+    "max_total_seconds": 54000,
+    "max_output_gib": 4,
+    "threads": 2
+  }
+}

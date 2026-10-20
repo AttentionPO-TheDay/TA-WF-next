@@ -1,0 +1,5 @@
+# 明确实现来源
+
+所有模型、输入、LoRA、几何、原型和评测辅助代码均显式复制自 runs/20261019T041139Z_momentum_cluster_v5_561c5c2e，本目录独立导入，无旧项目sys.path。momentum_legacy.py保留v5原始状态/损失实现，用于源域一致性检查；refinement.py实现本轮六组差异；frontier_base.py只复用既有事后曲线函数。原始更早来源链见v5/SOURCES.md。
+
+源checkpoint仅来自纯净18,553行Temporal训练。source_gmm、source_calibration与source_valid缓存按v5冻结清单及交付SHA核验。v5三组控制与v3 strict reference-TENT为历史复用，绝不称为新重复。

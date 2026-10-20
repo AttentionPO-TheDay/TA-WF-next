@@ -1,0 +1,87 @@
+{
+  "id": "20261018T144952Z_pure_temporal_core_matrix_v2_4aa89f43",
+  "status": "frozen",
+  "method_version": "pure_source_temporal_core_v2",
+  "dataset_config": "configs/datasets.json",
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "target_prepared": {
+    "day14": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day14_prepared.pt",
+    "day90": "runs/20261005T233151Z_wide_bn_day14_day90_eval_94f6ef85/artifacts/day90_prepared.pt",
+    "day270": "runs/20261005T233927Z_wide_bn_later_dates_eval_5add2406/artifacts/day270_prepared.pt"
+  },
+  "split_source_run": "runs/20261009T070330Z_tta_rollback_acceptance_91f808d9",
+  "depends_on": "20261018T125337Z_pure_source_backbone_c1d249f6",
+  "frozen_baseline_run": "20261018T143543Z_pure_temporal_frozen_gpu_24b5ecc4",
+  "dataset": "TemporalDrift",
+  "roles": [
+    "day14",
+    "day90",
+    "day270"
+  ],
+  "conditions": [
+    "frozen",
+    "tent_bn",
+    "tent_entropy_gate",
+    "proteus_default",
+    "no_pseudo_fixed"
+  ],
+  "adaptation_conditions": [
+    "tent_bn",
+    "tent_entropy_gate",
+    "proteus_default",
+    "no_pseudo_fixed"
+  ],
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "reference_rows": 1024,
+  "candidate_updates": 800,
+  "adaptation": {
+    "batch_size": 128,
+    "source_batch_size": 128,
+    "tent_lr": 0.00025,
+    "proteus_lr": 0.001,
+    "no_pseudo_lr": 0.00025,
+    "optimizer": "Adam; betas=(0.9,0.999); weight_decay=0",
+    "gmm_refresh_every_steps": 40,
+    "gmm_low_entropy_posterior_threshold": 0.6,
+    "entropy_gate_low_nats": 0.2,
+    "entropy_gate_high_nats": 0.4,
+    "source_loader_seed": 2025,
+    "support_loader_seed": 2026,
+    "dropout_seed_base": 102024,
+    "terminal_step": 800
+  },
+  "condition_scopes": {
+    "frozen": "all parameters and BN buffers unchanged",
+    "tent_bn": "BN affine only; target support entropy; query uses its own batch statistics without gradients, declared transductive-forward control",
+    "tent_entropy_gate": "Transformer and final LayerNorm affine only; source BN buffers and classifier frozen; 0.2-0.4 nat support entropy gate",
+    "proteus_default": "all parameters; source CE + GMM hard pseudo CE + target entropy/diversity + Gaussian MMD; 1.0x lr",
+    "no_pseudo_fixed": "all parameters except classifier; source CE + target entropy/diversity + Gaussian MMD; no pseudo CE; 0.25x lr"
+  },
+  "permissions": {
+    "source_labels": "source CE for Proteus and no_pseudo only",
+    "support_labels": false,
+    "query_gradient_updates": false,
+    "query_batch_statistics": "tent_bn inference only; report separately",
+    "query_labels": "terminal metrics only",
+    "future_external": false
+  },
+  "primary_metric": "macro_f1_fixed_102_all_seed_date_cells",
+  "secondary_metrics": ["accuracy", "NAR", "recovery_rate", "logit_l2_trajectory", "entropy_trajectory", "time", "peak_memory"],
+  "diagnostics": {"probe_interval": 10},
+  "query_labels": "terminal_scoring_only",
+  "query_adaptation": false,
+  "budget": {
+    "physical_gpu": 0,
+    "gpu_processes": 1,
+    "max_seconds_per_cell": 2400,
+    "max_cells": 45,
+    "new_adaptation_cells": 36,
+    "max_wall_seconds": 43200,
+    "max_output_gib": 2,
+    "threads": 2
+  }
+}

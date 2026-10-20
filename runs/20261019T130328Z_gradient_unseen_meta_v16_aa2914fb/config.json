@@ -1,0 +1,147 @@
+{
+  "id": "20261019T130328Z_gradient_unseen_meta_v16_aa2914fb",
+  "status": "frozen",
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "v9": "runs/20261019T094400Z_progressive_view_v9_9ee04ba2",
+  "v10": "runs/20261019T100749Z_independent_view_probe_v10_9b462cd2",
+  "v12": "runs/20261019T111322Z_low_nar_soft_rerank_v12_8860fe6c",
+  "v13": "runs/20261019T114139Z_candidate_cleanup_audit_v13_1b0f9d01",
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "slices": [
+    "version_045",
+    "network_USA"
+  ],
+  "views": [
+    "original",
+    "time095",
+    "time105",
+    "thin01",
+    "tail98"
+  ],
+  "source_selection": {
+    "in_model_per_class": 6,
+    "valid_meta_per_class": 6,
+    "valid_calibration_per_class": 5,
+    "valid_diagnostic_per_class": 6,
+    "group": "sha256(effective TAM), within class sha256(v16|role|group); no cross-role group overlap",
+    "train_pool": "fixed v14 train2448 rows only",
+    "qualification": "observed source valid; backbone-gradient-unseen but used in historical checkpoint/temperature selection; NOT strict out-of-model confirmation"
+  },
+  "perturbations": [
+    {
+      "name": "clean",
+      "time": 1.0,
+      "thin_percent": 0,
+      "tail": 1.0
+    },
+    {
+      "name": "time070_thin10",
+      "time": 0.7,
+      "thin_percent": 10,
+      "tail": 1.0
+    },
+    {
+      "name": "time140_thin10",
+      "time": 1.4,
+      "thin_percent": 10,
+      "tail": 1.0
+    },
+    {
+      "name": "thin25_tail75",
+      "time": 1.0,
+      "thin_percent": 25,
+      "tail": 0.75
+    },
+    {
+      "name": "thin40_tail60",
+      "time": 1.0,
+      "thin_percent": 40,
+      "tail": 0.6
+    }
+  ],
+  "fit": {
+    "C": 1.0,
+    "max_iter": 2000,
+    "tol": 1e-08,
+    "class_weight": "balanced",
+    "min_each_type": 10,
+    "sd_floor": 0.001,
+    "blend_weight": 0.25,
+    "features": [
+      "margin",
+      "candidate_logprob",
+      "third_margin"
+    ],
+    "min_clean_each_type": 3
+  },
+  "scores": [
+    "v9_margin",
+    "v12_primary",
+    "v14_primary",
+    "IM_all",
+    "IM_aug",
+    "GU_all",
+    "GU_aug",
+    "GU_clean"
+  ],
+  "primary": "GU_all",
+  "metrics": {
+    "alpha": 0.01
+  },
+  "calibration": {
+    "utility_W_cost": 0.25,
+    "min_R": 10,
+    "query_fit": false
+  },
+  "permissions": {
+    "source_train": "612 fixed original source rows and five v14 variants for matched meta-supervision only",
+    "source_valid": "content-disjoint meta612(calculating gradients in reranker only)/calibration510/diagnostic612; source networks never updated; observed validation role reassignment, not confirmation",
+    "query": "cached per-sample features after source-fit freeze; labels terminal diagnostics only",
+    "reference": "no new access; fixed v9 reference-only adapters retained",
+    "new_backbone_training": false,
+    "external_access": false
+  },
+  "budget": {
+    "threads": 2,
+    "gpus": [
+      0,
+      1,
+      2
+    ],
+    "wall_seconds": 1800,
+    "gpu_hours": 1.0,
+    "output_gib": 1,
+    "main_batch": 128,
+    "aux_batch": 256,
+    "seed_gpu_map": {
+      "42": 0,
+      "100": 1,
+      "2026": 2
+    },
+    "worker_seconds": 600,
+    "max_rerank_models": 30
+  },
+  "gates": {
+    "pauc_gain_min": 0.0,
+    "rec1_loss_tolerance_pp": 0.1,
+    "same_damage_rec_gain_pp": 0.2,
+    "same_correction_W_ratio_max": 0.95,
+    "stop_on_source_type_insufficient": true,
+    "min_each_slice_non_decreasing_seeds": 2,
+    "mechanism_matched_IM_gain_pp": 0.2
+  },
+  "v14": "runs/20261019T115616Z_source_confirmation_rerank_v14_04dd0e83",
+  "v15": "runs/20261019T124904Z_tail_robust_reference_v15_6e2dab9e",
+  "v11": "runs/20261019T105659Z_cross_view_stability_v11_c00a5945",
+  "arms": [
+    "IM_all",
+    "IM_aug",
+    "GU_all",
+    "GU_aug",
+    "GU_clean"
+  ]
+}

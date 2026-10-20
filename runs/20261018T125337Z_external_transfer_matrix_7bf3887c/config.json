@@ -1,0 +1,22 @@
+{
+  "id": "20261018T125337Z_external_transfer_matrix_7bf3887c",
+  "status": "draft",
+  "depends_on": "20261018T125337Z_pure_source_backbone_c1d249f6",
+  "datasets": [
+    "wtt_time",
+    "awf"
+  ],
+  "classes": {
+    "wtt_time": 100,
+    "awf_common": 189
+  },
+  "conditions": [
+    "frozen",
+    "tent_entropy_gate",
+    "no_pseudo_fixed"
+  ],
+  "head_policy": "train_each_dataset_from_scratch_with_own_classes",
+  "input": "direction_only_common_frontend",
+  "future_scoring": "closed_until_freeze_and_exposure_audit",
+  "query_adaptation": false
+}

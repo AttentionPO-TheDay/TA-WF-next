@@ -1,0 +1,327 @@
+{
+  "id": "20261019T092024Z_teacher_decouple_v8_4e542026",
+  "status": "frozen",
+  "version": "teacher_decoupling_and_reference_tail_v8",
+  "evaluation_role": "observed_diagnostic_not_confirmation",
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "prototype_run": "runs/20261018T130529Z_p2_token_alignment_a4be1af8",
+  "identity_run": "runs/20261018T161630Z_multifactor_manifest_gate_v1_cea5ea02",
+  "p0_run": "runs/20261008T031805Z_p0_duplicate_split_audit_47a886d5",
+  "label_evidence_run": "runs/20261009T014524Z_joint_role_identity_audit_51b4162b",
+  "external_run": "runs/20261018T130529Z_p2_external_transfer_v3_pure_fa94a001",
+  "dataset_config": "configs/datasets.json",
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "slices": [
+    "version_045",
+    "network_USA"
+  ],
+  "conditions": [
+    "no_teacher_kl",
+    "confident_teacher_kl",
+    "geometry_grad_balance"
+  ],
+  "split": {
+    "reference_rows": 1024,
+    "order": "sha256(diagnostic-v1|raw_group_id) except Behavior exact URL",
+    "behavior": "one representative per exact URL, then URL-disjoint split",
+    "exclude_pure_source_and_selection_valid_effective_tam": true,
+    "global_target_tam_dedup": true
+  },
+  "permissions": {
+    "source_labels": "fixed source targets/anchors only",
+    "target_reference_labels": false,
+    "query_labels": "terminal raw and preregistered output-policy metrics, error-pair/frontier/layer diagnostic only; no checkpoint or threshold selection",
+    "url_hostname": "split grouping and posthoc clustering metrics only",
+    "cross_family_map": "content_supported_102_identity_assumption_not_official",
+    "query_for_selection": false,
+    "target_checkpoint_selection": "fixed final400",
+    "external_new_scoring": false,
+    "source_valid_labels": "registered source-only threshold calibration and terminal source retention; no checkpoint selection",
+    "query_input": "independent per-sample inference; no query feature, BN, normalization, CDF, GMM or prototype fitting"
+  },
+  "adaptation": {
+    "steps": 400,
+    "batch_size": 64,
+    "source_batch_size": 32,
+    "lr": 0.00025,
+    "bottleneck": 16,
+    "scale": 0.1,
+    "lora_rank": 4,
+    "lora_scale": 1.0,
+    "gmm_k": [
+      1,
+      4
+    ],
+    "gmm_covariance": "diag",
+    "gmm_reg_covar": 0.001,
+    "gmm_n_init": 3,
+    "gmm_max_iter": 200,
+    "gmm_random_seed": 20261019,
+    "feature_space": "128D post-attention final-norm time-pooled, source standardized",
+    "sample_distribution": "degenerate Gaussian N(embedding,0); diagonal Gaussian W2 squared / dimension",
+    "soft_assignment": "frozen teacher predicted class; mixture prior times exp(-W2/source median nearest W2)",
+    "routing": "strictly positive batch-momentum soft weights; momentum_v5 is authoritative",
+    "distance": "minimum over all classes and components of mean squared standardized Mahalanobis",
+    "routing_fit": "unlabeled1024 reference only",
+    "pull_weight": 0.1,
+    "topology_weight": 1.0,
+    "source_identity_weight": 1.0,
+    "grad_clip": 1.0,
+    "source_anchor_rows": 1024,
+    "teacher_fixed": true,
+    "entropy_loss": false,
+    "dropout": false,
+    "selection": "fixed final400; no target selection",
+    "kl_weight": 1.0,
+    "kl_temperature": 2.0,
+    "neighbor_count_per_bank": 10,
+    "neighbor_smoothing": 0.01,
+    "candidate_topk": 102,
+    "neighbor_exponent": 1.0,
+    "target_update": "full102 fixed soft source-neighbor q, with anchored EMA prototype mixing only in proto/joint",
+    "acceptance_calibration": "source validation: minimum bank log-vote gain threshold over frozen classifier; smallest feasible grid value with >=10 changes, correction:damage>=2 and damage<=1% of baseline correct; fallback reject all",
+    "acceptance_grid": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "acceptance_min_changes": 10,
+    "acceptance_min_ratio": 2.0,
+    "acceptance_max_nar": 0.01,
+    "acceptance_distance_quantile": 0.99,
+    "validation_entropy_quantile": 0.95,
+    "validation_distance_quantile": 0.99,
+    "neighbor_banks": "source rows hash parity; two deterministic disjoint banks",
+    "tent_protocol": "400x64 reference entropy updates; two query policies: standard batch-stat transductive, and sequential reference-population BN calibration without query statistics"
+  },
+  "visualization": {
+    "conditions": [],
+    "slices": []
+  },
+  "budget": {
+    "physical_gpus": [
+      0,
+      1,
+      2
+    ],
+    "seed_gpu_map": {
+      "42": 0,
+      "100": 1,
+      "2026": 2
+    },
+    "max_wall_seconds": 3600,
+    "max_gpu_hours": 3,
+    "max_cell_seconds": 600,
+    "max_output_gib": 2,
+    "threads": 2
+  },
+  "diagnostic_run": "runs/20261018T164924Z_multifactor_diagnostic_v1_4fc8f13d",
+  "previous_run": "runs/20261018T183916Z_gmm_routing_lora_v2_28dc7c4b",
+  "policies": [
+    "raw"
+  ],
+  "baseline_run": "runs/20261019T024601Z_candidate_accept_v3_51e6680d",
+  "v4_run": "runs/20261019T031622Z_bandpass_frontier_v4_44ce7a10",
+  "momentum_v5": {
+    "full_target": "softmax(frozen logits /2 + log(mean source neighbor votes)); all102 classes, no Top5 truncation; fixed and detached",
+    "weighting": "full_static ones; other arms w=.05+.95*exp(-(H(EMA_probability_i)-batch_EMA_mean)^2/(2*batch_EMA_variance)); detached and strictly positive",
+    "batch_momentum": 0.9,
+    "sample_probability_momentum": 0.9,
+    "feature_memory_momentum": 0.9,
+    "entropy_variance_floor": 0.01,
+    "weight_floor": 0.05,
+    "weight_normalization": "batch mean w*per-sample losses; relation multiplied by batch mean(w); source identity unchanged",
+    "prototype_momentum": 0.95,
+    "prototype_update": "after optimizer, weighted soft assignment centroid of EMA reference features; step=(1-.95)*class_mass/(class_mass+1); absent mass leaves class unchanged",
+    "prototype_source_anchor": 0.5,
+    "prototype_target_mix": 0.25,
+    "prototype_target": "q=(1-.25)*fixed_full_q+.25*softmax(cosine(EMA feature, anchored dynamic class prototypes)/.1); detached; computed before current-batch memory update",
+    "geometry_temperature": 0.1,
+    "contrast_weight": 0.1,
+    "contrast_temperature": 0.1,
+    "contrast_target": "detached q_i dot q_j, exclude diagonal, row-normalize; differentiable log-softmax normalized embedding similarity to every other batch sample; soft targets, no hard pseudo labels",
+    "no_static_hard_gates": true,
+    "query_output": "unconditional original classifier with LoRA; no prototype reranking, no frozen bypass",
+    "reset": "model, optimizer, reference memories and102 prototype state reset for every seed/slice/arm",
+    "expansion_gate": "joint raw mean deltaF1 >=3pp in BOTH slices; positive each seed in each slice; same-score diagnostic Recovery@NAR1 no worse than full_static on BOTH slices; no expansion by cherry-picking another arm",
+    "budget_stop": "30 tasks only, no target-feedback retries or parameter sweep; report all arms regardless outcome"
+  },
+  "v5_run": "runs/20261019T041139Z_momentum_cluster_v5_561c5c2e",
+  "refinement_v6": {
+    "hypothesis": "separate moving teacher prototypes from fixed source student anchors; sharper geometry or source-class-radius preservation may reduce soft-assignment dilution",
+    "primary_candidate": "sharp_target_only",
+    "secondary_candidates": [
+      "sharp_proto",
+      "radius_proto"
+    ],
+    "arms": {
+      "anchor_only": {
+        "target": "qfixed",
+        "loss_anchor": "moving",
+        "prototype_update": true,
+        "temperature": 0.1,
+        "radius_preservation": false
+      },
+      "target_only": {
+        "target": "moving_geometry",
+        "loss_anchor": "source",
+        "prototype_update": true,
+        "temperature": 0.1,
+        "radius_preservation": false
+      },
+      "fixed_geometry": {
+        "target": "source_geometry",
+        "loss_anchor": "source",
+        "prototype_update": false,
+        "temperature": 0.1,
+        "radius_preservation": false
+      },
+      "sharp_proto": {
+        "target": "moving_geometry",
+        "loss_anchor": "moving",
+        "prototype_update": true,
+        "temperature": 0.05,
+        "radius_preservation": false
+      },
+      "radius_proto": {
+        "target": "moving_geometry",
+        "loss_anchor": "moving",
+        "prototype_update": true,
+        "temperature": 0.1,
+        "radius_preservation": true
+      },
+      "sharp_target_only": {
+        "target": "moving_geometry",
+        "loss_anchor": "source",
+        "prototype_update": true,
+        "temperature": 0.05,
+        "radius_preservation": false
+      }
+    },
+    "radius_rule": "a=0.5*source+0.5*EMAproto; use mean(a) as reference center, restore each class radius around that reference center to centered source radius; zero-radius fallback to source centered class direction; corrected set mean need not equal mean(a)",
+    "matched_baseline": "v5 momentum_proto reused predictions; same pure models, split, source anchors, batch streams, full102 q, optimizer and final400 budget",
+    "source_model_seeds": [
+      42,
+      100,
+      2026
+    ],
+    "adaptation_rng": 20261019,
+    "primary_gate": "on BOTH slices, mean deltaF1 over v5 proto >=0.20pp; raw NAR increase <=0.20pp; same frozen common-score Recovery@NAR1 no worse; all source-model seeds positive vs frozen",
+    "secondary_gate": "same gate separately for sharp_proto and radius_proto; no relabeling as primary",
+    "expansion_gate": "primary gate plus mean deltaF1>=3pp on BOTH slices; no automatic expansion within this run",
+    "selection": "all arms fixed final400; no checkpoint/seed/threshold selection for deployed predictions; posthoc label-based frontier thresholds diagnostics only",
+    "budget_stop": "36 new tasks only; no feedback-driven additional arms, epochs or retries except documented implementation repairs"
+  },
+  "v6_run": "runs/20261019T052905Z_prototype_refinement_v6_da9bb898",
+  "review_run": "runs/20261019T054638Z_adaptation_retrospective_v1_102e5b35",
+  "v7": {
+    "bn_states": [
+      "affine_only",
+      "stats_only",
+      "tent_both",
+      "lora_stats_composed",
+      "lora_tent_composed"
+    ],
+    "fresh_adaptations": 24,
+    "inference_states": 30,
+    "lora_rank": 4,
+    "fixed_teacher": "original pure reference logits, votes and source prototypes for all four arms; BN arms re-encode reference/source tokens but preserve original source teacher embedding identity",
+    "writer_rule": "fixed source-calibrated reference reliability: I(head=bank1=bank2)*sigmoid((source_valid_H75-H_frozen)/.1)*sigmoid((.05-JS(mean_bank,head_softmax))/.01); only prototype writes affected, loss gradients remain full positive momentum weighting",
+    "mass_control": "uniform writer factor=sum(w*r)/sum(w) per batch; matches total weighted writer mass in that arm, not class allocation",
+    "gradient_probes": [
+      1,
+      200,
+      400
+    ],
+    "source_probe_rows": 256,
+    "reference_probe_rows": 256,
+    "probe_layers": [
+      "generator.stages.0",
+      "generator.stages.1",
+      "generator.stages.2",
+      "time_projection",
+      "head.0",
+      "head.1"
+    ],
+    "probe_metric": "unpaired source/reference diagonal Gaussian channel-moment W2 standardized by source-channel SD; paired reference before/after linear CKA only; no irreversible-damage inference",
+    "score_candidate": "v6 sharp_target_only fixed checkpoint",
+    "score_policies": [
+      "combined_source1",
+      "margin_source1",
+      "margin_ref_z_source1",
+      "margin_ref_rank_source1",
+      "rank_fusion_source1",
+      "ref_rank95",
+      "ref_gmm2_tail"
+    ],
+    "score_fit": "query-free: unlabeled changed reference rows for local stats/CDF/GMM; changed source-valid rows for source normalization and source-only threshold calibration",
+    "calibration_quantiles": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      0.95,
+      0.975,
+      0.99,
+      1.0
+    ],
+    "calibration_nar_cap": 0.01,
+    "calibration_min_changes": 10,
+    "calibration_select": "highest source recovered count, then lowest damage, then largest threshold; require recovered>damaged; infeasible reject all",
+    "gmm": "1D normalized margin gain on changed unlabeled reference; compare BIC k1 vs k2; n_init3, reg1e-3, random_state20261019; tail high-mean component posterior>=.95 and margin_gain>0; BIC not improved or fewer32 rows => no acceptance; posterior is NOT probability of safe correction",
+    "criteria": {
+      "memory_isolation": "memory_route beats memory_mass_control mean F1>=.2pp and same-score Rec@NAR1 not worse on BOTH slices; no positive claim from fewer writes alone",
+      "early_stats": "stats_only vs frozen separates reference-stat effect; compare stats_lora vs v6 LoRA with same400 optimization steps and teacher; evidence gate both slices mean F1>=.2pp over LoRA and raw NAR increase<=.2pp",
+      "joint": "stats_memory_route vs both stats_lora and memory_route: report interaction, cannot infer layer cause from TENT comparison alone",
+      "scoring": "source-calibrated margin_ref_rank on BOTH slices target NAR<=1% and recovery>=combined_source1+.5pp; one source-only fixed rule, no target threshold tuning",
+      "stop": "two slices only, no additions based on target scores; no external scoring or full-matrix expansion"
+    }
+  },
+  "v7_run": "runs/20261019T074232Z_mechanism_isolation_v7_50f41beb",
+  "v8": {
+    "baseline": "v6 sharp_target_only frozen source BN; reuse verified checkpoint/raw/valid",
+    "fresh_adaptations": 18,
+    "bn_policy": "pure source BN affine and statistics completely frozen; only r4 Q/V4096 LoRA trainable",
+    "teacher_caveat": "Only direct output KL changes; full102 soft q and geometric losses/memories still inherit original teacher/source-neighbor evidence. Not a teacher-free method.",
+    "kl_gate": "fixed original reference teacher entropy <= source-valid frozen entropy75 AND original head == nearest source prototype; only KL numerator masked; divide by full batch size",
+    "balance": "lambda_geo=clip(EMA.9(||grad KL||)/(EMA.9(||grad(.1pull+relation)||)+1e-8),1,50), current batch included; detach; identical .1pull/relation relative weights and identity=1; nearzero geomgrad<=1e-10 gives lambda1",
+    "source_probe": "No new source model training or source reference row selection; same1024 source anchor tokens/embeddings as v6",
+    "common_frontier_signal": "raw normalized_margin_gain; all changed candidates eligible, same definition for all methods; query-derived thresholds diagnostic only",
+    "primary": "no_teacher_kl",
+    "secondary": [
+      "confident_teacher_kl",
+      "geometry_grad_balance"
+    ],
+    "mechanism_gate": "each of TWO slices mean Recovery@NAR1 improves >=.5pp over fixed v6 LoRA, raw MacroF1 does not decrease, raw NAR increase <=.2pp; retain cluster/commonwrong diagnostics regardless",
+    "cluster": "Reference-only standardized embeddings KMeans102, n_init3,max_iter100,random_state20261019; query assigned fixed nearest centroid; query-label majority purity/ARI/NMI terminal metrics only; source prototype nearest accuracy reported separately; clusters never used in adaptation or output",
+    "common_error": "Frozen wrong AND frozen head=source nearest prototype=bank1top1=bank2top1. Report same wrong retention, correction, other wrong transfer in that fixed subset; source-target identity assumption unchanged",
+    "score_policies": [
+      "margin_ref_rank_source1",
+      "extreme_q95",
+      "extreme_q99",
+      "agreement_q95"
+    ],
+    "score_candidate": "all frozen and v6 controls plus all18 new adapters; no candidate selection",
+    "score_primary": "agreement_q95 on fixed v6 control, evaluated without tuning",
+    "score_gate": "both slices Recovery no less than margin_ref_rank_source1-.5pp AND each source-seed target NAR<=1%; mean NAR also reported; secondary candidates exploratory",
+    "score_fit": "Reference inputs only for ECDF/quantiles/envelope; sourcevalid labels only for source1 rule. No query-fitted quantities. No GMM or sigmoid(gain).",
+    "tail": "changed reference>=32; threshold quantile(method=higher) of unsquashed normalized_margin_gain; query changed,gain>0 and gain>=threshold. q95 and q99 fixed in advance; not safety probabilities",
+    "agreement": "reference compatible=changed, gain>0, adapted head==adapted nearest source prototype, adapted candidate geometric margin>=frozen candidate geometric margin; require>=32compatible. q95 higher of compatible reference gain; same compatibility at inference. Query never fits envelope.",
+    "steps": 400,
+    "gradient_probes": [
+      1,
+      200,
+      400
+    ],
+    "checkpoint": "fixed final400 no query selection",
+    "stop": "18new only,2observed slices, no target-feedback additional arms or broader/external matrix; repairs only with documented implementation cause"
+  }
+}

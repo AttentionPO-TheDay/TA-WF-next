@@ -1,0 +1,96 @@
+{
+  "id": "20261019T155827Z_honest_fold_risk_v19_56fe906c",
+  "status": "frozen",
+  "version": "honest_fold_risk_v19",
+  "parent_run": "runs/20261019T154828Z_nshot_low_nar_v18_1e42d406",
+  "feature_run": "runs/20261019T151701Z_nshot_frozen_feature_v17_58c8933b",
+  "dataset_config": "configs/datasets.json",
+  "roles": [
+    "day90",
+    "day270"
+  ],
+  "model_seeds": [
+    42,
+    100,
+    2026
+  ],
+  "support_seeds": [
+    1701,
+    1702,
+    1703
+  ],
+  "caps": [
+    3,
+    5
+  ],
+  "folds": 3,
+  "routes": [
+    {
+      "name": "agree_head1_shrink",
+      "kind": "agree",
+      "model": "head1",
+      "other": "shrink"
+    },
+    {
+      "name": "local_head1",
+      "kind": "local",
+      "model": "head1"
+    },
+    {
+      "name": "local_protect",
+      "kind": "local",
+      "model": "protect"
+    }
+  ],
+  "models": [
+    "head1",
+    "shrink",
+    "protect"
+  ],
+  "prototype_logit_scale": 20.0,
+  "calibration": {
+    "zero": {
+      "max_empirical_oof_NAR": 0.0,
+      "minimum_R": 2
+    },
+    "onepct": {
+      "max_empirical_oof_NAR": 0.01,
+      "minimum_R": 2
+    }
+  },
+  "threshold_rule": "fixed one route per calibrator, utility R-4D-.1W; only own held-out fold labels; no route search and no full-support refit",
+  "modes": [
+    "uncalibrated",
+    "zero",
+    "onepct"
+  ],
+  "votes": [
+    2,
+    3
+  ],
+  "primary": {
+    "route": "agree_head1_shrink",
+    "mode": "zero",
+    "votes": 2,
+    "cap": 5,
+    "gate": "both dates all9 actual NAR<=1%; mean deltaF1>=1pp and >=50% rawfullhead Recovery; sameD Recovery vs rawfullhead diagnosticNAR1 nonnegative mean and >=2/3 modelseed means nonnegative"
+  },
+  "permissions": {
+    "target_labels": "same v17 cap3/5 support only; per model own calibration fold excluded from gradient training",
+    "query": "terminal independent inference and metrics only after calibration freeze; no threshold/normalization/library fitting",
+    "source": "same v17 source-derived normalization and prototypes",
+    "new_gradient_training": false,
+    "extra_labels": false,
+    "external_access": false
+  },
+  "budget": {
+    "device": "cpu",
+    "threads": 2,
+    "max_wall_seconds": 1200,
+    "max_output_gib": 1,
+    "support_states": 36,
+    "calibrators": 648,
+    "states": 726
+  },
+  "qualification": "v18-query-feedback-informed development version; fold training sets overlap and calibrators dependent, no statistical risk guarantee; no independent confirmation claim"
+}

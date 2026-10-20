@@ -1,0 +1,3 @@
+# 来源
+
+maintenance_base.py显式复制自v17 maintenance.py，SHA256=bf054a3fb7007821a365217b7f46b61831ec03fcec574076ac1a7ff1936cda99。新实现仅本run内导入该副本，不sys.path依赖其他run或旧项目。v17冻结源/目标特征及原支持与head/prototype只读复用，配置显式注明路径；不会把缓存复用当成新骨干训练。

@@ -59,3 +59,5 @@ with torch.no_grad():
 版本控制保留源码、测试、实验脚本、配置、计划、结果报告、小型JSON摘要及EXPERIMENTS.csv。环境文件、锁、缓存、数据数组、抓包、模型权重、runs中的artifacts/checkpoints/logs及生成CSV不提交。忽略不等于删除，本地证据仍保留。
 
 Git不是完整研究归档：逐样本证据、预测和模型需要单独备份；克隆仓库不会恢复这些产物。报告中的服务器绝对路径是本地证据入口，不保证外部可访问。当前数据配置也是服务器路径，换环境须显式配置；部分归档脚本保留旧环境依赖，不应当作可移植生产入口。
+
+可将 `configs/storage.example.json` 复制为本机的 `configs/storage.json`，将 `run_payload_root` 改为已有的绝对目录。此后管理脚本把新实验的 artifacts/checkpoints 建在该目录中，并在原 run 路径保留软链接；未配置时仍使用本地目录。机器配置和产物软链接不提交，实验脚本、计划和报告继续留在仓库。

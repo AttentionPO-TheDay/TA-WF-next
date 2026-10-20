@@ -1,0 +1,5 @@
+# 显式复用与实现来源
+- v9smooth query/valid预测、margin_gain、frozen基线和前沿：20261019T094400Z_progressive_view_v9_9ee04ba2，显式SHA复用，不是新模型重复。
+- v10原始direction_iat logits及3个seed温度：20261019T100749Z_independent_view_probe_v10_9b462cd2；此前额外源监督训练预算仍属于整体成本。
+- v11四扰动direction_iat logits、min对照与已审计score文件：20261019T105659Z_cross_view_stability_v11_c00a5945；本轮无新前向。
+- 新run内runtime/scoring/metrics/experiment/controller为显式实现，不改sys.path、不导入旧训练代码。FPR=NAR的分母与旧条件ROC不同，记录指标修订，不修改旧结果。

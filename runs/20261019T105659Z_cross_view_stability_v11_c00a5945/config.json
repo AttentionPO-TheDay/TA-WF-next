@@ -1,0 +1,124 @@
+{
+  "id": "20261019T105659Z_cross_view_stability_v11_c00a5945",
+  "status": "frozen",
+  "version": "cross_view_stability_v11",
+  "evaluation_role": "observed_diagnostic_development_not_confirmation",
+  "dataset_config": "configs/datasets.json",
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "diagnostic_run": "runs/20261018T164924Z_multifactor_diagnostic_v1_4fc8f13d",
+  "v9_run": "runs/20261019T094400Z_progressive_view_v9_9ee04ba2",
+  "v10_run": "runs/20261019T100749Z_independent_view_probe_v10_9b462cd2",
+  "seeds": [
+    42,
+    100,
+    2026
+  ],
+  "slices": [
+    "version_045",
+    "network_USA"
+  ],
+  "arms": [
+    "direction_order",
+    "direction_iat",
+    "tam_cnn"
+  ],
+  "primary_arm": "direction_iat",
+  "candidate_pools": [
+    "v10_view",
+    "v9_smooth"
+  ],
+  "primary_pool": "v10_view",
+  "secondary_pool": "v9_smooth",
+  "scores": [
+    "baseline",
+    "perturb_support",
+    "seed_support",
+    "joint_support",
+    "shuffled_joint"
+  ],
+  "primary_score": "joint_support",
+  "classes": 102,
+  "architecture": {
+    "kind": "Conv1D GroupNorm ELU independent encoder",
+    "channels": [
+      32,
+      64,
+      96,
+      128
+    ],
+    "blocks": "Conv7 stride2 + GN8 + ELU + Conv3 + GN8 + ELU + MaxPool2 ceil",
+    "pool": 8,
+    "hidden": 256,
+    "dropout": 0.2,
+    "head": "102class linear",
+    "sharing": "none with main encoder; independence of errors must be measured"
+  },
+  "training": {
+    "eval_batch_size": 256,
+    "new_optimizer_steps": 0,
+    "new_models": 0
+  },
+  "views": [
+    "original",
+    "time095",
+    "time105",
+    "thin01",
+    "tail98"
+  ],
+  "perturbations": {
+    "time095": "multiply signed timestamp by0.95 in float32",
+    "time105": "multiply signed timestamp by1.05 in float32",
+    "thin01": "fixed per(row_id,packet_index) hash removes1% nonzero packets; first valid retained; remaining nonzero packets packed left without time change",
+    "tail98": "retain first ceil(.98*nonzero packet count) valid packets at original positions; others zero",
+    "tam": "reconstruct2x1800 from transformed nonzero timestamps using float64 floor(abs(t)*1799/80) clipped1799, sign direction; original uses existing TAM",
+    "role": "robustness probes, not assumed label preserving; report sourcevalid degradation per view; no target-based view removal"
+  },
+  "permissions": {
+    "model": "9 v10 checkpoints explicitly reused SHA verified, eval mode only; all state frozen; no retraining or adaptation",
+    "source": "source cache structure only, sourcevalid inputs/labels permitted terminal invariance/ranking diagnostics, no new fitting",
+    "reference": "forward/cache/unlabeled statistics only, no reference labels or fitting",
+    "query": "independent per-sample transformations and fixed-model inference; labels terminal diagnostics only, no score/model/transform/threshold selection",
+    "temperatures": "immutable v10 sourcevalid calibration only",
+    "external": "closed",
+    "identity": "same content-supported102class mapping assumption; not official map"
+  },
+  "score_rules": {
+    "candidate": "v10 unaugmented own-seed prediction; separately fixed v9 smooth prediction, no fusion/new candidate generation",
+    "baseline": "v10 calibrated probability top1-top2 for v10_view; historical v9 raw margin_gain for v9_smooth",
+    "contrast": "p_view(candidate)-p_view(frozen_base_class)",
+    "perturb_support": "minimum contrast over4 nonoriginal views of own seed",
+    "seed_support": "minimum contrast over other2 seeds original view",
+    "joint_support": "minimum contrast over all3 seeds x5 views",
+    "shuffled_joint": "same joint scores permuted only among changed candidates by fixed row-id hash; exactly same changed-score multiset; no labels",
+    "note": "bounded probability contrasts, no sigmoid(gain), no GMM risk posterior or quantile rejection; ranking only, no safety guarantee"
+  },
+  "gates": {
+    "source_invariance": "primary arm all4 perturbations across3seed mean valid MacroF1 drop<=2pp vs original; no deleting failed views",
+    "primary": "direction_iat/v10_view joint vs baseline: BOTH slices mean Recovery@NAR1 gain>=.5pp, correction-vs-damage AUROC gain>=.03 and absolute>=.65; joint Rec@NAR1 beats shuffled>=.5pp; source invariance must pass",
+    "utility": "primary plus joint Rec@NAR1 exceeds historical v9smooth by>=.2pp BOTH slices; no automatic integration",
+    "secondary": "v9_smooth joint vs its own historical margin baseline, same risk/ranking gain tests; report separately, never replace primary",
+    "frontier": "unique score thresholds from query labels, diagnostics only; maxRecovery at NAR<=1%; no deployment threshold fitting"
+  },
+  "budget": {
+    "physical_gpus": [
+      0,
+      1,
+      2
+    ],
+    "seed_gpu_map": {
+      "42": 0,
+      "100": 1,
+      "2026": 2
+    },
+    "threads": 2,
+    "max_wall_seconds": 1200,
+    "max_gpu_hours": 1.0,
+    "max_output_gib": 2,
+    "max_cell_seconds": 600,
+    "new_training_steps": 0,
+    "new_augmented_logit_states": 180,
+    "reload_augmented_states": 180,
+    "original_identity_states": 45,
+    "stop": "one fixed batch only; no feedback-driven extra transformations/weights/training, same-config implementation repair documented"
+  }
+}

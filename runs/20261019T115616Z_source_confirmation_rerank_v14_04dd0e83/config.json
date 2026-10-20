@@ -1,0 +1,28 @@
+{
+  "id": "20261019T115616Z_source_confirmation_rerank_v14_04dd0e83",
+  "status": "frozen",
+  "source_run": "runs/20261018T125337Z_pure_source_backbone_c1d249f6",
+  "v9": "runs/20261019T094400Z_progressive_view_v9_9ee04ba2",
+  "v10": "runs/20261019T100749Z_independent_view_probe_v10_9b462cd2",
+  "v12": "runs/20261019T111322Z_low_nar_soft_rerank_v12_8860fe6c",
+  "v13": "runs/20261019T114139Z_candidate_cleanup_audit_v13_1b0f9d01",
+  "seeds": [42, 100, 2026],
+  "slices": ["version_045", "network_USA"],
+  "views": ["original", "time095", "time105", "thin01", "tail98"],
+  "source_selection": {"train_per_class": 24, "valid_per_class": 8, "order": "sha256(v14|role|raw_row) ascending per class"},
+  "perturbations": [
+    {"name": "clean", "time": 1.0, "thin_percent": 0, "tail": 1.0},
+    {"name": "time070_thin10", "time": 0.7, "thin_percent": 10, "tail": 1.0},
+    {"name": "time140_thin10", "time": 1.4, "thin_percent": 10, "tail": 1.0},
+    {"name": "thin25_tail75", "time": 1.0, "thin_percent": 25, "tail": 0.75},
+    {"name": "thin40_tail60", "time": 1.0, "thin_percent": 40, "tail": 0.6}
+  ],
+  "fit": {"C": 1.0, "max_iter": 2000, "tol": 1e-8, "class_weight": "balanced", "min_each_type": 25, "sd_floor": 0.001, "blend_weight": 0.25, "features": ["margin", "candidate_logprob", "third_margin"]},
+  "scores": ["v9_margin", "v12_primary", "margin_control", "confirmation_primary"],
+  "primary": "confirmation_primary",
+  "metrics": {"alpha": 0.01},
+  "calibration": {"utility_W_cost": 0.25, "min_R": 10, "query_fit": false},
+  "permissions": {"source_train": "fixed immutable source subset labels for small reranker only", "source_valid": "fixed observed source subset plus fixed synthetic perturbations for threshold calibration only", "query": "cached per-sample descriptors; labels terminal diagnostics only", "reference": "no new access; existing target-specific adapters retain original reference-only adaptation", "new_backbone_training": false, "external_access": false},
+  "budget": {"threads": 2, "gpus": [0, 1, 2], "wall_seconds": 1800, "gpu_hours": 1.5, "output_gib": 1, "main_batch": 128, "aux_batch": 256},
+  "gates": {"pauc_gain_min": 0.0, "rec1_loss_tolerance_pp": 0.1, "same_damage_rec_gain_pp": 0.2, "same_correction_W_ratio_max": 0.95, "stop_on_source_type_insufficient": true}
+}
